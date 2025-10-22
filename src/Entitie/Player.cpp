@@ -31,7 +31,7 @@ Player::Player(){
 
 void Player::Update() {
 	bool is_moving = false;
-	if (kInputUp.pressed() || kInputDown.pressed() || kInputLeft.pressed() || kInputRight.pressed()) {
+	if (kInputLeft.pressed() || kInputRight.pressed()) {
 		if (kInputLeft.pressed()) {
 			pos_.x -= speed_;
 		}
