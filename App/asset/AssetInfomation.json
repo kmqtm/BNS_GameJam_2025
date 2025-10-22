@@ -1,0 +1,75 @@
+{
+	"PreLoad": {
+
+		"Font": [ "null" ],
+
+		"Sound": [ "null" ],
+
+		"Texture": [ "null" ]
+
+	},
+
+
+	"Title": {
+
+		"Font": [
+			"GridGazer.ttf"
+		],
+		"FontSize": 40,
+
+		"Sound": [ "null" ],
+
+		"Texture": [ "null" ]
+
+	},
+
+
+	"Option": {
+
+		"Font": [ "null" ],
+
+		"Sound": [ "null" ],
+
+		"Texture": [ "null" ]
+
+	},
+
+
+	"HowToPlay": {
+
+		"Font": [ "null" ],
+
+		"Sound": [ "null" ],
+
+		"Texture": [ "null" ]
+
+	},
+
+
+	"Game": {
+
+		"Font": [ "null" ],
+
+		"Sound": [ "null" ],
+
+		"Texture": [
+			"windmill.png",
+			"siv3d-kun-16.png",
+			"player_1.png",
+			"player_2.png"
+		]
+	},
+
+
+	"Result": {
+
+		"Font": [
+			"GridGazer.ttf"
+		],
+		"FontSize": 40,
+
+		"Sound": [ "null" ],
+
+		"Texture": [ "null" ]
+	}
+}
