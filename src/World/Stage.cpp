@@ -1,6 +1,6 @@
 ﻿# include "Stage.h"
-#include <Siv3D.hpp> // Vec2, Floor などのため
-#include <cmath>    // std::round のため
+#include <Siv3D.hpp>
+#include <cmath>
 
 Stage::Stage(const FilePath& jsonPath, const FilePath& tilesetPath)
 	: m_tileTexture(tilesetPath)
@@ -33,7 +33,7 @@ void Stage::loadFromJSON(const FilePath& jsonPath)
 
 	m_mapWidth = json[U"width"].get<int32>();
 	m_mapHeight = json[U"height"].get<int32>();
-	m_tileSize = json[U"tilewidth"].get<int32>(); // Tiledは正方形想定
+	m_tileSize = json[U"tilewidth"].get<int32>();
 
 	for (const auto& layer : json[U"layers"].arrayView())
 	{

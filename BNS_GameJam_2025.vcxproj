@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="App\asset\AssetInfomation.json" />
     <None Include="App\asset\Stage\tilemap_v0.json" />

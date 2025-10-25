@@ -8,7 +8,7 @@
 // メインのゲームプレイシーン
 class GameScene : public App::Scene {
 public:
-	GameScene(const InitData &init);
+	GameScene(const InitData& init);
 	~GameScene() override;
 
 	void update() override;
