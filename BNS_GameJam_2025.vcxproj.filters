@@ -210,6 +210,9 @@
     <Image Include="App\example\obj\siv3d-kun-eye.png">
       <Filter>Resource Files\example\obj</Filter>
     </Image>
+    <Image Include="App\asset\Stage\stage_tiles_v0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="App\Resource.rc">
@@ -760,6 +763,7 @@
     <None Include="App\BNS_GameJam_2025(debug).exe" />
     <None Include="App\asset\AssetInfomation.json" />
     <None Include=".gitignore" />
+    <None Include="App\asset\Stage\tilemap_v0.json" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">
@@ -825,6 +829,9 @@
     <ClCompile Include="src\Entitie\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\World\Stage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\pch\stdafx.h">
@@ -852,6 +859,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Entitie\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Stage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,7 +3,7 @@
 #include <Siv3D.hpp>
 
 // シーンの基本サイズ
-inline constexpr Size kSceneSize = {384, 576};
+inline constexpr Size kSceneSize = {240, 300};
 // デバッグ用の背景色(白)
 const ColorF kBackgroundColor = ColorF{ 0.8, 0.9, 1.0 };
 // ゲーム用の背景色(水色)
@@ -23,7 +23,3 @@ const InputGroup kInputLeft{KeyLeft, KeyA};
 const InputGroup kInputRight{KeyRight, KeyD};
 const InputGroup kInputUp{KeyUp, KeyW};
 const InputGroup kInputDown{KeyDown, KeyS};
-
-// カメラの位置と注視点のオフセット
-inline constexpr Vec3 kCameraPositionOffset{0.0, 18.0, -30.0};
-inline constexpr Vec3 kCameraFocusOffset{0.0, 0.0, 0.0};

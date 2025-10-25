@@ -115,6 +115,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Image Include="App\asset\Stage\stage_tiles_v0.png" />
     <Image Include="App\engine\texture\box-shadow\128.png" />
     <Image Include="App\engine\texture\box-shadow\16.png" />
     <Image Include="App\engine\texture\box-shadow\256.png" />
@@ -165,6 +166,7 @@
     <None Include=".editorconfig" />
     <None Include=".gitignore" />
     <None Include="App\asset\AssetInfomation.json" />
+    <None Include="App\asset\Stage\tilemap_v0.json" />
     <None Include="App\BNS_GameJam_2025(debug).exe" />
     <None Include="App\dll\soundtouch\SoundTouch_x64.dll" />
     <None Include="App\engine\font\fontawesome\fontawesome-brands.otf.zstdcmp" />
@@ -417,6 +419,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Scenes\GameScene.cpp" />
+    <ClCompile Include="src\World\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\AssetController.h" />
@@ -428,6 +431,7 @@
     <ClInclude Include="src\Entitie\Player.h" />
     <ClInclude Include="src\pch\stdafx.h" />
     <ClInclude Include="src\Scenes\GameScene.h" />
+    <ClInclude Include="src\World\Stage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
