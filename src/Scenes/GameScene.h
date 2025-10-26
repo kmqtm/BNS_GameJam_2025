@@ -6,7 +6,6 @@
 
 #include <Siv3D.hpp>
 
-// メインのゲームプレイシーン
 class GameScene : public App::Scene
 {
 public:
