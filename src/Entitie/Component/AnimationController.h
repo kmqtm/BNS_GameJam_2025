@@ -14,6 +14,9 @@ public:
 	// 指定した名前のアニメーションの再生を開始
 	void Play(const String &name);
 
+	// 特定のアニメーションが再生中かどうかを取得
+	bool IsPlaying(const String& animation_name) const;
+
 	// 毎フレーム呼び出し，アニメーションの状態を更新
 	void Update();
 
