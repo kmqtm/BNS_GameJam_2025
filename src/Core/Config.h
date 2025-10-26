@@ -2,7 +2,7 @@
 
 #include <Siv3D.hpp>
 
-inline constexpr Size kSceneSize = { 240, 300 };
+inline constexpr Size kSceneSize = { 704, 800 };
 const ColorF kBackgroundColor = ColorF{ 0.8, 0.9, 1.0 };
 const ColorF kGameBackgroundColor = ColorF{ 0.4, 0.7, 1.0 };
 
