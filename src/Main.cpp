@@ -7,7 +7,7 @@
 void Main()
 {
 	// ウィンドウの初期設定を一括で行う
-	ScreenManager::Initialize();
+	screen_manager::Initialize();
 
 	// シーンマネージャーを作成
 	App manager;
