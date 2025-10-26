@@ -11,8 +11,8 @@ void Main()
 
 	// シーンマネージャーを作成
 	App manager;
-	manager.add<GameScene>(SceneID::Game);
-	manager.init(SceneID::Game, 10.0ms);
+	manager.add<GameScene>(SceneID::kGame);
+	manager.init(SceneID::kGame, 10.0ms);
 
 	// ウィンドウを閉じるユーザアクションのみを終了操作に設定
 	System::SetTerminationTriggers(UserAction::CloseButtonClicked);

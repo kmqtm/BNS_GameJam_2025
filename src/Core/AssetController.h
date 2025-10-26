@@ -4,12 +4,13 @@
 
 // アセットの読み込み，登録，登録解除を管理するクラス
 // シーンごとに必要なアセットをJSONファイルから読み込む
-class AssetController {
+class AssetController
+{
 public:
 	static AssetController& GetInstance();
 
 	// 指定されたシーン名に基づいてアセットを準備(登録・ロード)
-	void PrepareAssets(const String &scene_name);
+	void PrepareAssets(const String& scene_name);
 
 	// 現在のシーンで登録されているアセットの登録をすべて解除
 	void UnregisterAssets();
@@ -28,8 +29,8 @@ private:
 	String current_scene_name_;
 
 	// 対象とするアセットの種類を定義した配列
-	const Array<String> asset_types_ = {U"Font", U"Sound", U"Texture"};
+	const Array<String> asset_types_ = { U"Font", U"Sound", U"Texture" };
 
 	// アセットの登録とロードを行うヘルパー関数
-	void RegisterAndLoadAsset(const String &asset_type, const String &asset_filepath);
+	void RegisterAndLoadAsset(const String& asset_type, const String& asset_filepath);
 };
