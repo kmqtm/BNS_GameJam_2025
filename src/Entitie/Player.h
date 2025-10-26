@@ -18,7 +18,7 @@ public:
 
 	void SetPos(const Vec2& new_pos);
 
-	Collider collider{ Circle{0, 0, 1.0}, ColliderTag::Player };
+	Collider collider{ Circle{0, 0, 1.0}, ColliderTag::kPlayer };
 
 private:
 	void HandleInput();
