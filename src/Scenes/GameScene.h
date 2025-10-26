@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "../Core/CameraManager.h"
 #include "../Core/Config.h"
 #include "../Entitie/Player.h"
 #include "../World/Stage.h"
@@ -18,7 +19,7 @@ public:
 private:
 	Stage stage_{ U"asset/Stage/tilemap_v0.json", U"asset/Stage/stage_tiles_v0.png" };
 
-	Camera2D camera_{ Vec2{ 0, 0 }, 1.0 ,CameraControl::None_ };
+	Core::CameraManager camera_manager_;
 
 	Player player_;
 };
