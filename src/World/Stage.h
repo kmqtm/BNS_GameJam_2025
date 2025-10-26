@@ -15,27 +15,27 @@ public:
 	// tilesetPath: タイルセット画像のパス
 	Stage(const FilePath& jsonPath, const FilePath& tilesetPath);
 
-	void draw(const Vec2& offset = Vec2{ 0, 0 }) const;
+	void Draw(const Vec2& offset = Vec2{ 0, 0 }) const;
 
-	int32 getWidth() const { return m_mapWidth; }
+	int32 GetWidth() const { return map_width_; }
 
-	int32 getHeight() const { return m_mapHeight; }
+	int32 GetHeight() const { return map_height_; }
 
-	int32 getTileSize() const { return m_tileSize; }
+	int32 GetTileSize() const { return tile_size_; }
 
 private:
 	// 基本情報
-	int32 m_mapWidth = 0;
-	int32 m_mapHeight = 0;
-	int32 m_tileSize = 16;
+	int32 map_width_ = 0;
+	int32 map_height_ = 0;
+	int32 tile_size_ = 16;
 
 	// レイヤー情報
-	Array<TileMapLayer> m_layers;
+	Array<TileMapLayer> layers_;
 
 	// タイルセット画像と切り出し
-	Texture m_tileTexture;
-	Array<TextureRegion> m_tileRegions;
+	Texture tile_texture_;
+	Array<TextureRegion> tile_regions_;
 
 	// 内部関数: Tiled JSON をロード
-	void loadFromJSON(const FilePath& jsonPath);
+	void LoadFromJSON(const FilePath& jsonPath);
 };
