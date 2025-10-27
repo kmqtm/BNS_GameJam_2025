@@ -2,7 +2,7 @@
 
 AnimationController::AnimationController()
 	: current_frame_index_{ 0 }
-	, current_animation_{ nullptr } // (リファクタリング) ポインタを nullptr で初期化
+	, current_animation_{ nullptr }
 {
 }
 

@@ -1,5 +1,5 @@
-#pragma once
-#include "Utility.h" // Utility::RoundVec2 ‚Ì‚½‚ß‚ÉƒCƒ“ƒNƒ‹[ƒh
+ï»¿#pragma once
+#include "Utility.h" // Utility::RoundVec2 ã®ãŸã‚ã«ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include <Siv3D.hpp>
 
 namespace Core
@@ -9,16 +9,15 @@ namespace Core
 	public:
 		CameraManager();
 
-		// –ˆƒtƒŒ[ƒ€‚ÌXV
 		void Update();
 
-		// ƒJƒƒ‰‚Ì’Ç]ƒ^[ƒQƒbƒgiƒvƒŒƒCƒ„[À•W‚È‚Çj‚ğİ’è
+		// ã‚«ãƒ¡ãƒ©ã®è¿½å¾“ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã‚’è¨­å®š
 		void SetTarget(const s3d::Vec2& target);
 
-		// •`‰æ—p‚ÌƒsƒNƒZƒ‹ƒp[ƒtƒFƒNƒg‚ÈƒIƒtƒZƒbƒg‚ğæ“¾
+		// æç”»ç”¨ã®ãƒ”ã‚¯ã‚»ãƒ«ãƒ‘ãƒ¼ãƒ•ã‚§ã‚¯ãƒˆãªã‚ªãƒ•ã‚»ãƒƒãƒˆã‚’å–å¾—
 		s3d::Vec2 GetSnappedOffset() const;
 
-		// •`‰æƒJƒŠƒ“ƒO—p‚Ìƒrƒ…[‹éŒ`‚ğæ“¾
+		// æç”»ã‚«ãƒªãƒ³ã‚°ç”¨ã®ãƒ“ãƒ¥ãƒ¼çŸ©å½¢ã‚’å–å¾—
 		s3d::RectF GetViewRect() const;
 
 	private:

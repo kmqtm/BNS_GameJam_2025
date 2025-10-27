@@ -1,39 +1,32 @@
-#include "CameraManager.h"
+ï»¿#include "CameraManager.h"
 
 namespace Core
 {
 	CameraManager::CameraManager()
-		// GameScene ‚Å‚Ì‰Šú‰»İ’è‚ğ‚±‚¿‚ç‚ÉˆÚ“®
 		: camera_{ s3d::Vec2{ 0, 0 }, 1.0 ,s3d::CameraControl::None_ }
 	{
-		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 	}
 
 	void CameraManager::Update()
 	{
-		// GameScene::update() ‚ÅŒÄ‚ñ‚Å‚¢‚½ƒJƒƒ‰©‘Ì‚ÌXV
 		camera_.update();
 	}
 
 	void CameraManager::SetTarget(const s3d::Vec2& target)
 	{
-		// GameScene::update() ‚ÅŒÄ‚ñ‚Å‚¢‚½ƒ^[ƒQƒbƒgİ’è
 		camera_.setTargetCenter(target);
 	}
 
 	s3d::Vec2 CameraManager::GetSnappedOffset() const
 	{
-		// GameScene::draw() ‚Ås‚Á‚Ä‚¢‚½ƒXƒiƒbƒvˆ—
 		const s3d::Vec2 camera_center = camera_.getCenter();
 		const s3d::Vec2 camera_top_left = camera_center - s3d::Scene::Center();
 
-		// Utility::RoundVec2 ‚ğg—p
 		return Utility::RoundVec2(camera_top_left);
 	}
 
 	s3d::RectF CameraManager::GetViewRect() const
 	{
-		// GameScene::draw() ‚Ås‚Á‚Ä‚¢‚½ƒrƒ…[‹éŒ`‚Ìæ“¾
 		return camera_.getRegion();
 	}
 }
