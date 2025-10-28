@@ -115,7 +115,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Image Include="App\asset\Stage\stage_tiles_v0.png" />
     <Image Include="App\engine\texture\box-shadow\128.png" />
     <Image Include="App\engine\texture\box-shadow\16.png" />
     <Image Include="App\engine\texture\box-shadow\256.png" />
@@ -167,7 +166,6 @@
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="App\asset\AssetInfomation.json" />
-    <None Include="App\asset\Stage\tilemap_v0.json" />
     <None Include="App\BNS_GameJam_2025(debug).exe" />
     <None Include="App\dll\soundtouch\SoundTouch_x64.dll" />
     <None Include="App\engine\font\fontawesome\fontawesome-brands.otf.zstdcmp" />

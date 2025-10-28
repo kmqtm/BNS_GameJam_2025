@@ -4,11 +4,30 @@
 #include <cmath>
 #include <Siv3D.hpp>
 
-Stage::Stage(const FilePath& json_path, const FilePath& tileset_path)
+Stage::Stage(const FilePath& json_path, const FilePath& tileset_path, const String& collision_layer_name)
 	: tile_texture_(tileset_path)
+	, collision_layer_name_(collision_layer_name)
 {
 	LoadFromJson(json_path);
 	CreateTileRegions();
+
+	// 当たり判定レイヤーを検索してポインタを保持
+	// LoadFromJson の後で実行
+	collision_layer_ = nullptr;
+	for(const auto& layer : layers_)
+	{
+		if(layer.name == collision_layer_name_)
+		{
+			collision_layer_ = &layer;
+			break;
+		}
+	}
+
+	// 見つからなかった場合
+	if(not collision_layer_)
+	{
+		throw Error{ U"Stage: 当たり判定レイヤー '{}' が見つかりませんでした．"_fmt(collision_layer_name_) };
+	}
 }
 
 void Stage::CreateTileRegions()
@@ -80,6 +99,9 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 
 	for(const auto& layer : layers_)
 	{
+		// 当たり判定レイヤーは描画しない
+		if(layer.name == collision_layer_name_) continue;
+
 		for(int32 y = start_y; y < end_y; ++y)
 		{
 			for(int32 x = start_x; x < end_x; ++x)
@@ -87,13 +109,35 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 				const int32 tile_id = layer.tiles[y][x];
 				if(tile_id <= 0) continue;
 
-				// タイルのワールド座標
 				const Vec2 world_pos = Vec2{ x * tile_size_, y * tile_size_ };
-
-				// ワールド座標 - スナップ済みカメラ座標 = スクリーン座標
 				const Vec2 draw_pos = world_pos - camera_offset;
 				tile_regions_[tile_id - 1].draw(draw_pos);
 			}
 		}
 	}
+}
+
+// ワールド座標 (px) から当たり判定をチェックする関数
+bool Stage::IsSolid(double world_x, double world_y) const
+{
+	// 当たり判定レイヤーがコンストラクタで正常に設定されていない場合は常に「壁なし」
+	if(not collision_layer_)
+	{
+		return false;
+	}
+
+	// ワールド座標(px)をタイル座標(グリッドのインデックス)に変換
+	// (floorを使いマイナス座標に対応)
+	const int32 tile_x = static_cast<int32>(std::floor(world_x / tile_size_));
+	const int32 tile_y = static_cast<int32>(std::floor(world_y / tile_size_));
+
+	// マップの範囲外かチェック
+	// (範囲外は「壁」として扱う)
+	if((tile_x < 0) || (tile_x >= map_width_) || (tile_y < 0) || (tile_y >= map_height_))
+	{
+		return true;
+	}
+
+	// ID > 0 なら「壁あり」と判定
+	return (collision_layer_->tiles[tile_y][tile_x] > 0);
 }

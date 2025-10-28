@@ -17,7 +17,7 @@ public:
 	void draw() const override;
 
 private:
-	Stage stage_{ U"asset/Stage/tilemap_v0.json", U"asset/Stage/stage_tiles_v0.png" };
+	Stage stage_{ U"asset/Stage/tilemap.json", U"asset/Stage/tileset.png", U"collision_layer" };
 
 	Core::CameraManager camera_manager_;
 

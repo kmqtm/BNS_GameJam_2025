@@ -17,7 +17,7 @@ GameScene::~GameScene()
 
 void GameScene::update()
 {
-	player_.Update();
+	player_.Update(stage_);
 
 	Vec2 target = player_.GetPos();
 	camera_manager_.SetTarget(target);

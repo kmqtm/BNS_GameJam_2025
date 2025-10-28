@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "../World/Stage.h"
 #include "Component/AnimationController.h"
 #include "Component/Collider.h"
 
@@ -10,7 +11,7 @@ class Player
 public:
 	Player();
 
-	void Update();
+	void Update(const Stage& stage);
 
 	void Draw(const Vec2& camera_offset) const;
 
@@ -18,17 +19,19 @@ public:
 
 	void SetPos(const Vec2& new_pos);
 
+	// 地形衝突には使わないが，敵やアイテムとの当たり判定に使う
 	Collider collider{ Circle{0, 0, 1.0}, ColliderTag::kPlayer };
 
 private:
 	void HandleInput();
-	void UpdatePhysics();
+	void UpdatePhysics(const Stage& stage);
 	void UpdateAnimation();
 
 	Vec2 pos_{ 0, 1.0 };
 	Vec2 velocity_{ 0.0, 0.0 };
 
 	bool is_moving_x_ = false;
+	bool is_grounded_ = false;
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.2 };
