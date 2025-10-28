@@ -14,5 +14,6 @@ namespace screen_manager
 		Window::Resize(kSceneSize);
 		Scene::SetLetterbox(ColorF{ 0, 0, 0 });
 		Scene::SetResizeMode(ResizeMode::Keep);
+		Window::Maximize();
 	}
 }
