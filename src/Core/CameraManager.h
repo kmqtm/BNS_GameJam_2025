@@ -21,6 +21,8 @@ namespace Core
 		double fixed_world_x_;
 		double y_offset_;
 
+		Size view_size_;
+
 		// ターゲットのY座標と，現在のカメラのY座標
 		double target_y_ = 0.0;
 		double current_y_ = 0.0;
