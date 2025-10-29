@@ -11,7 +11,7 @@ namespace Core
 		void SetTargetY(double target_y);
 
 		void Update();
-		Vec2 GetSnappedOffset() const;
+		Vec2 GetCameraOffset() const;
 		RectF GetViewRect() const;
 
 	private:

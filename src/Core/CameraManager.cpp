@@ -33,10 +33,10 @@ namespace Core
 		camera_.update();
 	}
 
-	Vec2 CameraManager::GetSnappedOffset() const
+	Vec2 CameraManager::GetCameraOffset() const
 	{
-		// スナップ処理
-		return Utility::RoundVec2(camera_.getRegion().tl());
+		// スナップ処理を削除し，生の(doubleの)オフセットを返す
+		return camera_.getRegion().tl();
 	}
 
 	RectF CameraManager::GetViewRect() const

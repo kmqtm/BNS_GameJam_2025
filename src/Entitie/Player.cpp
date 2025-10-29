@@ -212,21 +212,19 @@ void Player::Draw(const Vec2& camera_offset) const
 {
 	if(auto texture_asset = anim_controller_.GetCurrentTextureAsset())
 	{
-		// プレイヤーのワールド座標を整数にスナップ
-		const Vec2 snapped_pos = Utility::RoundVec2(pos_);
+		// pos_(double)が中央座標だと仮定しているため，描画時に左上座標に補正
+		const Vec2 top_left_pos = pos_ - Vec2{ 64, 64 };
 
-		// pos_ が中央座標だと仮定しているため，描画時に左上座標に補正
-		const Vec2 top_left_pos = snapped_pos - Vec2{ 64, 64 };
-
-		// スクリーン座標 = ワールド座標 - カメラオフセット
+		// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
 		const Vec2 draw_pos = top_left_pos - camera_offset;
 
-		texture_asset->draw(draw_pos);
+		// 描画直前に s3d::Floor で整数にスナップ
+		texture_asset->draw(s3d::Floor(draw_pos));
 	}
 	else
 	{
 		// texture_assetの中身がなかった場合
-		RectF{ Arg::center(pos_ - camera_offset), 32, 32 }.drawFrame(2, 0, Palette::Red);
+		RectF{ Arg::center(s3d::Floor(pos_ - camera_offset)), 32, 32 }.drawFrame(2, 0, Palette::Red);
 	}
 }
 

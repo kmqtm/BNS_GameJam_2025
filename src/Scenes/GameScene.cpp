@@ -33,12 +33,13 @@ void GameScene::draw() const
 {
 	Scene::SetBackground(kGameBackgroundColor);
 
-	const Vec2 snapped_camera_offset = camera_manager_.GetSnappedOffset();
+	// スナップされていない(doubleの)オフセットを取得
+	const Vec2 camera_offset = camera_manager_.GetCameraOffset();
 	const RectF view_rect = camera_manager_.GetViewRect();
 
-	stage_.Draw(snapped_camera_offset, view_rect);
+	stage_.Draw(camera_offset, view_rect);
 
-	player_.Draw(snapped_camera_offset);
+	player_.Draw(camera_offset);
 
 	// UI
 }

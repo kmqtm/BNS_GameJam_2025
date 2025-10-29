@@ -92,8 +92,9 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 {
 	const ScopedRenderStates2D sampler{ SamplerState::ClampNearest };
 
-	const int32 start_x = Max(0, static_cast<int32>(view_rect.x / tile_size_));
-	const int32 start_y = Max(0, static_cast<int32>(view_rect.y / tile_size_));
+	// 描画範囲の計算にstd::floorを使用し，負の座標でも正確に動作するようにする
+	const int32 start_x = Max(0, static_cast<int32>(std::floor(view_rect.x / tile_size_)));
+	const int32 start_y = Max(0, static_cast<int32>(std::floor(view_rect.y / tile_size_)));
 	const int32 end_x = Min(map_width_, static_cast<int32>(std::ceil(view_rect.tr().x / tile_size_)));
 	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_)));
 
@@ -110,8 +111,11 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 				if(tile_id <= 0) continue;
 
 				const Vec2 world_pos = Vec2{ x * tile_size_, y * tile_size_ };
+				// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
 				const Vec2 draw_pos = world_pos - camera_offset;
-				tile_regions_[tile_id - 1].draw(draw_pos);
+
+				// 描画直前にs3d::Floorで整数にスナップ
+				tile_regions_[tile_id - 1].draw(s3d::Floor(draw_pos));
 			}
 		}
 	}
