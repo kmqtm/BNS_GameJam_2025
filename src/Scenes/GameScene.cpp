@@ -6,6 +6,10 @@
 
 GameScene::GameScene(const App::Scene::InitData& init)
 	: IScene(init)
+	, camera_manager_(
+		(stage_.GetWidth()* stage_.GetTileSize()) / 2.0,		// 固定するX座標 (ステージ中央)
+		kSceneSize											// 画面サイズ (Yオフセット計算用)
+	)
 {
 	AssetController::GetInstance().PrepareAssets(U"Game");
 }
@@ -19,8 +23,7 @@ void GameScene::update()
 {
 	player_.Update(stage_);
 
-	Vec2 target = player_.GetPos();
-	camera_manager_.SetTarget(target);
+	camera_manager_.SetTargetY(player_.GetPos().y);
 
 	camera_manager_.Update();
 }

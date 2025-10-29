@@ -27,7 +27,7 @@ private:
 	void UpdatePhysics(const Stage& stage);
 	void UpdateAnimation();
 
-	Vec2 pos_{ 0, 1.0 };
+	Vec2 pos_{ 300, 100.0 };
 	Vec2 velocity_{ 0.0, 0.0 };
 
 	bool is_moving_x_ = false;

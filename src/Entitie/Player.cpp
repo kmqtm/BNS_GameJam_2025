@@ -75,10 +75,9 @@ void Player::HandleInput()
 // 物理演算と位置更新
 void Player::UpdatePhysics(const Stage& stage)
 {
-	// プレイヤーの当たり判定のサイズ (pos_ が中央と仮定)
-	// (Draw関数のデバッグ描画 RectF{ pos_ - Vec2{16, 16}, 32, 32 } に基づく)
-	constexpr double kPlayerHalfWidth = 16.0;
-	constexpr double kPlayerHalfHeight = 16.0;
+	// プレイヤーの当たり判定のサイズ(pos_が中央と仮定)
+	constexpr double kPlayerHalfWidth = 25.0;
+	constexpr double kPlayerHalfHeight = 62.0;
 	const double tile_size = stage.GetTileSize();
 
 	// Y軸の重力・速度計算
@@ -170,11 +169,10 @@ void Player::UpdatePhysics(const Stage& stage)
 	}
 
 	// 動的Collider(vs 敵用)の位置を最終座標で更新
-	// 当たり判定を 32x32 の矩形として更新
 	collider.shape = RectF{ Arg::center(pos_), kPlayerHalfWidth * 2, kPlayerHalfHeight * 2 };
 }
 
-// アニメーション制御 (そのまま保持)
+// アニメーション制御
 void Player::UpdateAnimation()
 {
 	// swimアニメーションが再生中(または終了してスタック中)か確認
@@ -207,7 +205,7 @@ void Player::UpdateAnimation()
 		}
 	}
 
-	// (メモ: is_grounded_ を使って着地アニメーションなどをここに追加可能)
+	// (メモ: is_grounded_を使って着地アニメーションなどをここに追加可能)
 }
 
 void Player::Draw(const Vec2& camera_offset) const
@@ -218,8 +216,7 @@ void Player::Draw(const Vec2& camera_offset) const
 		const Vec2 snapped_pos = Utility::RoundVec2(pos_);
 
 		// pos_ が中央座標だと仮定しているため，描画時に左上座標に補正
-		// (32x32スプライトと仮定)
-		const Vec2 top_left_pos = snapped_pos - Vec2{ 16, 16 };
+		const Vec2 top_left_pos = snapped_pos - Vec2{ 64, 64 };
 
 		// スクリーン座標 = ワールド座標 - カメラオフセット
 		const Vec2 draw_pos = top_left_pos - camera_offset;
@@ -229,7 +226,6 @@ void Player::Draw(const Vec2& camera_offset) const
 	else
 	{
 		// texture_assetの中身がなかった場合
-		// pos_ が中央座標であることを確認
 		RectF{ Arg::center(pos_ - camera_offset), 32, 32 }.drawFrame(2, 0, Palette::Red);
 	}
 }

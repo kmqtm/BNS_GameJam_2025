@@ -1,26 +1,28 @@
 ﻿#pragma once
-#include "Utility.h" // Utility::RoundVec2 のためにインクルード
-#include <Siv3D.hpp>
+# include <Siv3D.hpp>
 
 namespace Core
 {
 	class CameraManager
 	{
 	public:
-		CameraManager();
+		CameraManager(double fixed_world_x, const Size& view_size);
+
+		void SetTargetY(double target_y);
 
 		void Update();
-
-		// カメラの追従ターゲットを設定
-		void SetTarget(const s3d::Vec2& target);
-
-		// 描画用のピクセルパーフェクトなオフセットを取得
-		s3d::Vec2 GetSnappedOffset() const;
-
-		// 描画カリング用のビュー矩形を取得
-		s3d::RectF GetViewRect() const;
+		Vec2 GetSnappedOffset() const;
+		RectF GetViewRect() const;
 
 	private:
-		s3d::Camera2D camera_;
+		Camera2D camera_{ Vec2::Zero(), 1.0, Camera2DParameters::NoControl() };
+
+		// 固定するX座標と，Y軸のオフセット値
+		double fixed_world_x_;
+		double y_offset_;
+
+		// ターゲットのY座標と，現在のカメラのY座標
+		double target_y_ = 0.0;
+		double current_y_ = 0.0;
 	};
 }
