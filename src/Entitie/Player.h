@@ -32,15 +32,16 @@ private:
 
 	bool is_moving_x_ = false;
 	bool is_grounded_ = false;
+	bool is_facing_right_ = false;
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.2 };
-	double horizontal_speed_max_{ 0.4 };
+	double horizontal_speed_max_{ 0.6 };
 	double friction_{ 0.70 };					// 水平方向の抵抗係数(1.0が無抵抗)
-	double gravity_ = 0.02;
-	double swim_power_ = -1.2;					// 水中での上昇力
-	double terminal_velocity_y_ = 0.35;
-	double rising_gravity_multiplier_ = 0.8;	// 上昇時の重力軽減倍率
+	double gravity_ = 0.05;
+	double swim_power_ = -1.8;					// 水中での上昇力
+	double terminal_velocity_y_ = 0.45;
+	double rising_gravity_multiplier_ = 0.4;	// 上昇時の重力軽減倍率(0.0で無重力)
 
 	AnimationController anim_controller_;
 };

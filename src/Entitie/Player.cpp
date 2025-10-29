@@ -23,7 +23,7 @@ Player::Player()
 
 	Animation swim_animation;
 	swim_animation.texture_asset_names = { U"player_2", U"player_3" };
-	swim_animation.frame_duration_sec = 0.2;
+	swim_animation.frame_duration_sec = 0.14;
 	swim_animation.is_looping = false;
 	anim_controller_.AddAnimation(U"swim", swim_animation);
 }
@@ -46,11 +46,13 @@ void Player::HandleInput()
 	{
 		velocity_.x = Max(velocity_.x - horizontal_accel_, -horizontal_speed_max_);
 		is_moving_x_ = true;
+		is_facing_right_ = false;
 	}
 	else if(kInputRight.pressed())
 	{
 		velocity_.x = Min(velocity_.x + horizontal_accel_, horizontal_speed_max_);
 		is_moving_x_ = true;
+		is_facing_right_ = true;
 	}
 	else
 	{
@@ -219,7 +221,17 @@ void Player::Draw(const Vec2& camera_offset) const
 		const Vec2 draw_pos = top_left_pos - camera_offset;
 
 		// 描画直前に s3d::Floor で整数にスナップ
-		texture_asset->draw(s3d::Floor(draw_pos));
+		const Vec2 final_draw_pos = s3d::Floor(draw_pos);
+
+		// 向きに応じて描画を分岐
+		if(is_facing_right_)
+		{
+			texture_asset->mirrored().draw(final_draw_pos);
+		}
+		else
+		{
+			texture_asset->draw(final_draw_pos);
+		}
 	}
 	else
 	{
