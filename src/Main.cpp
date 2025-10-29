@@ -1,13 +1,18 @@
 ﻿#include "Core/Config.h"
-#include "Core/ScreenManager.h"
 #include "Scenes/GameScene.h"
 
 #include <Siv3D.hpp>
 
 void Main()
 {
-	// ウィンドウの初期設定を一括で行う
-	screen_manager::Initialize();
+	// ウィンドウの初期設定
+	Window::SetTitle(U"BNS GameJam 2025");
+	Window::SetStyle(WindowStyle::Sizable);
+	Scene::SetTextureFilter(TextureFilter::Nearest);
+	Window::Resize(kSceneSize);
+	Scene::SetLetterbox(ColorF{ 0, 0, 0 });
+	Scene::SetResizeMode(ResizeMode::Keep);
+	Window::Maximize();
 
 	// シーンマネージャーを作成
 	App manager;

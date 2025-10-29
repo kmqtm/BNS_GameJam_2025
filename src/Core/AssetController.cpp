@@ -14,7 +14,7 @@ AssetController::AssetController()
 	asset_json_ = JSON::Load(U"asset/AssetInfomation.json");
 	if(!asset_json_)
 	{
-		Print << U"AssetInfomation.jsonの読み込みに失敗しました．";
+		throw std::runtime_error("AssetInfomation.jsonの読み込みに失敗しました．");
 	}
 }
 
@@ -24,6 +24,12 @@ void AssetController::PrepareAssets(const String& scene_name)
 	if(!asset_json_)
 	{
 		return;
+	}
+
+	if((not current_scene_name_.isEmpty()) && (current_scene_name_ != scene_name))
+	{
+		// 先に古いシーンのアセットを解放する
+		UnregisterAssets();
 	}
 
 	current_scene_name_ = scene_name;

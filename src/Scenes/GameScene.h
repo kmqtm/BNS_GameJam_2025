@@ -20,7 +20,7 @@ private:
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/tilemap.json", U"asset/Stage/tileset.png", U"collision_layer" };
 
-	Core::CameraManager camera_manager_;
+	CameraManager camera_manager_;
 
 	Player player_;
 };

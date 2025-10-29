@@ -3,8 +3,8 @@
 #include <Siv3D.hpp>
 
 inline constexpr Size kSceneSize = { 704, 800 };
-const ColorF kBackgroundColor = ColorF{ 0.8, 0.9, 1.0 };
-const ColorF kGameBackgroundColor = ColorF{ 0.4, 0.7, 1.0 };
+inline constexpr ColorF kBackgroundColor = ColorF{ 0.8, 0.9, 1.0 };
+inline constexpr ColorF kGameBackgroundColor = ColorF{ 0.4, 0.7, 1.0 };
 
 enum class SceneID : int8
 {
