@@ -9,21 +9,33 @@
 Player::Player()
 {
 	// アニメーションの初期化処理
-	Animation floating_move_animation;
-	floating_move_animation.texture_asset_names = { U"player_4", U"player_5", U"player_6" };
-	floating_move_animation.frame_duration_sec = 0.18;
-	floating_move_animation.is_looping = true;
-	anim_controller_.AddAnimation(U"floating_move", floating_move_animation);
+	Animation ground_idle_animation;
+	ground_idle_animation.texture_asset_names = { U"player_stand" };
+	ground_idle_animation.frame_duration_sec = 1.0;
+	ground_idle_animation.is_looping = false;
+	anim_controller_.AddAnimation(U"ground_idle", ground_idle_animation);
 
-	Animation idle_animation;
-	idle_animation.texture_asset_names = { U"player_1" };
-	idle_animation.frame_duration_sec = 1.0;
-	idle_animation.is_looping = false;
-	anim_controller_.AddAnimation(U"idle", idle_animation);
+	Animation float_idle_animation;
+	float_idle_animation.texture_asset_names = { U"player_1" };
+	float_idle_animation.frame_duration_sec = 1.0;
+	float_idle_animation.is_looping = false;
+	anim_controller_.AddAnimation(U"float_idle", float_idle_animation);
+
+	Animation walk_animation;
+	walk_animation.texture_asset_names = { U"player_walk1", U"player_walk2", U"player_walk3", U"player_walk4", U"player_walk5", U"player_walk6", };
+	walk_animation.frame_duration_sec = 0.32;
+	walk_animation.is_looping = true;
+	anim_controller_.AddAnimation(U"walk", walk_animation);
+
+	Animation float_move_animation;
+	float_move_animation.texture_asset_names = { U"player_4", U"player_5", U"player_6" };
+	float_move_animation.frame_duration_sec = 0.25;
+	float_move_animation.is_looping = true;
+	anim_controller_.AddAnimation(U"float_move", float_move_animation);
 
 	Animation swim_animation;
 	swim_animation.texture_asset_names = { U"player_2", U"player_3" };
-	swim_animation.frame_duration_sec = 0.14;
+	swim_animation.frame_duration_sec = 0.07;
 	swim_animation.is_looping = false;
 	anim_controller_.AddAnimation(U"swim", swim_animation);
 }
@@ -65,12 +77,12 @@ void Player::HandleInput()
 	}
 
 	// 泳ぎ
-	if(KeySpace.down())
+	if(kInputAction1.down())
 	{
 		velocity_.y = swim_power_;
 
-		anim_controller_.Play(U"idle");
-		anim_controller_.Play(U"swim");
+		// 泳ぎ始めのアニメーション再生のためにダミーアニメーションを再生
+		anim_controller_.Play(U"float_idle");
 	}
 }
 
@@ -180,34 +192,47 @@ void Player::UpdateAnimation()
 	// swimアニメーションが再生中(または終了してスタック中)か確認
 	if(anim_controller_.IsPlaying(U"swim"))
 	{
-		// 泳ぎによる上昇が終わり，重力で落下し始めたか確認
-		if(velocity_.y > 0)
+		if(velocity_.y > 0) // 下に移動中なら
 		{
-			// swimの物理動作が終わっているので，移動状態かアイドル状態に強制遷移させる
 			if(is_moving_x_)
 			{
-				anim_controller_.Play(U"floating_move");
+				anim_controller_.Play(U"float_move");
 			}
 			else
 			{
-				anim_controller_.Play(U"idle");
+				anim_controller_.Play(U"float_idle");
 			}
 		}
 	}
-	else
+	else // swimが再生中でない場合
 	{
-		// swimが再生中でない(ゲーム開始時など)場合は，通常通り
-		if(is_moving_x_)
+		if(velocity_.y < 0) // 上に移動中なら
 		{
-			anim_controller_.Play(U"floating_move");
+			anim_controller_.Play(U"swim");
 		}
-		else
+		else if(is_grounded_) // 接地時
 		{
-			anim_controller_.Play(U"idle");
+			if(is_moving_x_)
+			{
+				anim_controller_.Play(U"walk");
+			}
+			else
+			{
+				anim_controller_.Play(U"ground_idle");
+			}
+		}
+		else // 空中(水中)時
+		{
+			if(is_moving_x_)
+			{
+				anim_controller_.Play(U"float_move");
+			}
+			else
+			{
+				anim_controller_.Play(U"float_idle");
+			}
 		}
 	}
-
-	// (メモ: is_grounded_を使って着地アニメーションなどをここに追加可能)
 }
 
 void Player::Draw(const Vec2& camera_offset) const

@@ -11,7 +11,15 @@
 			"player_3.png",
 			"player_4.png",
 			"player_5.png",
-      "player_6.png"
+			"player_6.png",
+			"player_dead.png",
+			"player_stand.png",
+			"player_walk1.png",
+			"player_walk2.png",
+			"player_walk3.png",
+			"player_walk4.png",
+			"player_walk5.png",
+			"player_walk6.png"
 		]
 	}
 }

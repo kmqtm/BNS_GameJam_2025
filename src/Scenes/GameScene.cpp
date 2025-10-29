@@ -37,9 +37,11 @@ void GameScene::draw() const
 	const Vec2 camera_offset = camera_manager_.GetCameraOffset();
 	const RectF view_rect = camera_manager_.GetViewRect();
 
+	player_.Draw(camera_offset);
+
 	stage_.Draw(camera_offset, view_rect);
 
-	player_.Draw(camera_offset);
+
 
 	// UI
 }

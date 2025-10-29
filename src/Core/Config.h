@@ -19,3 +19,4 @@ const InputGroup kInputLeft{ KeyLeft, KeyA };
 const InputGroup kInputRight{ KeyRight, KeyD };
 const InputGroup kInputUp{ KeyUp, KeyW };
 const InputGroup kInputDown{ KeyDown, KeyS };
+const InputGroup kInputAction1{ KeySpace };
