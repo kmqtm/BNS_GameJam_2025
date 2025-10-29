@@ -181,7 +181,6 @@ void Player::UpdatePhysics(const Stage& stage)
 			pos_.y = next_y;
 		}
 	}
-
 	// 動的Collider(vs 敵用)の位置を最終座標で更新
 	collider.shape = RectF{ Arg::center(pos_), kPlayerHalfWidth * 2, kPlayerHalfHeight * 2 };
 }
