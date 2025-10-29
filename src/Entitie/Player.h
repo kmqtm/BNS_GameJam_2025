@@ -37,7 +37,7 @@ private:
 	// 物理パラメータ
 	double horizontal_accel_{ 0.2 };
 	double horizontal_speed_max_{ 0.6 };
-	double friction_{ 0.70 };					// 水平方向の抵抗係数(1.0が無抵抗)
+	double friction_{ 0.90 };					// 水平方向の抵抗係数(1.0が無抵抗)
 	double gravity_ = 0.05;
 	double swim_power_ = -1.8;					// 水中での上昇力
 	double terminal_velocity_y_ = 0.45;

@@ -96,7 +96,7 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 	const int32 start_x = Max(0, static_cast<int32>(std::floor(view_rect.x / tile_size_)));
 	const int32 start_y = Max(0, static_cast<int32>(std::floor(view_rect.y / tile_size_)));
 	const int32 end_x = Min(map_width_, static_cast<int32>(std::ceil(view_rect.tr().x / tile_size_)));
-	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_)));
+	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_))) + 1;
 
 	for(const auto& layer : layers_)
 	{
@@ -114,14 +114,14 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 				// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
 				const Vec2 draw_pos = world_pos - camera_offset;
 
-				// 描画直前にs3d::Floorで整数にスナップ
+				// 整数にスナップ
 				tile_regions_[tile_id - 1].draw(s3d::Floor(draw_pos));
 			}
 		}
 	}
 }
 
-// ワールド座標 (px) から当たり判定をチェックする関数
+// ワールド座標(px)から当たり判定をチェックする関数
 bool Stage::IsSolid(double world_x, double world_y) const
 {
 	// 当たり判定レイヤーがコンストラクタで正常に設定されていない場合は常に「壁なし」
@@ -136,7 +136,7 @@ bool Stage::IsSolid(double world_x, double world_y) const
 	const int32 tile_y = static_cast<int32>(std::floor(world_y / tile_size_));
 
 	// マップの範囲外かチェック
-	// (範囲外は「壁」として扱う)
+	// (範囲外は壁として扱う)
 	if((tile_x < 0) || (tile_x >= map_width_) || (tile_y < 0) || (tile_y >= map_height_))
 	{
 		return true;

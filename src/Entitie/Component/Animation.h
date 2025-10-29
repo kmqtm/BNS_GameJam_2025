@@ -3,7 +3,8 @@
 #include <Siv3D.hpp>
 
 // 1つのアニメーションパターンを定義する構造体
-struct Animation {
+struct Animation
+{
 	// アニメーションを構成するテクスチャアセット名のリスト
 	Array<String> texture_asset_names;
 
