@@ -817,9 +817,6 @@
     <ClCompile Include="src\Scenes\GameScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\ScreenManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Entitie\Component\AnimationController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -835,6 +832,9 @@
     <ClCompile Include="src\Core\Utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Entitie\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\pch\stdafx.h">
@@ -847,9 +847,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Scenes\GameScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\ScreenManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Entitie\Component\Animation.h">
@@ -871,6 +868,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entitie\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
