@@ -41,6 +41,8 @@ Player::Player()
 
 void Player::Update(const Stage& stage)
 {
+	just_took_damage_ = false;
+
 	HandleInput();
 	UpdatePhysics(stage);
 	UpdateAnimation();
@@ -65,15 +67,12 @@ void Player::Update(const Stage& stage)
 				break;
 			}
 		}
-
 	}
-
 }
 
 // 入力処理
 void Player::HandleInput()
 {
-	// 左右移動
 	is_moving_x_ = false;
 	if(kInputLeft.pressed())
 	{
@@ -89,7 +88,6 @@ void Player::HandleInput()
 	}
 	else
 	{
-		// 水平方向の抵抗
 		velocity_.x *= friction_;
 		if(std::abs(velocity_.x) < 0.1)
 		{
@@ -97,12 +95,9 @@ void Player::HandleInput()
 		}
 	}
 
-	// 泳ぎ
 	if(kInputAction1.down())
 	{
 		velocity_.y = swim_power_;
-
-		// 泳ぎ始めのアニメーション再生のためにダミーアニメーションを再生
 		anim_controller_.Play(U"float_idle");
 		anim_controller_.Play(U"swim");
 	}
@@ -111,12 +106,14 @@ void Player::HandleInput()
 // 物理演算と位置更新
 void Player::UpdatePhysics(const Stage& stage)
 {
-	// プレイヤーの当たり判定のサイズ(pos_が中央と仮定)
-	constexpr double kPlayerHalfWidth = 25.0;
-	constexpr double kPlayerHalfHeight = 62.0;
-	const double tile_size = stage.GetTileSize();
+	ApplyGravity();
+	MoveX(stage);
+	MoveY(stage);
+	UpdateColliderPosition();
+}
 
-	// Y軸の重力・速度計算
+void Player::ApplyGravity()
+{
 	if(velocity_.y < 0)
 	{
 		velocity_.y += (gravity_ * rising_gravity_multiplier_);
@@ -126,19 +123,23 @@ void Player::UpdatePhysics(const Stage& stage)
 		velocity_.y += gravity_;
 	}
 	velocity_.y = Min(velocity_.y, terminal_velocity_y_);
+}
 
-	// X軸の移動と衝突判定
+void Player::MoveX(const Stage& stage)
+{
+	const double tile_size = stage.GetTileSize();
 	double next_x = pos_.x + velocity_.x;
+
 	if(velocity_.x > 0)
 	{
 		// センサー: 右側面の上端と下端
-		const double sensor_x = next_x + kPlayerHalfWidth;
-		const double sensor_y_top = pos_.y - kPlayerHalfHeight + 1.0;
-		const double sensor_y_bot = pos_.y + kPlayerHalfHeight - 1.0;
+		const double sensor_x = next_x + kPhysicsHalfWidth;
+		const double sensor_y_top = pos_.y - kPhysicsHalfHeight + 1.0;
+		const double sensor_y_bot = pos_.y + kPhysicsHalfHeight - 1.0;
 		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_bot))
 		{
 			// 衝突，壁タイルの左端にスナップ
-			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) - kPlayerHalfWidth;
+			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) - kPhysicsHalfWidth;
 			velocity_.x = 0; // 速度リセット
 		}
 		else
@@ -149,13 +150,13 @@ void Player::UpdatePhysics(const Stage& stage)
 	else if(velocity_.x < 0)
 	{
 		// センサー: 左側面の上端と下端
-		const double sensor_x = next_x - kPlayerHalfWidth;
-		const double sensor_y_top = pos_.y - kPlayerHalfHeight + 1.0;
-		const double sensor_y_bot = pos_.y + kPlayerHalfHeight - 1.0;
+		const double sensor_x = next_x - kPhysicsHalfWidth;
+		const double sensor_y_top = pos_.y - kPhysicsHalfHeight + 1.0;
+		const double sensor_y_bot = pos_.y + kPhysicsHalfHeight - 1.0;
 		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_bot))
 		{
 			// 衝突，壁タイルの右端にスナップ
-			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + kPlayerHalfWidth;
+			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + kPhysicsHalfWidth;
 			velocity_.x = 0; // 速度リセット
 		}
 		else
@@ -163,21 +164,24 @@ void Player::UpdatePhysics(const Stage& stage)
 			pos_.x = next_x;
 		}
 	}
+}
 
-	// Y軸の移動と衝突判定
+void Player::MoveY(const Stage& stage)
+{
+	const double tile_size = stage.GetTileSize();
 	double next_y = pos_.y + velocity_.y;
 	is_grounded_ = false;
 
 	if(velocity_.y > 0)
 	{
 		// センサー: 下面の左端と右端
-		const double sensor_y = next_y + kPlayerHalfHeight;
-		const double sensor_x_left = pos_.x - kPlayerHalfWidth + 1.0;
-		const double sensor_x_right = pos_.x + kPlayerHalfWidth - 1.0;
+		const double sensor_y = next_y + kPhysicsHalfHeight;
+		const double sensor_x_left = pos_.x - kPhysicsHalfWidth + 1.0;
+		const double sensor_x_right = pos_.x + kPhysicsHalfWidth - 1.0;
 		if(stage.IsSolid(sensor_x_left, sensor_y) || stage.IsSolid(sensor_x_right, sensor_y))
 		{
 			// 衝突，床タイルの上端にスナップ
-			pos_.y = (std::floor(sensor_y / tile_size) * tile_size) - kPlayerHalfHeight;
+			pos_.y = (std::floor(sensor_y / tile_size) * tile_size) - kPhysicsHalfHeight;
 			velocity_.y = 0; // 速度リセット
 			is_grounded_ = true; // 着地
 		}
@@ -186,16 +190,16 @@ void Player::UpdatePhysics(const Stage& stage)
 			pos_.y = next_y;
 		}
 	}
-	else if(velocity_.y < 0)
+	else if(velocity_.y < 0 && (not just_took_damage_))
 	{
 		// センサー: 上面の左端と右端
-		const double sensor_y = next_y - kPlayerHalfHeight;
-		const double sensor_x_left = pos_.x - kPlayerHalfWidth + 1.0;
-		const double sensor_x_right = pos_.x + kPlayerHalfWidth - 1.0;
+		const double sensor_y = next_y - kPhysicsHalfHeight;
+		const double sensor_x_left = pos_.x - kPhysicsHalfWidth + 1.0;
+		const double sensor_x_right = pos_.x + kPhysicsHalfWidth - 1.0;
 		if(stage.IsSolid(sensor_x_left, sensor_y) || stage.IsSolid(sensor_x_right, sensor_y))
 		{
 			// 衝突，天井タイルの下端にスナップ
-			pos_.y = (std::floor(sensor_y / tile_size) * tile_size) + tile_size + kPlayerHalfHeight;
+			pos_.y = (std::floor(sensor_y / tile_size) * tile_size) + tile_size + kPhysicsHalfHeight;
 			velocity_.y = 0; // 速度リセット
 		}
 		else
@@ -203,17 +207,26 @@ void Player::UpdatePhysics(const Stage& stage)
 			pos_.y = next_y;
 		}
 	}
-	// 動的Collider(vs 敵用)の位置を最終座標で更新
-	collider.shape = RectF{ Arg::center(pos_), kPlayerHalfWidth * 2, kPlayerHalfHeight * 2 };
+	else if(velocity_.y < 0)
+	{
+		pos_.y = next_y;
+	}
 }
+
+void Player::UpdateColliderPosition()
+{
+	// 動的Collider(vs 敵用)の位置を最終座標で更新
+	collider.shape = RectF{ Arg::center(pos_), kColliderWidth, kColliderHeight };
+}
+
 
 // アニメーション制御
 void Player::UpdateAnimation()
 {
-	// swimアニメーションが再生中(または終了してスタック中)か確認
+	// (処理 ... 変更なし)
 	if(anim_controller_.IsPlaying(U"swim"))
 	{
-		if(velocity_.y > 0) // 下に移動中なら
+		if(velocity_.y > 0)
 		{
 			if(is_moving_x_)
 			{
@@ -225,9 +238,9 @@ void Player::UpdateAnimation()
 			}
 		}
 	}
-	else // swimが再生中でない場合
+	else
 	{
-		if(is_grounded_) // 接地時
+		if(is_grounded_)
 		{
 			if(is_moving_x_)
 			{
@@ -238,7 +251,7 @@ void Player::UpdateAnimation()
 				anim_controller_.Play(U"ground_idle");
 			}
 		}
-		else // 空中(水中)時
+		else
 		{
 			if(is_moving_x_)
 			{
@@ -254,13 +267,10 @@ void Player::UpdateAnimation()
 
 void Player::Draw(const Vec2& camera_offset) const
 {
-	// 無敵時間の点滅処理
 	if(is_invincible_)
 	{
-		// (タイマー % 点滅間隔) < 表示時間 かどうか
 		if((invincible_timer_.ms() % kBlinkIntervalMs) < kBlinkOnDurationMs)
 		{
-			// 下の描画処理へ進む
 		}
 		else
 		{
@@ -270,12 +280,9 @@ void Player::Draw(const Vec2& camera_offset) const
 
 	if(auto texture_asset = anim_controller_.GetCurrentTextureAsset())
 	{
-		const Vec2 top_left_pos = pos_ - Vec2{ 64, 64 };
+		const Vec2 top_left_pos = pos_ - kDrawOffset;
 
-		// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
 		const Vec2 draw_pos = top_left_pos - camera_offset;
-
-		// 描画直前に s3d::Floor で整数にスナップ
 		const Vec2 final_draw_pos = s3d::Floor(draw_pos);
 
 		if(is_facing_right_)
@@ -303,15 +310,15 @@ void Player::SetPos(const Vec2& new_pos)
 
 void Player::TakeDamage()
 {
-	// 既に無敵なら何もしない
 	if(is_invincible_)
 	{
 		return;
 	}
 
 	Print << U"Player took damage!";
-	// 上に少し浮く
 	velocity_.y = -1.0;
+
+	just_took_damage_ = true;
 
 	is_invincible_ = true;
 	invincible_timer_.restart();

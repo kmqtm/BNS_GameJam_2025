@@ -34,19 +34,19 @@ Enemy::Enemy(const String& type, const Vec2& center_pos)
 
 		if(type == U"Coral_L")
 		{
-			size_ = { 32, 32 };
+			size_ = { 64, 64 };
 			anim.texture_asset_names = { U"coral_l" };
 			anim.is_looping = false;
 		}
 		else if(type == U"Coral_R")
 		{
-			size_ = { 32, 32 };
+			size_ = { 64, 64 };
 			anim.texture_asset_names = { U"coral_r" };
 			anim.is_looping = false;
 		}
 		else if(type == U"Clione")
 		{
-			size_ = { 32, 32 };
+			size_ = { 18, 24 };
 			anim.texture_asset_names = { U"clione1" };
 			anim.frame_duration_sec = 0.5;
 		}
@@ -143,10 +143,13 @@ void Enemy::Draw(const Vec2& camera_offset) const
 	if(auto texture_asset = anim_controller_.GetCurrentTextureAsset())
 	{
 		// pos_は中央座標なので，左上座標に補正
-		const Vec2 top_left_pos = pos_ - (size_ / 2.0);
+		//const Vec2 top_left_pos = pos_ - (size_ / 2.0);
 
 		// スクリーン座標 = ワールド座標 - カメラオフセット
-		const Vec2 draw_pos = top_left_pos - camera_offset;
+		//const Vec2 draw_pos = top_left_pos - camera_offset;
+
+		// スクリーン座標 = ワールドの中心座標 - カメラオフセット
+		const Vec2 draw_pos = pos_ - camera_offset;
 
 		// 整数にスナップ
 		const Vec2 final_draw_pos = s3d::Floor(draw_pos);
@@ -154,11 +157,11 @@ void Enemy::Draw(const Vec2& camera_offset) const
 		// 向きに応じて描画を分岐
 		if(is_facing_right_)
 		{
-			texture_asset->mirrored().draw(final_draw_pos);
+			texture_asset->mirrored().drawAt(final_draw_pos);
 		}
 		else
 		{
-			texture_asset->draw(final_draw_pos);
+			texture_asset->drawAt(final_draw_pos);
 		}
 	}
 }

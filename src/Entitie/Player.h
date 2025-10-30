@@ -25,6 +25,12 @@ public:
 private:
 	void HandleInput();
 	void UpdatePhysics(const Stage& stage);
+
+	void ApplyGravity();
+	void MoveX(const Stage& stage);
+	void MoveY(const Stage& stage);
+	void UpdateColliderPosition();
+
 	void UpdateAnimation();
 
 	void TakeDamage();
@@ -41,6 +47,19 @@ private:
 	static constexpr double kInvincibleDurationSec = 2.7;	// 無敵時間
 	static constexpr int32 kBlinkIntervalMs = 300;			// 点滅の間隔
 	static constexpr int32 kBlinkOnDurationMs = 150;		// 点滅中の表示時間
+
+	bool just_took_damage_ = false;
+
+	// 地形衝突(Physics)用のサイズ
+	static constexpr double kPhysicsHalfWidth = 20.0;
+	static constexpr double kPhysicsHalfHeight = 62.0;
+
+	// 敵との当たり判定(Collider)用のサイズ
+	static constexpr double kColliderWidth = 60.0;
+	static constexpr double kColliderHeight = 80.0;
+
+	// 描画オフセット(スプライトの中心から左上までの距離)
+	static constexpr Vec2 kDrawOffset = { 64.0, 64.0 };
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.2 };
