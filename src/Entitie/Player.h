@@ -50,8 +50,8 @@ private:
 
 	bool just_took_damage_ = false;
 
-	// 地形衝突(Physics)用のサイズ
-	static constexpr double kPhysicsHalfWidth = 20.0;
+	// 地形衝突(Physics)用のサイズ(ハーフ)
+	static constexpr double kPhysicsHalfWidth = 25.0;
 	static constexpr double kPhysicsHalfHeight = 62.0;
 
 	// 敵との当たり判定(Collider)用のサイズ

@@ -5,7 +5,7 @@
 
 CameraManager::CameraManager(double fixed_world_x, const Size& view_size)
 	: fixed_world_x_(fixed_world_x)
-	, y_offset_(view_size.y * 0.1)
+	, y_offset_(view_size.y* (1.0 / 6.0))
 	, view_size_(view_size)
 	, target_y_(0.0)
 	, current_y_(target_y_ + y_offset_)

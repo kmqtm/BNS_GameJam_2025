@@ -33,17 +33,34 @@ public:
 private:
 	void UpdatePatrol(const Stage& stage);
 
+	void SetupProperties(const String& type);
+	void SetupAnimations(const String& type);
+
+	void UpdateAI(const Stage& stage);
+	void UpdateColliderPosition();
+	void HandleCollision();
+
 	EnemyBehavior behavior_;
 
 	Vec2 pos_;
 	Vec2 velocity_ = Vec2::Zero();
-	Vec2 size_; // 当たり判定サイズ
+
+	// 物理演算(壁との当たり判定)用のサイズ
+	Vec2 physics_size_;
 
 	bool is_alive_ = true;
 	bool is_facing_right_ = false;
 
 	AnimationController anim_controller_;
 	Collider collider_{ Circle{0,0,1}, ColliderTag::kEnemy };
+
+	static constexpr Size kFishPhysicsSize = { 32, 24 };
+	static constexpr Size kCoralPhysicsSize = { 64, 64 };
+	static constexpr Size kClionePhysicsSize = { 18, 24 };
+
+	static constexpr Size kFishColliderSize = { 32, 24 };
+	static constexpr double kCoralColliderRadius = 28.0;
+	static constexpr Size kClioneColliderSize = { 18, 24 };
 
 	static constexpr double kPatrolSpeed = 0.4; // 巡回型敵の移動速度
 };
