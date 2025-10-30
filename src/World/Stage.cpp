@@ -1,4 +1,5 @@
 ﻿#include "../Core/Utility.h"
+#include "SpawnInfo.h"
 # include "Stage.h"
 
 #include <cmath>
@@ -66,6 +67,10 @@ void Stage::LoadFromJson(const FilePath& json_path)
 		{
 			ParseTileLayer(layer);
 		}
+		else if(layer[U"type"].getString() == U"objectgroup")
+		{
+			ParseObjectLayer(layer);
+		}
 	}
 }
 
@@ -86,6 +91,29 @@ void Stage::ParseTileLayer(const JSON& layer_json)
 
 	new_layer.tiles = std::move(grid);
 	layers_ << std::move(new_layer);
+}
+
+void Stage::ParseObjectLayer(const JSON& layer_json)
+{
+	if(layer_json[U"name"].getString() != U"spawn_layer")
+	{
+		return;
+	}
+
+	for(const auto& object : layer_json[U"objects"].arrayView())
+	{
+		SpawnInfo info;
+		info.type = object[U"type"].getString();
+		info.pos = { object[U"x"].get<double>(), object[U"y"].get<double>() };
+		info.size = { object[U"width"].get<double>(), object[U"height"].get<double>() };
+
+		spawn_points_.push_back(info);
+	}
+}
+
+const s3d::Array<SpawnInfo>& Stage::GetSpawnPoints() const
+{
+	return spawn_points_;
 }
 
 void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
@@ -111,7 +139,6 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 				if(tile_id <= 0) continue;
 
 				const Vec2 world_pos = Vec2{ x * tile_size_, y * tile_size_ };
-				// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
 				const Vec2 draw_pos = world_pos - camera_offset;
 
 				// 整数にスナップ

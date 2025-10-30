@@ -434,6 +434,7 @@
     <ClInclude Include="src\Entitie\Player.h" />
     <ClInclude Include="src\pch\stdafx.h" />
     <ClInclude Include="src\Scenes\GameScene.h" />
+    <ClInclude Include="src\World\SpawnInfo.h" />
     <ClInclude Include="src\World\Stage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

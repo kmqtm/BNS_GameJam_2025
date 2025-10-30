@@ -1,5 +1,6 @@
 ﻿#include "../Core/AssetController.h"
 #include "../Core/Config.h"
+#include "../World/SpawnInfo.h"
 #include "GameScene.h"
 
 #include <Siv3D.hpp>
@@ -24,10 +25,31 @@ GameScene::~GameScene()
 
 void GameScene::SpawnEnemies()
 {
-	enemies_.emplace_back(U"Clione", player_.GetPos() + Vec2{ 200, 0 });
-	enemies_.emplace_back(U"Coral_R", player_.GetPos() + Vec2{ -100, 0 });
-}
+	// Stageからスポーン情報を取得
+	const auto& spawn_points = stage_.GetSpawnPoints();
 
+	// 情報を元に敵を生成
+	for(const auto& info : spawn_points)
+	{
+		if(info.type.isEmpty())
+		{
+			Print << U"Warning: Tiled object_spawn に 'Type' が設定されていないオブジェクトがあります．";
+			continue;
+		}
+
+		// 座標変換
+		// Tiledの座標(info.pos)は左上
+		// Enemyコンストラクタ (Enemy.cpp) は「中心座標」を期待している
+		// 
+		// info.pos (左上) + info.size / 2.0 (サイズの半分) = 中心座標
+		const Vec2 center_pos = info.pos + (info.size / 2.0);
+
+		// 4. Enemyを生成
+		enemies_.emplace_back(info.type, center_pos);
+	}
+
+	Print << U"Spawned {} enemies."_fmt(enemies_.size());
+}
 
 void GameScene::update()
 {
@@ -83,9 +105,9 @@ void GameScene::draw() const
 	const Vec2 camera_offset = camera_manager_.GetCameraOffset();
 	const RectF view_rect = camera_manager_.GetViewRect();
 
-	stage_.Draw(camera_offset, view_rect);
-
 	player_.Draw(camera_offset);
+
+	stage_.Draw(camera_offset, view_rect);
 
 	for(const auto& enemy : enemies_)
 	{
