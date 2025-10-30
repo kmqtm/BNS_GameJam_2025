@@ -124,7 +124,7 @@ void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 	const int32 start_x = Max(0, static_cast<int32>(std::floor(view_rect.x / tile_size_)));
 	const int32 start_y = Max(0, static_cast<int32>(std::floor(view_rect.y / tile_size_)));
 	const int32 end_x = Min(map_width_, static_cast<int32>(std::ceil(view_rect.tr().x / tile_size_)));
-	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_))) + 1;
+	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_)));
 
 	for(const auto& layer : layers_)
 	{

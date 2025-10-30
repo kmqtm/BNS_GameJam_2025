@@ -12,12 +12,11 @@ struct TileMapLayer
 class Stage
 {
 public:
-	// 第3引数で「当たり判定として扱うレイヤー名」を受け取る
 	Stage(const FilePath& json_path, const FilePath& tileset_path, const String& collision_layer_name);
 
 	void Draw(const Vec2& camera_offset, const RectF& view_rect) const;
 
-	// 指定したワールド座標 (ピクセル単位) が「壁」タイル上かどうかを判定する
+	// 指定したワールド座標が「壁」タイル上かどうかを判定する
 	bool IsSolid(double world_x, double world_y) const;
 
 	const s3d::Array<SpawnInfo>& GetSpawnPoints() const;

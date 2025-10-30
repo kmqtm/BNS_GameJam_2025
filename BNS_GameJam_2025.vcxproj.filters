@@ -210,6 +210,12 @@
     <Image Include="App\example\obj\siv3d-kun-eye.png">
       <Filter>Resource Files\example\obj</Filter>
     </Image>
+    <Image Include="App\asset\Stage\v2\tileset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="App\asset\Stage\v1\tileset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="App\Resource.rc">
@@ -761,6 +767,8 @@
     <None Include=".gitignore" />
     <None Include=".editorconfig" />
     <None Include=".gitattributes" />
+    <None Include="App\asset\Stage\v2\tilemap_v2.json" />
+    <None Include="App\asset\Stage\v1\tilemap.json" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">

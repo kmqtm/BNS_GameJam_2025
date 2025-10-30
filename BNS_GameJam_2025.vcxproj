@@ -115,6 +115,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Image Include="App\asset\Stage\v1\tileset.png">
+      <DeploymentContent>true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    </Image>
+    <Image Include="App\asset\Stage\v2\tileset.png">
+      <DeploymentContent>true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    </Image>
     <Image Include="App\engine\texture\box-shadow\128.png" />
     <Image Include="App\engine\texture\box-shadow\16.png" />
     <Image Include="App\engine\texture\box-shadow\256.png" />
@@ -166,6 +174,14 @@
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="App\asset\AssetInfomation.json" />
+    <None Include="App\asset\Stage\v1\tilemap.json">
+      <DeploymentContent>true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    </None>
+    <None Include="App\asset\Stage\v2\tilemap_v2.json">
+      <DeploymentContent>true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    </None>
     <None Include="App\BNS_GameJam_2025(debug).exe" />
     <None Include="App\dll\soundtouch\SoundTouch_x64.dll" />
     <None Include="App\engine\font\fontawesome\fontawesome-brands.otf.zstdcmp" />

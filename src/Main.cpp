@@ -13,11 +13,17 @@ void Main()
 	Scene::SetLetterbox(ColorF{ 0, 0, 0 });
 	Scene::SetResizeMode(ResizeMode::Keep);
 	Window::Maximize();
+	Graphics::SetVSyncEnabled(false);
+
+	// FPS固定のためのストップウォッチ
+	Stopwatch FPS_SW;
+	FPS_SW.start();
 
 	// シーンマネージャーを作成
 	App manager;
 	manager.add<GameScene>(SceneID::kGame);
-	manager.init(SceneID::kGame, 10.0ms);
+
+	manager.init(SceneID::kGame, 1000.0ms / 60);
 
 	// ウィンドウを閉じるユーザアクションのみを終了操作に設定
 	System::SetTerminationTriggers(UserAction::CloseButtonClicked);
@@ -28,5 +34,10 @@ void Main()
 		{
 			break;
 		}
+
+		// 1/60秒が経過するまでループ
+		while(FPS_SW.msF() < 1000.0 / 60) {}
+		//ストップウォッチをリスタート
+		FPS_SW.restart();
 	}
 }

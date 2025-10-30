@@ -37,18 +37,12 @@ void GameScene::SpawnEnemies()
 			continue;
 		}
 
-		// 座標変換
-		// Tiledの座標(info.pos)は左上
-		// Enemyコンストラクタ (Enemy.cpp) は「中心座標」を期待している
-		// 
-		// info.pos (左上) + info.size / 2.0 (サイズの半分) = 中心座標
 		const Vec2 center_pos = info.pos + (info.size / 2.0);
 
-		// 4. Enemyを生成
 		enemies_.emplace_back(info.type, center_pos);
 	}
 
-	Print << U"Spawned {} enemies."_fmt(enemies_.size());
+	//Print << U"Spawned {} enemies."_fmt(enemies_.size());
 }
 
 void GameScene::update()

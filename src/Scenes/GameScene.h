@@ -22,7 +22,7 @@ private:
 	void SpawnEnemies();
 
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
-	Stage stage_{ U"asset/Stage/tilemap.json", U"asset/Stage/tileset.png", U"collision_layer" };
+	Stage stage_{ U"asset/Stage/v2/tilemap.json", U"asset/Stage/v2/tileset.png", U"collision_layer" };
 
 	CameraManager camera_manager_;
 

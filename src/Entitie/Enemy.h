@@ -62,5 +62,5 @@ private:
 	static constexpr double kCoralColliderRadius = 28.0;
 	static constexpr Size kClioneColliderSize = { 18, 24 };
 
-	static constexpr double kPatrolSpeed = 0.4; // 巡回型敵の移動速度
+	static constexpr double kPatrolSpeed = 0.67; // 巡回型敵の移動速度
 };

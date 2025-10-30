@@ -44,5 +44,5 @@ Vec2 CameraManager::GetCameraOffset() const
 
 RectF CameraManager::GetViewRect() const
 {
-	return camera_.getRegion();
+	return RectF{ GetCameraOffset(), view_size_ };
 }

@@ -130,34 +130,36 @@ void Player::MoveX(const Stage& stage)
 	const double tile_size = stage.GetTileSize();
 	double next_x = pos_.x + velocity_.x;
 
-	if(velocity_.x > 0)
+	if(velocity_.x > 0) // 右へ移動
 	{
-		// センサー: 右側面の上端と下端
 		const double sensor_x = next_x + kPhysicsHalfWidth;
 		const double sensor_y_top = pos_.y - kPhysicsHalfHeight + 1.0;
 		const double sensor_y_bot = pos_.y + kPhysicsHalfHeight - 1.0;
-		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_bot))
+
+		const double sensor_y_mid = pos_.y;
+
+		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_mid) || stage.IsSolid(sensor_x, sensor_y_bot))
 		{
-			// 衝突，壁タイルの左端にスナップ
 			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) - kPhysicsHalfWidth;
-			velocity_.x = 0; // 速度リセット
+			velocity_.x = 0;
 		}
 		else
 		{
 			pos_.x = next_x;
 		}
 	}
-	else if(velocity_.x < 0)
+	else if(velocity_.x < 0) // 左へ移動
 	{
-		// センサー: 左側面の上端と下端
 		const double sensor_x = next_x - kPhysicsHalfWidth;
 		const double sensor_y_top = pos_.y - kPhysicsHalfHeight + 1.0;
 		const double sensor_y_bot = pos_.y + kPhysicsHalfHeight - 1.0;
-		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_bot))
+
+		const double sensor_y_mid = pos_.y;
+
+		if(stage.IsSolid(sensor_x, sensor_y_top) || stage.IsSolid(sensor_x, sensor_y_mid) || stage.IsSolid(sensor_x, sensor_y_bot))
 		{
-			// 衝突，壁タイルの右端にスナップ
 			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + kPhysicsHalfWidth;
-			velocity_.x = 0; // 速度リセット
+			velocity_.x = 0;
 		}
 		else
 		{
