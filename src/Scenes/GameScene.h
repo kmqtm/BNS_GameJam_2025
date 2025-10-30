@@ -2,6 +2,7 @@
 
 #include "../Core/CameraManager.h"
 #include "../Core/Config.h"
+#include "../Entitie/Enemy.h"
 #include "../Entitie/Player.h"
 #include "../World/Stage.h"
 
@@ -17,10 +18,15 @@ public:
 	void draw() const override;
 
 private:
+	// Tiledからスポーン情報を読み込み，enemies_配列を初期化
+	void SpawnEnemies();
+
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/tilemap.json", U"asset/Stage/tileset.png", U"collision_layer" };
 
 	CameraManager camera_manager_;
 
 	Player player_;
+
+	s3d::Array<Enemy> enemies_;
 };

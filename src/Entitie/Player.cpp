@@ -8,7 +8,6 @@
 
 Player::Player()
 {
-	// アニメーションの初期化処理
 	Animation ground_idle_animation;
 	ground_idle_animation.texture_asset_names = { U"player_stand" };
 	ground_idle_animation.frame_duration_sec = 1.0;
@@ -47,6 +46,28 @@ void Player::Update(const Stage& stage)
 	UpdateAnimation();
 
 	anim_controller_.Update();
+
+	if(is_invincible_)
+	{
+		if(invincible_timer_.sF() > kInvincibleDurationSec)
+		{
+			is_invincible_ = false; // 無敵時間終了
+		}
+	}
+
+	if((not is_invincible_) && collider.is_colliding)
+	{
+		for(const auto& tag : collider.collided_tags)
+		{
+			if(tag == ColliderTag::kEnemy)
+			{
+				TakeDamage();
+				break;
+			}
+		}
+
+	}
+
 }
 
 // 入力処理
@@ -83,6 +104,7 @@ void Player::HandleInput()
 
 		// 泳ぎ始めのアニメーション再生のためにダミーアニメーションを再生
 		anim_controller_.Play(U"float_idle");
+		anim_controller_.Play(U"swim");
 	}
 }
 
@@ -205,11 +227,7 @@ void Player::UpdateAnimation()
 	}
 	else // swimが再生中でない場合
 	{
-		if(velocity_.y < 0) // 上に移動中なら
-		{
-			anim_controller_.Play(U"swim");
-		}
-		else if(is_grounded_) // 接地時
+		if(is_grounded_) // 接地時
 		{
 			if(is_moving_x_)
 			{
@@ -236,9 +254,22 @@ void Player::UpdateAnimation()
 
 void Player::Draw(const Vec2& camera_offset) const
 {
+	// 無敵時間の点滅処理
+	if(is_invincible_)
+	{
+		// (タイマー % 点滅間隔) < 表示時間 かどうか
+		if((invincible_timer_.ms() % kBlinkIntervalMs) < kBlinkOnDurationMs)
+		{
+			// 下の描画処理へ進む
+		}
+		else
+		{
+			return;
+		}
+	}
+
 	if(auto texture_asset = anim_controller_.GetCurrentTextureAsset())
 	{
-		// pos_(double)が中央座標だと仮定しているため，描画時に左上座標に補正
 		const Vec2 top_left_pos = pos_ - Vec2{ 64, 64 };
 
 		// スクリーン座標 = ワールド座標 - カメラオフセット(doubleのまま計算)
@@ -247,7 +278,6 @@ void Player::Draw(const Vec2& camera_offset) const
 		// 描画直前に s3d::Floor で整数にスナップ
 		const Vec2 final_draw_pos = s3d::Floor(draw_pos);
 
-		// 向きに応じて描画を分岐
 		if(is_facing_right_)
 		{
 			texture_asset->mirrored().draw(final_draw_pos);
@@ -259,7 +289,6 @@ void Player::Draw(const Vec2& camera_offset) const
 	}
 	else
 	{
-		// texture_assetの中身がなかった場合
 		RectF{ Arg::center(s3d::Floor(pos_ - camera_offset)), 32, 32 }.drawFrame(2, 0, Palette::Red);
 	}
 }
@@ -270,4 +299,20 @@ void Player::SetPos(const Vec2& new_pos)
 {
 	pos_ = new_pos;
 	velocity_ = Vec2::Zero();
+}
+
+void Player::TakeDamage()
+{
+	// 既に無敵なら何もしない
+	if(is_invincible_)
+	{
+		return;
+	}
+
+	Print << U"Player took damage!";
+	// 上に少し浮く
+	velocity_.y = -1.0;
+
+	is_invincible_ = true;
+	invincible_timer_.restart();
 }
