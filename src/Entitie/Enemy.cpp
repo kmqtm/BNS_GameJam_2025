@@ -104,7 +104,6 @@ void Enemy::SetupAnimations(const String& type)
 	}
 }
 
-
 void Enemy::Update(const Stage& stage, const Player& player)
 {
 	if(not is_alive_) return;

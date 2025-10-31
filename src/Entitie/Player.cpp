@@ -7,6 +7,7 @@
 #include <Siv3D.hpp>
 
 Player::Player()
+	: oxygen_(kMaxOxygen)
 {
 	Animation ground_idle_animation;
 	ground_idle_animation.texture_asset_names = { U"player_stand" };
@@ -27,7 +28,7 @@ Player::Player()
 	anim_controller_.AddAnimation(U"walk", walk_animation);
 
 	Animation float_move_animation;
-	float_move_animation.texture_asset_names = { U"player_4", U"player_5", U"player_6" };
+	float_move_animation.texture_asset_names = { U"player_6", U"player_4", U"player_5" };
 	float_move_animation.frame_duration_sec = 0.25;
 	float_move_animation.is_looping = true;
 	anim_controller_.AddAnimation(U"float_move", float_move_animation);
@@ -42,8 +43,14 @@ Player::Player()
 void Player::Update(const Stage& stage)
 {
 	just_took_damage_ = false;
+	UpdateOxygen();
 
-	HandleInput();
+	// 酸素が0なら入力処理を受け付けない
+	if(not is_oxygen_empty_)
+	{
+		HandleInput();
+	}
+
 	UpdatePhysics(stage);
 	UpdateAnimation();
 
@@ -57,7 +64,7 @@ void Player::Update(const Stage& stage)
 		}
 	}
 
-	if((not is_invincible_) && collider.is_colliding)
+	if((not is_invincible_) && (not is_oxygen_empty_) && collider.is_colliding)
 	{
 		for(const auto& tag : collider.collided_tags)
 		{
@@ -310,18 +317,50 @@ void Player::SetPos(const Vec2& new_pos)
 	velocity_ = Vec2::Zero();
 }
 
-void Player::TakeDamage()
+void Player::UpdateOxygen()
 {
-	if(is_invincible_)
+	ModifyOxygen(-kOxygenDrainPerFrame);
+}
+
+void Player::ModifyOxygen(double amount)
+{
+	if(is_oxygen_empty_ || amount == 0.0)
 	{
 		return;
 	}
 
-	Print << U"Player took damage!";
+	oxygen_ += amount;
+	oxygen_ = Clamp(oxygen_, 0.0, kMaxOxygen);
+
+	// 0になった瞬間
+	if(oxygen_ == 0.0)
+	{
+		is_oxygen_empty_ = true;
+	}
+}
+
+void Player::TakeDamage()
+{
+	if(is_invincible_ || is_oxygen_empty_)
+	{
+		return;
+	}
+
 	velocity_.y = -1.0;
 
-	just_took_damage_ = true;
+	ModifyOxygen(-kOxygenDamageAmount);
 
+	just_took_damage_ = true;
 	is_invincible_ = true;
 	invincible_timer_.restart();
+}
+
+double Player::GetOxygen() const
+{
+	return oxygen_;
+}
+
+bool Player::IsOxygenEmpty() const
+{
+	return is_oxygen_empty_;
 }

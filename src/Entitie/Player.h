@@ -12,12 +12,13 @@ public:
 	Player();
 
 	void Update(const Stage& stage);
-
 	void Draw(const Vec2& camera_offset) const;
 
 	Vec2 GetPos() const;
-
 	void SetPos(const Vec2& new_pos);
+
+	double GetOxygen() const;
+	bool IsOxygenEmpty() const;
 
 	// 地形衝突には使わないが，敵やアイテムとの当たり判定に使う
 	Collider collider{ RectF{0, 0, 1.0, 1.0}, ColliderTag::kPlayer };
@@ -34,6 +35,9 @@ private:
 	void UpdateAnimation();
 
 	void TakeDamage();
+
+	void UpdateOxygen();
+	void ModifyOxygen(double amount);
 
 	Vec2 pos_{ 300, 800.0 };
 	Vec2 velocity_{ 0.0, 0.0 };
@@ -63,15 +67,19 @@ private:
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.6 };
-	double horizontal_speed_max_{ 0.8 };
+	double horizontal_speed_max_{ 1.0 };
 	double friction_{ 0.90 };					// 水平方向の抵抗係数(1.0が無抵抗)
-	double gravity_ = 0.08;
-	double swim_power_ = -2.3;					// 水中での上昇力
-	double terminal_velocity_y_ = 0.60;			// Y軸の終端速度
+	double gravity_ = 0.06;
+	double swim_power_ = -1.8;					// 水中での上昇力
+	double terminal_velocity_y_ = 0.7;			// Y軸の終端速度
 	double rising_gravity_multiplier_ = 0.4;	// 上昇時の重力軽減倍率(0.0で無重力)
 
-	// 酸素量(体力と同義)
-	int32 oxygen_{ 100 };
+	double oxygen_{ 100.0 };		// 酸素量(体力と同義)
+	bool is_oxygen_empty_ = false;	// 0でtrue
+
+	static constexpr double kMaxOxygen = 100.0;
+	static constexpr double kOxygenDrainPerFrame = 0.013;	// 毎フレームの減少量
+	static constexpr double kOxygenDamageAmount = 20.0;		// ダメージ時の減少量
 
 	AnimationController anim_controller_;
 };

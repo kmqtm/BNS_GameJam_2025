@@ -48,6 +48,22 @@ void GameScene::SpawnEnemies()
 void GameScene::update()
 {
 	player_.Update(stage_);
+
+	if((not is_player_dead_) && player_.IsOxygenEmpty())
+	{
+		is_player_dead_ = true;
+		OnPlayerDied();
+	}
+
+	// プレイヤーが死んだら，敵の更新や当たり判定をスキップ
+	if(is_player_dead_)
+	{
+		// カメラは更新
+		camera_manager_.SetTargetY(player_.GetPos().y);
+		camera_manager_.Update();
+		return;
+	}
+
 	for(auto& enemy : enemies_)
 	{
 		enemy.Update(stage_, player_);
@@ -90,6 +106,12 @@ void GameScene::update()
 	}
 }
 
+void GameScene::OnPlayerDied()
+{
+	// ゲームオーバー演出
+
+	Print << U"GAME SCENE: OXYGEN ZERO!";
+}
 
 void GameScene::draw() const
 {
@@ -109,4 +131,6 @@ void GameScene::draw() const
 	}
 
 	// UI
+	ClearPrint();
+	Print << U"Oxygen: " << player_.GetOxygen();
 }

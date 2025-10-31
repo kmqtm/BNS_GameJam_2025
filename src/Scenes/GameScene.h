@@ -21,12 +21,13 @@ private:
 	// Tiledからスポーン情報を読み込み，enemies_配列を初期化
 	void SpawnEnemies();
 
+	void OnPlayerDied();
+
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/v2/tilemap.json", U"asset/Stage/v2/tileset.png", U"collision_layer" };
 
 	CameraManager camera_manager_;
-
 	Player player_;
-
+	bool is_player_dead_ = false;
 	s3d::Array<Enemy> enemies_;
 };
