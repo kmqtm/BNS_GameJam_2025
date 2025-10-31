@@ -15,7 +15,7 @@ GameScene::GameScene(const App::Scene::InitData& init)
 {
 	AssetController::GetInstance().PrepareAssets(U"Game");
 
-	SpawnEnemies();
+	SpawnEntities();
 }
 
 GameScene::~GameScene()
@@ -23,12 +23,11 @@ GameScene::~GameScene()
 	AssetController::GetInstance().UnregisterAssets();
 }
 
-void GameScene::SpawnEnemies()
+void GameScene::SpawnEntities()
 {
 	// Stageからスポーン情報を取得
 	const auto& spawn_points = stage_.GetSpawnPoints();
 
-	// 情報を元に敵を生成
 	for(const auto& info : spawn_points)
 	{
 		if(info.type.isEmpty())
@@ -39,7 +38,18 @@ void GameScene::SpawnEnemies()
 
 		const Vec2 center_pos = info.pos + (info.size / 2.0);
 
-		enemies_.emplace_back(info.type, center_pos);
+		if(info.type == U"Player")
+		{
+			player_.SetPos(center_pos);	// プレイヤーの初期位置
+		}
+		else if(info.type == U"Oxygen")
+		{
+			oxygen_spots_.emplace_back(center_pos, info.size);	// 酸素回復スポット
+		}
+		else // その他の敵type("Fish", "Coral_L"など)
+		{
+			enemies_.emplace_back(info.type, center_pos);
+		}
 	}
 }
 
@@ -51,6 +61,11 @@ void GameScene::update()
 	{
 		is_player_dead_ = true;
 		OnPlayerDied();
+	}
+
+	for(auto& spot : oxygen_spots_)
+	{
+		spot.Update();
 	}
 
 	// プレイヤーが死んだら，敵の更新や当たり判定をスキップ
@@ -75,6 +90,10 @@ void GameScene::update()
 	for(auto& enemy : enemies_)
 	{
 		enemy.GetCollider().ClearCollisionResult();
+	}
+	for(auto& spot : oxygen_spots_)
+	{
+		spot.GetCollider().ClearCollisionResult();
 	}
 
 	auto& player_collider = player_.collider;
@@ -102,6 +121,29 @@ void GameScene::update()
 			enemy_collider.collided_tags.push_back(player_collider.tag);
 		}
 	}
+
+	for(auto& spot : oxygen_spots_)
+	{
+		auto& spot_collider = spot.GetCollider();
+
+		bool is_collided = std::visit([&](const auto& player_shape)
+									  {
+										  return std::visit([&](const auto& spot_shape)
+															{
+																return player_shape.intersects(spot_shape);
+															}, spot_collider.shape);
+									  }, player_collider.shape);
+
+		if(is_collided)
+		{
+			// Player側にはOxygenと衝突したことを通知
+			player_collider.is_colliding = true;
+			player_collider.collided_tags.push_back(spot_collider.tag);
+
+			// PlayerのOxygenを回復
+			player_.RecoverOxygen();
+		}
+	}
 }
 
 void GameScene::OnPlayerDied()
@@ -126,6 +168,11 @@ void GameScene::draw() const
 	for(const auto& enemy : enemies_)
 	{
 		enemy.Draw(camera_offset);
+	}
+
+	for(const auto& spot : oxygen_spots_)
+	{
+		spot.Draw(camera_offset);
 	}
 
 	// UI

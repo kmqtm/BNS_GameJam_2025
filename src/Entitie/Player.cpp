@@ -364,6 +364,15 @@ void Player::ModifyOxygen(double amount)
 	{
 		is_oxygen_empty_ = true;
 	}
+	else
+	{
+		is_oxygen_empty_ = false;
+	}
+}
+
+void Player::RecoverOxygen()
+{
+	ModifyOxygen(kOxygenRecoveryPerSec);
 }
 
 void Player::TakeDamage()
@@ -382,12 +391,6 @@ void Player::TakeDamage()
 	invincible_timer_.restart();
 }
 
-double Player::GetOxygen() const
-{
-	return oxygen_;
-}
+double Player::GetOxygen() const { return oxygen_; }
 
-bool Player::IsOxygenEmpty() const
-{
-	return is_oxygen_empty_;
-}
+bool Player::IsOxygenEmpty() const { return is_oxygen_empty_; }
