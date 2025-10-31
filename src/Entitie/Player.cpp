@@ -393,4 +393,6 @@ void Player::TakeDamage()
 
 double Player::GetOxygen() const { return oxygen_; }
 
+double Player::GetMaxOxygen() const { return kMaxOxygen; }
+
 bool Player::IsOxygenEmpty() const { return is_oxygen_empty_; }

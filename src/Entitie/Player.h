@@ -18,6 +18,7 @@ public:
 	void SetPos(const Vec2& new_pos);
 
 	double GetOxygen() const;
+	double GetMaxOxygen() const;
 	bool IsOxygenEmpty() const;
 	void RecoverOxygen();
 

@@ -12,6 +12,7 @@ GameScene::GameScene(const App::Scene::InitData& init)
 		(stage_.GetWidth()* stage_.GetTileSize()) / 2.0,		// 固定するX座標 (ステージ中央)
 		kSceneSize											// 画面サイズ (Yオフセット計算用)
 	)
+	, map_total_height_(stage_.GetHeight()* stage_.GetTileSize())
 {
 	AssetController::GetInstance().PrepareAssets(U"Game");
 
@@ -41,6 +42,7 @@ void GameScene::SpawnEntities()
 		if(info.type == U"Player")
 		{
 			player_.SetPos(center_pos);	// プレイヤーの初期位置
+			player_start_y_ = center_pos.y;
 		}
 		else if(info.type == U"Oxygen")
 		{
@@ -176,6 +178,55 @@ void GameScene::draw() const
 	}
 
 	// UI
-	ClearPrint();
-	Print << U"Oxygen: " << player_.GetOxygen();
+	DrawOxygenGauge();
+	DrawProgressMeter();
+}
+
+void GameScene::DrawOxygenGauge() const
+{
+	// ゲージの背景
+	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.draw(kUIGaugeBackgroundColor);
+
+	// 現在の酸素量(0.0 - 1.0)
+	const double oxygen_ratio = player_.GetOxygen() / player_.GetMaxOxygen();
+
+	// ゲージの現在の高さ
+	const double current_height = kOxygenGaugeSize.y * oxygen_ratio;
+
+	// ゲージの描画 (Y座標を調整して下から伸びるようにする)
+	RectF{
+		kOxygenGaugePos.x,
+		kOxygenGaugePos.y + (kOxygenGaugeSize.y - current_height),
+		kOxygenGaugeSize.x,
+		current_height
+	}.draw(kOxygenGaugeColor);
+
+	// ゲージの枠線
+	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.drawFrame(2, 0, Palette::White);
+}
+
+void GameScene::DrawProgressMeter() const
+{
+	// 画面の高さと右端のX座標
+	const double screen_height = Scene::Height();
+	const double screen_right_x = Scene::Width() - kProgressMeterWidth;
+
+	// メーターの背景
+	RectF{ screen_right_x, 0, kProgressMeterWidth, screen_height }.draw(kUIGaugeBackgroundColor);
+
+	// 全体の移動距離
+	const double total_travel = map_total_height_ - player_start_y_;
+	if(total_travel <= 0)
+	{
+		return;
+	}
+
+	double progress_ratio = (player_.GetPos().y - player_start_y_) / total_travel;
+	progress_ratio = Clamp(progress_ratio, 0.0, 1.0);
+
+	// 画面上でのマーカーのY座標
+	const double marker_y = screen_height * progress_ratio;
+
+	// 進行度マーカー (現在地を示す小さな横長の四角形) を描画
+	RectF{ Arg::center(screen_right_x + kProgressMeterWidth / 2.0, marker_y), kProgressMeterWidth + 4.0, 4.0 }.draw(kProgressMeterColor);
 }
