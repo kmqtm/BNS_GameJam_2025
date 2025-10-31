@@ -41,8 +41,6 @@ void GameScene::SpawnEnemies()
 
 		enemies_.emplace_back(info.type, center_pos);
 	}
-
-	//Print << U"Spawned {} enemies."_fmt(enemies_.size());
 }
 
 void GameScene::update()

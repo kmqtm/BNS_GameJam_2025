@@ -38,6 +38,12 @@ Player::Player()
 	swim_animation.frame_duration_sec = 0.07;
 	swim_animation.is_looping = false;
 	anim_controller_.AddAnimation(U"swim", swim_animation);
+
+	Animation dead_animation;
+	dead_animation.texture_asset_names = { U"player_dead" };
+	dead_animation.frame_duration_sec = 1.0;
+	dead_animation.is_looping = true;
+	anim_controller_.AddAnimation(U"dead", dead_animation);
 }
 
 void Player::Update(const Stage& stage)
@@ -107,6 +113,9 @@ void Player::HandleInput()
 		velocity_.y = swim_power_;
 		anim_controller_.Play(U"float_idle");
 		anim_controller_.Play(U"swim");
+
+		// swim時に酸素を少し消費
+		ModifyOxygen(-kOxygenSwimCost);
 	}
 }
 
@@ -228,11 +237,20 @@ void Player::UpdateColliderPosition()
 	collider.shape = RectF{ Arg::center(pos_), kColliderWidth, kColliderHeight };
 }
 
-
 // アニメーション制御
 void Player::UpdateAnimation()
 {
-	// (処理 ... 変更なし)
+	if(is_oxygen_empty_)
+	{
+		if(anim_controller_.IsPlaying(U"dead"))
+		{
+			return;
+		}
+		anim_controller_.Play(U"dead");
+
+		return;
+	}
+
 	if(anim_controller_.IsPlaying(U"swim"))
 	{
 		if(velocity_.y > 0)
@@ -319,7 +337,16 @@ void Player::SetPos(const Vec2& new_pos)
 
 void Player::UpdateOxygen()
 {
-	ModifyOxygen(-kOxygenDrainPerFrame);
+	// 基本の減少
+	double oxygen_drain = kOxygenDrainPerFrame;
+
+	// 水平移動中は追加で消費
+	if(is_moving_x_)
+	{
+		oxygen_drain += kOxygenHorizontalExtraDrain;
+	}
+
+	ModifyOxygen(-oxygen_drain);
 }
 
 void Player::ModifyOxygen(double amount)

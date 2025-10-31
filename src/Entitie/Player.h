@@ -67,19 +67,25 @@ private:
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.6 };
-	double horizontal_speed_max_{ 1.0 };
+	double horizontal_speed_max_{ 1.3 };
 	double friction_{ 0.90 };					// 水平方向の抵抗係数(1.0が無抵抗)
 	double gravity_ = 0.06;
 	double swim_power_ = -1.8;					// 水中での上昇力
-	double terminal_velocity_y_ = 0.7;			// Y軸の終端速度
+	double terminal_velocity_y_ = 1.0;			// Y軸の終端速度
 	double rising_gravity_multiplier_ = 0.4;	// 上昇時の重力軽減倍率(0.0で無重力)
 
 	double oxygen_{ 100.0 };		// 酸素量(体力と同義)
-	bool is_oxygen_empty_ = false;	// 0でtrue
+	bool is_oxygen_empty_ = false;	// oxygen_ == 0でtrue
 
 	static constexpr double kMaxOxygen = 100.0;
 	static constexpr double kOxygenDrainPerFrame = 0.013;	// 毎フレームの減少量
 	static constexpr double kOxygenDamageAmount = 20.0;		// ダメージ時の減少量
+
+	// 水平移動時の追加酸素消費量
+	static constexpr double kOxygenHorizontalExtraDrain = 0.006;
+
+	// swim時の酸素消費量
+	static constexpr double kOxygenSwimCost = 0.5;
 
 	AnimationController anim_controller_;
 };
