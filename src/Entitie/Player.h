@@ -83,10 +83,9 @@ private:
 	static constexpr double kOxygenDrainPerFrame = 0.013;	// 毎フレームの減少量
 	static constexpr double kOxygenDamageAmount = 20.0;		// ダメージ時の減少量
 
-
 	static constexpr double kOxygenHorizontalExtraDrain = 0.006;	// 水平移動時の追加酸素消費量
 	static constexpr double kOxygenSwimCost = 0.5;					// swim時の酸素消費量
-	static constexpr double kOxygenRecoveryPerSec = 25.0;			// 回復速度(1秒あたり)
+	static constexpr double kOxygenRecoveryPerFrame = 1.0;			// 回復速度(1秒あたり)
 
 	AnimationController anim_controller_;
 };

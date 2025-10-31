@@ -372,7 +372,7 @@ void Player::ModifyOxygen(double amount)
 
 void Player::RecoverOxygen()
 {
-	ModifyOxygen(kOxygenRecoveryPerSec);
+	ModifyOxygen(kOxygenRecoveryPerFrame);
 }
 
 void Player::TakeDamage()
@@ -383,6 +383,14 @@ void Player::TakeDamage()
 	}
 
 	velocity_.y = -1.0;
+	if(is_facing_right_)
+	{
+		velocity_.x = -2.5;
+	}
+	else
+	{
+		velocity_.x = 2.5;
+	}
 
 	ModifyOxygen(-kOxygenDamageAmount);
 

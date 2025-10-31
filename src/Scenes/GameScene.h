@@ -44,6 +44,19 @@ private:
 	static constexpr ColorF kOxygenGaugeColor = Palette::Cyan;
 	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 }; // 半透明の黒
 
+	static constexpr ColorF kOxygenColorSafe = Palette::Limegreen;
+	static constexpr ColorF kOxygenColorWarning = Palette::Yellow;
+	static constexpr ColorF kOxygenColorDanger = Palette::Red;
+
+	static constexpr double kOxygenWarningThreshold = 70.0;
+	static constexpr double kOxygenDangerThreshold = 30.0;
+
 	static constexpr double kProgressMeterWidth = 10.0;
-	static constexpr ColorF kProgressMeterColor = Palette::Yellow;
+
+	static constexpr ColorF kProgressLineColor = Palette::White;			// メーターの縦線の色
+	static constexpr ColorF kProgressPlayerColor = Palette::Yellow;		// プレイヤーマーカーの色
+	static constexpr ColorF kProgressSpotColor = Palette::Limegreen;	// 酸素スポットマーカーの色
+	static constexpr double kProgressPlayerMarkerWidth = 14.0;			// プレイヤーマーカーの幅
+	static constexpr double kProgressSpotMarkerWidth = 8.0;				// スポットマーカーの幅
+	static constexpr double kProgressMarkerHeight = 4.0;				// マーカーの高さ
 };

@@ -184,22 +184,38 @@ void GameScene::draw() const
 
 void GameScene::DrawOxygenGauge() const
 {
-	// ゲージの背景
 	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.draw(kUIGaugeBackgroundColor);
 
-	// 現在の酸素量(0.0 - 1.0)
-	const double oxygen_ratio = player_.GetOxygen() / player_.GetMaxOxygen();
+	const double current_oxygen = player_.GetOxygen();
+	const double max_oxygen = player_.GetMaxOxygen();
+
+	const double oxygen_ratio = (current_oxygen / max_oxygen);
+
+	// 酸素量に応じて色を決定
+	ColorF gauge_color;
+	if(current_oxygen > kOxygenWarningThreshold) // 70% ~
+	{
+		gauge_color = kOxygenColorSafe;
+	}
+	else if(current_oxygen > kOxygenDangerThreshold) // 30% ~ 70%
+	{
+		gauge_color = kOxygenColorWarning;
+	}
+	else // ~ 30%
+	{
+		gauge_color = kOxygenColorDanger;
+	}
 
 	// ゲージの現在の高さ
 	const double current_height = kOxygenGaugeSize.y * oxygen_ratio;
 
-	// ゲージの描画 (Y座標を調整して下から伸びるようにする)
+	// ゲージの描画(Y座標を調整して下から伸びるように)
 	RectF{
 		kOxygenGaugePos.x,
 		kOxygenGaugePos.y + (kOxygenGaugeSize.y - current_height),
 		kOxygenGaugeSize.x,
 		current_height
-	}.draw(kOxygenGaugeColor);
+	}.draw(gauge_color);
 
 	// ゲージの枠線
 	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.drawFrame(2, 0, Palette::White);
@@ -207,26 +223,46 @@ void GameScene::DrawOxygenGauge() const
 
 void GameScene::DrawProgressMeter() const
 {
-	// 画面の高さと右端のX座標
 	const double screen_height = Scene::Height();
 	const double screen_right_x = Scene::Width() - kProgressMeterWidth;
+	const double meter_center_x = screen_right_x + (kProgressMeterWidth / 2.0);
 
-	// メーターの背景
-	RectF{ screen_right_x, 0, kProgressMeterWidth, screen_height }.draw(kUIGaugeBackgroundColor);
-
-	// 全体の移動距離
 	const double total_travel = map_total_height_ - player_start_y_;
 	if(total_travel <= 0)
 	{
 		return;
 	}
 
+	RectF{ screen_right_x, 0, kProgressMeterWidth, screen_height }.draw(kUIGaugeBackgroundColor);
+
+	Line{ meter_center_x, 0, meter_center_x, screen_height }.draw(1, kProgressLineColor);
+
+	// Oxygenの位置を描画
+	for(const auto& spot : oxygen_spots_)
+	{
+		double spot_y = 0.0;
+		std::visit([&](const auto& shape)
+				   {
+					   // center() メンバ関数が存在する型のみアクセス
+					   if constexpr(requires { shape.center(); })
+					   {
+						   spot_y = shape.center().y;
+					   }
+					   // center() がない型は何もしない
+				   }, spot.GetCollider().shape);
+
+		double spot_ratio = (spot_y - player_start_y_) / total_travel;
+		spot_ratio = Clamp(spot_ratio, 0.0, 1.0);
+
+		const double marker_y = screen_height * spot_ratio;
+
+		RectF{ Arg::center(meter_center_x, marker_y), kProgressSpotMarkerWidth, kProgressMarkerHeight }.draw(kProgressSpotColor);
+	}
+
 	double progress_ratio = (player_.GetPos().y - player_start_y_) / total_travel;
 	progress_ratio = Clamp(progress_ratio, 0.0, 1.0);
 
-	// 画面上でのマーカーのY座標
 	const double marker_y = screen_height * progress_ratio;
 
-	// 進行度マーカー (現在地を示す小さな横長の四角形) を描画
-	RectF{ Arg::center(screen_right_x + kProgressMeterWidth / 2.0, marker_y), kProgressMeterWidth + 4.0, 4.0 }.draw(kProgressMeterColor);
+	RectF{ Arg::center(meter_center_x, marker_y), kProgressPlayerMarkerWidth, kProgressMarkerHeight }.draw(kProgressPlayerColor);
 }
