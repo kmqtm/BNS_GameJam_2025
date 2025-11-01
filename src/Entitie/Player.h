@@ -22,6 +22,8 @@ public:
 	bool IsOxygenEmpty() const;
 	void RecoverOxygen();
 
+	void Respawn(const Vec2& spawn_pos);
+
 	// 地形衝突には使わないが，敵やアイテムとの当たり判定に使う
 	Collider collider{ RectF{0, 0, 1.0, 1.0}, ColliderTag::kPlayer };
 

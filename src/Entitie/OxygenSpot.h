@@ -15,6 +15,8 @@ public:
 
 	void Draw(const Vec2& camera_offset) const;
 
+	Vec2 GetPos() const;
+
 	// GameSceneが当たり判定に使う
 	Collider& GetCollider() { return collider_; }
 	const Collider& GetCollider() const { return collider_; }

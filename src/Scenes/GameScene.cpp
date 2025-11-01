@@ -42,7 +42,7 @@ void GameScene::SpawnEntities()
 		if(info.type == U"Player")
 		{
 			player_.SetPos(center_pos);	// プレイヤーの初期位置
-			player_start_y_ = center_pos.y;
+			player_start_pos_ = center_pos;
 		}
 		else if(info.type == U"Oxygen")
 		{
@@ -73,6 +73,17 @@ void GameScene::update()
 	// プレイヤーが死んだら，敵の更新や当たり判定をスキップ
 	if(is_player_dead_)
 	{
+		if(kInputOK.down() || KeyEnter.down())
+		{
+			Vec2 respawn_pos = FindNearestRespawnSpot();
+
+			// プレイヤー復活
+			player_.Respawn(respawn_pos);
+
+			// GameSceneの状態リセット
+			is_player_dead_ = false;
+		}
+
 		// カメラは更新
 		camera_manager_.SetTargetY(player_.GetPos().y);
 		camera_manager_.Update();
@@ -155,6 +166,38 @@ void GameScene::OnPlayerDied()
 	Print << U"GAME SCENE: OXYGEN ZERO!";
 }
 
+Vec2 GameScene::FindNearestRespawnSpot() const
+{
+	const double dead_y = player_.GetPos().y;
+	Vec2 best_spot_pos = Vec2::Zero();
+	double min_distance = std::numeric_limits<double>::max();
+
+	// プレイヤーより上にある酸素スポットを全探索
+	for(const auto& spot : oxygen_spots_)
+	{
+		const Vec2 spot_pos = spot.GetPos();
+
+		// スポットがプレイヤーより上にあるか
+		if(spot_pos.y < dead_y)
+		{
+			const double distance_y = dead_y - spot_pos.y; // 垂直距離
+			if(distance_y < min_distance)
+			{
+				min_distance = distance_y;
+				best_spot_pos = spot_pos;
+			}
+		}
+	}
+
+	// スポットが1つも見つからなかったら
+	if(best_spot_pos == Vec2::Zero())
+	{
+		return player_start_pos_; // 最初のスタート地点に戻す
+	}
+
+	return best_spot_pos;
+}
+
 void GameScene::draw() const
 {
 	Scene::SetBackground(kGameBackgroundColor);
@@ -227,7 +270,7 @@ void GameScene::DrawProgressMeter() const
 	const double screen_right_x = Scene::Width() - kProgressMeterWidth;
 	const double meter_center_x = screen_right_x + (kProgressMeterWidth / 2.0);
 
-	const double total_travel = map_total_height_ - player_start_y_;
+	const double total_travel = map_total_height_ - player_start_pos_.y;
 	if(total_travel <= 0)
 	{
 		return;
@@ -251,7 +294,7 @@ void GameScene::DrawProgressMeter() const
 					   // center() がない型は何もしない
 				   }, spot.GetCollider().shape);
 
-		double spot_ratio = (spot_y - player_start_y_) / total_travel;
+		double spot_ratio = (spot_y - player_start_pos_.y) / total_travel;
 		spot_ratio = Clamp(spot_ratio, 0.0, 1.0);
 
 		const double marker_y = screen_height * spot_ratio;
@@ -259,7 +302,7 @@ void GameScene::DrawProgressMeter() const
 		RectF{ Arg::center(meter_center_x, marker_y), kProgressSpotMarkerWidth, kProgressMarkerHeight }.draw(kProgressSpotColor);
 	}
 
-	double progress_ratio = (player_.GetPos().y - player_start_y_) / total_travel;
+	double progress_ratio = (player_.GetPos().y - player_start_pos_.y) / total_travel;
 	progress_ratio = Clamp(progress_ratio, 0.0, 1.0);
 
 	const double marker_y = screen_height * progress_ratio;

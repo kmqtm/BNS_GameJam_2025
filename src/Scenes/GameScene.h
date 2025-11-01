@@ -25,8 +25,10 @@ private:
 	void DrawOxygenGauge() const;
 	void DrawProgressMeter() const;
 
+	Vec2 FindNearestRespawnSpot() const;
+
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
-	Stage stage_{ U"asset/Stage/v3/tilemap.json", U"asset/Stage/v3/tileset.png", U"collision_layer" };
+	Stage stage_{ U"asset/Stage/v3/tilemap_v3.json", U"asset/Stage/v3/tileset.png", U"collision_layer" };
 
 	CameraManager camera_manager_;
 	Player player_;
@@ -34,8 +36,7 @@ private:
 	s3d::Array<Enemy> enemies_;
 	s3d::Array<OxygenSpot> oxygen_spots_;
 
-	// 進行度メーター用の変数
-	double player_start_y_ = 0.0;
+	Vec2 player_start_pos_ = Vec2::Zero();
 	double map_total_height_ = 0.0;
 
 	// UIの定数

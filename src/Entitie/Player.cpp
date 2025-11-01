@@ -404,3 +404,18 @@ double Player::GetOxygen() const { return oxygen_; }
 double Player::GetMaxOxygen() const { return kMaxOxygen; }
 
 bool Player::IsOxygenEmpty() const { return is_oxygen_empty_; }
+
+void Player::Respawn(const Vec2& spawn_pos)
+{
+	pos_ = spawn_pos;
+	velocity_ = Vec2::Zero();
+	oxygen_ = kMaxOxygen;
+	is_oxygen_empty_ = false;
+
+	// 復活時の無敵時間
+	is_invincible_ = true;
+	invincible_timer_.restart();
+
+	// アニメーションをアイドルに戻す
+	anim_controller_.Play(U"float_idle");
+}

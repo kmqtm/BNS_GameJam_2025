@@ -41,3 +41,5 @@ void OxygenSpot::Draw(const Vec2& camera_offset) const
 		texture_asset->drawAt(final_draw_pos);
 	}
 }
+
+Vec2 OxygenSpot::GetPos() const { return pos_; }
