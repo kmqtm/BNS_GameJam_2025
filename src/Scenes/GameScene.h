@@ -52,6 +52,9 @@ private:
 	static constexpr double kOxygenWarningThreshold = 70.0;
 	static constexpr double kOxygenDangerThreshold = 30.0;
 
+	// 深度による背景色
+	static constexpr ColorF kDeepSeaColor = ColorF{ 0.0, 0.1, 0.3 }; // 紺色
+
 	static constexpr double kProgressMeterWidth = 10.0;
 
 	static constexpr ColorF kProgressLineColor = Palette::White;			// メーターの縦線の色

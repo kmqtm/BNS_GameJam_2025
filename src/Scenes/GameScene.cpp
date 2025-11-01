@@ -200,7 +200,19 @@ Vec2 GameScene::FindNearestRespawnSpot() const
 
 void GameScene::draw() const
 {
-	Scene::SetBackground(kGameBackgroundColor);
+	static constexpr ColorF kSurfaceColor = kGameBackgroundColor;
+
+	// 深度の割合(0.0 ~ 1.0)を計算
+	const double total_travel = map_total_height_ - player_start_pos_.y;
+	double depth_ratio = 0.0;
+	if(total_travel > 0)
+	{
+		depth_ratio = (player_.GetPos().y - player_start_pos_.y) / total_travel;
+	}
+	depth_ratio = Clamp(depth_ratio, 0.0, 1.0);
+
+	const ColorF current_bg_color = kSurfaceColor.lerp(kDeepSeaColor, depth_ratio);
+	Scene::SetBackground(current_bg_color);
 
 	// スナップされていない(doubleの)オフセットを取得
 	const Vec2 camera_offset = camera_manager_.GetCameraOffset();
