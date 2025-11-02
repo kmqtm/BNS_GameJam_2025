@@ -8,6 +8,10 @@ public:
 
 	void SetTargetY(double target_y);
 
+	// カメラのY軸オフセット比率を変更する
+	// (例: 1.0/6.0 = 上1/3, -1.0/6.0 = 下1/3)
+	void SetYOffsetRatio(double ratio);
+
 	void Update();
 	Vec2 GetCameraOffset() const;
 	RectF GetViewRect() const;

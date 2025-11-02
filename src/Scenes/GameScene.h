@@ -9,6 +9,14 @@
 
 #include <Siv3D.hpp>
 
+enum class GameState
+{
+	Title,
+	Playing,
+	Ending,
+	GameOver
+};
+
 class GameScene : public App::Scene
 {
 public:
@@ -32,7 +40,7 @@ private:
 
 	CameraManager camera_manager_;
 	Player player_;
-	bool is_player_dead_ = false;
+	GameState current_state_ = GameState::Title;
 	s3d::Array<Enemy> enemies_;
 	s3d::Array<OxygenSpot> oxygen_spots_;
 
@@ -42,8 +50,7 @@ private:
 	// UIの定数
 	static constexpr Vec2 kOxygenGaugePos = { 20, 20 };
 	static constexpr Size kOxygenGaugeSize = { 24, 200 };
-	static constexpr ColorF kOxygenGaugeColor = Palette::Cyan;
-	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 }; // 半透明の黒
+	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 };
 
 	static constexpr ColorF kOxygenColorSafe = Palette::Limegreen;
 	static constexpr ColorF kOxygenColorWarning = Palette::Yellow;
@@ -63,4 +70,12 @@ private:
 	static constexpr double kProgressPlayerMarkerWidth = 14.0;			// プレイヤーマーカーの幅
 	static constexpr double kProgressSpotMarkerWidth = 8.0;				// スポットマーカーの幅
 	static constexpr double kProgressMarkerHeight = 4.0;				// マーカーの高さ
+
+	// タイトル・エンディング画面用のカメラオフセット
+	static constexpr double kTitleEndingCameraOffsetYRatio = -1.0 / 4.9;
+	// ゲームプレイ用のカメラオフセット(上1/3にPlayer)
+	static constexpr double kPlayingCameraOffsetYRatio = 1.0 / 6.0;
+
+	// エンディングに移行するY座標
+	static constexpr double kEndingZoneY = 7650.0;
 };

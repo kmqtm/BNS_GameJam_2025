@@ -44,6 +44,8 @@ Player::Player()
 	dead_animation.frame_duration_sec = 1.0;
 	dead_animation.is_looping = true;
 	anim_controller_.AddAnimation(U"dead", dead_animation);
+
+	anim_controller_.Play(U"float_idle");
 }
 
 void Player::Update(const Stage& stage)
@@ -51,8 +53,8 @@ void Player::Update(const Stage& stage)
 	just_took_damage_ = false;
 	UpdateOxygen();
 
-	// 酸素が0なら入力処理を受け付けない
-	if(not is_oxygen_empty_)
+	// ★ 修正: 酸素が0かエンディング中なら入力処理を受け付けない
+	if(not is_oxygen_empty_ && not is_in_ending_)
 	{
 		HandleInput();
 	}
@@ -70,7 +72,8 @@ void Player::Update(const Stage& stage)
 		}
 	}
 
-	if((not is_invincible_) && (not is_oxygen_empty_) && collider.is_colliding)
+	// ★ 修正: エンディング中か、無敵中か、酸素が0なら当たり判定の反応をしない
+	if((not is_invincible_) && (not is_oxygen_empty_) && (not is_in_ending_) && collider.is_colliding)
 	{
 		for(const auto& tag : collider.collided_tags)
 		{
@@ -99,14 +102,6 @@ void Player::HandleInput()
 		is_moving_x_ = true;
 		is_facing_right_ = true;
 	}
-	else
-	{
-		velocity_.x *= friction_;
-		if(std::abs(velocity_.x) < 0.1)
-		{
-			velocity_.x = 0.0;
-		}
-	}
 
 	if(kInputAction1.down())
 	{
@@ -122,7 +117,25 @@ void Player::HandleInput()
 // 物理演算と位置更新
 void Player::UpdatePhysics(const Stage& stage)
 {
+	// エンディング中でワープ有効時は，画面が暗い間に中心へ向かって Lerp
+	if(is_in_ending_ && ending_warp_enabled_)
+	{
+		const double dx = ending_target_x_ - pos_.x;
+		// Lerp により徐々に中央へ移動，1.0で即時ワープ
+		pos_.x = Math::Lerp(pos_.x, ending_target_x_, ending_warp_lerp_);
+
+		// 十分近ければスナップして終了
+		if(std::abs(dx) <= ending_snap_threshold_)
+		{
+			pos_.x = ending_target_x_;
+			ending_warp_enabled_ = false;
+			velocity_.x = 0.0;
+			is_moving_x_ = false;
+		}
+	}
+
 	ApplyGravity();
+	ApplyFriction();
 	MoveX(stage);
 	MoveY(stage);
 	UpdateColliderPosition();
@@ -139,6 +152,19 @@ void Player::ApplyGravity()
 		velocity_.y += gravity_;
 	}
 	velocity_.y = Min(velocity_.y, terminal_velocity_y_);
+}
+
+void Player::ApplyFriction()
+{
+	// 入力がない時だけ摩擦をかける
+	if(not is_moving_x_)
+	{
+		velocity_.x *= friction_;
+		if(std::abs(velocity_.x) < 0.1)
+		{
+			velocity_.x = 0.0;
+		}
+	}
 }
 
 void Player::MoveX(const Stage& stage)
@@ -240,6 +266,15 @@ void Player::UpdateColliderPosition()
 // アニメーション制御
 void Player::UpdateAnimation()
 {
+	if(is_in_ending_)
+	{
+		if(not anim_controller_.IsPlaying(U"dead"))
+		{
+			anim_controller_.Play(U"float_idle");
+		}
+		return;
+	}
+
 	if(is_oxygen_empty_)
 	{
 		if(anim_controller_.IsPlaying(U"dead"))
@@ -337,6 +372,11 @@ void Player::SetPos(const Vec2& new_pos)
 
 void Player::UpdateOxygen()
 {
+	if(is_in_ending_)
+	{
+		return;
+	}
+
 	// 基本の減少
 	double oxygen_drain = kOxygenDrainPerFrame;
 
@@ -377,19 +417,18 @@ void Player::RecoverOxygen()
 
 void Player::TakeDamage()
 {
-	if(is_invincible_ || is_oxygen_empty_)
+	if(is_invincible_ || is_oxygen_empty_ || is_in_ending_)
 	{
 		return;
 	}
 
-	velocity_.y = -1.0;
 	if(is_facing_right_)
 	{
-		velocity_.x = -2.5;
+		velocity_.x += -2.5;
 	}
 	else
 	{
-		velocity_.x = 2.5;
+		velocity_.x += 2.5;
 	}
 
 	ModifyOxygen(-kOxygenDamageAmount);
@@ -412,10 +451,27 @@ void Player::Respawn(const Vec2& spawn_pos)
 	oxygen_ = kMaxOxygen;
 	is_oxygen_empty_ = false;
 
+	is_in_ending_ = false;
+
 	// 復活時の無敵時間
 	is_invincible_ = true;
 	invincible_timer_.restart();
 
-	// アニメーションをアイドルに戻す
+	// アニメーションをidleに戻す
 	anim_controller_.Play(U"float_idle");
+}
+
+void Player::StartEnding(double camera_center_world_x)
+{
+	is_in_ending_ = true;
+	// ワールド座標 X を目標に設定してワープ有効化
+	ending_target_x_ = camera_center_world_x;
+	ending_warp_enabled_ = true;
+
+	// Y方向のモーションは止めておく
+	velocity_.y = 0.0;
+	// X 速度はワープ側で制御するので 0 にしておく
+	velocity_.x = 0.0;
+
+	Print << U"PLAYER: START ENDING! target_x=" << ending_target_x_;
 }

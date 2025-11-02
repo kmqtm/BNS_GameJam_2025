@@ -24,6 +24,9 @@ public:
 
 	void Respawn(const Vec2& spawn_pos);
 
+	// 変更: カメラのワールド座標での中心 x を渡す
+	void StartEnding(double camera_center_world_x);
+
 	// 地形衝突には使わないが，敵やアイテムとの当たり判定に使う
 	Collider collider{ RectF{0, 0, 1.0, 1.0}, ColliderTag::kPlayer };
 
@@ -32,6 +35,7 @@ private:
 	void UpdatePhysics(const Stage& stage);
 
 	void ApplyGravity();
+	void ApplyFriction();
 	void MoveX(const Stage& stage);
 	void MoveY(const Stage& stage);
 	void UpdateColliderPosition();
@@ -43,7 +47,7 @@ private:
 	void UpdateOxygen();
 	void ModifyOxygen(double amount);
 
-	Vec2 pos_{ 300, 800.0 };
+	Vec2 pos_{ 0.0, 0.0 };
 	Vec2 velocity_{ 0.0, 0.0 };
 
 	bool is_moving_x_ = false;
@@ -80,6 +84,14 @@ private:
 
 	double oxygen_{ 100.0 };		// 酸素量(体力と同義)
 	bool is_oxygen_empty_ = false;	// oxygen_ == 0でtrue
+
+	bool is_in_ending_ = false;
+
+	// エンディング中のx軸ワープ制御
+	double ending_target_x_ = 0.0;			// 目標x（ワールド座標）
+	bool ending_warp_enabled_ = false;		// ワープ処理中ならtrue
+	double ending_warp_lerp_ = 0.01;		// Lerpファクター（1.0で即時ワープ）
+	double ending_snap_threshold_ = 1.0;	// この距離以下でスナップ
 
 	static constexpr double kMaxOxygen = 100.0;
 	static constexpr double kOxygenDrainPerFrame = 0.013;	// 毎フレームの減少量

@@ -17,6 +17,9 @@ GameScene::GameScene(const App::Scene::InitData& init)
 	AssetController::GetInstance().PrepareAssets(U"Game");
 
 	SpawnEntities();
+
+	camera_manager_.SetTargetY(player_.GetPos().y);
+	camera_manager_.SetYOffsetRatio(kTitleEndingCameraOffsetYRatio);
 }
 
 GameScene::~GameScene()
@@ -57,106 +60,120 @@ void GameScene::SpawnEntities()
 
 void GameScene::update()
 {
-	player_.Update(stage_);
-
-	if((not is_player_dead_) && player_.IsOxygenEmpty())
+	switch(current_state_)
 	{
-		is_player_dead_ = true;
-		OnPlayerDied();
+	case GameState::Title:
+	{
+		// OxygenSpotのアニメーションだけ更新
+		for(auto& spot : oxygen_spots_)
+		{
+			spot.Update();
+		}
+
+		// ゲーム開始
+		if(kInputOK.down() || KeyEnter.down())
+		{
+			current_state_ = GameState::Playing;
+		}
+
+		camera_manager_.SetYOffsetRatio(kTitleEndingCameraOffsetYRatio);
+		break;
 	}
-
-	for(auto& spot : oxygen_spots_)
+	case GameState::Playing:
 	{
-		spot.Update();
+		player_.Update(stage_);
+
+		// エンディング判定
+		if(player_.GetPos().y >= kEndingZoneY)
+		{
+			current_state_ = GameState::Ending;
+
+			// カメラのワールド中心 X を取得してプレイヤーに渡す（プレイヤー側で徐々に中央へ移動させる）
+			const double camera_center_x = camera_manager_.GetViewRect().center().x;
+			player_.StartEnding(camera_center_x);
+			break;
+		}
+
+		// 死亡判定
+		if(player_.IsOxygenEmpty())
+		{
+			current_state_ = GameState::GameOver;
+			OnPlayerDied();
+			break;
+		}
+
+		for(auto& spot : oxygen_spots_)
+		{
+			spot.Update();
+		}
+		for(auto& enemy : enemies_)
+		{
+			enemy.Update(stage_, player_);
+		}
+
+		player_.collider.ClearCollisionResult();
+		for(auto& enemy : enemies_) { enemy.GetCollider().ClearCollisionResult(); }
+		for(auto& spot : oxygen_spots_) { spot.GetCollider().ClearCollisionResult(); }
+		auto& player_collider = player_.collider;
+		for(auto& enemy : enemies_)
+		{
+			if(not enemy.IsAlive()) continue;
+			auto& enemy_collider = enemy.GetCollider();
+			bool is_collided = std::visit([&](const auto& s1) { return std::visit([&](const auto& s2) { return s1.intersects(s2); }, enemy_collider.shape); }, player_collider.shape);
+			if(is_collided)
+			{
+				player_collider.is_colliding = true;
+				player_collider.collided_tags.push_back(enemy_collider.tag);
+
+				enemy_collider.is_colliding = true;
+				enemy_collider.collided_tags.push_back(player_collider.tag);
+			}
+		}
+		for(auto& spot : oxygen_spots_)
+		{
+			auto& spot_collider = spot.GetCollider();
+			bool is_collided = std::visit([&](const auto& s1) { return std::visit([&](const auto& s2) { return s1.intersects(s2); }, spot_collider.shape); }, player_collider.shape);
+			if(is_collided)
+			{
+				player_collider.is_colliding = true;
+				player_collider.collided_tags.push_back(spot_collider.tag);
+				player_.RecoverOxygen();
+			}
+		}
+
+		camera_manager_.SetYOffsetRatio(kPlayingCameraOffsetYRatio);
+		break;
 	}
-
-	// プレイヤーが死んだら，敵の更新や当たり判定をスキップ
-	if(is_player_dead_)
+	case GameState::Ending:
 	{
+		// フェード処理は削除：プレイヤーの移動は Player::Update()（内部Lerp）に任せる
+
+		// プレイヤーはアニメーションと物理演算だけ更新(入力や酸素消費はしない)
+		player_.Update(stage_);
+		// OxygenSpot のアニメーションだけ更新（敵は更新しない）
+		for(auto& spot : oxygen_spots_) { spot.Update(); }
+
+		camera_manager_.SetYOffsetRatio(kTitleEndingCameraOffsetYRatio);
+		break;
+	}
+	case GameState::GameOver:
+	{
+		player_.Update(stage_);
+
 		if(kInputOK.down() || KeyEnter.down())
 		{
 			Vec2 respawn_pos = FindNearestRespawnSpot();
-
-			// プレイヤー復活
 			player_.Respawn(respawn_pos);
-
-			// GameSceneの状態リセット
-			is_player_dead_ = false;
+			current_state_ = GameState::Playing;
 		}
 
-		// カメラは更新
-		camera_manager_.SetTargetY(player_.GetPos().y);
-		camera_manager_.Update();
-		return;
+		camera_manager_.SetYOffsetRatio(kPlayingCameraOffsetYRatio);
+		break;
 	}
-
-	for(auto& enemy : enemies_)
-	{
-		enemy.Update(stage_, player_);
 	}
 
 	camera_manager_.SetTargetY(player_.GetPos().y);
 	camera_manager_.Update();
-
-	// 全Colliderの衝突状態をリセット
-	player_.collider.ClearCollisionResult();
-	for(auto& enemy : enemies_)
-	{
-		enemy.GetCollider().ClearCollisionResult();
-	}
-	for(auto& spot : oxygen_spots_)
-	{
-		spot.GetCollider().ClearCollisionResult();
-	}
-
-	auto& player_collider = player_.collider;
-
-	for(auto& enemy : enemies_)
-	{
-		if(not enemy.IsAlive()) continue;
-
-		auto& enemy_collider = enemy.GetCollider();
-
-		bool is_collided = std::visit([&](const auto& player_shape)
-									  {
-										  return std::visit([&](const auto& enemy_shape)
-															{
-																return player_shape.intersects(enemy_shape);
-															}, enemy_collider.shape);
-									  }, player_collider.shape);
-
-		if(is_collided)
-		{
-			player_collider.is_colliding = true;
-			player_collider.collided_tags.push_back(enemy_collider.tag);
-
-			enemy_collider.is_colliding = true;
-			enemy_collider.collided_tags.push_back(player_collider.tag);
-		}
-	}
-
-	for(auto& spot : oxygen_spots_)
-	{
-		auto& spot_collider = spot.GetCollider();
-
-		bool is_collided = std::visit([&](const auto& player_shape)
-									  {
-										  return std::visit([&](const auto& spot_shape)
-															{
-																return player_shape.intersects(spot_shape);
-															}, spot_collider.shape);
-									  }, player_collider.shape);
-
-		if(is_collided)
-		{
-			// Player側にはOxygenと衝突したことを通知
-			player_collider.is_colliding = true;
-			player_collider.collided_tags.push_back(spot_collider.tag);
-
-			// PlayerのOxygenを回復
-			player_.RecoverOxygen();
-		}
-	}
 }
 
 void GameScene::OnPlayerDied()
@@ -235,6 +252,18 @@ void GameScene::draw() const
 	// UI
 	DrawOxygenGauge();
 	DrawProgressMeter();
+
+	if(current_state_ == GameState::Title)
+	{
+	}
+	else if(current_state_ == GameState::Ending)
+	{
+	}
+	else if(current_state_ == GameState::GameOver)
+	{
+	}
+
+	// 暗転・明転の描画は削除しました（フェード効果なし）
 }
 
 void GameScene::DrawOxygenGauge() const

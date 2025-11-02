@@ -7,7 +7,7 @@ CameraManager::CameraManager(double fixed_world_x, const Size& view_size)
 	: fixed_world_x_(fixed_world_x)
 	, y_offset_(view_size.y* (1.0 / 6.0))
 	, view_size_(view_size)
-	, target_y_(0.0)
+	, target_y_(300.0)
 	, current_y_(target_y_ + y_offset_)
 {
 	camera_.setCenter(Vec2{ fixed_world_x_, current_y_ });
@@ -18,13 +18,18 @@ void CameraManager::SetTargetY(double target_y)
 	target_y_ = target_y;
 }
 
+void CameraManager::SetYOffsetRatio(double ratio)
+{
+	y_offset_ = view_size_.y * ratio;
+}
+
 void CameraManager::Update()
 {
 	// カメラの中心が向かうべき目標Y座標を計算
 	const double goal_y = target_y_ + y_offset_;
 
 	// 現在のカメラY座標を，目標Y座標に滑らかに近づける(1.0 にすると即座に追従)
-	current_y_ = Math::Lerp(current_y_, goal_y, 0.1);
+	current_y_ = Math::Lerp(current_y_, goal_y, 0.05);
 
 	// カメラの中心座標を(固定X, 計算したY)に設定
 	camera_.setCenter(Vec2{ fixed_world_x_, current_y_ });
