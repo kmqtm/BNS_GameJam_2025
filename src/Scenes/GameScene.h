@@ -2,6 +2,7 @@
 
 #include "../Core/CameraManager.h"
 #include "../Core/Config.h"
+#include "../Entitie/Component/SoundController.h"
 #include "../Entitie/Enemy.h"
 #include "../Entitie/OxygenSpot.h"
 #include "../Entitie/Player.h"
@@ -35,6 +36,8 @@ private:
 
 	Vec2 FindNearestRespawnSpot() const;
 
+	void UpdateBGM();
+
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/v3/tilemap_v3.json", U"asset/Stage/v3/tileset.png", U"collision_layer" };
 
@@ -44,10 +47,12 @@ private:
 	s3d::Array<Enemy> enemies_;
 	s3d::Array<OxygenSpot> oxygen_spots_;
 
+	SoundController bgm_controller_;
+	bool is_intro_finished_ = false;
+
 	Vec2 player_start_pos_ = Vec2::Zero();
 	double map_total_height_ = 0.0;
 
-	// UIの定数
 	static constexpr Vec2 kOxygenGaugePos = { 20, 20 };
 	static constexpr Size kOxygenGaugeSize = { 24, 200 };
 	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 };

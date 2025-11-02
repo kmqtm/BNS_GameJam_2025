@@ -45,6 +45,33 @@ Player::Player()
 	dead_animation.is_looping = true;
 	anim_controller_.AddAnimation(U"dead", dead_animation);
 
+	Animation ending_animation;
+	ending_animation.texture_asset_names = {
+			U"player_end1",
+			U"player_end2",
+			U"player_end3",
+			U"player_end4",
+			U"player_end5",
+			U"player_end6",
+			U"player_end7",
+			U"player_end8",
+			U"player_end9",
+			U"player_end10",
+			U"player_end11",
+			U"player_end12",
+			U"player_end13",
+			U"player_end14",
+			U"player_end15",
+			U"player_end16",
+			U"player_end17",
+			U"player_end18",
+			U"player_end19",
+			U"player_end20",
+			U"player_end21", };
+	ending_animation.frame_duration_sec = 0.4;
+	ending_animation.is_looping = false;
+	anim_controller_.AddAnimation(U"ending", ending_animation);
+
 	anim_controller_.Play(U"float_idle");
 }
 
@@ -53,7 +80,7 @@ void Player::Update(const Stage& stage)
 	just_took_damage_ = false;
 	UpdateOxygen();
 
-	// ★ 修正: 酸素が0かエンディング中なら入力処理を受け付けない
+	// 酸素が0かエンディング中なら入力処理を受け付けない
 	if(not is_oxygen_empty_ && not is_in_ending_)
 	{
 		HandleInput();
@@ -72,7 +99,7 @@ void Player::Update(const Stage& stage)
 		}
 	}
 
-	// ★ 修正: エンディング中か、無敵中か、酸素が0なら当たり判定の反応をしない
+	// エンディング中か、無敵中か、酸素が0なら当たり判定の反応をしない
 	if((not is_invincible_) && (not is_oxygen_empty_) && (not is_in_ending_) && collider.is_colliding)
 	{
 		for(const auto& tag : collider.collided_tags)
@@ -111,6 +138,8 @@ void Player::HandleInput()
 
 		// swim時に酸素を少し消費
 		ModifyOxygen(-kOxygenSwimCost);
+
+		sound_controller_.Play(U"water_craw", false);
 	}
 }
 
@@ -268,9 +297,20 @@ void Player::UpdateAnimation()
 {
 	if(is_in_ending_)
 	{
-		if(not anim_controller_.IsPlaying(U"dead"))
+		// エンディング開始から3秒経過したらendingアニメーションを再生
+		if(ending_timer_.sF() >= kEndingAnimationDelaySec)
 		{
-			anim_controller_.Play(U"float_idle");
+			if(not anim_controller_.IsPlaying(U"ending"))
+			{
+				anim_controller_.Play(U"ending");
+			}
+		}
+		else
+		{
+			if(not anim_controller_.IsPlaying(U"float_idle"))
+			{
+				anim_controller_.Play(U"float_idle");
+			}
 		}
 		return;
 	}
@@ -342,7 +382,12 @@ void Player::Draw(const Vec2& camera_offset) const
 
 	if(auto texture_asset = anim_controller_.GetCurrentTextureAsset())
 	{
-		const Vec2 top_left_pos = pos_ - kDrawOffset;
+		// エンディングアニメーション用の特別な描画オフセット
+		const Vec2 draw_offset = anim_controller_.IsPlaying(U"ending")
+			? kEndingDrawOffset
+			: kDrawOffset;
+
+		const Vec2 top_left_pos = pos_ - draw_offset;
 
 		const Vec2 draw_pos = top_left_pos - camera_offset;
 		const Vec2 final_draw_pos = s3d::Floor(draw_pos);
@@ -436,6 +481,8 @@ void Player::TakeDamage()
 	just_took_damage_ = true;
 	is_invincible_ = true;
 	invincible_timer_.restart();
+
+	sound_controller_.Play(U"damage2", false);
 }
 
 double Player::GetOxygen() const { return oxygen_; }
@@ -464,14 +511,15 @@ void Player::Respawn(const Vec2& spawn_pos)
 void Player::StartEnding(double camera_center_world_x)
 {
 	is_in_ending_ = true;
-	// ワールド座標 X を目標に設定してワープ有効化
-	ending_target_x_ = camera_center_world_x;
+	// 中心から150px右にオフセット
+	ending_target_x_ = camera_center_world_x + 80.0;
 	ending_warp_enabled_ = true;
 
-	// Y方向のモーションは止めておく
 	velocity_.y = 0.0;
-	// X 速度はワープ側で制御するので 0 にしておく
 	velocity_.x = 0.0;
 
-	Print << U"PLAYER: START ENDING! target_x=" << ending_target_x_;
+	// エンディングタイマーを開始
+	ending_timer_.restart();
+
+	//Print << U"PLAYER: START ENDING! target_x=" << ending_target_x_;
 }

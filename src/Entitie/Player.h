@@ -3,6 +3,7 @@
 #include "../World/Stage.h"
 #include "Component/AnimationController.h"
 #include "Component/Collider.h"
+#include "Component/SoundController.h"
 
 #include <Siv3D.hpp>
 
@@ -24,10 +25,8 @@ public:
 
 	void Respawn(const Vec2& spawn_pos);
 
-	// 変更: カメラのワールド座標での中心 x を渡す
 	void StartEnding(double camera_center_world_x);
 
-	// 地形衝突には使わないが，敵やアイテムとの当たり判定に使う
 	Collider collider{ RectF{0, 0, 1.0, 1.0}, ColliderTag::kPlayer };
 
 private:
@@ -72,6 +71,7 @@ private:
 
 	// 描画オフセット(スプライトの中心から左上までの距離)
 	static constexpr Vec2 kDrawOffset = { 64.0, 64.0 };
+	static constexpr Vec2 kEndingDrawOffset = { 96.0, 128.0 };
 
 	// 物理パラメータ
 	double horizontal_accel_{ 0.6 };
@@ -86,6 +86,8 @@ private:
 	bool is_oxygen_empty_ = false;	// oxygen_ == 0でtrue
 
 	bool is_in_ending_ = false;
+	s3d::Stopwatch ending_timer_;
+	static constexpr double kEndingAnimationDelaySec = 7.0;
 
 	// エンディング中のx軸ワープ制御
 	double ending_target_x_ = 0.0;			// 目標x（ワールド座標）
@@ -102,4 +104,5 @@ private:
 	static constexpr double kOxygenRecoveryPerFrame = 1.0;			// 回復速度(1秒あたり)
 
 	AnimationController anim_controller_;
+	SoundController sound_controller_;
 };
