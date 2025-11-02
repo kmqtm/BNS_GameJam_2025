@@ -272,6 +272,40 @@ void GameScene::draw() const
 	const Vec2 camera_offset = camera_manager_.GetCameraOffset();
 	const RectF view_rect = camera_manager_.GetViewRect();
 
+	// ヘルパー関数：背景を簡単に描画
+	auto DrawBackground = [&](const String& texture_name, const Vec2& center_pos)
+		{
+			const Vec2 kDrawOffset = { 64.0, 64.0 };
+			const Vec2 final_pos = s3d::Floor((center_pos - kDrawOffset) - camera_offset);
+			TextureAsset(texture_name).draw(final_pos);
+		};
+
+	// ここで座標と画像名を指定するだけ
+	DrawBackground(U"water_lay1", Vec2{ 50, 100 });
+	DrawBackground(U"whale", Vec2{ 200, 400 });
+	DrawBackground(U"jerry_fish", Vec2{ 200, 700 });
+	DrawBackground(U"fish_02", Vec2{ 350, 1000 });
+	DrawBackground(U"fish_01", Vec2{ 600, 1200 });
+	DrawBackground(U"tuna", Vec2{ 300, 1500 });
+	DrawBackground(U"fish_02", Vec2{ 500, 1600 });
+	DrawBackground(U"tuna", Vec2{ 400, 1900 });
+	DrawBackground(U"turtle", Vec2{ 400, 2000 });
+	DrawBackground(U"fish_01", Vec2{ 600, 2500 });
+	DrawBackground(U"stone-bream", Vec2{ 400, 2800 });
+	DrawBackground(U"fish_02", Vec2{ 200, 2900 });
+	DrawBackground(U"stone-bream", Vec2{ 600, 3300 });
+	DrawBackground(U"sunfish", Vec2{ 250, 3500 });
+	DrawBackground(U"fish_02", Vec2{ 450, 3700 });
+	DrawBackground(U"stingray", Vec2{ 300, 4500 });
+	DrawBackground(U"fish_02", Vec2{ 150, 4700 });
+	DrawBackground(U"deapsea-fish01", Vec2{ 350, 5200 });
+	DrawBackground(U"deapsea-fish02", Vec2{ 550, 6000 });
+	DrawBackground(U"oarfish", Vec2{ 400, 7000 });
+	DrawBackground(U"chair", Vec2{ 550, 7200 });
+	DrawBackground(U"sofa", Vec2{ 400, 7500 });
+	DrawBackground(U"deapsea-fish01", Vec2{ 150, 7350 });
+	DrawBackground(U"TV1", Vec2{ 100, 7800 });
+
 	// プレイヤー開始位置にtitleを描画
 	if(TextureAsset::IsRegistered(U"title"))
 	{
