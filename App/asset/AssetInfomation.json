@@ -3,7 +3,15 @@
 
 		"Font": [ "null" ],
 
-		"Sound": [ "null" ],
+		"Sound": [
+			"damage.mp3",
+			"damage2.mp3",
+			"determing.mp3",
+			"deepsea.mp3",
+			"deepsea_intro.mp3",
+			"heal.mp3",
+      "water_craw.mp3"
+		],
 
 		"Texture": [
 			"player_1.png",
@@ -20,6 +28,27 @@
 			"player_walk4.png",
 			"player_walk5.png",
 			"player_walk6.png",
+			"player_end1.png",
+			"player_end2.png",
+			"player_end3.png",
+			"player_end4.png",
+			"player_end5.png",
+			"player_end6.png",
+			"player_end7.png",
+			"player_end8.png",
+			"player_end9.png",
+			"player_end10.png",
+			"player_end11.png",
+			"player_end12.png",
+			"player_end13.png",
+			"player_end14.png",
+			"player_end15.png",
+			"player_end16.png",
+			"player_end17.png",
+			"player_end18.png",
+			"player_end19.png",
+			"player_end20.png",
+			"player_end21.png",
 			"clione1.png",
 			"coral_l.png",
 			"coral_r.png",
@@ -30,7 +59,9 @@
 			"hot-spring-and-bubble4.png",
 			"hot-spring-and-bubble5.png",
 			"hot-spring-and-bubble6.png",
-			"hot-spring-and-bubble7.png"
+			"hot-spring-and-bubble7.png",
+			"octopus.png",
+      "title.png"
 		]
 	}
 }
