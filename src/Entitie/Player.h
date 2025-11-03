@@ -46,6 +46,11 @@ private:
 	void UpdateOxygen();
 	void ModifyOxygen(double amount);
 
+	// Refactor helpers
+	void SetupAnimations();
+	void OnSwimPressed();
+	void HandleCollisions();
+
 	Vec2 pos_{ 0.0, 0.0 };
 	Vec2 velocity_{ 0.0, 0.0 };
 
