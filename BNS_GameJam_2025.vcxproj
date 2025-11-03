@@ -173,7 +173,7 @@
     <None Include=".editorconfig" />
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="App\asset\AssetInfomation.json" />
+    <None Include="App\asset\AssetInformation.json" />
     <None Include="App\asset\Stage\v1\tilemap.json">
       <DeploymentContent>true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>

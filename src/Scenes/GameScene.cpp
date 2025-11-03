@@ -21,14 +21,55 @@ GameScene::GameScene(const App::Scene::InitData& init)
 	camera_manager_.SetTargetY(player_.GetPos().y);
 	camera_manager_.SetYOffsetRatio(kTitleEndingCameraOffsetYRatio);
 
-	// イントロBGMを再生開始
-	bgm_controller_.Play(U"deepsea_intro", false);
+	//イントロBGMを再生開始（準備ができるまで保留して毎フレームチェック）
+	StartOrDeferBGM(U"deepsea_intro", false);
 }
 
 GameScene::~GameScene()
 {
 	bgm_controller_.StopAll();
 	AssetController::GetInstance().UnregisterAssets();
+}
+
+void GameScene::StartOrDeferBGM(const String& asset, bool loop)
+{
+	//既に現在再生中のBGMと同じなら何もしない
+	if(not current_playing_bgm_asset_.isEmpty() && current_playing_bgm_asset_ == asset)
+	{
+		return;
+	}
+
+	// 即時再生できるなら再生して記録する
+	if(AudioAsset::IsRegistered(asset) && AudioAsset::IsReady(asset))
+	{
+		bgm_controller_.Play(asset, loop);
+		current_playing_bgm_asset_ = asset;
+		// clear pending
+		pending_bgm_asset_.clear();
+		pending_bgm_loop_ = false;
+		return;
+	}
+
+	//まだ準備できていない場合は保留して毎フレームチェックする
+	pending_bgm_asset_ = asset;
+	pending_bgm_loop_ = loop;
+}
+
+void GameScene::ProcessPendingBGM()
+{
+	if(pending_bgm_asset_.isEmpty())
+	{
+		return;
+	}
+
+	// 登録され準備完了したら再生する
+	if(AudioAsset::IsRegistered(pending_bgm_asset_) && AudioAsset::IsReady(pending_bgm_asset_))
+	{
+		bgm_controller_.Play(pending_bgm_asset_, pending_bgm_loop_);
+		current_playing_bgm_asset_ = pending_bgm_asset_;
+		pending_bgm_asset_.clear();
+		pending_bgm_loop_ = false;
+	}
 }
 
 void GameScene::SpawnEntities()
@@ -63,17 +104,31 @@ void GameScene::SpawnEntities()
 
 void GameScene::UpdateBGM()
 {
-	// イントロが終わったらループBGMに切り替え
-	if(not is_intro_finished_ && not bgm_controller_.IsPlaying(U"deepsea_intro"))
+	// pending 再生があれば毎フレームチェックして可能なら再生
+	ProcessPendingBGM();
+
+	//イントロが実際に再生されていて終了したらループBGMに切り替え
+	if(not is_intro_finished_)
 	{
-		is_intro_finished_ = true;
-		bgm_controller_.Play(U"deepsea", true);
+		// intro が現在再生中か再生済みかを current_playing_bgm_asset_で管理
+		if(current_playing_bgm_asset_ == U"deepsea_intro")
+		{
+			if(not bgm_controller_.IsPlaying(U"deepsea_intro"))
+			{
+				is_intro_finished_ = true;
+				StartOrDeferBGM(U"deepsea", true);
+			}
+		}
+		// else: introまだ準備できてない／再生されてない -> 待つ
 	}
 
 	// プレイヤーが死んだらBGMを停止
 	if(player_.IsOxygenEmpty())
 	{
 		bgm_controller_.StopAll();
+		current_playing_bgm_asset_.clear();
+		pending_bgm_asset_.clear();
+		pending_bgm_loop_ = false;
 		return;
 	}
 
@@ -208,7 +263,7 @@ void GameScene::update()
 
 			// リスポーン時にBGMを再開
 			is_intro_finished_ = false;
-			bgm_controller_.Play(U"deepsea_intro", false);
+			StartOrDeferBGM(U"deepsea_intro", false);
 		}
 
 		camera_manager_.SetYOffsetRatio(kPlayingCameraOffsetYRatio);

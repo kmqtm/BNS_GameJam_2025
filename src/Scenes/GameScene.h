@@ -38,6 +38,10 @@ private:
 
 	void UpdateBGM();
 
+	// helper to start or defer bgm playback
+	void StartOrDeferBGM(const String& asset, bool loop);
+	void ProcessPendingBGM();
+
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/v3/tilemap_v3.json", U"asset/Stage/v3/tileset.png", U"collision_layer" };
 
@@ -49,6 +53,12 @@ private:
 
 	SoundController bgm_controller_;
 	bool is_intro_finished_ = false;
+
+	// pending bgm playback when asset not yet ready
+	String pending_bgm_asset_;
+	bool pending_bgm_loop_ = false;
+	// which BGM actually started playing (empty if none)
+	String current_playing_bgm_asset_;
 
 	Vec2 player_start_pos_ = Vec2::Zero();
 	double map_total_height_ = 0.0;

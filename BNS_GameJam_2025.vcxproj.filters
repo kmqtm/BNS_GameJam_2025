@@ -763,7 +763,7 @@
       <Filter>Resource Files\engine\shader\glsl</Filter>
     </None>
     <None Include="App\BNS_GameJam_2025(debug).exe" />
-    <None Include="App\asset\AssetInfomation.json" />
+    <None Include="App\asset\AssetInformation.json" />
     <None Include=".gitignore" />
     <None Include=".editorconfig" />
     <None Include=".gitattributes" />

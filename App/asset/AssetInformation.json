@@ -1,7 +1,7 @@
 {
 	"Game": {
 
-		"Font": [ "null" ],
+		"Font": [],
 
 		"Sound": [
 			"damage.mp3",
