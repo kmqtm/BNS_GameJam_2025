@@ -73,8 +73,8 @@ void Enemy::SetupAnimations(const String& type)
 
 	if(type == U"Fish")
 	{
-		anim.texture_asset_names = { U"fish1" };
-		anim.frame_duration_sec = 0.25;
+		anim.texture_asset_names = { U"fishA_1", U"fishA_2" };
+		anim.frame_duration_sec = 0.5;
 		anim.is_looping = true;
 		anim_controller_.AddAnimation(U"move", anim);
 		anim_controller_.Play(U"move");
@@ -95,7 +95,7 @@ void Enemy::SetupAnimations(const String& type)
 		}
 		else if(type == U"Clione")
 		{
-			anim.texture_asset_names = { U"clione1" };
+			anim.texture_asset_names = { U"clione1", U"clione2", U"clione3" };
 			anim.frame_duration_sec = 0.5;
 		}
 
