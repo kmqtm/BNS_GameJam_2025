@@ -53,6 +53,9 @@ private:
 	Vec2 player_start_pos_ = Vec2::Zero();
 	double map_total_height_ = 0.0;
 
+	// 背景オブジェクトがアクティブになった時刻を記録（プレイヤーが近づいた時刻）
+	mutable std::unordered_map<String, double> background_activation_times_;
+
 	static constexpr Vec2 kOxygenGaugePos = { 20, 20 };
 	static constexpr Size kOxygenGaugeSize = { 24, 200 };
 	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 };
