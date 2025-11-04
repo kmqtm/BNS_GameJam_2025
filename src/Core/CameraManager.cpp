@@ -23,28 +23,45 @@ void CameraManager::SetYOffsetRatio(double ratio)
 	y_offset_ = view_size_.y * ratio;
 }
 
+// カメラ中心の目標Yを計算
+double CameraManager::ComputeGoalY() const
+{
+	return target_y_ + y_offset_;
+}
+
+// 補間ヘルパー（線形補間）
+double CameraManager::SmoothTo(double current, double goal, double factor) const
+{
+	return Math::Lerp(current, goal, factor);
+}
+
+// カメラ中心座標を計算
+Vec2 CameraManager::ComputeCameraCenter() const
+{
+	return Vec2{ fixed_world_x_, current_y_ };
+}
+
+Vec2 CameraManager::HalfViewSize() const
+{
+	return (view_size_ / 2.0);
+}
+
 void CameraManager::Update()
 {
-	// カメラの中心が向かうべき目標Y座標を計算
-	const double goal_y = target_y_ + y_offset_;
+	// 目標Yを計算し、現在値を滑らかに更新
+	const double goal_y = ComputeGoalY();
+	current_y_ = SmoothTo(current_y_, goal_y, 0.05);
 
-	// 現在のカメラY座標を，目標Y座標に滑らかに近づける(1.0 にすると即座に追従)
-	current_y_ = Math::Lerp(current_y_, goal_y, 0.05);
-
-	// カメラの中心座標を(固定X, 計算したY)に設定
-	camera_.setCenter(Vec2{ fixed_world_x_, current_y_ });
+	// カメラに適用
+	camera_.setCenter(ComputeCameraCenter());
 	camera_.update();
 }
 
 Vec2 CameraManager::GetCameraOffset() const
 {
-	// 中心座標を取得
-	const Vec2 center = Vec2{ fixed_world_x_, current_y_ };
-
-	// ビューサイズの半分を計算
-	const Vec2 half_view_size = (view_size_ / 2.0);
-
-	return (center - half_view_size);
+	// 中心 - ビュー半分 = 左上のワールド座標
+	const Vec2 center = ComputeCameraCenter();
+	return (center - HalfViewSize());
 }
 
 RectF CameraManager::GetViewRect() const

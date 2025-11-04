@@ -44,4 +44,9 @@ private:
 	void ParseTileLayer(const JSON& layer_json);
 	void ParseObjectLayer(const JSON& layer_json);
 	void CreateTileRegions();
+
+	// new helpers
+	void FindCollisionLayer();
+	void DrawLayerTiles(const TileMapLayer& layer, int32 start_x, int32 start_y, int32 end_x, int32 end_y, const Vec2& camera_offset) const;
+	void ComputeDrawRange(const RectF& view_rect, int32& out_start_x, int32& out_start_y, int32& out_end_x, int32& out_end_y) const;
 };

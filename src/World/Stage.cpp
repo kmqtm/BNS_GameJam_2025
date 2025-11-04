@@ -13,7 +13,17 @@ Stage::Stage(const FilePath& json_path, const FilePath& tileset_path, const Stri
 	CreateTileRegions();
 
 	// 当たり判定レイヤーを検索してポインタを保持
-	// LoadFromJson の後で実行
+	FindCollisionLayer();
+
+	// 見つからなかった場合
+	if(not collision_layer_)
+	{
+		throw Error{ U"Stage: 当たり判定レイヤー '{}' が見つかりませんでした．"_fmt(collision_layer_name_) };
+	}
+}
+
+void Stage::FindCollisionLayer()
+{
 	collision_layer_ = nullptr;
 	for(const auto& layer : layers_)
 	{
@@ -22,12 +32,6 @@ Stage::Stage(const FilePath& json_path, const FilePath& tileset_path, const Stri
 			collision_layer_ = &layer;
 			break;
 		}
-	}
-
-	// 見つからなかった場合
-	if(not collision_layer_)
-	{
-		throw Error{ U"Stage: 当たり判定レイヤー '{}' が見つかりませんでした．"_fmt(collision_layer_name_) };
 	}
 }
 
@@ -63,11 +67,12 @@ void Stage::LoadFromJson(const FilePath& json_path)
 
 	for(const auto& layer : json[U"layers"].arrayView())
 	{
-		if(layer[U"type"].getString() == U"tilelayer")
+		const String type = layer[U"type"].getString();
+		if(type == U"tilelayer")
 		{
 			ParseTileLayer(layer);
 		}
-		else if(layer[U"type"].getString() == U"objectgroup")
+		else if(type == U"objectgroup")
 		{
 			ParseObjectLayer(layer);
 		}
@@ -82,7 +87,8 @@ void Stage::ParseTileLayer(const JSON& layer_json)
 	Grid<int32> grid(map_width_, map_height_);
 	const auto& data = layer_json[U"data"].arrayView();
 
-	for(size_t i = 0; i < layer_json[U"data"].size(); ++i)
+	const size_t data_size = layer_json[U"data"].size();
+	for(size_t i = 0; i < data_size; ++i)
 	{
 		const int32 x = static_cast<s3d::int32>(i) % map_width_;
 		const int32 y = static_cast<s3d::int32>(i) / map_width_;
@@ -116,35 +122,46 @@ const s3d::Array<SpawnInfo>& Stage::GetSpawnPoints() const
 	return spawn_points_;
 }
 
+void Stage::ComputeDrawRange(const RectF& view_rect, int32& out_start_x, int32& out_start_y, int32& out_end_x, int32& out_end_y) const
+{
+	// 描画範囲の計算にstd::floorを使用し，負の座標でも正確に動作するようにする
+	out_start_x = Max(0, static_cast<int32>(std::floor(view_rect.x / tile_size_)));
+	out_start_y = Max(0, static_cast<int32>(std::floor(view_rect.y / tile_size_)));
+	out_end_x = Min(map_width_, static_cast<int32>(std::ceil(view_rect.tr().x / tile_size_)));
+	out_end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_)));
+}
+
+void Stage::DrawLayerTiles(const TileMapLayer& layer, int32 start_x, int32 start_y, int32 end_x, int32 end_y, const Vec2& camera_offset) const
+{
+	for(int32 y = start_y; y < end_y; ++y)
+	{
+		for(int32 x = start_x; x < end_x; ++x)
+		{
+			const int32 tile_id = layer.tiles[y][x];
+			if(tile_id <= 0) continue;
+
+			const Vec2 world_pos = Vec2{ x * tile_size_, y * tile_size_ };
+			const Vec2 draw_pos = world_pos - camera_offset;
+
+			// 整数にスナップ
+			tile_regions_[tile_id - 1].draw(s3d::Floor(draw_pos));
+		}
+	}
+}
+
 void Stage::Draw(const Vec2& camera_offset, const RectF& view_rect) const
 {
 	const ScopedRenderStates2D sampler{ SamplerState::ClampNearest };
 
-	// 描画範囲の計算にstd::floorを使用し，負の座標でも正確に動作するようにする
-	const int32 start_x = Max(0, static_cast<int32>(std::floor(view_rect.x / tile_size_)));
-	const int32 start_y = Max(0, static_cast<int32>(std::floor(view_rect.y / tile_size_)));
-	const int32 end_x = Min(map_width_, static_cast<int32>(std::ceil(view_rect.tr().x / tile_size_)));
-	const int32 end_y = Min(map_height_, static_cast<int32>(std::ceil(view_rect.br().y / tile_size_)));
+	int32 start_x, start_y, end_x, end_y;
+	ComputeDrawRange(view_rect, start_x, start_y, end_x, end_y);
 
 	for(const auto& layer : layers_)
 	{
 		// 当たり判定レイヤーは描画しない
 		if(layer.name == collision_layer_name_) continue;
 
-		for(int32 y = start_y; y < end_y; ++y)
-		{
-			for(int32 x = start_x; x < end_x; ++x)
-			{
-				const int32 tile_id = layer.tiles[y][x];
-				if(tile_id <= 0) continue;
-
-				const Vec2 world_pos = Vec2{ x * tile_size_, y * tile_size_ };
-				const Vec2 draw_pos = world_pos - camera_offset;
-
-				// 整数にスナップ
-				tile_regions_[tile_id - 1].draw(s3d::Floor(draw_pos));
-			}
-		}
+		DrawLayerTiles(layer, start_x, start_y, end_x, end_y, camera_offset);
 	}
 }
 
