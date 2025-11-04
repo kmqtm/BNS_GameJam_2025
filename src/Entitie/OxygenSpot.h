@@ -27,4 +27,10 @@ private:
 
 	AnimationController anim_controller_;
 	Collider collider_; // 当たり判定
+
+	// アニメーション初期化を分離
+	void SetupAnimation();
+
+	// コライダーの形状に応じて中心を更新するヘルパー
+	void UpdateColliderCenter();
 };

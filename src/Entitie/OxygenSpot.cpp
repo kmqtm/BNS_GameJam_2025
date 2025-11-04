@@ -1,4 +1,4 @@
-﻿#include "Component/Animation.h" // アニメーション設定のため
+﻿#include "Component/Animation.h"
 #include "OxygenSpot.h"
 
 #include <Siv3D.hpp>
@@ -9,26 +9,45 @@ OxygenSpot::OxygenSpot(const Vec2& center_pos, const Vec2& size)
 	, size_(size)
 	, collider_(Collider{ RectF{ Arg::center(center_pos), size }, ColliderTag::kOxygen })
 {
+	SetupAnimation();
+	anim_controller_.Play(U"idle");
+}
+
+void OxygenSpot::SetupAnimation()
+{
 	Animation anim;
-	anim.texture_asset_names = { U"hot-spring-and-bubble2", U"hot-spring-and-bubble3", U"hot-spring-and-bubble4", U"hot-spring-and-bubble5", U"hot-spring-and-bubble6", U"hot-spring-and-bubble7", };
+	anim.texture_asset_names = {
+		U"hot-spring-and-bubble2",
+		U"hot-spring-and-bubble3",
+		U"hot-spring-and-bubble4",
+		U"hot-spring-and-bubble5",
+		U"hot-spring-and-bubble6",
+		U"hot-spring-and-bubble7",
+	};
 	anim.frame_duration_sec = 0.2;
 	anim.is_looping = true;
 	anim_controller_.AddAnimation(U"idle", anim);
-	anim_controller_.Play(U"idle");
 }
 
 void OxygenSpot::Update()
 {
 	anim_controller_.Update();
 
+	// コライダーの中心をスポット位置に追従させる
+	UpdateColliderCenter();
+}
+
+void OxygenSpot::UpdateColliderCenter()
+{
+	// variant に格納される形状の種類ごとに中心設定を行う
 	std::visit([&](auto& shape)
 			   {
-				   // C++17 の if constexpr を使い、型ごとに処理を分岐
-				   if constexpr(std::is_same_v<std::decay_t<decltype(shape)>, s3d::Circle> ||
-								std::is_same_v<std::decay_t<decltype(shape)>, s3d::RectF>)
+				   using T = std::decay_t<decltype(shape)>;
+				   if constexpr(std::is_same_v<T, s3d::Circle> || std::is_same_v<T, s3d::RectF>)
 				   {
 					   shape.setCenter(pos_);
 				   }
+				   // 他の形状タイプには対応していないが，必要ならここに追加
 			   }, collider_.shape);
 }
 
