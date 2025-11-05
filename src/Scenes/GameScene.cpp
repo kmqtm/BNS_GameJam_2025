@@ -407,8 +407,8 @@ void GameScene::draw() const
 	DrawBackground(U"stone-bream", Vec2{ 700, 2800 }, false, Vec2{ -20, 0 });
 	DrawBackground(U"fish_02", Vec2{ 100, 2900 }, true, Vec2{ 20, 0 }, true);
 	DrawBackground(U"stone-bream", Vec2{ 600, 3300 }, false, Vec2{ -20, 0 });
-	DrawBackground(U"sunfish", Vec2{ 100, 3500 }, false, Vec2{ 5, 0 });
 	DrawBackground(U"fish_02", Vec2{ 600, 3600 }, false, Vec2{ -20, 0 }, true);
+	DrawBackground(U"sunfish", Vec2{ 200, 3900 }, false, Vec2{ 5, 0 });
 	DrawBackground(U"stingray", Vec2{ 200, 4600 }, false, Vec2{ 5, -5 });
 	DrawBackground(U"stone-bream", Vec2{ 100, 5000 }, true, Vec2{ 10, 0 });
 	DrawBackground(U"deepsea-fish01", Vec2{ 200 , 5400 }, true, Vec2{ 5, 0 });
@@ -438,12 +438,12 @@ void GameScene::draw() const
 
 	player_.Draw(camera_offset);
 
-	stage_.Draw(camera_offset, view_rect);
-
 	for(const auto& enemy : enemies_)
 	{
 		enemy.Draw(camera_offset);
 	}
+
+	stage_.Draw(camera_offset, view_rect);
 
 	for(const auto& spot : oxygen_spots_)
 	{

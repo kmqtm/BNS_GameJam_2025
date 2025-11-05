@@ -40,44 +40,8 @@
                  "type":"Fish",
                  "visible":true,
                  "width":0,
-                 "x":160,
-                 "y":3104
-                }, 
-                {
-                 "height":0,
-                 "id":8,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Coral_L",
-                 "visible":true,
-                 "width":0,
-                 "x":384,
-                 "y":4096
-                }, 
-                {
-                 "height":0,
-                 "id":9,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Coral_R",
-                 "visible":true,
-                 "width":0,
-                 "x":576,
-                 "y":3520
-                }, 
-                {
-                 "height":0,
-                 "id":10,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Coral_R",
-                 "visible":true,
-                 "width":0,
-                 "x":576,
-                 "y":4288
+                 "x":552,
+                 "y":2814
                 }, 
                 {
                  "height":0,
@@ -85,11 +49,11 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_L",
+                 "type":"Shark",
                  "visible":true,
                  "width":0,
-                 "x":128,
-                 "y":3584
+                 "x":318,
+                 "y":3548
                 }, 
                 {
                  "height":0,
@@ -121,11 +85,11 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_R",
+                 "type":"Swimmie",
                  "visible":true,
                  "width":0,
-                 "x":576,
-                 "y":2816
+                 "x":158,
+                 "y":3110
                 }, 
                 {
                  "height":0,
@@ -138,8 +102,7 @@
                  "width":0,
                  "x":608,
                  "y":3424
-                },
-            
+                }, 
                 {
                  "height":0,
                  "id":20,
@@ -170,34 +133,23 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_R",
+                 "type":"MorayEel_L",
                  "visible":true,
                  "width":0,
-                 "x":320,
-                 "y":4672
-                }, 
-                {
-                 "height":0,
-                 "id":24,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Clione",
-                 "visible":true,
-                 "width":0,
-                 "x":128,
-                 "y":4864
-                }, 
+                 "x":126,
+                 "y":4640
+                },
+            
                 {
                  "height":0,
                  "id":25,
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"MorayEel_R",
                  "visible":true,
                  "width":0,
-                 "x":416,
+                 "x":446,
                  "y":4896
                 }, 
                 {
@@ -238,23 +190,11 @@
                 }, 
                 {
                  "height":0,
-                 "id":31,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Coral_R",
-                 "visible":true,
-                 "width":0,
-                 "x":512,
-                 "y":5504
-                }, 
-                {
-                 "height":0,
                  "id":32,
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
                  "x":480,
@@ -266,13 +206,12 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
                  "x":96,
                  "y":5728
-                },
-            
+                }, 
                 {
                  "height":0,
                  "id":34,
@@ -291,11 +230,11 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_R",
+                 "type":"Octoleg_R",
                  "visible":true,
                  "width":0,
-                 "x":576,
-                 "y":6080
+                 "x":634,
+                 "y":6012
                 }, 
                 {
                  "height":0,
@@ -303,7 +242,7 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
                  "x":576,
@@ -311,23 +250,11 @@
                 }, 
                 {
                  "height":0,
-                 "id":38,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Fish",
-                 "visible":true,
-                 "width":0,
-                 "x":352,
-                 "y":6496
-                }, 
-                {
-                 "height":0,
                  "id":39,
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
                  "x":96,
@@ -339,23 +266,24 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_R",
+                 "type":"Octoleg_R",
                  "visible":true,
                  "width":0,
-                 "x":512,
-                 "y":6720
-                }, 
+                 "x":572,
+                 "y":6712
+                },
+            
                 {
                  "height":0,
                  "id":41,
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_L",
+                 "type":"Octoleg_L",
                  "visible":true,
                  "width":0,
-                 "x":192,
-                 "y":6528
+                 "x":122,
+                 "y":6520
                 }, 
                 {
                  "height":0,
@@ -375,11 +303,11 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_R",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
-                 "x":192,
-                 "y":7296
+                 "x":204,
+                 "y":7138
                 }, 
                 {
                  "height":0,
@@ -387,10 +315,10 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Coral_L",
+                 "type":"Octoleg_R",
                  "visible":true,
                  "width":0,
-                 "x":448,
+                 "x":634,
                  "y":7104
                 }, 
                 {
@@ -399,24 +327,11 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
-                 "type":"Fish",
+                 "type":"DeepseaFish",
                  "visible":true,
                  "width":0,
-                 "x":480,
-                 "y":7264
-                },
-            
-                {
-                 "height":0,
-                 "id":46,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "type":"Fish",
-                 "visible":true,
-                 "width":0,
-                 "x":224,
-                 "y":7392
+                 "x":482,
+                 "y":7326
                 }, 
                 {
                  "height":0,
@@ -424,11 +339,47 @@
                  "name":"",
                  "point":true,
                  "rotation":0,
+                 "type":"Octoleg_L",
+                 "visible":true,
+                 "width":0,
+                 "x":68,
+                 "y":7500
+                }, 
+                {
+                 "height":0,
+                 "id":48,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "type":"MorayEel_R",
+                 "visible":true,
+                 "width":0,
+                 "x":576,
+                 "y":4194
+                }, 
+                {
+                 "height":0,
+                 "id":50,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "type":"Coral_R",
+                 "visible":true,
+                 "width":0,
+                 "x":572,
+                 "y":2496
+                }, 
+                {
+                 "height":0,
+                 "id":51,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
                  "type":"Coral_L",
                  "visible":true,
                  "width":0,
                  "x":128,
-                 "y":7552
+                 "y":2302
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -502,18 +453,18 @@
             13, 13, 13, 13, 26, 0, 0, 0, 0, 38, 13,
             13, 13, 13, 13, 26, 0, 0, 0, 0, 38, 13,
             13, 13, 13, 13, 26, 0, 0, 0, 0, 41, 42,
-            13, 13, 13, 39, 40, 0, 0, 0, 0, 0, 38,
+            13, 13, 13, 39, 40, 0, 0, 0, 0, 80, 38,
             13, 13, 13, 26, 0, 0, 0, 0, 0, 0, 38,
             13, 13, 13, 26, 0, 0, 0, 0, 0, 0, 38,
             13, 13, 13, 26, 0, 0, 0, 0, 0, 29, 30,
             13, 13, 39, 40, 0, 0, 0, 0, 29, 30, 13,
             13, 39, 40, 0, 0, 0, 29, 35, 30, 13, 13,
             39, 40, 0, 0, 0, 0, 38, 13, 13, 13, 13,
-            26, 0, 0, 0, 0, 0, 38, 13, 13, 13, 13,
+            26, 79, 0, 0, 0, 0, 38, 13, 13, 13, 13,
             26, 0, 0, 0, 0, 0, 38, 13, 13, 13, 13,
             26, 0, 0, 0, 0, 0, 41, 42, 13, 13, 13,
             26, 0, 0, 0, 0, 0, 0, 41, 42, 13, 13,
-            26, 0, 0, 0, 0, 0, 0, 0, 38, 13, 13,
+            26, 0, 0, 0, 0, 0, 0, 80, 38, 13, 13,
             27, 28, 0, 0, 0, 0, 0, 0, 38, 13, 13,
             13, 26, 0, 0, 0, 0, 0, 29, 30, 13, 13,
             13, 27, 28, 0, 0, 0, 0, 38, 13, 13, 13,
@@ -530,7 +481,7 @@
             51, 52, 0, 0, 0, 0, 0, 0, 62, 13, 13,
             13, 51, 52, 0, 0, 0, 0, 0, 65, 66, 13,
             13, 13, 51, 52, 0, 0, 0, 0, 0, 65, 66,
-            13, 13, 13, 51, 56, 57, 0, 0, 0, 0, 62,
+            13, 13, 13, 51, 56, 57, 0, 0, 0, 81, 62,
             13, 13, 13, 13, 13, 50, 0, 0, 0, 0, 62,
             13, 13, 13, 13, 13, 50, 0, 0, 0, 0, 62,
             13, 13, 13, 13, 63, 64, 0, 0, 0, 58, 60,
@@ -721,13 +672,13 @@
          "name":"collision_layer",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":11,
          "x":0,
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":48,
+ "nextobjectid":52,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
