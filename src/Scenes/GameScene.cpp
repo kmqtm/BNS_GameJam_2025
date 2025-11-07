@@ -340,9 +340,9 @@ void GameScene::draw() const
 			const double distance = player_pos.distanceFrom(center_pos);
 
 			// プレイヤーが範囲内に入った場合、アクティブ化時刻を記録
-			if (distance <= render_distance)
+			if(distance <= render_distance)
 			{
-				if (background_activation_times_.find(unique_key) == background_activation_times_.end())
+				if(background_activation_times_.find(unique_key) == background_activation_times_.end())
 				{
 					// まだ記録されていない場合、現在時刻を記録
 					background_activation_times_[unique_key] = Scene::Time();
@@ -353,7 +353,7 @@ void GameScene::draw() const
 			Vec2 animated_pos = center_pos;
 
 			// アクティブ化されている場合のみ、移動を計算
-			if (background_activation_times_.find(unique_key) != background_activation_times_.end())
+			if(background_activation_times_.find(unique_key) != background_activation_times_.end())
 			{
 				const double activation_time = background_activation_times_[unique_key];
 				const double elapsed_time = Scene::Time() - activation_time;
@@ -363,7 +363,7 @@ void GameScene::draw() const
 				animated_pos.y += elapsed_time * velocity.y;
 
 				// 波の揺れを追加
-				if (isWave)
+				if(isWave)
 				{
 					const double wave_amplitude = 1.0; // 揺れの振幅（ピクセル）
 					const double wave_frequency = 1.0; // 揺れの速さ
@@ -372,7 +372,7 @@ void GameScene::draw() const
 			}
 
 			// 描画範囲外の場合はスキップ
-			if (distance > render_distance)
+			if(distance > render_distance)
 			{
 				return;
 			}
@@ -381,7 +381,7 @@ void GameScene::draw() const
 			const Vec2 final_pos = s3d::Floor((animated_pos - kDrawOffset) - camera_offset);
 
 			// 左右反転して描画
-			if (isFlip)
+			if(isFlip)
 			{
 				TextureAsset(texture_name).mirrored().draw(final_pos);
 			}
@@ -396,10 +396,10 @@ void GameScene::draw() const
 	DrawBackground(U"whale", Vec2{ 300, 400 }, false, Vec2{ -10, 0 });
 	DrawBackground(U"jerry_fish", Vec2{ 200, 700 }, false, Vec2{ 5, -20 });
 	DrawBackground(U"tuna", Vec2{ 200, 950 }, true, Vec2{ 40, 0 });
-	DrawBackground(U"fish_02", Vec2{ 600, 1000 },false , Vec2{ -30, 0 }, true);
-	DrawBackground(U"fish_01", Vec2{ 250, 1300 },true, Vec2{ 30, 0 });
-	DrawBackground(U"tuna", Vec2{ 700, 1500 },false, Vec2{ -40, 0 });
-	DrawBackground(U"fish_02", Vec2{ 700, 1600 },false, Vec2{ -30, 0 }, true);
+	DrawBackground(U"fish_02", Vec2{ 600, 1000 }, false, Vec2{ -30, 0 }, true);
+	DrawBackground(U"fish_01", Vec2{ 250, 1300 }, true, Vec2{ 30, 0 });
+	DrawBackground(U"tuna", Vec2{ 700, 1500 }, false, Vec2{ -40, 0 });
+	DrawBackground(U"fish_02", Vec2{ 700, 1600 }, false, Vec2{ -30, 0 }, true);
 	DrawBackground(U"fish_01", Vec2{ 100, 1750 }, true, Vec2{ 20, 0 }, true);
 	DrawBackground(U"turtle", Vec2{ 200, 2150 }, true, Vec2{ 15, -10 });
 	DrawBackground(U"fish_02", Vec2{ 650, 2000 }, false, Vec2{ -30, 0 }, true);
@@ -413,11 +413,15 @@ void GameScene::draw() const
 	DrawBackground(U"stone-bream", Vec2{ 100, 5000 }, true, Vec2{ 10, 0 });
 	DrawBackground(U"deepsea-fish01", Vec2{ 200 , 5400 }, true, Vec2{ 5, 0 });
 	DrawBackground(U"deepsea-fish03", Vec2{ 500, 5700 }, true, Vec2{ -5, 0 });
-	DrawBackground(U"chair", Vec2{ 200, 5900 }, false, Vec2{ 0, -10});
+	DrawBackground(U"chair", Vec2{ 200, 5900 }, false, Vec2{ 0, -10 });
 	DrawBackground(U"deepsea-fish02", Vec2{ 100, 6475 });
 	DrawBackground(U"oarfish", Vec2{ 600, 6500 }, false, Vec2{ -5, -5 });
 	DrawBackground(U"sofa", Vec2{ 500, 6700 }, false, Vec2{ 0, -10 });
 	DrawBackground(U"TV1", Vec2{ 200, 7000 }, false, Vec2{ 0, -10 });
+	DrawBackground(U"guide_text1", Vec2{ 220, 990 });
+	DrawBackground(U"guide_text2", Vec2{ 500, 990 });
+	DrawBackground(U"guide_text3", Vec2{ 230, 1400 });
+	DrawBackground(U"guide_text4", Vec2{ 250, 2370 });
 
 	// プレイヤー開始位置にtitleを描画
 	if(TextureAsset::IsRegistered(U"title"))
