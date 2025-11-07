@@ -153,7 +153,7 @@ void GameScene::update()
 	// BGMの状態を更新
 	UpdateBGM();
 
-#if 1 // デバッグ用: 0 にすると無効化
+#if 0 // デバッグ用: 0 にすると無効化
 	// Eキーでエンディング付近にワープ
 	if(KeyE.down())
 	{
