@@ -459,6 +459,7 @@ void GameScene::draw() const
 
 	if(current_state_ == GameState::Title)
 	{
+		DrawBackground(U"title_text", Vec2{ stage_.GetWidth() * stage_.GetTileSize() / 2.0 - 100, 600 });
 	}
 	else if(current_state_ == GameState::Ending)
 	{
