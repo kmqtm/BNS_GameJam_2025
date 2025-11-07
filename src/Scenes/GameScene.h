@@ -96,4 +96,10 @@ private:
 
 	// エンディングに移行するY座標
 	static constexpr double kEndingZoneY = 7650.0;
+
+	// エンディング開始からの経過時間計測（秒）
+	double ending_start_time_ = -1.0;
+	static constexpr double kOctopusSmileDelay = 7.0 + 8.6; // エンディング開始から8.4 秒後に笑顔に切替
+	static constexpr double kEndingDarkenAlpha = 0.45; // 笑顔後に画面を薄暗くするアルファ
+	static constexpr StringView kEndingOverlayTexture = U"ending_text"; //追加で描画する画像名（AssetInformation.json に登録必要）
 };

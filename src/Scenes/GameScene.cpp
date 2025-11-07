@@ -153,7 +153,7 @@ void GameScene::update()
 	// BGMの状態を更新
 	UpdateBGM();
 
-#if 0 // デバッグ用: 0 にすると無効化
+#if 1 // デバッグ用: 0 にすると無効化
 	// Eキーでエンディング付近にワープ
 	if(KeyE.down())
 	{
@@ -188,6 +188,9 @@ void GameScene::update()
 		if(player_.GetPos().y >= kEndingZoneY)
 		{
 			current_state_ = GameState::Ending;
+
+			// エンディング開始時刻を記録
+			ending_start_time_ = Scene::Time();
 
 			const double camera_center_x = camera_manager_.GetViewRect().center().x;
 			player_.StartEnding(camera_center_x);
@@ -264,6 +267,9 @@ void GameScene::update()
 			// リスポーン時にBGMを再開
 			is_intro_finished_ = false;
 			StartOrDeferBGM(U"deepsea_intro", false);
+
+			// エンディングタイマーをリセット
+			ending_start_time_ = -1.0;
 		}
 
 		camera_manager_.SetYOffsetRatio(kPlayingCameraOffsetYRatio);
@@ -433,11 +439,41 @@ void GameScene::draw() const
 	}
 
 	// エンディング座標にoctopusを描画（背景の直後、他のオブジェクトより前）
-	if(TextureAsset::IsRegistered(U"octopus"))
 	{
-		const Vec2 octopus_world_pos = Vec2{ stage_.GetWidth() * stage_.GetTileSize() / 2.0, 7300.0 };
-		const Vec2 octopus_screen_pos = octopus_world_pos - camera_offset;
-		TextureAsset(U"octopus").drawAt(octopus_screen_pos);
+		// エンディング開始から8.4秒後に笑顔へ切り替え
+		const bool showSmile = (current_state_ == GameState::Ending)
+			&& (ending_start_time_ >= 0.0)
+			&& ((Scene::Time() - ending_start_time_) >= kOctopusSmileDelay);
+
+		const String texName = showSmile ? U"octopus_smile" : U"octopus";
+
+		if(TextureAsset::IsRegistered(texName))
+		{
+			const Vec2 octopus_world_pos = Vec2{ stage_.GetWidth() * stage_.GetTileSize() / 2.0,7300.0 };
+			const Vec2 octopus_screen_pos = octopus_world_pos - camera_offset;
+			TextureAsset(texName).drawAt(octopus_screen_pos);
+		}
+
+		// 笑顔になった後に画面を暗くしオーバレイ画像を描画
+		if(showSmile)
+		{
+			// showSmile になってからの経過時間を計算
+			const double smile_elapsed_time = Scene::Time() - ending_start_time_ - kOctopusSmileDelay;
+
+			// 0.8 秒以上経過してから画面を薄暗くする
+			if(smile_elapsed_time >= 0.8)
+			{
+				//画面全体を薄暗く
+				Rect{ 0, 0, Scene::Width(), Scene::Height() }.draw(ColorF{ 0, 0, 0, kEndingDarkenAlpha });
+
+				// オーバレイ画像が存在すれば中央より少し上に描画
+				if(TextureAsset::IsRegistered(kEndingOverlayTexture))
+				{
+					constexpr int overlayYOffset = -190; // 少し上に
+					TextureAsset(kEndingOverlayTexture).drawAt(Scene::Center().movedBy(0, overlayYOffset));
+				}
+			}
+		}
 	}
 
 	player_.Draw(camera_offset);
