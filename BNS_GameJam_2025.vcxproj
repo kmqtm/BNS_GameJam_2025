@@ -438,6 +438,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Scenes\GameScene.cpp" />
+    <ClCompile Include="src\System\CollisionManager.cpp" />
     <ClCompile Include="src\World\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -454,6 +455,7 @@
     <ClInclude Include="src\Entitie\Player.h" />
     <ClInclude Include="src\pch\stdafx.h" />
     <ClInclude Include="src\Scenes\GameScene.h" />
+    <ClInclude Include="src\System\CollisionManager.h" />
     <ClInclude Include="src\World\SpawnInfo.h" />
     <ClInclude Include="src\World\Stage.h" />
   </ItemGroup>
