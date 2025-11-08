@@ -6,7 +6,7 @@
 void Main()
 {
 	// ウィンドウの初期設定
-	Window::SetTitle(U"BNS GameJam 2025");
+	Window::SetTitle(U"シンカイサンタ");
 	Window::SetStyle(WindowStyle::Sizable);
 	Scene::SetTextureFilter(TextureFilter::Nearest);
 	Window::Resize(kSceneSize);
