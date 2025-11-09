@@ -213,35 +213,30 @@ void GameScene::update()
 			enemy.Update(stage_, player_);
 		}
 
-		player_.collider.ClearCollisionResult();
-		for(auto& enemy : enemies_) { enemy.GetCollider().ClearCollisionResult(); }
-		for(auto& spot : oxygen_spots_) { spot.GetCollider().ClearCollisionResult(); }
-		auto& player_collider = player_.collider;
-		for(auto& enemy : enemies_)
-		{
-			if(not enemy.IsAlive()) continue;
-			auto& enemy_collider = enemy.GetCollider();
-			bool is_collided = std::visit([&](const auto& s1) { return std::visit([&](const auto& s2) { return s1.intersects(s2); }, enemy_collider.shape); }, player_collider.shape);
-			if(is_collided)
-			{
-				player_collider.is_colliding = true;
-				player_collider.collided_tags.push_back(enemy_collider.tag);
+		// CollisionManagerを使用した衝突判定（O(N)に最適化）
+		collision_manager_.ClearResults();
 
-				enemy_collider.is_colliding = true;
-				enemy_collider.collided_tags.push_back(player_collider.tag);
-			}
-		}
-		for(auto& spot : oxygen_spots_)
+		// Playerのコライダーを登録
+		collision_manager_.RegisterPlayer(&player_.collider);
+
+		// 敵のコライダーを登録（生存中のもののみ）
+		for(size_t i = 0; i < enemies_.size(); ++i)
 		{
-			auto& spot_collider = spot.GetCollider();
-			bool is_collided = std::visit([&](const auto& s1) { return std::visit([&](const auto& s2) { return s1.intersects(s2); }, spot_collider.shape); }, player_collider.shape);
-			if(is_collided)
+			if(enemies_[i].IsAlive())
 			{
-				player_collider.is_colliding = true;
-				player_collider.collided_tags.push_back(spot_collider.tag);
-				player_.RecoverOxygen();
+				collision_manager_.RegisterOther(&enemies_[i].GetCollider(), static_cast<uint32_t>(i + 1));
 			}
 		}
+
+		// 酸素スポットのコライダーを登録
+		const uint32_t oxygen_id_offset = static_cast<uint32_t>(enemies_.size() + 1);
+		for(size_t i = 0; i < oxygen_spots_.size(); ++i)
+		{
+			collision_manager_.RegisterOther(&oxygen_spots_[i].GetCollider(), oxygen_id_offset + static_cast<uint32_t>(i));
+		}
+
+		// Player vs Other の衝突判定を実行（O(N)）
+		collision_manager_.ResolveCollisions();
 
 		camera_manager_.SetYOffsetRatio(kPlayingCameraOffsetYRatio);
 		break;

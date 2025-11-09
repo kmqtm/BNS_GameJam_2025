@@ -6,6 +6,7 @@
 #include "../Entitie/Enemy.h"
 #include "../Entitie/OxygenSpot.h"
 #include "../Entitie/Player.h"
+#include "../System/CollisionManager.h"
 #include "../World/Stage.h"
 
 #include <Siv3D.hpp>
@@ -50,6 +51,8 @@ private:
 	GameState current_state_ = GameState::Title;
 	s3d::Array<Enemy> enemies_;
 	s3d::Array<OxygenSpot> oxygen_spots_;
+
+	CollisionManager collision_manager_;
 
 	SoundController bgm_controller_;
 	bool is_intro_finished_ = false;

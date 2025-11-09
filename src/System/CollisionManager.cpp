@@ -1,16 +1,28 @@
 ﻿#include "CollisionManager.h"
 
-void CollisionManager::RegisterCollider(Collider* collider, uint32_t entity_id)
+void CollisionManager::RegisterPlayer(Collider* player_collider)
 {
-	if(collider)
+	player_collider_ = player_collider;
+}
+
+void CollisionManager::RegisterOther(Collider* other_collider, uint32_t entity_id)
+{
+	if(other_collider)
 	{
-		colliders_.push_back({ collider, entity_id });
+		other_colliders_.push_back({ other_collider, entity_id });
 	}
 }
 
 void CollisionManager::ClearResults()
 {
-	for(auto& entry : colliders_)
+	// Playerの衝突結果をクリア
+	if(player_collider_)
+	{
+		player_collider_->ClearCollisionResult();
+	}
+
+	// その他のコライダーの衝突結果をクリア
+	for(auto& entry : other_colliders_)
 	{
 		if(entry.collider)
 		{
@@ -21,40 +33,40 @@ void CollisionManager::ClearResults()
 
 void CollisionManager::ResolveCollisions()
 {
-	const size_t count = colliders_.size();
-
-	for(size_t i = 0; i < count; ++i)
+	// Playerが登録されていない場合は処理しない
+	if(!player_collider_)
 	{
-		for(size_t j = i + 1; j < count; ++j)
+		return;
+	}
+
+	// Player vs Other の O(N) 衝突判定
+	for(auto& other_entry : other_colliders_)
+	{
+		if(!other_entry.collider)
 		{
-			auto& entry_a = colliders_[i];
-			auto& entry_b = colliders_[j];
+			continue;
+		}
 
-			if(!entry_a.collider || !entry_b.collider)
-			{
-				continue;
-			}
+		// PlayerとOtherの衝突判定
+		const bool is_colliding = CheckIntersection(player_collider_->shape, other_entry.collider->shape);
 
-			// 2つの Collider の shape 同士で衝突判定
-			const bool is_colliding = CheckIntersection(entry_a.collider->shape, entry_b.collider->shape);
+		if(is_colliding)
+		{
+			// Playerに衝突情報を追加
+			player_collider_->is_colliding = true;
+			player_collider_->collided_tags.push_back(other_entry.collider->tag);
 
-			if(is_colliding)
-			{
-				// A に B の情報を追加
-				entry_a.collider->is_colliding = true;
-				entry_a.collider->collided_tags.push_back(entry_b.collider->tag);
-
-				// B に A の情報を追加
-				entry_b.collider->is_colliding = true;
-				entry_b.collider->collided_tags.push_back(entry_a.collider->tag);
-			}
+			// Otherに衝突情報を追加
+			other_entry.collider->is_colliding = true;
+			other_entry.collider->collided_tags.push_back(player_collider_->tag);
 		}
 	}
 }
 
 void CollisionManager::Clear()
 {
-	colliders_.clear();
+	player_collider_ = nullptr;
+	other_colliders_.clear();
 }
 
 bool CollisionManager::CheckIntersection(const ShapeVariant& shape1, const ShapeVariant& shape2) const

@@ -88,6 +88,8 @@ void Player::Update(const Stage& stage)
 		is_invincible_ = false; // 無敵時間終了
 	}
 
+	UpdateColliderPosition();
+
 	// 衝突処理は独立関数に切り出し
 	HandleCollisions();
 }
@@ -479,15 +481,44 @@ void Player::StartEnding(double camera_center_world_x)
 
 void Player::HandleCollisions()
 {
-	if((not is_invincible_) && (not is_oxygen_empty_) && (not is_in_ending_) && collider.is_colliding)
+	// 衝突していない場合は早期リターン
+	if(not collider.is_colliding || collider.collided_tags.isEmpty())
 	{
-		for(const auto& tag : collider.collided_tags)
+		return;
+	}
+
+	// エンディング中や酸素切れ時は衝突処理をスキップ
+	if(is_in_ending_ || is_oxygen_empty_)
+	{
+		return;
+	}
+
+	// 各タグが1回だけ処理されるようにフラグを使用
+	bool has_enemy_collision = false;
+	bool has_oxygen_collision = false;
+
+	// 衝突タグをチェックして適切な処理を実行
+	for(const auto& tag : collider.collided_tags)
+	{
+		if(tag == ColliderTag::kEnemy)
 		{
-			if(tag == ColliderTag::kEnemy)
-			{
-				TakeDamage();
-				break;
-			}
+			has_enemy_collision = true;
 		}
+		else if(tag == ColliderTag::kOxygen)
+		{
+			has_oxygen_collision = true;
+		}
+	}
+
+	// 敵との衝突処理（1回のみ）
+	if(has_enemy_collision && not is_invincible_)
+	{
+		TakeDamage();
+	}
+
+	// 酸素回復処理（1回のみ）
+	if(has_oxygen_collision)
+	{
+		RecoverOxygen();
 	}
 }

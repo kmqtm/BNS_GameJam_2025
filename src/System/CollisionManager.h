@@ -10,16 +10,19 @@
 class CollisionManager
 {
 public:
-	// Colliderとそれが属するエンティティIDを登録
-	void RegisterCollider(Collider* collider, uint32_t entity_id);
+	// Playerのコライダーを登録（1つのみ）
+	void RegisterPlayer(Collider* player_collider);
 
-	// 登録された全ての Collider の衝突結果をクリア
+	// Player以外のコライダーを登録（Enemy、OxygenSpotなど）
+	void RegisterOther(Collider* other_collider, uint32_t entity_id);
+
+	/// 登録された全ての Collider の衝突結果をクリア
 	void ClearResults();
 
-	// 登録された全てのCollider同士の衝突判定を行い，結果を各 Collider に記録
+	// Player vs Other の衝突判定のみを行う（O(N)）
 	void ResolveCollisions();
 
-	/// 登録されているColliderをすべてクリア
+	// 登録されているColliderをすべてクリア
 	void Clear();
 
 private:
@@ -29,7 +32,8 @@ private:
 		uint32_t entity_id;
 	};
 
-	std::vector<ColliderEntry> colliders_;
+	Collider* player_collider_ = nullptr;
+	std::vector<ColliderEntry> other_colliders_;
 
 	// 2つのShapeVariant同士の衝突判定を行う
 	bool CheckIntersection(const ShapeVariant& shape1, const ShapeVariant& shape2) const;
