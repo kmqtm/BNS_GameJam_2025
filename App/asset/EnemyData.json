@@ -1,0 +1,235 @@
+{
+  "enemies": {
+    "Fish": {
+      "behavior": "Patrol",
+      "physics_size": {
+        "width": 32,
+        "height": 24
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 32,
+        "height": 24
+      },
+      "speed": 0.67,
+      "collision_offset": 0.0,
+      "initial_facing_right": false,
+      "animations": {
+        "move": {
+          "textures": ["fishA_1", "fishA_2"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "Shark": {
+      "behavior": "Patrol",
+      "physics_size": {
+        "width": 64,
+        "height": 48
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 320,
+        "height": 48
+      },
+      "speed": 0.40,
+      "collision_offset": 150.0,
+      "initial_facing_right": false,
+      "animations": {
+        "move": {
+          "textures": ["shark"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "DeepseaFish": {
+      "behavior": "Patrol",
+      "physics_size": {
+        "width": 40,
+        "height": 32
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 40,
+        "height": 32
+      },
+      "speed": 0.30,
+      "collision_offset": 0.0,
+      "initial_facing_right": false,
+      "animations": {
+        "move": {
+          "textures": ["deapsea-fishA1", "deapsea-fishA2"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "Swimmie": {
+      "behavior": "Patrol",
+      "physics_size": {
+        "width": 32,
+        "height": 32
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 64,
+        "height": 32
+      },
+      "speed": 0.75,
+      "collision_offset": 35.0,
+      "initial_facing_right": false,
+      "animations": {
+        "move": {
+          "textures": ["swimmie1", "swimmie2"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "MorayEel_L": {
+      "behavior": "BackAndForth",
+      "physics_size": {
+        "width": 48,
+        "height": 32
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 192,
+        "height": 32
+      },
+      "speed": 0.60,
+      "max_travel_distance": 64.0,
+      "initial_velocity_x": -0.60,
+      "animations": {
+        "move": {
+          "textures": ["moray_eel1_l", "moray_eel2_l", "moray_eel3_l", "moray_eel4_l"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "MorayEel_R": {
+      "behavior": "BackAndForth",
+      "physics_size": {
+        "width": 48,
+        "height": 32
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 192,
+        "height": 32
+      },
+      "speed": 0.60,
+      "max_travel_distance": 64.0,
+      "initial_velocity_x": 0.60,
+      "animations": {
+        "move": {
+          "textures": ["moray_eel1_r", "moray_eel2_r", "moray_eel3_r", "moray_eel4_r"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "Octoleg_L": {
+      "behavior": "BackAndForth",
+      "physics_size": {
+        "width": 40,
+        "height": 40
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 288,
+        "height": 40
+      },
+      "speed": 0.55,
+      "max_travel_distance": 64.0,
+      "initial_velocity_x": -0.55,
+      "animations": {
+        "move": {
+          "textures": ["octoleg1_l", "octoleg2_l"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "Octoleg_R": {
+      "behavior": "BackAndForth",
+      "physics_size": {
+        "width": 40,
+        "height": 40
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 288,
+        "height": 40
+      },
+      "speed": 0.55,
+      "max_travel_distance": 64.0,
+      "initial_velocity_x": 0.55,
+      "animations": {
+        "move": {
+          "textures": ["octoleg1_r", "octoleg2_r"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    },
+    "Coral_L": {
+      "behavior": "Stationary",
+      "physics_size": {
+        "width": 64,
+        "height": 64
+      },
+      "collider_shape": "Circle",
+      "collider_size": {
+        "radius": 28.0
+      },
+      "animations": {
+        "idle": {
+          "textures": ["coral_l"],
+          "frame_duration": 1.0,
+          "is_looping": false
+        }
+      }
+    },
+    "Coral_R": {
+      "behavior": "Stationary",
+      "physics_size": {
+        "width": 64,
+        "height": 64
+      },
+      "collider_shape": "Circle",
+      "collider_size": {
+        "radius": 28.0
+      },
+      "animations": {
+        "idle": {
+          "textures": ["coral_r"],
+          "frame_duration": 1.0,
+          "is_looping": false
+        }
+      }
+    },
+    "Clione": {
+      "behavior": "Stationary",
+      "physics_size": {
+        "width": 18,
+        "height": 24
+      },
+      "collider_shape": "RectF",
+      "collider_size": {
+        "width": 18,
+        "height": 24
+      },
+      "animations": {
+        "idle": {
+          "textures": ["clione1", "clione2", "clione3"],
+          "frame_duration": 0.5,
+          "is_looping": true
+        }
+      }
+    }
+  }
+}
