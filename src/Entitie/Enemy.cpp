@@ -1,4 +1,5 @@
-﻿#include "../World/Stage.h"
+﻿#include "../Manager/EnemyDataManager.h"
+#include "../World/Stage.h"
 #include "Component/Animation.h"
 #include "Enemy.h"
 #include "Player.h"
@@ -6,252 +7,117 @@
 #include <Siv3D.hpp>
 #include <variant>
 
+using namespace s3d;
+
+namespace
+{
+	Animation ToAnimation(const EnemyDataManager::AnimationSpec& spec)
+	{
+		Animation a;
+		a.texture_asset_names = spec.textures;
+		a.frame_duration_sec = spec.frame_duration_sec;
+		a.is_looping = spec.is_looping;
+		return a;
+	}
+}
+
 Enemy::Enemy(const String& type, const Vec2& center_pos)
 	: pos_(center_pos)
 	, start_pos_(center_pos)
 {
-	SetupProperties(type);
-	SetupAnimations(type);
+	// 仕様の取得（安全な集中管理）
+	if(auto specOpt = EnemyDataManager::GetInstance().TryGetSpec(type))
+	{
+		const auto& spec = *specOpt;
 
-	if(type == U"Coral_L" || type == U"Coral_R")
-	{
-		// Coralは Circle で初期化
-		collider_ = Collider{
-			Circle{ pos_, kCoralColliderRadius }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"Fish")
-	{
-		// Fishは RectF で初期化
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kFishColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"Clione")
-	{
-		// Clioneは RectF で初期化
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kClioneColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"Shark")
-	{
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kSharkColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"DeepseaFish")
-	{
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kDeepseaFishColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"Swimmie")
-	{
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kSwimmieColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"MorayEel_L" || type == U"MorayEel_R")
-	{
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kMorayEelColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-	else if(type == U"Octoleg_L" || type == U"Octoleg_R")
-	{
-		collider_ = Collider{
-			RectF{ Arg::center(pos_), kOctolegColliderSize }, //
-			ColliderTag::kEnemy
-		};
-	}
-}
-
-void Enemy::SetupProperties(const String& type)
-{
-	if(type == U"Fish")
-	{
-		behavior_ = EnemyBehavior::Patrol;
-		physics_size_ = kFishPhysicsSize;
-		velocity_.x = -kFishSpeed;
-		is_facing_right_ = false;
-		collision_offset_ = 0.0;
-	}
-	else if(type == U"Shark")
-	{
-		behavior_ = EnemyBehavior::Patrol;
-		physics_size_ = kSharkPhysicsSize;
-		velocity_.x = -kSharkSpeed;
-		is_facing_right_ = false;
-		collision_offset_ = 150.0;
-	}
-	else if(type == U"DeepseaFish")
-	{
-		behavior_ = EnemyBehavior::Patrol;
-		physics_size_ = kDeepseaFishPhysicsSize;
-		velocity_.x = -kDeepseaFishSpeed;
-		is_facing_right_ = false;
-		collision_offset_ = 0.0;
-	}
-	else if(type == U"Swimmie")
-	{
-		behavior_ = EnemyBehavior::Patrol;
-		physics_size_ = kSwimmiePhysicsSize;
-		velocity_.x = -kSwimmieSpeed;
-		is_facing_right_ = false;
-		collision_offset_ = 35.0;
-	}
-	else if(type == U"MorayEel_L")
-	{
-		behavior_ = EnemyBehavior::BackAndForth;
-		physics_size_ = kMorayEelPhysicsSize;
-		velocity_.x = -kMorayEelSpeed;
-		max_travel_distance_ = kBackAndForthDistance;
-	}
-	else if(type == U"MorayEel_R")
-	{
-		behavior_ = EnemyBehavior::BackAndForth;
-		physics_size_ = kMorayEelPhysicsSize;
-		velocity_.x = kMorayEelSpeed;
-		max_travel_distance_ = kBackAndForthDistance;
-	}
-	else if(type == U"Octoleg_L")
-	{
-		behavior_ = EnemyBehavior::BackAndForth;
-		physics_size_ = kOctolegPhysicsSize;
-		velocity_.x = -kOctolegSpeed;
-		max_travel_distance_ = kBackAndForthDistance;
-	}
-	else if(type == U"Octoleg_R")
-	{
-		behavior_ = EnemyBehavior::BackAndForth;
-		physics_size_ = kOctolegPhysicsSize;
-		velocity_.x = kOctolegSpeed;
-		max_travel_distance_ = kBackAndForthDistance;
-	}
-	else
-	{
-		behavior_ = EnemyBehavior::Stationary;
-		velocity_ = Vec2::Zero();
-
-		if(type == U"Coral_L")
+		// behavior
+		switch(spec.behavior)
 		{
-			physics_size_ = kCoralPhysicsSize;
+		case EnemyDataManager::BehaviorKind::Patrol:       behavior_ = EnemyBehavior::Patrol; break;
+		case EnemyDataManager::BehaviorKind::BackAndForth: behavior_ = EnemyBehavior::BackAndForth; break;
+		default:                                            behavior_ = EnemyBehavior::Stationary; break;
 		}
-		else if(type == U"Coral_R")
-		{
-			physics_size_ = kCoralPhysicsSize;
-		}
-		else if(type == U"Clione")
-		{
-			physics_size_ = kClionePhysicsSize;
-		}
-	}
-}
 
-void Enemy::SetupAnimations(const String& type)
-{
-	Animation anim;
+		// physics
+		physics_size_ = Vec2{ static_cast<double>(spec.physics_size.x), static_cast<double>(spec.physics_size.y) };
 
-	if(type == U"Fish")
-	{
-		anim.texture_asset_names = { U"fishA_1", U"fishA_2" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"Shark")
-	{
-		anim.texture_asset_names = { U"shark" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"DeepseaFish")
-	{
-		anim.texture_asset_names = { U"deapsea-fishA1", U"deapsea-fishA2" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"Swimmie")
-	{
-		anim.texture_asset_names = { U"swimmie1", U"swimmie2" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"MorayEel_L")
-	{
-		anim.texture_asset_names = { U"moray_eel1_l", U"moray_eel2_l", U"moray_eel3_l", U"moray_eel4_l" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"MorayEel_R")
-	{
-		anim.texture_asset_names = { U"moray_eel1_r", U"moray_eel2_r", U"moray_eel3_r", U"moray_eel4_r" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"Octoleg_L")
-	{
-		anim.texture_asset_names = { U"octoleg1_l", U"octoleg2_l" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else if(type == U"Octoleg_R")
-	{
-		anim.texture_asset_names = { U"octoleg1_r", U"octoleg2_r" };
-		anim.frame_duration_sec = 0.5;
-		anim.is_looping = true;
-		anim_controller_.AddAnimation(U"move", anim);
-		anim_controller_.Play(U"move");
-	}
-	else // Stationary型
-	{
-		anim.is_looping = true;
+		// movement
+		collision_offset_ = spec.collision_offset;
+		if(behavior_ == EnemyBehavior::Patrol)
+		{
+			velocity_.x = (spec.initial_facing_right ? +spec.speed : -spec.speed);
+			is_facing_right_ = spec.initial_facing_right;
+		}
+		else if(behavior_ == EnemyBehavior::BackAndForth)
+		{
+			velocity_.x = spec.initial_velocity_x;
+			max_travel_distance_ = spec.max_travel_distance;
+		}
 
-		if(type == U"Coral_L")
+		// collider
+		if(spec.collider_shape == EnemyDataManager::ColliderKind::Circle)
 		{
-			anim.texture_asset_names = { U"coral_l" };
-			anim.is_looping = false;
-		}
-		else if(type == U"Coral_R")
-		{
-			anim.texture_asset_names = { U"coral_r" };
-			anim.is_looping = false;
-		}
-		else if(type == U"Clione")
-		{
-			anim.texture_asset_names = { U"clione1", U"clione2", U"clione3" };
-			anim.frame_duration_sec = 0.5;
+			collider_ = Collider{ Circle{ pos_, spec.collider_radius }, ColliderTag::kEnemy };
 		}
 		else
 		{
-			Print << U"エラー: 未知の敵タイプ '{}' です．"_fmt(type);
-			anim.texture_asset_names = { U"coral_l" }; // フォールバック
-			anim.is_looping = false;
+			collider_ = Collider{ RectF{ Arg::center(pos_), spec.collider_width, spec.collider_height }, ColliderTag::kEnemy };
 		}
 
-		anim_controller_.AddAnimation(U"idle", anim);
-		anim_controller_.Play(U"idle");
+		// animations
+		for(const auto& [name, animSpec] : spec.animations)
+		{
+			anim_controller_.AddAnimation(name, ToAnimation(animSpec));
+		}
+		// 初期再生
+		if(behavior_ == EnemyBehavior::Stationary)
+		{
+			if(spec.animations.contains(U"idle")) anim_controller_.Play(U"idle");
+		}
+		else
+		{
+			if(spec.animations.contains(U"move")) anim_controller_.Play(U"move");
+		}
+		return;
+	}
+
+	// JSONにない場合のフォールバック（従来の静的テーブル）
+	Print << U"警告: '{}' のデータが見つからないため、デフォルト設定を使用します"_fmt(type);
+	//SetupProperties(type); 削除で良いかも
+	//SetupAnimations(type);
+
+	// フォールバックのコライダー
+	if(type == U"Coral_L" || type == U"Coral_R")
+	{
+		collider_ = Collider{ Circle{ pos_, kCoralColliderRadius }, ColliderTag::kEnemy };
+	}
+	else if(type == U"Fish")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kFishColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"Clione")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kClioneColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"Shark")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kSharkColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"DeepseaFish")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kDeepseaFishColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"Swimmie")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kSwimmieColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"MorayEel_L" || type == U"MorayEel_R")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kMorayEelColliderSize }, ColliderTag::kEnemy };
+	}
+	else if(type == U"Octoleg_L" || type == U"Octoleg_R")
+	{
+		collider_ = Collider{ RectF{ Arg::center(pos_), kOctolegColliderSize }, ColliderTag::kEnemy };
 	}
 }
 

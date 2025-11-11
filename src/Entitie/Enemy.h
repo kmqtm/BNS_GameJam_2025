@@ -23,7 +23,6 @@ public:
 	Enemy(const String& type, const Vec2& center_pos);
 
 	void Update(const Stage& stage, const Player& player);
-
 	void Draw(const Vec2& camera_offset) const;
 
 	Collider& GetCollider() { return collider_; }
