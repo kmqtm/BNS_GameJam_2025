@@ -213,18 +213,21 @@ void GameScene::update()
 			enemy.Update(stage_, player_);
 		}
 
-		// CollisionManagerを使用した衝突判定（O(N)に最適化）
-		collision_manager_.ClearResults();
+		// マネージャーの登録リストを完全にリセット
+		collision_manager_.Clear();
 
-		// Playerのコライダーを登録
+		// 各コライダーの衝突結果もリセット
+		player_.collider.ClearCollisionResult();
 		collision_manager_.RegisterPlayer(&player_.collider);
 
-		// 敵のコライダーを登録（生存中のもののみ）
+		// 敵のコライダーを登録(生存中のもののみ)
 		for(size_t i = 0; i < enemies_.size(); ++i)
 		{
 			if(enemies_[i].IsAlive())
 			{
-				collision_manager_.RegisterOther(&enemies_[i].GetCollider(), static_cast<uint32_t>(i + 1));
+				auto& enemy_collider = enemies_[i].GetCollider();
+				enemy_collider.ClearCollisionResult();
+				collision_manager_.RegisterOther(&enemy_collider, static_cast<uint32_t>(i + 1));
 			}
 		}
 
@@ -232,7 +235,9 @@ void GameScene::update()
 		const uint32_t oxygen_id_offset = static_cast<uint32_t>(enemies_.size() + 1);
 		for(size_t i = 0; i < oxygen_spots_.size(); ++i)
 		{
-			collision_manager_.RegisterOther(&oxygen_spots_[i].GetCollider(), oxygen_id_offset + static_cast<uint32_t>(i));
+			auto& spot_collider = oxygen_spots_[i].GetCollider();
+			spot_collider.ClearCollisionResult();
+			collision_manager_.RegisterOther(&spot_collider, oxygen_id_offset + static_cast<uint32_t>(i));
 		}
 
 		// Player vs Other の衝突判定を実行（O(N)）
