@@ -25,99 +25,76 @@ Enemy::Enemy(const String& type, const Vec2& center_pos)
 	: pos_(center_pos)
 	, start_pos_(center_pos)
 {
-	// 仕様の取得（安全な集中管理）
-	if(auto specOpt = EnemyDataManager::GetInstance().TryGetSpec(type))
+	// 仕様の取得
+	auto specOpt = EnemyDataManager::GetInstance().TryGetSpec(type);
+	if(not specOpt)
 	{
-		const auto& spec = *specOpt;
-
-		// behavior
-		switch(spec.behavior)
-		{
-		case EnemyDataManager::BehaviorKind::Patrol:       behavior_ = EnemyBehavior::Patrol; break;
-		case EnemyDataManager::BehaviorKind::BackAndForth: behavior_ = EnemyBehavior::BackAndForth; break;
-		default:                                            behavior_ = EnemyBehavior::Stationary; break;
-		}
-
-		// physics
-		physics_size_ = Vec2{ static_cast<double>(spec.physics_size.x), static_cast<double>(spec.physics_size.y) };
-
-		// movement
-		collision_offset_ = spec.collision_offset;
-		if(behavior_ == EnemyBehavior::Patrol)
-		{
-			velocity_.x = (spec.initial_facing_right ? +spec.speed : -spec.speed);
-			is_facing_right_ = spec.initial_facing_right;
-		}
-		else if(behavior_ == EnemyBehavior::BackAndForth)
-		{
-			velocity_.x = spec.initial_velocity_x;
-			max_travel_distance_ = spec.max_travel_distance;
-		}
-
-		// collider
-		if(spec.collider_shape == EnemyDataManager::ColliderKind::Circle)
-		{
-			collider_ = Collider{ Circle{ pos_, spec.collider_radius }, ColliderTag::kEnemy };
-		}
-		else
-		{
-			collider_ = Collider{ RectF{ Arg::center(pos_), spec.collider_width, spec.collider_height }, ColliderTag::kEnemy };
-		}
-
-		// animations
-		for(const auto& [name, animSpec] : spec.animations)
-		{
-			anim_controller_.AddAnimation(name, ToAnimation(animSpec));
-		}
-		// 初期再生
-		if(behavior_ == EnemyBehavior::Stationary)
-		{
-			if(spec.animations.contains(U"idle")) anim_controller_.Play(U"idle");
-		}
-		else
-		{
-			if(spec.animations.contains(U"move")) anim_controller_.Play(U"move");
-		}
+		Print << U"エラー: '{}' のデータが見つかりません"_fmt(type);
 		return;
 	}
 
-	// JSONにない場合のフォールバック（従来の静的テーブル）
-	Print << U"警告: '{}' のデータが見つからないため、デフォルト設定を使用します"_fmt(type);
-	//SetupProperties(type); 削除で良いかも
-	//SetupAnimations(type);
+	const auto& spec = *specOpt;
 
-	// フォールバックのコライダー
-	if(type == U"Coral_L" || type == U"Coral_R")
+	// behavior
+	switch(spec.behavior)
 	{
-		collider_ = Collider{ Circle{ pos_, kCoralColliderRadius }, ColliderTag::kEnemy };
+	case EnemyDataManager::BehaviorKind::Patrol:
+		behavior_ = EnemyBehavior::Patrol;
+		break;
+	case EnemyDataManager::BehaviorKind::BackAndForth:
+		behavior_ = EnemyBehavior::BackAndForth;
+		break;
+	default:
+		behavior_ = EnemyBehavior::Stationary;
+		break;
 	}
-	else if(type == U"Fish")
+
+	// physics
+	physics_size_ = Vec2{ static_cast<double>(spec.physics_size.x), static_cast<double>(spec.physics_size.y) };
+
+	// movement
+	collision_offset_ = spec.collision_offset;
+	if(behavior_ == EnemyBehavior::Patrol)
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kFishColliderSize }, ColliderTag::kEnemy };
+		velocity_.x = (spec.initial_facing_right ? +spec.speed : -spec.speed);
+		is_facing_right_ = spec.initial_facing_right;
 	}
-	else if(type == U"Clione")
+	else if(behavior_ == EnemyBehavior::BackAndForth)
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kClioneColliderSize }, ColliderTag::kEnemy };
+		velocity_.x = spec.initial_velocity_x;
+		max_travel_distance_ = spec.max_travel_distance;
 	}
-	else if(type == U"Shark")
+
+	// collider
+	if(spec.collider_shape == EnemyDataManager::ColliderKind::Circle)
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kSharkColliderSize }, ColliderTag::kEnemy };
+		collider_ = Collider{ Circle{ pos_, spec.collider_radius }, ColliderTag::kEnemy };
 	}
-	else if(type == U"DeepseaFish")
+	else
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kDeepseaFishColliderSize }, ColliderTag::kEnemy };
+		collider_ = Collider{ RectF{ Arg::center(pos_), spec.collider_width, spec.collider_height }, ColliderTag::kEnemy };
 	}
-	else if(type == U"Swimmie")
+
+	// animations
+	for(const auto& [name, animSpec] : spec.animations)
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kSwimmieColliderSize }, ColliderTag::kEnemy };
+		anim_controller_.AddAnimation(name, ToAnimation(animSpec));
 	}
-	else if(type == U"MorayEel_L" || type == U"MorayEel_R")
+
+	// 初期再生
+	if(behavior_ == EnemyBehavior::Stationary)
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kMorayEelColliderSize }, ColliderTag::kEnemy };
+		if(spec.animations.contains(U"idle"))
+		{
+			anim_controller_.Play(U"idle");
+		}
 	}
-	else if(type == U"Octoleg_L" || type == U"Octoleg_R")
+	else
 	{
-		collider_ = Collider{ RectF{ Arg::center(pos_), kOctolegColliderSize }, ColliderTag::kEnemy };
+		if(spec.animations.contains(U"move"))
+		{
+			anim_controller_.Play(U"move");
+		}
 	}
 }
 
