@@ -1,9 +1,10 @@
 ﻿#include "../Manager/EnemyDataManager.h"
 #include "../World/Stage.h"
+#include "BehaviorStrategies.h"
 #include "Component/Animation.h"
 #include "Enemy.h"
 #include "Player.h"
-
+#include <cmath>
 #include <Siv3D.hpp>
 #include <variant>
 
@@ -35,31 +36,31 @@ Enemy::Enemy(const String& type, const Vec2& center_pos)
 
 	const auto& spec = *specOpt;
 
-	// behavior
+	// Strategy の生成
 	switch(spec.behavior)
 	{
 	case EnemyDataManager::BehaviorKind::Patrol:
-		behavior_ = EnemyBehavior::Patrol;
+		behavior_strategy_ = std::make_unique<PatrolBehavior>();
 		break;
 	case EnemyDataManager::BehaviorKind::BackAndForth:
-		behavior_ = EnemyBehavior::BackAndForth;
+		behavior_strategy_ = std::make_unique<BackAndForthBehavior>();
 		break;
 	default:
-		behavior_ = EnemyBehavior::Stationary;
+		behavior_strategy_ = std::make_unique<StationaryBehavior>();
 		break;
 	}
 
 	// physics
 	physics_size_ = Vec2{ static_cast<double>(spec.physics_size.x), static_cast<double>(spec.physics_size.y) };
 
-	// movement
+	// movement 初期化（以前は behavior_ 判定、今は spec.behavior を直接使用）
 	collision_offset_ = spec.collision_offset;
-	if(behavior_ == EnemyBehavior::Patrol)
+	if(spec.behavior == EnemyDataManager::BehaviorKind::Patrol)
 	{
 		velocity_.x = (spec.initial_facing_right ? +spec.speed : -spec.speed);
 		is_facing_right_ = spec.initial_facing_right;
 	}
-	else if(behavior_ == EnemyBehavior::BackAndForth)
+	else if(spec.behavior == EnemyDataManager::BehaviorKind::BackAndForth)
 	{
 		velocity_.x = spec.initial_velocity_x;
 		max_travel_distance_ = spec.max_travel_distance;
@@ -82,7 +83,7 @@ Enemy::Enemy(const String& type, const Vec2& center_pos)
 	}
 
 	// 初期再生
-	if(behavior_ == EnemyBehavior::Stationary)
+	if(spec.behavior == EnemyDataManager::BehaviorKind::Stationary)
 	{
 		if(spec.animations.contains(U"idle"))
 		{
@@ -100,6 +101,8 @@ Enemy::Enemy(const String& type, const Vec2& center_pos)
 
 void Enemy::Update(const Stage& stage, const Player& player)
 {
+	(void)player;
+
 	if(not is_alive_) return;
 
 	UpdateAI(stage);
@@ -110,16 +113,10 @@ void Enemy::Update(const Stage& stage, const Player& player)
 
 void Enemy::UpdateAI(const Stage& stage)
 {
-	// 振る舞いに応じてロジックを更新
-	if(behavior_ == EnemyBehavior::Patrol)
+	if(behavior_strategy_)
 	{
-		UpdatePatrol(stage);
+		behavior_strategy_->Update(*this, stage);
 	}
-	else if(behavior_ == EnemyBehavior::BackAndForth)
-	{
-		UpdateBackAndForth(stage);
-	}
-	// Stationaryの場合は何もしない
 }
 
 void Enemy::UpdateColliderPosition()
@@ -137,79 +134,6 @@ void Enemy::UpdateColliderPosition()
 void Enemy::HandleCollision()
 {
 	// 本ゲームでは特に敵側で行う処理なし
-}
-
-// 巡回ロジック
-void Enemy::UpdatePatrol(const Stage& stage)
-{
-	const double next_x = pos_.x + velocity_.x;
-	const double half_width = physics_size_.x / 2.0;
-	const double tile_size = stage.GetTileSize();
-
-	if(velocity_.x > 0) // 右に移動中
-	{
-		// collision_offset_を加えて早めに検知
-		const double sensor_x = next_x + half_width + collision_offset_;
-		const double sensor_y = pos_.y;
-
-		if(stage.IsSolid(sensor_x, sensor_y))
-		{
-			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) - half_width - collision_offset_;
-			velocity_.x *= -1.0;
-			is_facing_right_ = false;
-		}
-		else
-		{
-			pos_.x = next_x;
-		}
-	}
-	else if(velocity_.x < 0) // 左に移動中
-	{
-		// collision_offset_を加えて早めに検知
-		const double sensor_x = next_x - half_width - collision_offset_;
-		const double sensor_y = pos_.y;
-
-		if(stage.IsSolid(sensor_x, sensor_y))
-		{
-			pos_.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + half_width + collision_offset_;
-			velocity_.x *= -1.0;
-			is_facing_right_ = true;
-		}
-		else
-		{
-			pos_.x = next_x;
-		}
-	}
-}
-
-// 前後往復ロジック
-void Enemy::UpdateBackAndForth(const Stage& stage)
-{
-	// 現在の移動方向に従って位置を更新
-	pos_.x += velocity_.x;
-
-	// 開始位置からの移動距離を計算
-	const double distance_from_start = std::abs(pos_.x - start_pos_.x);
-
-	// 最大移動距離に達したら方向を反転
-	if(distance_from_start >= max_travel_distance_)
-	{
-		// 方向反転（スプライトの向きは変えない）
-		velocity_.x *= -1.0;
-
-		// 距離をリセット
-		travel_distance_ = 0.0;
-
-		// 正確な位置に補正（行き過ぎを防ぐ）
-		if(velocity_.x > 0)
-		{
-			pos_.x = start_pos_.x - max_travel_distance_;
-		}
-		else
-		{
-			pos_.x = start_pos_.x + max_travel_distance_;
-		}
-	}
 }
 
 void Enemy::Draw(const Vec2& camera_offset) const

@@ -3,25 +3,18 @@
 #include "../World/Stage.h"
 #include "Component/AnimationController.h"
 #include "Component/Collider.h"
+#include "IBehaviorStrategy.h"
 
+#include <memory>
 #include <Siv3D.hpp>
 
 // 前方宣言
 class Player;
 
-// Strategy 前方宣言（friend指定に必要）
-class IBehaviorStrategy;
+// （friend 用）派生 Strategy 前方宣言
 class StationaryBehavior;
 class PatrolBehavior;
 class BackAndForthBehavior;
-
-// 敵の振る舞いの種類
-enum class EnemyBehavior
-{
-	Stationary,   // その場から動かない
-	Patrol,       // 左右に巡回する
-	BackAndForth  // 一定距離前後に往復する
-};
 
 class Enemy
 {
@@ -36,34 +29,28 @@ public:
 
 	bool IsAlive() const { return is_alive_; }
 
-	// Strategy から内部状態へアクセスできるようにする
+	// Strategy から内部状態へアクセス
 	friend class IBehaviorStrategy;
 	friend class StationaryBehavior;
 	friend class PatrolBehavior;
 	friend class BackAndForthBehavior;
 
 private:
-	void UpdatePatrol(const Stage& stage);
-	void UpdateBackAndForth(const Stage& stage);
 	void UpdateAI(const Stage& stage);
 	void UpdateColliderPosition();
 	void HandleCollision();
 
-	EnemyBehavior behavior_;
+	// Strategy ポインタ
+	std::unique_ptr<IBehaviorStrategy> behavior_strategy_;
 
 	Vec2 pos_;
 	Vec2 velocity_ = Vec2::Zero();
-
-	// 物理演算(壁との当たり判定)用のサイズ
 	Vec2 physics_size_;
-
-	// 壁との衝突検知のオフセット（大きいほど早く反転）
 	double collision_offset_ = 0.0;
-
 	bool is_alive_ = true;
 	bool is_facing_right_ = false;
 
-	// BackAndForth用の変数
+	// BackAndForth 用
 	Vec2 start_pos_ = Vec2::Zero();
 	double travel_distance_ = 0.0;
 	double max_travel_distance_ = 0.0;

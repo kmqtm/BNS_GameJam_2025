@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// 前方宣言（依存の最小化）
+// 前方宣言（依存最小化）
 class Enemy;
 class Stage;
 
