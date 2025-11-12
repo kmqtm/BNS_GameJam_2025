@@ -9,6 +9,12 @@
 // 前方宣言
 class Player;
 
+// Strategy 前方宣言（friend指定に必要）
+class IBehaviorStrategy;
+class StationaryBehavior;
+class PatrolBehavior;
+class BackAndForthBehavior;
+
 // 敵の振る舞いの種類
 enum class EnemyBehavior
 {
@@ -29,6 +35,12 @@ public:
 	const Collider& GetCollider() const { return collider_; }
 
 	bool IsAlive() const { return is_alive_; }
+
+	// Strategy から内部状態へアクセスできるようにする
+	friend class IBehaviorStrategy;
+	friend class StationaryBehavior;
+	friend class PatrolBehavior;
+	friend class BackAndForthBehavior;
 
 private:
 	void UpdatePatrol(const Stage& stage);

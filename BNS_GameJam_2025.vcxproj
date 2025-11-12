@@ -428,6 +428,7 @@
     <ClCompile Include="src\Core\CameraManager.cpp" />
     <ClCompile Include="src\Core\Config.cpp" />
     <ClCompile Include="src\Core\Utility.cpp" />
+    <ClCompile Include="src\Entitie\BehaviorStrategies.cpp" />
     <ClCompile Include="src\Entitie\Component\AnimationController.cpp" />
     <ClCompile Include="src\Entitie\Component\SoundController.cpp" />
     <ClCompile Include="src\Entitie\Enemy.cpp" />
@@ -448,11 +449,13 @@
     <ClInclude Include="src\Core\CameraManager.h" />
     <ClInclude Include="src\Core\Config.h" />
     <ClInclude Include="src\Core\Utility.h" />
+    <ClInclude Include="src\Entitie\BehaviorStrategies.h" />
     <ClInclude Include="src\Entitie\Component\Animation.h" />
     <ClInclude Include="src\Entitie\Component\AnimationController.h" />
     <ClInclude Include="src\Entitie\Component\Collider.h" />
     <ClInclude Include="src\Entitie\Component\SoundController.h" />
     <ClInclude Include="src\Entitie\Enemy.h" />
+    <ClInclude Include="src\Entitie\IBehaviorStrategy.h" />
     <ClInclude Include="src\Entitie\OxygenSpot.h" />
     <ClInclude Include="src\Entitie\Player.h" />
     <ClInclude Include="src\Manager\EnemyDataManager.h" />
