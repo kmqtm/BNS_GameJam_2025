@@ -50,7 +50,7 @@ void EnemyDataManager::LoadEnemyData()
 		return;
 	}
 
-	Print << U"EnemyDataManager: {} を読み込みました"_fmt(kEnemyDataPath);
+	//Print << U"EnemyDataManager: {} を読み込みました"_fmt(kEnemyDataPath);
 }
 
 const JSON& EnemyDataManager::GetData(const String& type) const
