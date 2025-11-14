@@ -1,10 +1,10 @@
 ﻿#pragma once
 # include <Siv3D.hpp>
 
-class CameraManager
+class CameraSystem
 {
 public:
-	CameraManager(double fixed_world_x, const Size& view_size);
+	CameraSystem(double fixed_world_x, const Size& view_size);
 
 	void SetTargetY(double target_y);
 

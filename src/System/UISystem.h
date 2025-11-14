@@ -2,10 +2,10 @@
 #include <Siv3D.hpp>
 
 // UI 表示を一元管理するマネージャ
-class UIManager
+class UISystem
 {
 public:
-	UIManager() = default;
+	UISystem() = default;
 
 	// 表示に必要な情報を受け取って内部に保持
 	void Update(double current_oxygen,

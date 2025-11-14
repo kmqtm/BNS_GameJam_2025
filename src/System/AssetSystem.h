@@ -8,10 +8,10 @@
 
 // アセットの読み込み，登録，登録解除を管理するクラス
 // シーンごとに必要なアセットをJSONファイルから読み込む
-class AssetController
+class AssetSystem
 {
 public:
-	static AssetController& GetInstance();
+	static AssetSystem& GetInstance();
 
 	// アセットのロードモード
 	enum class LoadMode
@@ -34,11 +34,11 @@ public:
 	void WaitUntilReady();
 
 	// コピーコンストラクタとコピー代入演算子を禁止
-	AssetController(const AssetController&) = delete;
-	AssetController& operator=(const AssetController&) = delete;
+	AssetSystem(const AssetSystem&) = delete;
+	AssetSystem& operator=(const AssetSystem&) = delete;
 
 private:
-	AssetController();
+	AssetSystem();
 
 	// アセット情報を定義したJSONデータを保持
 	JSON asset_json_;

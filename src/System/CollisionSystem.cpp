@@ -1,11 +1,11 @@
-﻿#include "CollisionManager.h"
+﻿#include "CollisionSystem.h"
 
-void CollisionManager::RegisterPlayer(Collider* player_collider)
+void CollisionSystem::RegisterPlayer(Collider* player_collider)
 {
 	player_collider_ = player_collider;
 }
 
-void CollisionManager::RegisterOther(Collider* other_collider, uint32_t entity_id)
+void CollisionSystem::RegisterOther(Collider* other_collider, uint32_t entity_id)
 {
 	if(other_collider)
 	{
@@ -13,7 +13,7 @@ void CollisionManager::RegisterOther(Collider* other_collider, uint32_t entity_i
 	}
 }
 
-void CollisionManager::ClearResults()
+void CollisionSystem::ClearResults()
 {
 	// Playerの衝突結果をクリア
 	if(player_collider_)
@@ -31,7 +31,7 @@ void CollisionManager::ClearResults()
 	}
 }
 
-void CollisionManager::ResolveCollisions()
+void CollisionSystem::ResolveCollisions()
 {
 	// Playerが登録されていない場合は処理しない
 	if(!player_collider_)
@@ -63,13 +63,13 @@ void CollisionManager::ResolveCollisions()
 	}
 }
 
-void CollisionManager::Clear()
+void CollisionSystem::Clear()
 {
 	player_collider_ = nullptr;
 	other_colliders_.clear();
 }
 
-bool CollisionManager::CheckIntersection(const ShapeVariant& shape1, const ShapeVariant& shape2) const
+bool CollisionSystem::CheckIntersection(const ShapeVariant& shape1, const ShapeVariant& shape2) const
 {
 	return std::visit([&](const auto& s1)
 					  {

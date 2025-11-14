@@ -1,9 +1,9 @@
 ﻿#pragma once
 
+#include "../AI/IBehaviorStrategy.h"
+#include "../Component/AnimationController.h"
+#include "../Component/Collider.h"
 #include "../World/Stage.h"
-#include "Component/AnimationController.h"
-#include "Component/Collider.h"
-#include "IBehaviorStrategy.h"
 
 #include <memory>
 #include <Siv3D.hpp>

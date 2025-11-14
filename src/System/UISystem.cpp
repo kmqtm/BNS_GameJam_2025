@@ -1,4 +1,4 @@
-﻿#include "UIManager.h"
+﻿#include "UISystem.h"
 #include <Siv3D.hpp>
 
 namespace
@@ -26,12 +26,12 @@ namespace
 	constexpr double kProgressMarkerHeight = 4.0;
 }
 
-void UIManager::Update(double current_oxygen,
-					   double max_oxygen,
-					   double player_y,
-					   double start_y,
-					   double total_height,
-					   const s3d::Array<s3d::Vec2>& spot_positions)
+void UISystem::Update(double current_oxygen,
+					  double max_oxygen,
+					  double player_y,
+					  double start_y,
+					  double total_height,
+					  const s3d::Array<s3d::Vec2>& spot_positions)
 {
 	current_oxygen_ = current_oxygen;
 	max_oxygen_ = (max_oxygen > 0.0) ? max_oxygen : 1.0;
@@ -41,13 +41,13 @@ void UIManager::Update(double current_oxygen,
 	spot_positions_ = spot_positions;
 }
 
-void UIManager::Draw() const
+void UISystem::Draw() const
 {
 	DrawOxygenGauge();
 	DrawProgressMeter();
 }
 
-void UIManager::DrawOxygenGauge() const
+void UISystem::DrawOxygenGauge() const
 {
 	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.draw(kUIGaugeBackgroundColor);
 
@@ -79,7 +79,7 @@ void UIManager::DrawOxygenGauge() const
 	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.drawFrame(2, 0, Palette::White);
 }
 
-void UIManager::DrawProgressMeter() const
+void UISystem::DrawProgressMeter() const
 {
 	const double screen_height = Scene::Height();
 	const double screen_right_x = Scene::Width() - kProgressMeterWidth;

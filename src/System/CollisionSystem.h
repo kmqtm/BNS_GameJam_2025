@@ -1,13 +1,13 @@
 ﻿#pragma once
 
-#include "../Entitie/Component/Collider.h"
+#include "../Component/Collider.h"
 
 #include <cstdint>
 #include <Siv3D.hpp>
 #include <variant>
 #include <vector>
 
-class CollisionManager
+class CollisionSystem
 {
 public:
 	// Playerのコライダーを登録（1つのみ）

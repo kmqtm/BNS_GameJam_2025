@@ -3,10 +3,10 @@
 #include <Siv3D.hpp>
 
 // AssetController と同様の「集中管理＋防御的読み込み」方針
-class EnemyDataManager
+class EnemyDataSystem
 {
 public:
-	static EnemyDataManager& GetInstance();
+	static EnemyDataSystem& GetInstance();
 
 	// JSON 全体が有効にロードされているか
 	bool IsLoaded() const;
@@ -52,11 +52,11 @@ public:
 	// 指定タイプの JSON データを取得（存在しなければ空の JSON を返す）
 	const s3d::JSON& GetData(const s3d::String& type) const;
 
-	EnemyDataManager(const EnemyDataManager&) = delete;
-	EnemyDataManager& operator=(const EnemyDataManager&) = delete;
+	EnemyDataSystem(const EnemyDataSystem&) = delete;
+	EnemyDataSystem& operator=(const EnemyDataSystem&) = delete;
 
 private:
-	EnemyDataManager();
+	EnemyDataSystem();
 	void LoadEnemyData();
 
 	// ヘルパー

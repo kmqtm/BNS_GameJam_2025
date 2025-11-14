@@ -1,9 +1,9 @@
 ﻿#pragma once
 
+#include "../Component/AnimationController.h"
+#include "../Component/Collider.h"
+#include "../Component/SoundController.h"
 #include "../World/Stage.h"
-#include "Component/AnimationController.h"
-#include "Component/Collider.h"
-#include "Component/SoundController.h"
 
 #include <Siv3D.hpp>
 

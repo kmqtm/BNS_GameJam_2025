@@ -1,4 +1,4 @@
-﻿#include "Component/Animation.h"
+﻿#include "../Component/Animation.h"
 #include "OxygenSpot.h"
 
 #include <Siv3D.hpp>

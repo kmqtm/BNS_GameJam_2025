@@ -1,13 +1,13 @@
 ﻿#pragma once
 
-#include "../Core/CameraManager.h"
+#include "../Component/SoundController.h"
 #include "../Core/Config.h"
-#include "../Entitie/Component/SoundController.h"
 #include "../Entitie/Enemy.h"
 #include "../Entitie/OxygenSpot.h"
 #include "../Entitie/Player.h"
-#include "../System/CollisionManager.h"
-#include "../UI/UIManager.h"
+#include "../System/CameraSystem.h"
+#include "../System/CollisionSystem.h"
+#include "../System/UISystem.h"
 #include "../World/Stage.h"
 
 #include <Siv3D.hpp>
@@ -44,13 +44,13 @@ private:
 	// stage_を先に宣言(CameraManagerの初期化で使うため)
 	Stage stage_{ U"asset/Stage/v3/tilemap_v3.json", U"asset/Stage/v3/tileset.png", U"collision_layer" };
 
-	CameraManager camera_manager_;
+	CameraSystem camera_manager_;
 	Player player_;
 	GameState current_state_ = GameState::Title;
 	s3d::Array<Enemy> enemies_;
 	s3d::Array<OxygenSpot> oxygen_spots_;
 
-	CollisionManager collision_manager_;
+	CollisionSystem collision_manager_;
 
 	SoundController bgm_controller_;
 	bool is_intro_finished_ = false;
@@ -84,5 +84,5 @@ private:
 	static constexpr double kEndingDarkenAlpha = 0.45; // 笑顔後に画面を薄暗くするアルファ
 	static constexpr StringView kEndingOverlayTexture = U"ending_text"; //追加で描画する画像名（AssetInformation.json に登録必要）
 
-	UIManager ui_manager_;
+	UISystem ui_manager_;
 };

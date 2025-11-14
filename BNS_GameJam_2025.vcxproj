@@ -424,46 +424,46 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\AssetController.cpp" />
-    <ClCompile Include="src\Core\CameraManager.cpp" />
+    <ClCompile Include="src\System\AssetSystem.cpp" />
+    <ClCompile Include="src\System\CameraSystem.cpp" />
     <ClCompile Include="src\Core\Config.cpp" />
     <ClCompile Include="src\Core\Utility.cpp" />
-    <ClCompile Include="src\Entitie\BehaviorStrategies.cpp" />
-    <ClCompile Include="src\Entitie\Component\AnimationController.cpp" />
-    <ClCompile Include="src\Entitie\Component\SoundController.cpp" />
+    <ClCompile Include="src\AI\BehaviorStrategies.cpp" />
+    <ClCompile Include="src\Component\AnimationController.cpp" />
+    <ClCompile Include="src\Component\SoundController.cpp" />
     <ClCompile Include="src\Entitie\Enemy.cpp" />
     <ClCompile Include="src\Entitie\OxygenSpot.cpp" />
     <ClCompile Include="src\Entitie\Player.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Manager\EnemyDataManager.cpp" />
+    <ClCompile Include="src\System\EnemyDataSystem.cpp" />
     <ClCompile Include="src\pch\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Scenes\GameScene.cpp" />
-    <ClCompile Include="src\System\CollisionManager.cpp" />
-    <ClCompile Include="src\UI\UIManager.cpp" />
+    <ClCompile Include="src\System\CollisionSystem.cpp" />
+    <ClCompile Include="src\System\UISystem.cpp" />
     <ClCompile Include="src\World\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\AssetController.h" />
-    <ClInclude Include="src\Core\CameraManager.h" />
+    <ClInclude Include="src\System\AssetSystem.h" />
+    <ClInclude Include="src\System\CameraSystem.h" />
     <ClInclude Include="src\Core\Config.h" />
     <ClInclude Include="src\Core\Utility.h" />
-    <ClInclude Include="src\Entitie\BehaviorStrategies.h" />
-    <ClInclude Include="src\Entitie\Component\Animation.h" />
-    <ClInclude Include="src\Entitie\Component\AnimationController.h" />
-    <ClInclude Include="src\Entitie\Component\Collider.h" />
-    <ClInclude Include="src\Entitie\Component\SoundController.h" />
+    <ClInclude Include="src\AI\BehaviorStrategies.h" />
+    <ClInclude Include="src\Component\Animation.h" />
+    <ClInclude Include="src\Component\AnimationController.h" />
+    <ClInclude Include="src\Component\Collider.h" />
+    <ClInclude Include="src\Component\SoundController.h" />
     <ClInclude Include="src\Entitie\Enemy.h" />
-    <ClInclude Include="src\Entitie\IBehaviorStrategy.h" />
+    <ClInclude Include="src\AI\IBehaviorStrategy.h" />
     <ClInclude Include="src\Entitie\OxygenSpot.h" />
     <ClInclude Include="src\Entitie\Player.h" />
-    <ClInclude Include="src\Manager\EnemyDataManager.h" />
+    <ClInclude Include="src\System\EnemyDataSystem.h" />
     <ClInclude Include="src\pch\stdafx.h" />
     <ClInclude Include="src\Scenes\GameScene.h" />
-    <ClInclude Include="src\System\CollisionManager.h" />
-    <ClInclude Include="src\UI\UIManager.h" />
+    <ClInclude Include="src\System\CollisionSystem.h" />
+    <ClInclude Include="src\System\UISystem.h" />
     <ClInclude Include="src\World\SpawnInfo.h" />
     <ClInclude Include="src\World\Stage.h" />
   </ItemGroup>

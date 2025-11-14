@@ -1,4 +1,4 @@
-﻿#include "EnemyDataManager.h"
+﻿#include "EnemyDataSystem.h"
 
 using namespace s3d;
 
@@ -21,20 +21,20 @@ namespace
 	}
 }
 
-const JSON EnemyDataManager::kEmptyJSON = JSON{};
+const JSON EnemyDataSystem::kEmptyJSON = JSON{};
 
-EnemyDataManager& EnemyDataManager::GetInstance()
+EnemyDataSystem& EnemyDataSystem::GetInstance()
 {
-	static EnemyDataManager instance;
+	static EnemyDataSystem instance;
 	return instance;
 }
 
-EnemyDataManager::EnemyDataManager()
+EnemyDataSystem::EnemyDataSystem()
 {
 	LoadEnemyData();
 }
 
-void EnemyDataManager::LoadEnemyData()
+void EnemyDataSystem::LoadEnemyData()
 {
 	enemy_data_ = JSON::Load(kEnemyDataPath);
 
@@ -53,7 +53,7 @@ void EnemyDataManager::LoadEnemyData()
 	//Print << U"EnemyDataManager: {} を読み込みました"_fmt(kEnemyDataPath);
 }
 
-const JSON& EnemyDataManager::GetData(const String& type) const
+const JSON& EnemyDataSystem::GetData(const String& type) const
 {
 	// JSONが正常にロードされていない場合
 	if(not enemy_data_)
@@ -74,25 +74,25 @@ const JSON& EnemyDataManager::GetData(const String& type) const
 	return enemies[type];
 }
 
-bool EnemyDataManager::IsLoaded() const
+bool EnemyDataSystem::IsLoaded() const
 {
 	return enemy_data_.isObject() && enemy_data_.hasElement(U"enemies");
 }
 
-EnemyDataManager::BehaviorKind EnemyDataManager::ToBehaviorKind(const String& s)
+EnemyDataSystem::BehaviorKind EnemyDataSystem::ToBehaviorKind(const String& s)
 {
 	if(s == U"Patrol") return BehaviorKind::Patrol;
 	if(s == U"BackAndForth") return BehaviorKind::BackAndForth;
 	return BehaviorKind::Stationary;
 }
 
-EnemyDataManager::ColliderKind EnemyDataManager::ToColliderKind(const String& s)
+EnemyDataSystem::ColliderKind EnemyDataSystem::ToColliderKind(const String& s)
 {
 	if(s == U"Circle") return ColliderKind::Circle;
 	return ColliderKind::RectF;
 }
 
-Optional<EnemyDataManager::AnimationSpec> EnemyDataManager::ReadAnimationSpec(const JSON& anim)
+Optional<EnemyDataSystem::AnimationSpec> EnemyDataSystem::ReadAnimationSpec(const JSON& anim)
 {
 	if(not anim.isObject()) return none;
 
@@ -118,7 +118,7 @@ Optional<EnemyDataManager::AnimationSpec> EnemyDataManager::ReadAnimationSpec(co
 	return spec;
 }
 
-Optional<EnemyDataManager::EnemySpec> EnemyDataManager::TryGetSpec(const String& type) const
+Optional<EnemyDataSystem::EnemySpec> EnemyDataSystem::TryGetSpec(const String& type) const
 {
 	if(not IsLoaded()) return none;
 

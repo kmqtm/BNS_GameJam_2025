@@ -1,7 +1,7 @@
-﻿#include "../Core/Config.h"
+﻿#include "../Component/Animation.h"
+#include "../Core/Config.h"
 #include "../Core/Utility.h"
 #include "../World/Stage.h"
-#include "Component/Animation.h"
 #include "Player.h"
 
 #include <Siv3D.hpp>

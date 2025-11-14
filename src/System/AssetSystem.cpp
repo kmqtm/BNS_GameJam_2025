@@ -1,15 +1,15 @@
-﻿#include "AssetController.h"
+﻿#include "AssetSystem.h"
 
 #include <Siv3D.hpp>
 
-AssetController& AssetController::GetInstance()
+AssetSystem& AssetSystem::GetInstance()
 {
-	static AssetController instance;
+	static AssetSystem instance;
 	return instance;
 }
 
 // JSONの読み込みは最初の一回だけ行う
-AssetController::AssetController()
+AssetSystem::AssetSystem()
 {
 	asset_json_ = JSON::Load(U"asset/AssetInformation.json");
 	if(!asset_json_)
@@ -18,22 +18,22 @@ AssetController::AssetController()
 	}
 }
 
-static AssetController::LoadMode ParseLoadModeFromJson(const JSON& j)
+static AssetSystem::LoadMode ParseLoadModeFromJson(const JSON& j)
 {
 	if(j.isString())
 	{
-		return AssetController::LoadMode::Auto;
+		return AssetSystem::LoadMode::Auto;
 	}
 	else if(j.isObject())
 	{
 		if(j.hasElement(U"loadMode") && j[U"loadMode"].isString())
 		{
 			const String mode = j[U"loadMode"].getString();
-			if(mode == U"Sync") return AssetController::LoadMode::Sync;
-			if(mode == U"Async") return AssetController::LoadMode::Async;
+			if(mode == U"Sync") return AssetSystem::LoadMode::Sync;
+			if(mode == U"Async") return AssetSystem::LoadMode::Async;
 		}
 	}
-	return AssetController::LoadMode::Auto;
+	return AssetSystem::LoadMode::Auto;
 }
 
 // Extract the asset file name (or "path") from a JSON entry which may be a string or an object.
@@ -53,7 +53,7 @@ static String ParseAssetFileNameFromJson(const JSON& entry)
 	return String();
 }
 
-void AssetController::PrepareAssets(const String& scene_name)
+void AssetSystem::PrepareAssets(const String& scene_name)
 {
 	// コンストラクタで読み込み失敗した場合は即時リターン
 	if(!asset_json_)
@@ -74,7 +74,7 @@ void AssetController::PrepareAssets(const String& scene_name)
 		for(const auto& file_name_json : asset_json_[current_scene_name_][asset_type])
 		{
 			// parse load mode and file name in a helper to reduce nesting
-			AssetController::LoadMode mode = ParseLoadModeFromJson(file_name_json.value);
+			AssetSystem::LoadMode mode = ParseLoadModeFromJson(file_name_json.value);
 
 			const String asset_file_name = ParseAssetFileNameFromJson(file_name_json.value);
 			if(asset_file_name.isEmpty())
@@ -97,7 +97,7 @@ void AssetController::PrepareAssets(const String& scene_name)
 	}
 }
 
-void AssetController::UnregisterAssets()
+void AssetSystem::UnregisterAssets()
 {
 	if(!asset_json_)
 	{
@@ -139,7 +139,7 @@ void AssetController::UnregisterAssets()
 	registered_assets_.clear();
 }
 
-bool AssetController::IsSceneAssetsReady()
+bool AssetSystem::IsSceneAssetsReady()
 {
 	// より読みやすく: pending_assets_ を走査して未完了のみを残す
 	Array<std::pair<String, String>> remaining;
@@ -175,7 +175,7 @@ bool AssetController::IsSceneAssetsReady()
 	return pending_assets_.isEmpty();
 }
 
-void AssetController::WaitUntilReady()
+void AssetSystem::WaitUntilReady()
 {
 	while(!IsSceneAssetsReady())
 	{
@@ -183,33 +183,33 @@ void AssetController::WaitUntilReady()
 	}
 }
 
-void AssetController::RegisterAndLoadAsset(const String& asset_type, const String& asset_filepath, AssetController::LoadMode mode)
+void AssetSystem::RegisterAndLoadAsset(const String& asset_type, const String& asset_filepath, AssetSystem::LoadMode mode)
 {
 	const String asset_base_name = FileSystem::BaseName(asset_filepath);
 
 	// Determine mode if Auto
-	if(mode == AssetController::LoadMode::Auto)
+	if(mode == AssetSystem::LoadMode::Auto)
 	{
 		// Simple heuristic: textures and sounds => Async, fonts => Sync
 		if(asset_type == U"Texture" || asset_type == U"Sound")
 		{
-			mode = AssetController::LoadMode::Async;
+			mode = AssetSystem::LoadMode::Async;
 		}
 		else
 		{
-			mode = AssetController::LoadMode::Sync;
+			mode = AssetSystem::LoadMode::Sync;
 		}
 	}
 
 	// small lambda to centralize registered_assets_ push
 	auto markRegistered = [&](const String& type, const String& name)
-	{
-		registered_assets_.push_back({ type, name });
-	};
+		{
+			registered_assets_.push_back({ type, name });
+		};
 
 	if(asset_type == U"Font")
 	{
-		int32 font_size =24; // default
+		int32 font_size = 24; // default
 		// JSON に FontSize があれば取得
 		if(JSONValueType::Empty != asset_json_[current_scene_name_][U"FontSize"].getType())
 		{
@@ -218,7 +218,7 @@ void AssetController::RegisterAndLoadAsset(const String& asset_type, const Strin
 
 		FontAsset::Register(asset_base_name, font_size, asset_filepath);
 
-		if(mode == AssetController::LoadMode::Async)
+		if(mode == AssetSystem::LoadMode::Async)
 		{
 			FontAsset::LoadAsync(asset_base_name);
 			pending_assets_.push_back({ asset_type, asset_base_name });
@@ -234,7 +234,7 @@ void AssetController::RegisterAndLoadAsset(const String& asset_type, const Strin
 	{
 		AudioAsset::Register(asset_base_name, asset_filepath);
 
-		if(mode == AssetController::LoadMode::Async)
+		if(mode == AssetSystem::LoadMode::Async)
 		{
 			AudioAsset::LoadAsync(asset_base_name);
 			pending_assets_.push_back({ asset_type, asset_base_name });
@@ -250,7 +250,7 @@ void AssetController::RegisterAndLoadAsset(const String& asset_type, const Strin
 	{
 		TextureAsset::Register(asset_base_name, asset_filepath);
 
-		if(mode == AssetController::LoadMode::Async)
+		if(mode == AssetSystem::LoadMode::Async)
 		{
 			TextureAsset::LoadAsync(asset_base_name);
 			pending_assets_.push_back({ asset_type, asset_base_name });

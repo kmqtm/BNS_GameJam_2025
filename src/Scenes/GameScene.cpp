@@ -1,5 +1,5 @@
-﻿#include "../Core/AssetController.h"
-#include "../Core/Config.h"
+﻿#include "../Core/Config.h"
+#include "../System/AssetSystem.h"
 #include "../World/SpawnInfo.h"
 #include "GameScene.h"
 
@@ -14,7 +14,7 @@ GameScene::GameScene(const App::Scene::InitData& init)
 	)
 	, map_total_height_(stage_.GetHeight()* stage_.GetTileSize())
 {
-	AssetController::GetInstance().PrepareAssets(U"Game");
+	AssetSystem::GetInstance().PrepareAssets(U"Game");
 
 	SpawnEntities();
 
@@ -28,7 +28,7 @@ GameScene::GameScene(const App::Scene::InitData& init)
 GameScene::~GameScene()
 {
 	bgm_controller_.StopAll();
-	AssetController::GetInstance().UnregisterAssets();
+	AssetSystem::GetInstance().UnregisterAssets();
 }
 
 void GameScene::StartOrDeferBGM(const String& asset, bool loop)

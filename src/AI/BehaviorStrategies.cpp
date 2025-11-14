@@ -1,6 +1,6 @@
-﻿#include "../World/Stage.h"
+﻿#include "../Entitie/Enemy.h"
+#include "../World/Stage.h"
 #include "BehaviorStrategies.h"
-#include "Enemy.h"
 #include <cmath>
 
 // Stationary: 何もしない
