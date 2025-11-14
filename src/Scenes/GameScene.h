@@ -7,6 +7,7 @@
 #include "../Entitie/OxygenSpot.h"
 #include "../Entitie/Player.h"
 #include "../System/CollisionManager.h"
+#include "../UI/UIManager.h"
 #include "../World/Stage.h"
 
 #include <Siv3D.hpp>
@@ -31,9 +32,6 @@ public:
 private:
 	void SpawnEntities();
 	void OnPlayerDied();
-
-	void DrawOxygenGauge() const;
-	void DrawProgressMeter() const;
 
 	Vec2 FindNearestRespawnSpot() const;
 
@@ -69,28 +67,8 @@ private:
 	// 背景オブジェクトがアクティブになった時刻を記録（プレイヤーが近づいた時刻）
 	mutable std::unordered_map<String, double> background_activation_times_;
 
-	static constexpr Vec2 kOxygenGaugePos = { 20, 20 };
-	static constexpr Size kOxygenGaugeSize = { 24, 200 };
-	static constexpr ColorF kUIGaugeBackgroundColor = ColorF{ 0.0, 0.5 };
-
-	static constexpr ColorF kOxygenColorSafe = Palette::Limegreen;
-	static constexpr ColorF kOxygenColorWarning = Palette::Yellow;
-	static constexpr ColorF kOxygenColorDanger = Palette::Red;
-
-	static constexpr double kOxygenWarningThreshold = 70.0;
-	static constexpr double kOxygenDangerThreshold = 30.0;
-
 	// 深度による背景色
 	static constexpr ColorF kDeepSeaColor = ColorF{ 0.0, 0.1, 0.3 }; // 紺色
-
-	static constexpr double kProgressMeterWidth = 10.0;
-
-	static constexpr ColorF kProgressLineColor = Palette::White;			// メーターの縦線の色
-	static constexpr ColorF kProgressPlayerColor = Palette::Yellow;		// プレイヤーマーカーの色
-	static constexpr ColorF kProgressSpotColor = Palette::Limegreen;	// 酸素スポットマーカーの色
-	static constexpr double kProgressPlayerMarkerWidth = 14.0;			// プレイヤーマーカーの幅
-	static constexpr double kProgressSpotMarkerWidth = 8.0;				// スポットマーカーの幅
-	static constexpr double kProgressMarkerHeight = 4.0;				// マーカーの高さ
 
 	// タイトル・エンディング画面用のカメラオフセット
 	static constexpr double kTitleEndingCameraOffsetYRatio = -1.0 / 4.9;
@@ -105,4 +83,6 @@ private:
 	static constexpr double kOctopusSmileDelay = 7.0 + 8.6; // エンディング開始から8.4 秒後に笑顔に切替
 	static constexpr double kEndingDarkenAlpha = 0.45; // 笑顔後に画面を薄暗くするアルファ
 	static constexpr StringView kEndingOverlayTexture = U"ending_text"; //追加で描画する画像名（AssetInformation.json に登録必要）
+
+	UIManager ui_manager_;
 };

@@ -277,6 +277,26 @@ void GameScene::update()
 	}
 	}
 
+	// UI に必要な値を更新
+	{
+		s3d::Array<s3d::Vec2> spot_centers;
+		spot_centers.reserve(oxygen_spots_.size());
+		for(const auto& spot : oxygen_spots_)
+		{
+			// OxygenSpot は中心座標を返す想定
+			spot_centers << spot.GetPos();
+		}
+
+		ui_manager_.Update(
+			player_.GetOxygen(),
+			player_.GetMaxOxygen(),
+			player_.GetPos().y,
+			player_start_pos_.y,
+			map_total_height_,
+			spot_centers
+		);
+	}
+
 	camera_manager_.SetTargetY(player_.GetPos().y);
 	camera_manager_.Update();
 }
@@ -490,8 +510,8 @@ void GameScene::draw() const
 		spot.Draw(camera_offset);
 	}
 
-	DrawOxygenGauge();
-	DrawProgressMeter();
+	// UI 全体描画
+	ui_manager_.Draw();
 
 	if(current_state_ == GameState::Title)
 	{
@@ -503,82 +523,4 @@ void GameScene::draw() const
 	else if(current_state_ == GameState::GameOver)
 	{
 	}
-}
-
-void GameScene::DrawOxygenGauge() const
-{
-	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.draw(kUIGaugeBackgroundColor);
-
-	const double current_oxygen = player_.GetOxygen();
-	const double max_oxygen = player_.GetMaxOxygen();
-
-	const double oxygen_ratio = (current_oxygen / max_oxygen);
-
-	ColorF gauge_color;
-	if(current_oxygen > kOxygenWarningThreshold)
-	{
-		gauge_color = kOxygenColorSafe;
-	}
-	else if(current_oxygen > kOxygenDangerThreshold)
-	{
-		gauge_color = kOxygenColorWarning;
-	}
-	else
-	{
-		gauge_color = kOxygenColorDanger;
-	}
-
-	const double current_height = kOxygenGaugeSize.y * oxygen_ratio;
-
-	RectF{
-		kOxygenGaugePos.x,
-		kOxygenGaugePos.y + (kOxygenGaugeSize.y - current_height),
-		kOxygenGaugeSize.x,
-		current_height
-	}.draw(gauge_color);
-
-	RectF{ kOxygenGaugePos, kOxygenGaugeSize }.drawFrame(2, 0, Palette::White);
-}
-
-void GameScene::DrawProgressMeter() const
-{
-	const double screen_height = Scene::Height();
-	const double screen_right_x = Scene::Width() - kProgressMeterWidth;
-	const double meter_center_x = screen_right_x + (kProgressMeterWidth / 2.0);
-
-	const double total_travel = map_total_height_ - player_start_pos_.y;
-	if(total_travel <= 0)
-	{
-		return;
-	}
-
-	RectF{ screen_right_x, 0, kProgressMeterWidth, screen_height }.draw(kUIGaugeBackgroundColor);
-
-	Line{ meter_center_x, 0, meter_center_x, screen_height }.draw(1, kProgressLineColor);
-
-	for(const auto& spot : oxygen_spots_)
-	{
-		double spot_y = 0.0;
-		std::visit([&](const auto& shape)
-				   {
-					   if constexpr(requires { shape.center(); })
-					   {
-						   spot_y = shape.center().y;
-					   }
-				   }, spot.GetCollider().shape);
-
-		double spot_ratio = (spot_y - player_start_pos_.y) / total_travel;
-		spot_ratio = Clamp(spot_ratio, 0.0, 1.0);
-
-		const double marker_y = screen_height * spot_ratio;
-
-		RectF{ Arg::center(meter_center_x, marker_y), kProgressSpotMarkerWidth, kProgressMarkerHeight }.draw(kProgressSpotColor);
-	}
-
-	double progress_ratio = (player_.GetPos().y - player_start_pos_.y) / total_travel;
-	progress_ratio = Clamp(progress_ratio, 0.0, 1.0);
-
-	const double marker_y = screen_height * progress_ratio;
-
-	RectF{ Arg::center(meter_center_x, marker_y), kProgressPlayerMarkerWidth, kProgressMarkerHeight }.draw(kProgressPlayerColor);
 }

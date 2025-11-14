@@ -859,6 +859,9 @@
     <ClCompile Include="src\Entitie\BehaviorStrategies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\UI\UIManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\pch\stdafx.h">
@@ -916,6 +919,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Entitie\BehaviorStrategies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\UIManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

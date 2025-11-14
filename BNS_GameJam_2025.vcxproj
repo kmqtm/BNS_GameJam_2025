@@ -442,6 +442,7 @@
     </ClCompile>
     <ClCompile Include="src\Scenes\GameScene.cpp" />
     <ClCompile Include="src\System\CollisionManager.cpp" />
+    <ClCompile Include="src\UI\UIManager.cpp" />
     <ClCompile Include="src\World\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -462,6 +463,7 @@
     <ClInclude Include="src\pch\stdafx.h" />
     <ClInclude Include="src\Scenes\GameScene.h" />
     <ClInclude Include="src\System\CollisionManager.h" />
+    <ClInclude Include="src\UI\UIManager.h" />
     <ClInclude Include="src\World\SpawnInfo.h" />
     <ClInclude Include="src\World\Stage.h" />
   </ItemGroup>
