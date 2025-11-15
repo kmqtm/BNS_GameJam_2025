@@ -1,0 +1,7 @@
+<map id="AssetSystem::UnregisterAssets" name="AssetSystem::UnregisterAssets">
+<area shape="rect" id="Node000001" title="現在のシーンのアセット登録をすべて解除する" alt="" coords="5,13,215,40"/>
+<area shape="rect" id="Node000002" href="$class_asset_system.html#a88219cddf418f7a49d68ec447eb8ed13" title="非同期ロードが完了するまで待機する" alt="" coords="263,13,462,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,24,247,24,247,29,215,29"/>
+<area shape="rect" id="Node000003" href="$class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc" title="現在のシーンのアセット非同期ロードが完了したか" alt="" coords="510,5,707,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,24,495,24,495,29,462,29"/>
+</map>

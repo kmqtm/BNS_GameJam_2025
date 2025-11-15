@@ -1,0 +1,2485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: Player クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_player.html','','class_player-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Player クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>プレイヤーを管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+Player 連携図</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player__coll__graph.svg" width="407" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8" id="r_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
+<tr class="memdesc:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a4b224bdee973f00772184b1e87970633" id="r_a4b224bdee973f00772184b1e87970633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b224bdee973f00772184b1e87970633">Update</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage)</td></tr>
+<tr class="memdesc:a4b224bdee973f00772184b1e87970633"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーを更新する  <br /></td></tr>
+<tr class="memitem:abc8edc45ea7e479e343caa7454743541" id="r_abc8edc45ea7e479e343caa7454743541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc8edc45ea7e479e343caa7454743541">Draw</a> (const Vec2 &amp;camera_offset) const</td></tr>
+<tr class="memdesc:abc8edc45ea7e479e343caa7454743541"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーを描画する  <br /></td></tr>
+<tr class="memitem:a00371b0eff9f6bfa2c18e0e518ee39a6" id="r_a00371b0eff9f6bfa2c18e0e518ee39a6"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00371b0eff9f6bfa2c18e0e518ee39a6">GetPos</a> () const</td></tr>
+<tr class="memdesc:a00371b0eff9f6bfa2c18e0e518ee39a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を取得する  <br /></td></tr>
+<tr class="memitem:adf754ca579fa7a1be1a1db5c605c566b" id="r_adf754ca579fa7a1be1a1db5c605c566b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf754ca579fa7a1be1a1db5c605c566b">SetPos</a> (const Vec2 &amp;new_pos)</td></tr>
+<tr class="memdesc:adf754ca579fa7a1be1a1db5c605c566b"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を設定する  <br /></td></tr>
+<tr class="memitem:a300cd789f92424b16d8d7f349ebd1352" id="r_a300cd789f92424b16d8d7f349ebd1352"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a300cd789f92424b16d8d7f349ebd1352">GetOxygen</a> () const</td></tr>
+<tr class="memdesc:a300cd789f92424b16d8d7f349ebd1352"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の酸素量を取得する  <br /></td></tr>
+<tr class="memitem:a1d241854c7ddc1ffd2f1048978d7222a" id="r_a1d241854c7ddc1ffd2f1048978d7222a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d241854c7ddc1ffd2f1048978d7222a">GetMaxOxygen</a> () const</td></tr>
+<tr class="memdesc:a1d241854c7ddc1ffd2f1048978d7222a"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大酸素量を取得する  <br /></td></tr>
+<tr class="memitem:abf577519cc0265417050b596ee5651dd" id="r_abf577519cc0265417050b596ee5651dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf577519cc0265417050b596ee5651dd">IsOxygenEmpty</a> () const</td></tr>
+<tr class="memdesc:abf577519cc0265417050b596ee5651dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素が空かを判定する  <br /></td></tr>
+<tr class="memitem:a34183eba5b1c359a41c87f8ce9b06f98" id="r_a34183eba5b1c359a41c87f8ce9b06f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34183eba5b1c359a41c87f8ce9b06f98">RecoverOxygen</a> ()</td></tr>
+<tr class="memdesc:a34183eba5b1c359a41c87f8ce9b06f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素を回復する  <br /></td></tr>
+<tr class="memitem:aaae9cb1bf3841c553c40b231a7edf11e" id="r_aaae9cb1bf3841c553c40b231a7edf11e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaae9cb1bf3841c553c40b231a7edf11e">Respawn</a> (const Vec2 &amp;spawn_pos)</td></tr>
+<tr class="memdesc:aaae9cb1bf3841c553c40b231a7edf11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置にリスポーンする  <br /></td></tr>
+<tr class="memitem:aed60576c3b00bb0780e3bad353a34000" id="r_aed60576c3b00bb0780e3bad353a34000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed60576c3b00bb0780e3bad353a34000">StartEnding</a> (double camera_center_world_x)</td></tr>
+<tr class="memdesc:aed60576c3b00bb0780e3bad353a34000"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンディングを開始する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a10fd723bd44718d2b5c3ad12f7fd8ef5" id="r_a10fd723bd44718d2b5c3ad12f7fd8ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_collider.html">Collider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">collider</a> { RectF{0, 0, 1.0, 1.0}, <a class="el" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21eada1903f712056662fa093576e7eb9e36">ColliderTag::kPlayer</a> }</td></tr>
+<tr class="memdesc:a10fd723bd44718d2b5c3ad12f7fd8ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダー  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a235c6e2e4fe87bbec295d71a31e5ead2" id="r_a235c6e2e4fe87bbec295d71a31e5ead2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a235c6e2e4fe87bbec295d71a31e5ead2">HandleInput</a> ()</td></tr>
+<tr class="memdesc:a235c6e2e4fe87bbec295d71a31e5ead2"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力を処理する  <br /></td></tr>
+<tr class="memitem:a9dbda24f6f27cb247da724a92fdd873d" id="r_a9dbda24f6f27cb247da724a92fdd873d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dbda24f6f27cb247da724a92fdd873d">UpdatePhysics</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage)</td></tr>
+<tr class="memdesc:a9dbda24f6f27cb247da724a92fdd873d"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理演算を更新する  <br /></td></tr>
+<tr class="memitem:a34222904c837a901c35e95924e1dc2b7" id="r_a34222904c837a901c35e95924e1dc2b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34222904c837a901c35e95924e1dc2b7">ApplyGravity</a> ()</td></tr>
+<tr class="memdesc:a34222904c837a901c35e95924e1dc2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力を適用する  <br /></td></tr>
+<tr class="memitem:a6540d726e6044e7a98d720484cba0b96" id="r_a6540d726e6044e7a98d720484cba0b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6540d726e6044e7a98d720484cba0b96">ApplyFriction</a> ()</td></tr>
+<tr class="memdesc:a6540d726e6044e7a98d720484cba0b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">摩擦を適用する  <br /></td></tr>
+<tr class="memitem:abfeffb1320e2b63619161ae38b792e11" id="r_abfeffb1320e2b63619161ae38b792e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfeffb1320e2b63619161ae38b792e11">MoveX</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage)</td></tr>
+<tr class="memdesc:abfeffb1320e2b63619161ae38b792e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">X軸方向の移動処理  <br /></td></tr>
+<tr class="memitem:ae83f03e905e8fe4771a95345ef626d18" id="r_ae83f03e905e8fe4771a95345ef626d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83f03e905e8fe4771a95345ef626d18">MoveY</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage)</td></tr>
+<tr class="memdesc:ae83f03e905e8fe4771a95345ef626d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y軸方向の移動処理  <br /></td></tr>
+<tr class="memitem:a17e6f8a992c713d22e0e833398a3395b" id="r_a17e6f8a992c713d22e0e833398a3395b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17e6f8a992c713d22e0e833398a3395b">UpdateColliderPosition</a> ()</td></tr>
+<tr class="memdesc:a17e6f8a992c713d22e0e833398a3395b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダー位置を更新する  <br /></td></tr>
+<tr class="memitem:ab0bcce2ff453becf86020d7544a306dc" id="r_ab0bcce2ff453becf86020d7544a306dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0bcce2ff453becf86020d7544a306dc">UpdateAnimation</a> ()</td></tr>
+<tr class="memdesc:ab0bcce2ff453becf86020d7544a306dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションを更新する  <br /></td></tr>
+<tr class="memitem:a79060b32a95ca6e3f7a482b9ed45fa07" id="r_a79060b32a95ca6e3f7a482b9ed45fa07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79060b32a95ca6e3f7a482b9ed45fa07">TakeDamage</a> ()</td></tr>
+<tr class="memdesc:a79060b32a95ca6e3f7a482b9ed45fa07"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダメージを受ける  <br /></td></tr>
+<tr class="memitem:a81f83a6f55bec62fc908f494fd8249cc" id="r_a81f83a6f55bec62fc908f494fd8249cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f83a6f55bec62fc908f494fd8249cc">UpdateOxygen</a> ()</td></tr>
+<tr class="memdesc:a81f83a6f55bec62fc908f494fd8249cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素を更新する  <br /></td></tr>
+<tr class="memitem:ac7d159c578eb4da86911b484b499766c" id="r_ac7d159c578eb4da86911b484b499766c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d159c578eb4da86911b484b499766c">ModifyOxygen</a> (double amount)</td></tr>
+<tr class="memdesc:ac7d159c578eb4da86911b484b499766c"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素量を変更する  <br /></td></tr>
+<tr class="memitem:a9f80b81ed24b0053b6c3c7107c9b36a4" id="r_a9f80b81ed24b0053b6c3c7107c9b36a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f80b81ed24b0053b6c3c7107c9b36a4">SetupAnimations</a> ()</td></tr>
+<tr class="memdesc:a9f80b81ed24b0053b6c3c7107c9b36a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションをセットアップする  <br /></td></tr>
+<tr class="memitem:a075e705cdf3b3d264c034b938e3ed500" id="r_a075e705cdf3b3d264c034b938e3ed500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a075e705cdf3b3d264c034b938e3ed500">OnSwimPressed</a> ()</td></tr>
+<tr class="memdesc:a075e705cdf3b3d264c034b938e3ed500"><td class="mdescLeft">&#160;</td><td class="mdescRight">泳ぎ入力時の処理  <br /></td></tr>
+<tr class="memitem:ad5807ec776b055f5ee154395ad23c88b" id="r_ad5807ec776b055f5ee154395ad23c88b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5807ec776b055f5ee154395ad23c88b">HandleCollisions</a> ()</td></tr>
+<tr class="memdesc:ad5807ec776b055f5ee154395ad23c88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突処理を実行する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a5735d5b8e5adc1326bcd7dc78951d169" id="r_a5735d5b8e5adc1326bcd7dc78951d169"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a> { 0.0, 0.0 }</td></tr>
+<tr class="memitem:a948db2ce46074af0cc13f75ddd3232ae" id="r_a948db2ce46074af0cc13f75ddd3232ae"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a> { 0.0, 0.0 }</td></tr>
+<tr class="memitem:a943891f2c5a5225bba6d8cb9b936056d" id="r_a943891f2c5a5225bba6d8cb9b936056d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a> = false</td></tr>
+<tr class="memitem:a84de165a09d93bc70a59aee445902a71" id="r_a84de165a09d93bc70a59aee445902a71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84de165a09d93bc70a59aee445902a71">is_grounded_</a> = false</td></tr>
+<tr class="memitem:a9720f18c743b7e984a4c4593c4fb5d88" id="r_a9720f18c743b7e984a4c4593c4fb5d88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9720f18c743b7e984a4c4593c4fb5d88">is_facing_right_</a> = false</td></tr>
+<tr class="memitem:a1b6c42ba7dc2c6fa213780f3af1943bc" id="r_a1b6c42ba7dc2c6fa213780f3af1943bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> = false</td></tr>
+<tr class="memitem:a4cd3b53582b06799ef137766bd986320" id="r_a4cd3b53582b06799ef137766bd986320"><td class="memItemLeft" align="right" valign="top">s3d::Stopwatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd3b53582b06799ef137766bd986320">invincible_timer_</a></td></tr>
+<tr class="memitem:ace8e7dbe7eec242775a2183a417ca04b" id="r_ace8e7dbe7eec242775a2183a417ca04b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace8e7dbe7eec242775a2183a417ca04b">just_took_damage_</a> = false</td></tr>
+<tr class="memitem:a2884d72a401c324bca457b4a5bd52f38" id="r_a2884d72a401c324bca457b4a5bd52f38"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2884d72a401c324bca457b4a5bd52f38">horizontal_accel_</a> { 0.6 }</td></tr>
+<tr class="memitem:acfc9fd07a01d2f4180184cefb3aa80de" id="r_acfc9fd07a01d2f4180184cefb3aa80de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfc9fd07a01d2f4180184cefb3aa80de">horizontal_speed_max_</a> { 1.3 }</td></tr>
+<tr class="memitem:acdcbcc3ad64eb63e7c4f50d0a16949c0" id="r_acdcbcc3ad64eb63e7c4f50d0a16949c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdcbcc3ad64eb63e7c4f50d0a16949c0">friction_</a> { 0.90 }</td></tr>
+<tr class="memitem:a85b2c88b13e1c1da3c80cf595bf18e26" id="r_a85b2c88b13e1c1da3c80cf595bf18e26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85b2c88b13e1c1da3c80cf595bf18e26">gravity_</a> = 0.06</td></tr>
+<tr class="memitem:acf09f38b4bd35fc14e3b3b3b748f0a8e" id="r_acf09f38b4bd35fc14e3b3b3b748f0a8e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf09f38b4bd35fc14e3b3b3b748f0a8e">swim_power_</a> = -1.8</td></tr>
+<tr class="memitem:a718abab7d3c5f947b4e080861bea8766" id="r_a718abab7d3c5f947b4e080861bea8766"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718abab7d3c5f947b4e080861bea8766">terminal_velocity_y_</a> = 1.0</td></tr>
+<tr class="memitem:a6d56a56dbb7776f010965e7de2506bd1" id="r_a6d56a56dbb7776f010965e7de2506bd1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d56a56dbb7776f010965e7de2506bd1">rising_gravity_multiplier_</a> = 0.4</td></tr>
+<tr class="memitem:a3a5e81a3a26852072099d592f89676f5" id="r_a3a5e81a3a26852072099d592f89676f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a> { 100.0 }</td></tr>
+<tr class="memitem:a883ba5d9eab682d3f9a7ea0b6e942372" id="r_a883ba5d9eab682d3f9a7ea0b6e942372"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> = false</td></tr>
+<tr class="memitem:a81a4b0eff0c8920e74bac0f03cdc7e40" id="r_a81a4b0eff0c8920e74bac0f03cdc7e40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a> = false</td></tr>
+<tr class="memitem:a20c9ba005780d33f7fdb1ae80c3c45eb" id="r_a20c9ba005780d33f7fdb1ae80c3c45eb"><td class="memItemLeft" align="right" valign="top">s3d::Stopwatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c9ba005780d33f7fdb1ae80c3c45eb">ending_timer_</a></td></tr>
+<tr class="memitem:a3048b3b6fd8b9b3ad62214ad262f7342" id="r_a3048b3b6fd8b9b3ad62214ad262f7342"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3048b3b6fd8b9b3ad62214ad262f7342">ending_target_x_</a> = 0.0</td></tr>
+<tr class="memitem:afd219a160538e8cdedfa8aff98492a01" id="r_afd219a160538e8cdedfa8aff98492a01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd219a160538e8cdedfa8aff98492a01">ending_warp_enabled_</a> = false</td></tr>
+<tr class="memitem:a0e967751f0765ea0b37232b29a145863" id="r_a0e967751f0765ea0b37232b29a145863"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e967751f0765ea0b37232b29a145863">ending_warp_lerp_</a> = 0.01</td></tr>
+<tr class="memitem:a829604f3d857042fb4a1a8cda37672ad" id="r_a829604f3d857042fb4a1a8cda37672ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829604f3d857042fb4a1a8cda37672ad">ending_snap_threshold_</a> = 1.0</td></tr>
+<tr class="memitem:a84362f0680aa91218984503cbb51688a" id="r_a84362f0680aa91218984503cbb51688a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation_controller.html">AnimationController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a></td></tr>
+<tr class="memdesc:a84362f0680aa91218984503cbb51688a"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションコントローラー  <br /></td></tr>
+<tr class="memitem:a9146a7f6d2439e2151f0b6525727356b" id="r_a9146a7f6d2439e2151f0b6525727356b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sound_controller.html">SoundController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9146a7f6d2439e2151f0b6525727356b">sound_controller_</a></td></tr>
+<tr class="memdesc:a9146a7f6d2439e2151f0b6525727356b"><td class="mdescLeft">&#160;</td><td class="mdescRight">サウンドコントローラー  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a570cf5780bf5af9448729a76262c9960" id="r_a570cf5780bf5af9448729a76262c9960"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a570cf5780bf5af9448729a76262c9960">kInvincibleDurationSec</a> = 2.7</td></tr>
+<tr class="memitem:acb4f1ebc3871752450e11b69532938b5" id="r_acb4f1ebc3871752450e11b69532938b5"><td class="memItemLeft" align="right" valign="top">static constexpr int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb4f1ebc3871752450e11b69532938b5">kBlinkIntervalMs</a> = 300</td></tr>
+<tr class="memitem:a973b3858eb8e0c933f742362af27e3bc" id="r_a973b3858eb8e0c933f742362af27e3bc"><td class="memItemLeft" align="right" valign="top">static constexpr int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a973b3858eb8e0c933f742362af27e3bc">kBlinkOnDurationMs</a> = 150</td></tr>
+<tr class="memitem:ab628fc1142d57e518ee541ca2e1eb0e2" id="r_ab628fc1142d57e518ee541ca2e1eb0e2"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a> = 25.0</td></tr>
+<tr class="memitem:a9d46c6621010d356f3592efacb8dc103" id="r_a9d46c6621010d356f3592efacb8dc103"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a> = 62.0</td></tr>
+<tr class="memitem:a96749bd6618b797d23b4d84b1384dfcd" id="r_a96749bd6618b797d23b4d84b1384dfcd"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96749bd6618b797d23b4d84b1384dfcd">kColliderWidth</a> = 60.0</td></tr>
+<tr class="memitem:aa60ddc5c5cff3e963d8fc217496f399b" id="r_aa60ddc5c5cff3e963d8fc217496f399b"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60ddc5c5cff3e963d8fc217496f399b">kColliderHeight</a> = 80.0</td></tr>
+<tr class="memitem:ae9c66ded9161046640e7c1d8ef5d23ab" id="r_ae9c66ded9161046640e7c1d8ef5d23ab"><td class="memItemLeft" align="right" valign="top">static constexpr Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9c66ded9161046640e7c1d8ef5d23ab">kDrawOffset</a> = { 64.0, 64.0 }</td></tr>
+<tr class="memitem:aceb0438bb59089beb30db26aa856a6e4" id="r_aceb0438bb59089beb30db26aa856a6e4"><td class="memItemLeft" align="right" valign="top">static constexpr Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceb0438bb59089beb30db26aa856a6e4">kEndingDrawOffset</a> = { 96.0, 128.0 }</td></tr>
+<tr class="memitem:afc00504f3b2fd5e43f9b3a092ed29883" id="r_afc00504f3b2fd5e43f9b3a092ed29883"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc00504f3b2fd5e43f9b3a092ed29883">kEndingAnimationDelaySec</a> = 7.0</td></tr>
+<tr class="memitem:a58b305bef8e42f0b40f0c5a13d1c9373" id="r_a58b305bef8e42f0b40f0c5a13d1c9373"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b305bef8e42f0b40f0c5a13d1c9373">kMaxOxygen</a> = 100.0</td></tr>
+<tr class="memitem:a1c66642eb2dc505a67effe1ce58dc92b" id="r_a1c66642eb2dc505a67effe1ce58dc92b"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c66642eb2dc505a67effe1ce58dc92b">kOxygenDrainPerFrame</a> = 0.013</td></tr>
+<tr class="memitem:a1a0d16a8d5271e50b82b4c2dbaabe7d6" id="r_a1a0d16a8d5271e50b82b4c2dbaabe7d6"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a0d16a8d5271e50b82b4c2dbaabe7d6">kOxygenDamageAmount</a> = 20.0</td></tr>
+<tr class="memitem:a37bf322b2735023244a476e66f64ce45" id="r_a37bf322b2735023244a476e66f64ce45"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37bf322b2735023244a476e66f64ce45">kOxygenHorizontalExtraDrain</a> = 0.006</td></tr>
+<tr class="memitem:a88c319d377bef57942975ef4eae7a459" id="r_a88c319d377bef57942975ef4eae7a459"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c319d377bef57942975ef4eae7a459">kOxygenSwimCost</a> = 0.5</td></tr>
+<tr class="memitem:ab10dee651622ae22b272a1f0866429c1" id="r_ab10dee651622ae22b272a1f0866429c1"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab10dee651622ae22b272a1f0866429c1">kOxygenRecoveryPerFrame</a> = 1.0</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>プレイヤーを管理する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="affe0cc3cb714f6deb4e62f0c0d3f1fd8" name="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">&#9670;&#160;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>    : <a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a>(<a class="code hl_variable" href="#a58b305bef8e42f0b40f0c5a13d1c9373">kMaxOxygen</a>)</div>
+<div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_function" href="#a9f80b81ed24b0053b6c3c7107c9b36a4">SetupAnimations</a>();</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">   14</span>}</div>
+<div class="ttc" id="aclass_player_html_a3a5e81a3a26852072099d592f89676f5"><div class="ttname"><a href="#a3a5e81a3a26852072099d592f89676f5">Player::oxygen_</a></div><div class="ttdeci">double oxygen_</div><div class="ttdef"><b>Definition</b> Player.h:145</div></div>
+<div class="ttc" id="aclass_player_html_a58b305bef8e42f0b40f0c5a13d1c9373"><div class="ttname"><a href="#a58b305bef8e42f0b40f0c5a13d1c9373">Player::kMaxOxygen</a></div><div class="ttdeci">static constexpr double kMaxOxygen</div><div class="ttdef"><b>Definition</b> Player.h:158</div></div>
+<div class="ttc" id="aclass_player_html_a84362f0680aa91218984503cbb51688a"><div class="ttname"><a href="#a84362f0680aa91218984503cbb51688a">Player::anim_controller_</a></div><div class="ttdeci">AnimationController anim_controller_</div><div class="ttdoc">アニメーションコントローラー</div><div class="ttdef"><b>Definition</b> Player.h:167</div></div>
+<div class="ttc" id="aclass_player_html_a9f80b81ed24b0053b6c3c7107c9b36a4"><div class="ttname"><a href="#a9f80b81ed24b0053b6c3c7107c9b36a4">Player::SetupAnimations</a></div><div class="ttdeci">void SetupAnimations()</div><div class="ttdoc">アニメーションをセットアップする</div><div class="ttdef"><b>Definition</b> Player.cpp:16</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8_cgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a6540d726e6044e7a98d720484cba0b96" name="a6540d726e6044e7a98d720484cba0b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6540d726e6044e7a98d720484cba0b96">&#9670;&#160;</a></span>ApplyFriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::ApplyFriction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>摩擦を適用する </p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>{</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a>)</div>
+<div class="line"><span class="lineno">  173</span>    {</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x *= <a class="code hl_variable" href="#acdcbcc3ad64eb63e7c4f50d0a16949c0">friction_</a>;</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span>(std::abs(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x) &lt; 0.1)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = 0.0;</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+<div class="ttc" id="aclass_player_html_a943891f2c5a5225bba6d8cb9b936056d"><div class="ttname"><a href="#a943891f2c5a5225bba6d8cb9b936056d">Player::is_moving_x_</a></div><div class="ttdeci">bool is_moving_x_</div><div class="ttdef"><b>Definition</b> Player.h:112</div></div>
+<div class="ttc" id="aclass_player_html_a948db2ce46074af0cc13f75ddd3232ae"><div class="ttname"><a href="#a948db2ce46074af0cc13f75ddd3232ae">Player::velocity_</a></div><div class="ttdeci">Vec2 velocity_</div><div class="ttdef"><b>Definition</b> Player.h:110</div></div>
+<div class="ttc" id="aclass_player_html_acdcbcc3ad64eb63e7c4f50d0a16949c0"><div class="ttname"><a href="#acdcbcc3ad64eb63e7c4f50d0a16949c0">Player::friction_</a></div><div class="ttdeci">double friction_</div><div class="ttdef"><b>Definition</b> Player.h:139</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a6540d726e6044e7a98d720484cba0b96_icgraph.svg" width="514" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a34222904c837a901c35e95924e1dc2b7" name="a34222904c837a901c35e95924e1dc2b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34222904c837a901c35e95924e1dc2b7">&#9670;&#160;</a></span>ApplyGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::ApplyGravity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重力を適用する </p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y &lt; 0)</div>
+<div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y += (<a class="code hl_variable" href="#a85b2c88b13e1c1da3c80cf595bf18e26">gravity_</a> * <a class="code hl_variable" href="#a6d56a56dbb7776f010965e7de2506bd1">rising_gravity_multiplier_</a>);</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y += <a class="code hl_variable" href="#a85b2c88b13e1c1da3c80cf595bf18e26">gravity_</a>;</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  167</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y = Min(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y, <a class="code hl_variable" href="#a718abab7d3c5f947b4e080861bea8766">terminal_velocity_y_</a>);</div>
+<div class="line"><span class="lineno">  168</span>}</div>
+<div class="ttc" id="aclass_player_html_a6d56a56dbb7776f010965e7de2506bd1"><div class="ttname"><a href="#a6d56a56dbb7776f010965e7de2506bd1">Player::rising_gravity_multiplier_</a></div><div class="ttdeci">double rising_gravity_multiplier_</div><div class="ttdef"><b>Definition</b> Player.h:143</div></div>
+<div class="ttc" id="aclass_player_html_a718abab7d3c5f947b4e080861bea8766"><div class="ttname"><a href="#a718abab7d3c5f947b4e080861bea8766">Player::terminal_velocity_y_</a></div><div class="ttdeci">double terminal_velocity_y_</div><div class="ttdef"><b>Definition</b> Player.h:142</div></div>
+<div class="ttc" id="aclass_player_html_a85b2c88b13e1c1da3c80cf595bf18e26"><div class="ttname"><a href="#a85b2c88b13e1c1da3c80cf595bf18e26">Player::gravity_</a></div><div class="ttdeci">double gravity_</div><div class="ttdef"><b>Definition</b> Player.h:140</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a34222904c837a901c35e95924e1dc2b7_icgraph.svg" width="512" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abc8edc45ea7e479e343caa7454743541" name="abc8edc45ea7e479e343caa7454743541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8edc45ea7e479e343caa7454743541">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Draw </td>
+          <td>(</td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>camera_offset</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プレイヤーを描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_offset</td><td>カメラオフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>{</div>
+<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a>)</div>
+<div class="line"><span class="lineno">  349</span>    {</div>
+<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">if</span>((<a class="code hl_variable" href="#a4cd3b53582b06799ef137766bd986320">invincible_timer_</a>.ms() % <a class="code hl_variable" href="#acb4f1ebc3871752450e11b69532938b5">kBlinkIntervalMs</a>) &lt; <a class="code hl_variable" href="#a973b3858eb8e0c933f742362af27e3bc">kBlinkOnDurationMs</a>)</div>
+<div class="line"><span class="lineno">  351</span>        {</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  354</span>        {</div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  356</span>        }</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span> texture_asset = <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.GetCurrentTextureAsset())</div>
+<div class="line"><span class="lineno">  360</span>    {</div>
+<div class="line"><span class="lineno">  361</span>        <span class="comment">// エンディングアニメーション用の特別な描画オフセット</span></div>
+<div class="line"><span class="lineno">  362</span>        <span class="keyword">const</span> Vec2 draw_offset = <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.IsPlaying(U<span class="stringliteral">&quot;ending&quot;</span>) ? <a class="code hl_variable" href="#aceb0438bb59089beb30db26aa856a6e4">kEndingDrawOffset</a> : <a class="code hl_variable" href="#ae9c66ded9161046640e7c1d8ef5d23ab">kDrawOffset</a>;</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keyword">const</span> Vec2 top_left_pos = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a> - draw_offset;</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keyword">const</span> Vec2 draw_pos = top_left_pos - camera_offset;</div>
+<div class="line"><span class="lineno">  365</span>        <span class="keyword">const</span> Vec2 final_draw_pos = s3d::Floor(draw_pos);</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a9720f18c743b7e984a4c4593c4fb5d88">is_facing_right_</a>)</div>
+<div class="line"><span class="lineno">  368</span>        {</div>
+<div class="line"><span class="lineno">  369</span>            texture_asset-&gt;mirrored().draw(final_draw_pos);</div>
+<div class="line"><span class="lineno">  370</span>        }</div>
+<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  372</span>        {</div>
+<div class="line"><span class="lineno">  373</span>            texture_asset-&gt;draw(final_draw_pos);</div>
+<div class="line"><span class="lineno">  374</span>        }</div>
+<div class="line"><span class="lineno">  375</span>    }</div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  377</span>    {</div>
+<div class="line"><span class="lineno">  378</span>        RectF{ Arg::center(s3d::Floor(<a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a> - camera_offset)),32,32 }.drawFrame(2, 0, Palette::Red);</div>
+<div class="line"><span class="lineno">  379</span>    }</div>
+<div class="line"><span class="lineno">  380</span>}</div>
+<div class="ttc" id="aclass_player_html_a1b6c42ba7dc2c6fa213780f3af1943bc"><div class="ttname"><a href="#a1b6c42ba7dc2c6fa213780f3af1943bc">Player::is_invincible_</a></div><div class="ttdeci">bool is_invincible_</div><div class="ttdef"><b>Definition</b> Player.h:116</div></div>
+<div class="ttc" id="aclass_player_html_a4cd3b53582b06799ef137766bd986320"><div class="ttname"><a href="#a4cd3b53582b06799ef137766bd986320">Player::invincible_timer_</a></div><div class="ttdeci">s3d::Stopwatch invincible_timer_</div><div class="ttdef"><b>Definition</b> Player.h:117</div></div>
+<div class="ttc" id="aclass_player_html_a5735d5b8e5adc1326bcd7dc78951d169"><div class="ttname"><a href="#a5735d5b8e5adc1326bcd7dc78951d169">Player::pos_</a></div><div class="ttdeci">Vec2 pos_</div><div class="ttdef"><b>Definition</b> Player.h:109</div></div>
+<div class="ttc" id="aclass_player_html_a9720f18c743b7e984a4c4593c4fb5d88"><div class="ttname"><a href="#a9720f18c743b7e984a4c4593c4fb5d88">Player::is_facing_right_</a></div><div class="ttdeci">bool is_facing_right_</div><div class="ttdef"><b>Definition</b> Player.h:114</div></div>
+<div class="ttc" id="aclass_player_html_a973b3858eb8e0c933f742362af27e3bc"><div class="ttname"><a href="#a973b3858eb8e0c933f742362af27e3bc">Player::kBlinkOnDurationMs</a></div><div class="ttdeci">static constexpr int32 kBlinkOnDurationMs</div><div class="ttdef"><b>Definition</b> Player.h:120</div></div>
+<div class="ttc" id="aclass_player_html_acb4f1ebc3871752450e11b69532938b5"><div class="ttname"><a href="#acb4f1ebc3871752450e11b69532938b5">Player::kBlinkIntervalMs</a></div><div class="ttdeci">static constexpr int32 kBlinkIntervalMs</div><div class="ttdef"><b>Definition</b> Player.h:119</div></div>
+<div class="ttc" id="aclass_player_html_aceb0438bb59089beb30db26aa856a6e4"><div class="ttname"><a href="#aceb0438bb59089beb30db26aa856a6e4">Player::kEndingDrawOffset</a></div><div class="ttdeci">static constexpr Vec2 kEndingDrawOffset</div><div class="ttdef"><b>Definition</b> Player.h:134</div></div>
+<div class="ttc" id="aclass_player_html_ae9c66ded9161046640e7c1d8ef5d23ab"><div class="ttname"><a href="#ae9c66ded9161046640e7c1d8ef5d23ab">Player::kDrawOffset</a></div><div class="ttdeci">static constexpr Vec2 kDrawOffset</div><div class="ttdef"><b>Definition</b> Player.h:133</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d241854c7ddc1ffd2f1048978d7222a" name="a1d241854c7ddc1ffd2f1048978d7222a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d241854c7ddc1ffd2f1048978d7222a">&#9670;&#160;</a></span>GetMaxOxygen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::GetMaxOxygen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大酸素量を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>最大酸素量 </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a58b305bef8e42f0b40f0c5a13d1c9373">kMaxOxygen</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a300cd789f92424b16d8d7f349ebd1352" name="a300cd789f92424b16d8d7f349ebd1352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a300cd789f92424b16d8d7f349ebd1352">&#9670;&#160;</a></span>GetOxygen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::GetOxygen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在の酸素量を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>酸素量 </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  449</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a00371b0eff9f6bfa2c18e0e518ee39a6" name="a00371b0eff9f6bfa2c18e0e518ee39a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00371b0eff9f6bfa2c18e0e518ee39a6">&#9670;&#160;</a></span>GetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Player::GetPos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位置を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>プレイヤーの位置 </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  382</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad5807ec776b055f5ee154395ad23c88b" name="ad5807ec776b055f5ee154395ad23c88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5807ec776b055f5ee154395ad23c88b">&#9670;&#160;</a></span>HandleCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::HandleCollisions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突処理を実行する </p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>{</div>
+<div class="line"><span class="lineno">  484</span>    <span class="comment">// 衝突していない場合は早期リターン</span></div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">collider</a>.is_colliding || <a class="code hl_variable" href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">collider</a>.collided_tags.isEmpty())</div>
+<div class="line"><span class="lineno">  486</span>    {</div>
+<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  488</span>    }</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>    <span class="comment">// エンディング中や酸素切れ時は衝突処理をスキップ</span></div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a> || <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a>)</div>
+<div class="line"><span class="lineno">  492</span>    {</div>
+<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  494</span>    }</div>
+<div class="line"><span class="lineno">  495</span> </div>
+<div class="line"><span class="lineno">  496</span>    <span class="comment">// 各タグが1回だけ処理されるようにフラグを使用</span></div>
+<div class="line"><span class="lineno">  497</span>    <span class="keywordtype">bool</span> has_enemy_collision = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  498</span>    <span class="keywordtype">bool</span> has_oxygen_collision = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  499</span> </div>
+<div class="line"><span class="lineno">  500</span>    <span class="comment">// 衝突タグをチェックして適切な処理を実行</span></div>
+<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tag : <a class="code hl_variable" href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">collider</a>.collided_tags)</div>
+<div class="line"><span class="lineno">  502</span>    {</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">if</span>(tag == <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a>)</div>
+<div class="line"><span class="lineno">  504</span>        {</div>
+<div class="line"><span class="lineno">  505</span>            has_enemy_collision = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  506</span>        }</div>
+<div class="line"><span class="lineno">  507</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tag == <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea18dde316c19b92aedc371f4335f70c9f">ColliderTag::kOxygen</a>)</div>
+<div class="line"><span class="lineno">  508</span>        {</div>
+<div class="line"><span class="lineno">  509</span>            has_oxygen_collision = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  510</span>        }</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>    <span class="comment">// 敵との衝突処理（1回のみ）</span></div>
+<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">if</span>(has_enemy_collision &amp;&amp; not <a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a>)</div>
+<div class="line"><span class="lineno">  515</span>    {</div>
+<div class="line"><span class="lineno">  516</span>        <a class="code hl_function" href="#a79060b32a95ca6e3f7a482b9ed45fa07">TakeDamage</a>();</div>
+<div class="line"><span class="lineno">  517</span>    }</div>
+<div class="line"><span class="lineno">  518</span> </div>
+<div class="line"><span class="lineno">  519</span>    <span class="comment">// 酸素回復処理（1回のみ）</span></div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">if</span>(has_oxygen_collision)</div>
+<div class="line"><span class="lineno">  521</span>    {</div>
+<div class="line"><span class="lineno">  522</span>        <a class="code hl_function" href="#a34183eba5b1c359a41c87f8ce9b06f98">RecoverOxygen</a>();</div>
+<div class="line"><span class="lineno">  523</span>    }</div>
+<div class="line"><span class="lineno">  524</span>}</div>
+<div class="ttc" id="a_collider_8h_html_ac7af8ecfc927eb4be84ab71d0d3ec21ea18dde316c19b92aedc371f4335f70c9f"><div class="ttname"><a href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea18dde316c19b92aedc371f4335f70c9f">ColliderTag::kOxygen</a></div><div class="ttdeci">@ kOxygen</div><div class="ttdoc">酸素</div><div class="ttdef"><b>Definition</b> Collider.h:16</div></div>
+<div class="ttc" id="a_collider_8h_html_ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba"><div class="ttname"><a href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a></div><div class="ttdeci">@ kEnemy</div><div class="ttdoc">敵</div><div class="ttdef"><b>Definition</b> Collider.h:15</div></div>
+<div class="ttc" id="aclass_player_html_a10fd723bd44718d2b5c3ad12f7fd8ef5"><div class="ttname"><a href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">Player::collider</a></div><div class="ttdeci">Collider collider</div><div class="ttdoc">コライダー</div><div class="ttdef"><b>Definition</b> Player.h:60</div></div>
+<div class="ttc" id="aclass_player_html_a34183eba5b1c359a41c87f8ce9b06f98"><div class="ttname"><a href="#a34183eba5b1c359a41c87f8ce9b06f98">Player::RecoverOxygen</a></div><div class="ttdeci">void RecoverOxygen()</div><div class="ttdoc">酸素を回復する</div><div class="ttdef"><b>Definition</b> Player.cpp:426</div></div>
+<div class="ttc" id="aclass_player_html_a79060b32a95ca6e3f7a482b9ed45fa07"><div class="ttname"><a href="#a79060b32a95ca6e3f7a482b9ed45fa07">Player::TakeDamage</a></div><div class="ttdeci">void TakeDamage()</div><div class="ttdoc">ダメージを受ける</div><div class="ttdef"><b>Definition</b> Player.cpp:431</div></div>
+<div class="ttc" id="aclass_player_html_a81a4b0eff0c8920e74bac0f03cdc7e40"><div class="ttname"><a href="#a81a4b0eff0c8920e74bac0f03cdc7e40">Player::is_in_ending_</a></div><div class="ttdeci">bool is_in_ending_</div><div class="ttdef"><b>Definition</b> Player.h:148</div></div>
+<div class="ttc" id="aclass_player_html_a883ba5d9eab682d3f9a7ea0b6e942372"><div class="ttname"><a href="#a883ba5d9eab682d3f9a7ea0b6e942372">Player::is_oxygen_empty_</a></div><div class="ttdeci">bool is_oxygen_empty_</div><div class="ttdef"><b>Definition</b> Player.h:146</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ad5807ec776b055f5ee154395ad23c88b_cgraph.svg" width="582" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ad5807ec776b055f5ee154395ad23c88b_icgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a235c6e2e4fe87bbec295d71a31e5ead2" name="a235c6e2e4fe87bbec295d71a31e5ead2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235c6e2e4fe87bbec295d71a31e5ead2">&#9670;&#160;</a></span>HandleInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::HandleInput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力を処理する </p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="_config_8h.html#a4084901ed266524f2686dfe9165b3611">kInputLeft</a>.pressed())</div>
+<div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = Max(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x - <a class="code hl_variable" href="#a2884d72a401c324bca457b4a5bd52f38">horizontal_accel_</a>, -<a class="code hl_variable" href="#acfc9fd07a01d2f4180184cefb3aa80de">horizontal_speed_max_</a>);</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="#a9720f18c743b7e984a4c4593c4fb5d88">is_facing_right_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="_config_8h.html#aeb82e98dd9d59993bfa121612a706012">kInputRight</a>.pressed())</div>
+<div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = Min(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x + <a class="code hl_variable" href="#a2884d72a401c324bca457b4a5bd52f38">horizontal_accel_</a>, <a class="code hl_variable" href="#acfc9fd07a01d2f4180184cefb3aa80de">horizontal_speed_max_</a>);</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="#a9720f18c743b7e984a4c4593c4fb5d88">is_facing_right_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="_config_8h.html#ac5411287b9f05244aa0f067b14a16f48">kInputAction1</a>.down())</div>
+<div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="#a075e705cdf3b3d264c034b938e3ed500">OnSwimPressed</a>();</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+<div class="ttc" id="a_config_8h_html_a4084901ed266524f2686dfe9165b3611"><div class="ttname"><a href="_config_8h.html#a4084901ed266524f2686dfe9165b3611">kInputLeft</a></div><div class="ttdeci">const InputGroup kInputLeft</div><div class="ttdoc">左移動キー</div><div class="ttdef"><b>Definition</b> Config.h:34</div></div>
+<div class="ttc" id="a_config_8h_html_ac5411287b9f05244aa0f067b14a16f48"><div class="ttname"><a href="_config_8h.html#ac5411287b9f05244aa0f067b14a16f48">kInputAction1</a></div><div class="ttdeci">const InputGroup kInputAction1</div><div class="ttdoc">アクション1キー</div><div class="ttdef"><b>Definition</b> Config.h:46</div></div>
+<div class="ttc" id="a_config_8h_html_aeb82e98dd9d59993bfa121612a706012"><div class="ttname"><a href="_config_8h.html#aeb82e98dd9d59993bfa121612a706012">kInputRight</a></div><div class="ttdeci">const InputGroup kInputRight</div><div class="ttdoc">右移動キー</div><div class="ttdef"><b>Definition</b> Config.h:37</div></div>
+<div class="ttc" id="aclass_player_html_a075e705cdf3b3d264c034b938e3ed500"><div class="ttname"><a href="#a075e705cdf3b3d264c034b938e3ed500">Player::OnSwimPressed</a></div><div class="ttdeci">void OnSwimPressed()</div><div class="ttdoc">泳ぎ入力時の処理</div><div class="ttdef"><b>Definition</b> Player.cpp:120</div></div>
+<div class="ttc" id="aclass_player_html_a2884d72a401c324bca457b4a5bd52f38"><div class="ttname"><a href="#a2884d72a401c324bca457b4a5bd52f38">Player::horizontal_accel_</a></div><div class="ttdeci">double horizontal_accel_</div><div class="ttdef"><b>Definition</b> Player.h:137</div></div>
+<div class="ttc" id="aclass_player_html_acfc9fd07a01d2f4180184cefb3aa80de"><div class="ttname"><a href="#acfc9fd07a01d2f4180184cefb3aa80de">Player::horizontal_speed_max_</a></div><div class="ttdeci">double horizontal_speed_max_</div><div class="ttdef"><b>Definition</b> Player.h:138</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a235c6e2e4fe87bbec295d71a31e5ead2_cgraph.svg" width="558" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a235c6e2e4fe87bbec295d71a31e5ead2_icgraph.svg" width="304" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abf577519cc0265417050b596ee5651dd" name="abf577519cc0265417050b596ee5651dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf577519cc0265417050b596ee5651dd">&#9670;&#160;</a></span>IsOxygenEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::IsOxygenEmpty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>酸素が空かを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>空の場合はtrue </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  453</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac7d159c578eb4da86911b484b499766c" name="ac7d159c578eb4da86911b484b499766c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d159c578eb4da86911b484b499766c">&#9670;&#160;</a></span>ModifyOxygen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::ModifyOxygen </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>酸素量を変更する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>変更量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  407</span>{</div>
+<div class="line"><span class="lineno">  408</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> || amount == 0.0)</div>
+<div class="line"><span class="lineno">  409</span>    {</div>
+<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  411</span>    }</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>    <a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a> += amount;</div>
+<div class="line"><span class="lineno">  414</span>    <a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a> = Clamp(<a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a>, 0.0, <a class="code hl_variable" href="#a58b305bef8e42f0b40f0c5a13d1c9373">kMaxOxygen</a>);</div>
+<div class="line"><span class="lineno">  415</span> </div>
+<div class="line"><span class="lineno">  416</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a> == 0.0)</div>
+<div class="line"><span class="lineno">  417</span>    {</div>
+<div class="line"><span class="lineno">  418</span>        <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
+<div class="line"><span class="lineno">  420</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  421</span>    {</div>
+<div class="line"><span class="lineno">  422</span>        <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="line"><span class="lineno">  424</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ac7d159c578eb4da86911b484b499766c_icgraph.svg" width="743" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abfeffb1320e2b63619161ae38b792e11" name="abfeffb1320e2b63619161ae38b792e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfeffb1320e2b63619161ae38b792e11">&#9670;&#160;</a></span>MoveX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::MoveX </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>X軸方向の移動処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>{</div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordtype">double</span> next_x = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x + <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x;</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordtype">double</span> tile_size = stage.<a class="code hl_function" href="class_stage.html#aa1ee7cbc0b2b77c60aba3665038c2e91">GetTileSize</a>();</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x &gt; 0)</div>
+<div class="line"><span class="lineno">  188</span>    {</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">double</span> sensor_x = next_x + <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a>;</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">double</span> sensor_y_top = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y - <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a> + 1.0;</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">double</span> sensor_y_bot = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y + <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a> - 1.0;</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordtype">double</span> sensor_y_mid = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y;</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span>(stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_top) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_mid) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_bot))</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = (std::floor(sensor_x / tile_size) * tile_size) - <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a>;</div>
+<div class="line"><span class="lineno">  197</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = 0;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = next_x;</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x &lt; 0)</div>
+<div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordtype">double</span> sensor_x = next_x - <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a>;</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordtype">double</span> sensor_y_top = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y - <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a> + 1.0;</div>
+<div class="line"><span class="lineno">  208</span>        <span class="keywordtype">double</span> sensor_y_bot = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y + <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a> - 1.0;</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordtype">double</span> sensor_y_mid = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y;</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span>(stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_top) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_mid) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x, sensor_y_bot))</div>
+<div class="line"><span class="lineno">  212</span>        {</div>
+<div class="line"><span class="lineno">  213</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a>;</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = 0;</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  217</span>        {</div>
+<div class="line"><span class="lineno">  218</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = next_x;</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span>}</div>
+<div class="ttc" id="aclass_player_html_a9d46c6621010d356f3592efacb8dc103"><div class="ttname"><a href="#a9d46c6621010d356f3592efacb8dc103">Player::kPhysicsHalfHeight</a></div><div class="ttdeci">static constexpr double kPhysicsHalfHeight</div><div class="ttdef"><b>Definition</b> Player.h:126</div></div>
+<div class="ttc" id="aclass_player_html_ab628fc1142d57e518ee541ca2e1eb0e2"><div class="ttname"><a href="#ab628fc1142d57e518ee541ca2e1eb0e2">Player::kPhysicsHalfWidth</a></div><div class="ttdeci">static constexpr double kPhysicsHalfWidth</div><div class="ttdef"><b>Definition</b> Player.h:125</div></div>
+<div class="ttc" id="aclass_stage_html_a95f9531749e71dfe6c880295abeb9d8c"><div class="ttname"><a href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">Stage::IsSolid</a></div><div class="ttdeci">bool IsSolid(double world_x, double world_y) const</div><div class="ttdoc">指定したワールド座標が壁タイル上かを判定する</div><div class="ttdef"><b>Definition</b> Stage.cpp:169</div></div>
+<div class="ttc" id="aclass_stage_html_aa1ee7cbc0b2b77c60aba3665038c2e91"><div class="ttname"><a href="class_stage.html#aa1ee7cbc0b2b77c60aba3665038c2e91">Stage::GetTileSize</a></div><div class="ttdeci">int32 GetTileSize() const</div><div class="ttdoc">タイルサイズを取得する</div><div class="ttdef"><b>Definition</b> Stage.h:57</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_abfeffb1320e2b63619161ae38b792e11_cgraph.svg" width="298" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_abfeffb1320e2b63619161ae38b792e11_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae83f03e905e8fe4771a95345ef626d18" name="ae83f03e905e8fe4771a95345ef626d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83f03e905e8fe4771a95345ef626d18">&#9670;&#160;</a></span>MoveY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::MoveY </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Y軸方向の移動処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>{</div>
+<div class="line"><span class="lineno">  225</span>    <span class="keywordtype">double</span> next_y = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y + <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y;</div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordtype">double</span> tile_size = stage.<a class="code hl_function" href="class_stage.html#aa1ee7cbc0b2b77c60aba3665038c2e91">GetTileSize</a>();</div>
+<div class="line"><span class="lineno">  227</span>    <a class="code hl_variable" href="#a84de165a09d93bc70a59aee445902a71">is_grounded_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y &gt; 0)</div>
+<div class="line"><span class="lineno">  230</span>    {</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">double</span> sensor_y = next_y + <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a>;</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordtype">double</span> sensor_x_left = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x - <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a> + 1.0;</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordtype">double</span> sensor_x_right = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x + <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a> - 1.0;</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span>(stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x_left, sensor_y) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x_right, sensor_y))</div>
+<div class="line"><span class="lineno">  235</span>        {</div>
+<div class="line"><span class="lineno">  236</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y = (std::floor(sensor_y / tile_size) * tile_size) - <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a>;</div>
+<div class="line"><span class="lineno">  237</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y = 0;</div>
+<div class="line"><span class="lineno">  238</span>            <a class="code hl_variable" href="#a84de165a09d93bc70a59aee445902a71">is_grounded_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  241</span>        {</div>
+<div class="line"><span class="lineno">  242</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y = next_y;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y &lt; 0 &amp;&amp; (not <a class="code hl_variable" href="#ace8e7dbe7eec242775a2183a417ca04b">just_took_damage_</a>))</div>
+<div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordtype">double</span> sensor_y = next_y - <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a>;</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordtype">double</span> sensor_x_left = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x - <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a> + 1.0;</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordtype">double</span> sensor_x_right = <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x + <a class="code hl_variable" href="#ab628fc1142d57e518ee541ca2e1eb0e2">kPhysicsHalfWidth</a> - 1.0;</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span>(stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x_left, sensor_y) || stage.<a class="code hl_function" href="class_stage.html#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a>(sensor_x_right, sensor_y))</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y = (std::floor(sensor_y / tile_size) * tile_size) + tile_size + <a class="code hl_variable" href="#a9d46c6621010d356f3592efacb8dc103">kPhysicsHalfHeight</a>;</div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y = 0;</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  256</span>        {</div>
+<div class="line"><span class="lineno">  257</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y = next_y;</div>
+<div class="line"><span class="lineno">  258</span>        }</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y &lt; 0)</div>
+<div class="line"><span class="lineno">  261</span>    {</div>
+<div class="line"><span class="lineno">  262</span>        <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.y = next_y;</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+<div class="line"><span class="lineno">  264</span>}</div>
+<div class="ttc" id="aclass_player_html_a84de165a09d93bc70a59aee445902a71"><div class="ttname"><a href="#a84de165a09d93bc70a59aee445902a71">Player::is_grounded_</a></div><div class="ttdeci">bool is_grounded_</div><div class="ttdef"><b>Definition</b> Player.h:113</div></div>
+<div class="ttc" id="aclass_player_html_ace8e7dbe7eec242775a2183a417ca04b"><div class="ttname"><a href="#ace8e7dbe7eec242775a2183a417ca04b">Player::just_took_damage_</a></div><div class="ttdeci">bool just_took_damage_</div><div class="ttdef"><b>Definition</b> Player.h:122</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ae83f03e905e8fe4771a95345ef626d18_cgraph.svg" width="298" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ae83f03e905e8fe4771a95345ef626d18_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a075e705cdf3b3d264c034b938e3ed500" name="a075e705cdf3b3d264c034b938e3ed500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075e705cdf3b3d264c034b938e3ed500">&#9670;&#160;</a></span>OnSwimPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::OnSwimPressed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>泳ぎ入力時の処理 </p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y = <a class="code hl_variable" href="#acf09f38b4bd35fc14e3b3b3b748f0a8e">swim_power_</a>;</div>
+<div class="line"><span class="lineno">  123</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;swim&quot;</span>);</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    <span class="comment">// swim時に酸素を少し消費</span></div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_function" href="#ac7d159c578eb4da86911b484b499766c">ModifyOxygen</a>(-<a class="code hl_variable" href="#a88c319d377bef57942975ef4eae7a459">kOxygenSwimCost</a>);</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    <span class="comment">// 効果音は非同期ロード次第で再生されるため、呼び出しは安全</span></div>
+<div class="line"><span class="lineno">  130</span>    <a class="code hl_variable" href="#a9146a7f6d2439e2151f0b6525727356b">sound_controller_</a>.Play(U<span class="stringliteral">&quot;water_craw&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+<div class="ttc" id="aclass_player_html_a88c319d377bef57942975ef4eae7a459"><div class="ttname"><a href="#a88c319d377bef57942975ef4eae7a459">Player::kOxygenSwimCost</a></div><div class="ttdeci">static constexpr double kOxygenSwimCost</div><div class="ttdef"><b>Definition</b> Player.h:163</div></div>
+<div class="ttc" id="aclass_player_html_a9146a7f6d2439e2151f0b6525727356b"><div class="ttname"><a href="#a9146a7f6d2439e2151f0b6525727356b">Player::sound_controller_</a></div><div class="ttdeci">SoundController sound_controller_</div><div class="ttdoc">サウンドコントローラー</div><div class="ttdef"><b>Definition</b> Player.h:170</div></div>
+<div class="ttc" id="aclass_player_html_ac7d159c578eb4da86911b484b499766c"><div class="ttname"><a href="#ac7d159c578eb4da86911b484b499766c">Player::ModifyOxygen</a></div><div class="ttdeci">void ModifyOxygen(double amount)</div><div class="ttdoc">酸素量を変更する</div><div class="ttdef"><b>Definition</b> Player.cpp:406</div></div>
+<div class="ttc" id="aclass_player_html_acf09f38b4bd35fc14e3b3b3b748f0a8e"><div class="ttname"><a href="#acf09f38b4bd35fc14e3b3b3b748f0a8e">Player::swim_power_</a></div><div class="ttdeci">double swim_power_</div><div class="ttdef"><b>Definition</b> Player.h:141</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a075e705cdf3b3d264c034b938e3ed500_cgraph.svg" width="374" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a075e705cdf3b3d264c034b938e3ed500_icgraph.svg" width="516" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a34183eba5b1c359a41c87f8ce9b06f98" name="a34183eba5b1c359a41c87f8ce9b06f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34183eba5b1c359a41c87f8ce9b06f98">&#9670;&#160;</a></span>RecoverOxygen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::RecoverOxygen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>酸素を回復する </p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>{</div>
+<div class="line"><span class="lineno">  428</span>    <a class="code hl_function" href="#ac7d159c578eb4da86911b484b499766c">ModifyOxygen</a>(<a class="code hl_variable" href="#ab10dee651622ae22b272a1f0866429c1">kOxygenRecoveryPerFrame</a>);</div>
+<div class="line"><span class="lineno">  429</span>}</div>
+<div class="ttc" id="aclass_player_html_ab10dee651622ae22b272a1f0866429c1"><div class="ttname"><a href="#ab10dee651622ae22b272a1f0866429c1">Player::kOxygenRecoveryPerFrame</a></div><div class="ttdeci">static constexpr double kOxygenRecoveryPerFrame</div><div class="ttdef"><b>Definition</b> Player.h:164</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a34183eba5b1c359a41c87f8ce9b06f98_cgraph.svg" width="370" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a34183eba5b1c359a41c87f8ce9b06f98_icgraph.svg" width="540" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaae9cb1bf3841c553c40b231a7edf11e" name="aaae9cb1bf3841c553c40b231a7edf11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae9cb1bf3841c553c40b231a7edf11e">&#9670;&#160;</a></span>Respawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Respawn </td>
+          <td>(</td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>spawn_pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定位置にリスポーンする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spawn_pos</td><td>リスポーン位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  456</span>{</div>
+<div class="line"><span class="lineno">  457</span>    <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a> = spawn_pos;</div>
+<div class="line"><span class="lineno">  458</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a> = Vec2::Zero();</div>
+<div class="line"><span class="lineno">  459</span>    <a class="code hl_variable" href="#a3a5e81a3a26852072099d592f89676f5">oxygen_</a> = <a class="code hl_variable" href="#a58b305bef8e42f0b40f0c5a13d1c9373">kMaxOxygen</a>;</div>
+<div class="line"><span class="lineno">  460</span>    <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  461</span> </div>
+<div class="line"><span class="lineno">  462</span>    <a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>    <a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  465</span>    <a class="code hl_variable" href="#a4cd3b53582b06799ef137766bd986320">invincible_timer_</a>.restart();</div>
+<div class="line"><span class="lineno">  466</span> </div>
+<div class="line"><span class="lineno">  467</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  468</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf754ca579fa7a1be1a1db5c605c566b" name="adf754ca579fa7a1be1a1db5c605c566b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf754ca579fa7a1be1a1db5c605c566b">&#9670;&#160;</a></span>SetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::SetPos </td>
+          <td>(</td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>new_pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位置を設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_pos</td><td>設定する位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>{</div>
+<div class="line"><span class="lineno">  386</span>    <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a> = new_pos;</div>
+<div class="line"><span class="lineno">  387</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a> = Vec2::Zero();</div>
+<div class="line"><span class="lineno">  388</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f80b81ed24b0053b6c3c7107c9b36a4" name="a9f80b81ed24b0053b6c3c7107c9b36a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f80b81ed24b0053b6c3c7107c9b36a4">&#9670;&#160;</a></span>SetupAnimations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::SetupAnimations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションをセットアップする </p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
+<div class="line"><span class="lineno">   18</span>    <span class="comment">// 集約してアニメーション初期化を分離</span></div>
+<div class="line"><span class="lineno">   19</span>    Animation ground_idle_animation;</div>
+<div class="line"><span class="lineno">   20</span>    ground_idle_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_stand&quot;</span> };</div>
+<div class="line"><span class="lineno">   21</span>    ground_idle_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 1.0;</div>
+<div class="line"><span class="lineno">   22</span>    ground_idle_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;ground_idle&quot;</span>, ground_idle_animation);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    Animation float_idle_animation;</div>
+<div class="line"><span class="lineno">   26</span>    float_idle_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_1&quot;</span> };</div>
+<div class="line"><span class="lineno">   27</span>    float_idle_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 1.0;</div>
+<div class="line"><span class="lineno">   28</span>    float_idle_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;float_idle&quot;</span>, float_idle_animation);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    Animation walk_animation;</div>
+<div class="line"><span class="lineno">   32</span>    walk_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_walk1&quot;</span>, U<span class="stringliteral">&quot;player_walk2&quot;</span>, U<span class="stringliteral">&quot;player_walk3&quot;</span>, U<span class="stringliteral">&quot;player_walk4&quot;</span>, U<span class="stringliteral">&quot;player_walk5&quot;</span>, U<span class="stringliteral">&quot;player_walk6&quot;</span> };</div>
+<div class="line"><span class="lineno">   33</span>    walk_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 0.32;</div>
+<div class="line"><span class="lineno">   34</span>    walk_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;walk&quot;</span>, walk_animation);</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    Animation float_move_animation;</div>
+<div class="line"><span class="lineno">   38</span>    float_move_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_6&quot;</span>, U<span class="stringliteral">&quot;player_4&quot;</span>, U<span class="stringliteral">&quot;player_5&quot;</span> };</div>
+<div class="line"><span class="lineno">   39</span>    float_move_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 0.25;</div>
+<div class="line"><span class="lineno">   40</span>    float_move_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;float_move&quot;</span>, float_move_animation);</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    Animation swim_animation;</div>
+<div class="line"><span class="lineno">   44</span>    swim_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_2&quot;</span>, U<span class="stringliteral">&quot;player_3&quot;</span> };</div>
+<div class="line"><span class="lineno">   45</span>    swim_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 0.07;</div>
+<div class="line"><span class="lineno">   46</span>    swim_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;swim&quot;</span>, swim_animation);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    Animation dead_animation;</div>
+<div class="line"><span class="lineno">   50</span>    dead_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = { U<span class="stringliteral">&quot;player_dead&quot;</span> };</div>
+<div class="line"><span class="lineno">   51</span>    dead_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 1.0;</div>
+<div class="line"><span class="lineno">   52</span>    dead_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;dead&quot;</span>, dead_animation);</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    Animation ending_animation;</div>
+<div class="line"><span class="lineno">   56</span>    ending_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = {}</div>
+<div class="line"><span class="lineno">   57</span>    ; <span class="comment">// 大量なので見やすく改行して代入</span></div>
+<div class="line"><span class="lineno">   58</span>    ending_animation.<a class="code hl_variable" href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">texture_asset_names</a> = {</div>
+<div class="line"><span class="lineno">   59</span>        U<span class="stringliteral">&quot;player_end1&quot;</span>,U<span class="stringliteral">&quot;player_end2&quot;</span>,U<span class="stringliteral">&quot;player_end3&quot;</span>,U<span class="stringliteral">&quot;player_end4&quot;</span>,U<span class="stringliteral">&quot;player_end5&quot;</span>,</div>
+<div class="line"><span class="lineno">   60</span>        U<span class="stringliteral">&quot;player_end6&quot;</span>,U<span class="stringliteral">&quot;player_end7&quot;</span>,U<span class="stringliteral">&quot;player_end8&quot;</span>,U<span class="stringliteral">&quot;player_end9&quot;</span>,U<span class="stringliteral">&quot;player_end10&quot;</span>,</div>
+<div class="line"><span class="lineno">   61</span>        U<span class="stringliteral">&quot;player_end11&quot;</span>,U<span class="stringliteral">&quot;player_end12&quot;</span>,U<span class="stringliteral">&quot;player_end13&quot;</span>,U<span class="stringliteral">&quot;player_end14&quot;</span>,U<span class="stringliteral">&quot;player_end15&quot;</span>,</div>
+<div class="line"><span class="lineno">   62</span>        U<span class="stringliteral">&quot;player_end16&quot;</span>,U<span class="stringliteral">&quot;player_end17&quot;</span>,U<span class="stringliteral">&quot;player_end18&quot;</span>,U<span class="stringliteral">&quot;player_end19&quot;</span>,U<span class="stringliteral">&quot;player_end20&quot;</span>,</div>
+<div class="line"><span class="lineno">   63</span>        U<span class="stringliteral">&quot;player_end21&quot;</span></div>
+<div class="line"><span class="lineno">   64</span>    };</div>
+<div class="line"><span class="lineno">   65</span>    ending_animation.<a class="code hl_variable" href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">frame_duration_sec</a> = 0.4;</div>
+<div class="line"><span class="lineno">   66</span>    ending_animation.<a class="code hl_variable" href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">is_looping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.AddAnimation(U<span class="stringliteral">&quot;ending&quot;</span>, ending_animation);</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="astruct_animation_html_a0fc3d75a961b82b15422891aac9229c6"><div class="ttname"><a href="struct_animation.html#a0fc3d75a961b82b15422891aac9229c6">Animation::texture_asset_names</a></div><div class="ttdeci">Array&lt; String &gt; texture_asset_names</div><div class="ttdoc">アニメーションを構成するテクスチャアセット名のリスト</div><div class="ttdef"><b>Definition</b> Animation.h:12</div></div>
+<div class="ttc" id="astruct_animation_html_a4906270e700b1cb1422a751c6847ef45"><div class="ttname"><a href="struct_animation.html#a4906270e700b1cb1422a751c6847ef45">Animation::is_looping</a></div><div class="ttdeci">bool is_looping</div><div class="ttdoc">アニメーションをループ再生するか</div><div class="ttdef"><b>Definition</b> Animation.h:18</div></div>
+<div class="ttc" id="astruct_animation_html_ad499414934a6af1c0f9a894c47bd8152"><div class="ttname"><a href="struct_animation.html#ad499414934a6af1c0f9a894c47bd8152">Animation::frame_duration_sec</a></div><div class="ttdeci">double frame_duration_sec</div><div class="ttdoc">1フレームあたりの表示時間(秒)</div><div class="ttdef"><b>Definition</b> Animation.h:15</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a9f80b81ed24b0053b6c3c7107c9b36a4_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aed60576c3b00bb0780e3bad353a34000" name="aed60576c3b00bb0780e3bad353a34000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed60576c3b00bb0780e3bad353a34000">&#9670;&#160;</a></span>StartEnding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::StartEnding </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>camera_center_world_x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エンディングを開始する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_center_world_x</td><td>カメラ中心のワールド座標(X) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  471</span>{</div>
+<div class="line"><span class="lineno">  472</span>    <a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  473</span>    <a class="code hl_variable" href="#a3048b3b6fd8b9b3ad62214ad262f7342">ending_target_x_</a> = camera_center_world_x + 80.0;</div>
+<div class="line"><span class="lineno">  474</span>    <a class="code hl_variable" href="#afd219a160538e8cdedfa8aff98492a01">ending_warp_enabled_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  475</span> </div>
+<div class="line"><span class="lineno">  476</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y = 0.0;</div>
+<div class="line"><span class="lineno">  477</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = 0.0;</div>
+<div class="line"><span class="lineno">  478</span> </div>
+<div class="line"><span class="lineno">  479</span>    <a class="code hl_variable" href="#a20c9ba005780d33f7fdb1ae80c3c45eb">ending_timer_</a>.restart();</div>
+<div class="line"><span class="lineno">  480</span>}</div>
+<div class="ttc" id="aclass_player_html_a20c9ba005780d33f7fdb1ae80c3c45eb"><div class="ttname"><a href="#a20c9ba005780d33f7fdb1ae80c3c45eb">Player::ending_timer_</a></div><div class="ttdeci">s3d::Stopwatch ending_timer_</div><div class="ttdef"><b>Definition</b> Player.h:149</div></div>
+<div class="ttc" id="aclass_player_html_a3048b3b6fd8b9b3ad62214ad262f7342"><div class="ttname"><a href="#a3048b3b6fd8b9b3ad62214ad262f7342">Player::ending_target_x_</a></div><div class="ttdeci">double ending_target_x_</div><div class="ttdef"><b>Definition</b> Player.h:153</div></div>
+<div class="ttc" id="aclass_player_html_afd219a160538e8cdedfa8aff98492a01"><div class="ttname"><a href="#afd219a160538e8cdedfa8aff98492a01">Player::ending_warp_enabled_</a></div><div class="ttdeci">bool ending_warp_enabled_</div><div class="ttdef"><b>Definition</b> Player.h:154</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a79060b32a95ca6e3f7a482b9ed45fa07" name="a79060b32a95ca6e3f7a482b9ed45fa07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79060b32a95ca6e3f7a482b9ed45fa07">&#9670;&#160;</a></span>TakeDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::TakeDamage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ダメージを受ける </p>
+<div class="fragment"><div class="line"><span class="lineno">  432</span>{</div>
+<div class="line"><span class="lineno">  433</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> || <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> || <a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a>)</div>
+<div class="line"><span class="lineno">  434</span>    {</div>
+<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  436</span>    }</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>    <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x += (<a class="code hl_variable" href="#a9720f18c743b7e984a4c4593c4fb5d88">is_facing_right_</a> ? -2.5 : 2.5);</div>
+<div class="line"><span class="lineno">  439</span> </div>
+<div class="line"><span class="lineno">  440</span>    <a class="code hl_function" href="#ac7d159c578eb4da86911b484b499766c">ModifyOxygen</a>(-<a class="code hl_variable" href="#a1a0d16a8d5271e50b82b4c2dbaabe7d6">kOxygenDamageAmount</a>);</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>    <a class="code hl_variable" href="#ace8e7dbe7eec242775a2183a417ca04b">just_took_damage_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  443</span>    <a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  444</span>    <a class="code hl_variable" href="#a4cd3b53582b06799ef137766bd986320">invincible_timer_</a>.restart();</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>    <a class="code hl_variable" href="#a9146a7f6d2439e2151f0b6525727356b">sound_controller_</a>.Play(U<span class="stringliteral">&quot;damage2&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  447</span>}</div>
+<div class="ttc" id="aclass_player_html_a1a0d16a8d5271e50b82b4c2dbaabe7d6"><div class="ttname"><a href="#a1a0d16a8d5271e50b82b4c2dbaabe7d6">Player::kOxygenDamageAmount</a></div><div class="ttdeci">static constexpr double kOxygenDamageAmount</div><div class="ttdef"><b>Definition</b> Player.h:160</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a79060b32a95ca6e3f7a482b9ed45fa07_cgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a79060b32a95ca6e3f7a482b9ed45fa07_icgraph.svg" width="523" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4b224bdee973f00772184b1e87970633" name="a4b224bdee973f00772184b1e87970633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b224bdee973f00772184b1e87970633">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プレイヤーを更新する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_variable" href="#ace8e7dbe7eec242775a2183a417ca04b">just_took_damage_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_function" href="#a81f83a6f55bec62fc908f494fd8249cc">UpdateOxygen</a>();</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment">// 入力は条件がシンプルなので先にチェック</span></div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a> &amp;&amp; not <a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a>)</div>
+<div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="#a235c6e2e4fe87bbec295d71a31e5ead2">HandleInput</a>();</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="#a9dbda24f6f27cb247da724a92fdd873d">UpdatePhysics</a>(stage);</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_function" href="#ab0bcce2ff453becf86020d7544a306dc">UpdateAnimation</a>();</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Update();</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> &amp;&amp; <a class="code hl_variable" href="#a4cd3b53582b06799ef137766bd986320">invincible_timer_</a>.sF() &gt; <a class="code hl_variable" href="#a570cf5780bf5af9448729a76262c9960">kInvincibleDurationSec</a>)</div>
+<div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="#a1b6c42ba7dc2c6fa213780f3af1943bc">is_invincible_</a> = <span class="keyword">false</span>; <span class="comment">// 無敵時間終了</span></div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <a class="code hl_function" href="#a17e6f8a992c713d22e0e833398a3395b">UpdateColliderPosition</a>();</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">// 衝突処理は独立関数に切り出し</span></div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_function" href="#ad5807ec776b055f5ee154395ad23c88b">HandleCollisions</a>();</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+<div class="ttc" id="aclass_player_html_a17e6f8a992c713d22e0e833398a3395b"><div class="ttname"><a href="#a17e6f8a992c713d22e0e833398a3395b">Player::UpdateColliderPosition</a></div><div class="ttdeci">void UpdateColliderPosition()</div><div class="ttdoc">コライダー位置を更新する</div><div class="ttdef"><b>Definition</b> Player.cpp:266</div></div>
+<div class="ttc" id="aclass_player_html_a235c6e2e4fe87bbec295d71a31e5ead2"><div class="ttname"><a href="#a235c6e2e4fe87bbec295d71a31e5ead2">Player::HandleInput</a></div><div class="ttdeci">void HandleInput()</div><div class="ttdoc">入力を処理する</div><div class="ttdef"><b>Definition</b> Player.cpp:98</div></div>
+<div class="ttc" id="aclass_player_html_a570cf5780bf5af9448729a76262c9960"><div class="ttname"><a href="#a570cf5780bf5af9448729a76262c9960">Player::kInvincibleDurationSec</a></div><div class="ttdeci">static constexpr double kInvincibleDurationSec</div><div class="ttdef"><b>Definition</b> Player.h:118</div></div>
+<div class="ttc" id="aclass_player_html_a81f83a6f55bec62fc908f494fd8249cc"><div class="ttname"><a href="#a81f83a6f55bec62fc908f494fd8249cc">Player::UpdateOxygen</a></div><div class="ttdeci">void UpdateOxygen()</div><div class="ttdoc">酸素を更新する</div><div class="ttdef"><b>Definition</b> Player.cpp:390</div></div>
+<div class="ttc" id="aclass_player_html_a9dbda24f6f27cb247da724a92fdd873d"><div class="ttname"><a href="#a9dbda24f6f27cb247da724a92fdd873d">Player::UpdatePhysics</a></div><div class="ttdeci">void UpdatePhysics(const Stage &amp;stage)</div><div class="ttdoc">物理演算を更新する</div><div class="ttdef"><b>Definition</b> Player.cpp:134</div></div>
+<div class="ttc" id="aclass_player_html_ab0bcce2ff453becf86020d7544a306dc"><div class="ttname"><a href="#ab0bcce2ff453becf86020d7544a306dc">Player::UpdateAnimation</a></div><div class="ttdeci">void UpdateAnimation()</div><div class="ttdoc">アニメーションを更新する</div><div class="ttdef"><b>Definition</b> Player.cpp:272</div></div>
+<div class="ttc" id="aclass_player_html_ad5807ec776b055f5ee154395ad23c88b"><div class="ttname"><a href="#ad5807ec776b055f5ee154395ad23c88b">Player::HandleCollisions</a></div><div class="ttdeci">void HandleCollisions()</div><div class="ttdoc">衝突処理を実行する</div><div class="ttdef"><b>Definition</b> Player.cpp:482</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a4b224bdee973f00772184b1e87970633_cgraph.svg" width="779" height="455"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab0bcce2ff453becf86020d7544a306dc" name="ab0bcce2ff453becf86020d7544a306dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bcce2ff453becf86020d7544a306dc">&#9670;&#160;</a></span>UpdateAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::UpdateAnimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションを更新する </p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>{</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a>)</div>
+<div class="line"><span class="lineno">  275</span>    {</div>
+<div class="line"><span class="lineno">  276</span>        <span class="comment">// エンディング開始から3秒経過したらendingアニメーションを再生</span></div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a20c9ba005780d33f7fdb1ae80c3c45eb">ending_timer_</a>.sF() &gt;= <a class="code hl_variable" href="#afc00504f3b2fd5e43f9b3a092ed29883">kEndingAnimationDelaySec</a>)</div>
+<div class="line"><span class="lineno">  278</span>        {</div>
+<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.IsPlaying(U<span class="stringliteral">&quot;ending&quot;</span>))</div>
+<div class="line"><span class="lineno">  280</span>            {</div>
+<div class="line"><span class="lineno">  281</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;ending&quot;</span>);</div>
+<div class="line"><span class="lineno">  282</span>            }</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  285</span>        {</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.IsPlaying(U<span class="stringliteral">&quot;float_idle&quot;</span>))</div>
+<div class="line"><span class="lineno">  287</span>            {</div>
+<div class="line"><span class="lineno">  288</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  289</span>            }</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  292</span>    }</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a883ba5d9eab682d3f9a7ea0b6e942372">is_oxygen_empty_</a>)</div>
+<div class="line"><span class="lineno">  295</span>    {</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.IsPlaying(U<span class="stringliteral">&quot;dead&quot;</span>))</div>
+<div class="line"><span class="lineno">  297</span>        {</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  299</span>        }</div>
+<div class="line"><span class="lineno">  300</span>        <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;dead&quot;</span>);</div>
+<div class="line"><span class="lineno">  301</span> </div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  303</span>    }</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.IsPlaying(U<span class="stringliteral">&quot;swim&quot;</span>))</div>
+<div class="line"><span class="lineno">  306</span>    {</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.y &gt; 0)</div>
+<div class="line"><span class="lineno">  308</span>        {</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a>)</div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_move&quot;</span>);</div>
+<div class="line"><span class="lineno">  312</span>            }</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  314</span>            {</div>
+<div class="line"><span class="lineno">  315</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  316</span>            }</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a84de165a09d93bc70a59aee445902a71">is_grounded_</a>)</div>
+<div class="line"><span class="lineno">  322</span>        {</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a>)</div>
+<div class="line"><span class="lineno">  324</span>            {</div>
+<div class="line"><span class="lineno">  325</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;walk&quot;</span>);</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  328</span>            {</div>
+<div class="line"><span class="lineno">  329</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;ground_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  330</span>            }</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  333</span>        {</div>
+<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a>)</div>
+<div class="line"><span class="lineno">  335</span>            {</div>
+<div class="line"><span class="lineno">  336</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_move&quot;</span>);</div>
+<div class="line"><span class="lineno">  337</span>            }</div>
+<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  339</span>            {</div>
+<div class="line"><span class="lineno">  340</span>                <a class="code hl_variable" href="#a84362f0680aa91218984503cbb51688a">anim_controller_</a>.Play(U<span class="stringliteral">&quot;float_idle&quot;</span>);</div>
+<div class="line"><span class="lineno">  341</span>            }</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
+<div class="line"><span class="lineno">  344</span>}</div>
+<div class="ttc" id="aclass_player_html_afc00504f3b2fd5e43f9b3a092ed29883"><div class="ttname"><a href="#afc00504f3b2fd5e43f9b3a092ed29883">Player::kEndingAnimationDelaySec</a></div><div class="ttdeci">static constexpr double kEndingAnimationDelaySec</div><div class="ttdef"><b>Definition</b> Player.h:150</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_ab0bcce2ff453becf86020d7544a306dc_icgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a17e6f8a992c713d22e0e833398a3395b" name="a17e6f8a992c713d22e0e833398a3395b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e6f8a992c713d22e0e833398a3395b">&#9670;&#160;</a></span>UpdateColliderPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::UpdateColliderPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コライダー位置を更新する </p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>{</div>
+<div class="line"><span class="lineno">  268</span>    <a class="code hl_variable" href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">collider</a>.shape = RectF{ Arg::center(<a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>), <a class="code hl_variable" href="#a96749bd6618b797d23b4d84b1384dfcd">kColliderWidth</a>, <a class="code hl_variable" href="#aa60ddc5c5cff3e963d8fc217496f399b">kColliderHeight</a> };</div>
+<div class="line"><span class="lineno">  269</span>}</div>
+<div class="ttc" id="aclass_player_html_a96749bd6618b797d23b4d84b1384dfcd"><div class="ttname"><a href="#a96749bd6618b797d23b4d84b1384dfcd">Player::kColliderWidth</a></div><div class="ttdeci">static constexpr double kColliderWidth</div><div class="ttdef"><b>Definition</b> Player.h:129</div></div>
+<div class="ttc" id="aclass_player_html_aa60ddc5c5cff3e963d8fc217496f399b"><div class="ttname"><a href="#aa60ddc5c5cff3e963d8fc217496f399b">Player::kColliderHeight</a></div><div class="ttdeci">static constexpr double kColliderHeight</div><div class="ttdef"><b>Definition</b> Player.h:130</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a17e6f8a992c713d22e0e833398a3395b_icgraph.svg" width="570" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a81f83a6f55bec62fc908f494fd8249cc" name="a81f83a6f55bec62fc908f494fd8249cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f83a6f55bec62fc908f494fd8249cc">&#9670;&#160;</a></span>UpdateOxygen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::UpdateOxygen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>酸素を更新する </p>
+<div class="fragment"><div class="line"><span class="lineno">  391</span>{</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a>)</div>
+<div class="line"><span class="lineno">  393</span>    {</div>
+<div class="line"><span class="lineno">  394</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  395</span>    }</div>
+<div class="line"><span class="lineno">  396</span> </div>
+<div class="line"><span class="lineno">  397</span>    <span class="keywordtype">double</span> oxygen_drain = <a class="code hl_variable" href="#a1c66642eb2dc505a67effe1ce58dc92b">kOxygenDrainPerFrame</a>;</div>
+<div class="line"><span class="lineno">  398</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a>)</div>
+<div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>        oxygen_drain += <a class="code hl_variable" href="#a37bf322b2735023244a476e66f64ce45">kOxygenHorizontalExtraDrain</a>;</div>
+<div class="line"><span class="lineno">  401</span>    }</div>
+<div class="line"><span class="lineno">  402</span> </div>
+<div class="line"><span class="lineno">  403</span>    <a class="code hl_function" href="#ac7d159c578eb4da86911b484b499766c">ModifyOxygen</a>(-oxygen_drain);</div>
+<div class="line"><span class="lineno">  404</span>}</div>
+<div class="ttc" id="aclass_player_html_a1c66642eb2dc505a67effe1ce58dc92b"><div class="ttname"><a href="#a1c66642eb2dc505a67effe1ce58dc92b">Player::kOxygenDrainPerFrame</a></div><div class="ttdeci">static constexpr double kOxygenDrainPerFrame</div><div class="ttdef"><b>Definition</b> Player.h:159</div></div>
+<div class="ttc" id="aclass_player_html_a37bf322b2735023244a476e66f64ce45"><div class="ttname"><a href="#a37bf322b2735023244a476e66f64ce45">Player::kOxygenHorizontalExtraDrain</a></div><div class="ttdeci">static constexpr double kOxygenHorizontalExtraDrain</div><div class="ttdef"><b>Definition</b> Player.h:162</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a81f83a6f55bec62fc908f494fd8249cc_cgraph.svg" width="363" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a81f83a6f55bec62fc908f494fd8249cc_icgraph.svg" width="320" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9dbda24f6f27cb247da724a92fdd873d" name="a9dbda24f6f27cb247da724a92fdd873d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbda24f6f27cb247da724a92fdd873d">&#9670;&#160;</a></span>UpdatePhysics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::UpdatePhysics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>物理演算を更新する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>{</div>
+<div class="line"><span class="lineno">  136</span>    <span class="comment">// エンディング中でワープ有効時は中心にLerp</span></div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a81a4b0eff0c8920e74bac0f03cdc7e40">is_in_ending_</a> &amp;&amp; <a class="code hl_variable" href="#afd219a160538e8cdedfa8aff98492a01">ending_warp_enabled_</a>)</div>
+<div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordtype">double</span> dx = <a class="code hl_variable" href="#a3048b3b6fd8b9b3ad62214ad262f7342">ending_target_x_</a> - <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x;</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = Math::Lerp(<a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x, <a class="code hl_variable" href="#a3048b3b6fd8b9b3ad62214ad262f7342">ending_target_x_</a>, <a class="code hl_variable" href="#a0e967751f0765ea0b37232b29a145863">ending_warp_lerp_</a>);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span>(std::abs(dx) &lt;= <a class="code hl_variable" href="#a829604f3d857042fb4a1a8cda37672ad">ending_snap_threshold_</a>)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <a class="code hl_variable" href="#a5735d5b8e5adc1326bcd7dc78951d169">pos_</a>.x = <a class="code hl_variable" href="#a3048b3b6fd8b9b3ad62214ad262f7342">ending_target_x_</a>;</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="#afd219a160538e8cdedfa8aff98492a01">ending_warp_enabled_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  145</span>            <a class="code hl_variable" href="#a948db2ce46074af0cc13f75ddd3232ae">velocity_</a>.x = 0.0;</div>
+<div class="line"><span class="lineno">  146</span>            <a class="code hl_variable" href="#a943891f2c5a5225bba6d8cb9b936056d">is_moving_x_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    <a class="code hl_function" href="#a34222904c837a901c35e95924e1dc2b7">ApplyGravity</a>();</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_function" href="#a6540d726e6044e7a98d720484cba0b96">ApplyFriction</a>();</div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_function" href="#abfeffb1320e2b63619161ae38b792e11">MoveX</a>(stage);</div>
+<div class="line"><span class="lineno">  153</span>    <a class="code hl_function" href="#ae83f03e905e8fe4771a95345ef626d18">MoveY</a>(stage);</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="#a17e6f8a992c713d22e0e833398a3395b">UpdateColliderPosition</a>();</div>
+<div class="line"><span class="lineno">  155</span>}</div>
+<div class="ttc" id="aclass_player_html_a0e967751f0765ea0b37232b29a145863"><div class="ttname"><a href="#a0e967751f0765ea0b37232b29a145863">Player::ending_warp_lerp_</a></div><div class="ttdeci">double ending_warp_lerp_</div><div class="ttdef"><b>Definition</b> Player.h:155</div></div>
+<div class="ttc" id="aclass_player_html_a34222904c837a901c35e95924e1dc2b7"><div class="ttname"><a href="#a34222904c837a901c35e95924e1dc2b7">Player::ApplyGravity</a></div><div class="ttdeci">void ApplyGravity()</div><div class="ttdoc">重力を適用する</div><div class="ttdef"><b>Definition</b> Player.cpp:157</div></div>
+<div class="ttc" id="aclass_player_html_a6540d726e6044e7a98d720484cba0b96"><div class="ttname"><a href="#a6540d726e6044e7a98d720484cba0b96">Player::ApplyFriction</a></div><div class="ttdeci">void ApplyFriction()</div><div class="ttdoc">摩擦を適用する</div><div class="ttdef"><b>Definition</b> Player.cpp:170</div></div>
+<div class="ttc" id="aclass_player_html_a829604f3d857042fb4a1a8cda37672ad"><div class="ttname"><a href="#a829604f3d857042fb4a1a8cda37672ad">Player::ending_snap_threshold_</a></div><div class="ttdeci">double ending_snap_threshold_</div><div class="ttdef"><b>Definition</b> Player.h:156</div></div>
+<div class="ttc" id="aclass_player_html_abfeffb1320e2b63619161ae38b792e11"><div class="ttname"><a href="#abfeffb1320e2b63619161ae38b792e11">Player::MoveX</a></div><div class="ttdeci">void MoveX(const Stage &amp;stage)</div><div class="ttdoc">X軸方向の移動処理</div><div class="ttdef"><b>Definition</b> Player.cpp:182</div></div>
+<div class="ttc" id="aclass_player_html_ae83f03e905e8fe4771a95345ef626d18"><div class="ttname"><a href="#ae83f03e905e8fe4771a95345ef626d18">Player::MoveY</a></div><div class="ttdeci">void MoveY(const Stage &amp;stage)</div><div class="ttdoc">Y軸方向の移動処理</div><div class="ttdef"><b>Definition</b> Player.cpp:223</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a9dbda24f6f27cb247da724a92fdd873d_cgraph.svg" width="594" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_player_a9dbda24f6f27cb247da724a92fdd873d_icgraph.svg" width="323" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a84362f0680aa91218984503cbb51688a" name="a84362f0680aa91218984503cbb51688a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84362f0680aa91218984503cbb51688a">&#9670;&#160;</a></span>anim_controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation_controller.html">AnimationController</a> Player::anim_controller_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションコントローラー </p>
+
+</div>
+</div>
+<a id="a10fd723bd44718d2b5c3ad12f7fd8ef5" name="a10fd723bd44718d2b5c3ad12f7fd8ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10fd723bd44718d2b5c3ad12f7fd8ef5">&#9670;&#160;</a></span>collider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_collider.html">Collider</a> Player::collider { RectF{0, 0, 1.0, 1.0}, <a class="el" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21eada1903f712056662fa093576e7eb9e36">ColliderTag::kPlayer</a> }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コライダー </p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{ RectF{0, 0, 1.0, 1.0}, <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21eada1903f712056662fa093576e7eb9e36">ColliderTag::kPlayer</a> };</div>
+<div class="ttc" id="a_collider_8h_html_ac7af8ecfc927eb4be84ab71d0d3ec21eada1903f712056662fa093576e7eb9e36"><div class="ttname"><a href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21eada1903f712056662fa093576e7eb9e36">ColliderTag::kPlayer</a></div><div class="ttdeci">@ kPlayer</div><div class="ttdoc">プレイヤー</div><div class="ttdef"><b>Definition</b> Collider.h:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a829604f3d857042fb4a1a8cda37672ad" name="a829604f3d857042fb4a1a8cda37672ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829604f3d857042fb4a1a8cda37672ad">&#9670;&#160;</a></span>ending_snap_threshold_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::ending_snap_threshold_ = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3048b3b6fd8b9b3ad62214ad262f7342" name="a3048b3b6fd8b9b3ad62214ad262f7342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3048b3b6fd8b9b3ad62214ad262f7342">&#9670;&#160;</a></span>ending_target_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::ending_target_x_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c9ba005780d33f7fdb1ae80c3c45eb" name="a20c9ba005780d33f7fdb1ae80c3c45eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c9ba005780d33f7fdb1ae80c3c45eb">&#9670;&#160;</a></span>ending_timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">s3d::Stopwatch Player::ending_timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd219a160538e8cdedfa8aff98492a01" name="afd219a160538e8cdedfa8aff98492a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd219a160538e8cdedfa8aff98492a01">&#9670;&#160;</a></span>ending_warp_enabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::ending_warp_enabled_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e967751f0765ea0b37232b29a145863" name="a0e967751f0765ea0b37232b29a145863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e967751f0765ea0b37232b29a145863">&#9670;&#160;</a></span>ending_warp_lerp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::ending_warp_lerp_ = 0.01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdcbcc3ad64eb63e7c4f50d0a16949c0" name="acdcbcc3ad64eb63e7c4f50d0a16949c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcbcc3ad64eb63e7c4f50d0a16949c0">&#9670;&#160;</a></span>friction_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::friction_ { 0.90 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{ 0.90 };                   <span class="comment">// 水平方向の抵抗係数(1.0が無抵抗)</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a85b2c88b13e1c1da3c80cf595bf18e26" name="a85b2c88b13e1c1da3c80cf595bf18e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85b2c88b13e1c1da3c80cf595bf18e26">&#9670;&#160;</a></span>gravity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::gravity_ = 0.06</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2884d72a401c324bca457b4a5bd52f38" name="a2884d72a401c324bca457b4a5bd52f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2884d72a401c324bca457b4a5bd52f38">&#9670;&#160;</a></span>horizontal_accel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::horizontal_accel_ { 0.6 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  137</span>{ 0.6 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acfc9fd07a01d2f4180184cefb3aa80de" name="acfc9fd07a01d2f4180184cefb3aa80de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc9fd07a01d2f4180184cefb3aa80de">&#9670;&#160;</a></span>horizontal_speed_max_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::horizontal_speed_max_ { 1.3 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{ 1.3 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4cd3b53582b06799ef137766bd986320" name="a4cd3b53582b06799ef137766bd986320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd3b53582b06799ef137766bd986320">&#9670;&#160;</a></span>invincible_timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">s3d::Stopwatch Player::invincible_timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9720f18c743b7e984a4c4593c4fb5d88" name="a9720f18c743b7e984a4c4593c4fb5d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9720f18c743b7e984a4c4593c4fb5d88">&#9670;&#160;</a></span>is_facing_right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_facing_right_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84de165a09d93bc70a59aee445902a71" name="a84de165a09d93bc70a59aee445902a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84de165a09d93bc70a59aee445902a71">&#9670;&#160;</a></span>is_grounded_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_grounded_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81a4b0eff0c8920e74bac0f03cdc7e40" name="a81a4b0eff0c8920e74bac0f03cdc7e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a4b0eff0c8920e74bac0f03cdc7e40">&#9670;&#160;</a></span>is_in_ending_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_in_ending_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b6c42ba7dc2c6fa213780f3af1943bc" name="a1b6c42ba7dc2c6fa213780f3af1943bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6c42ba7dc2c6fa213780f3af1943bc">&#9670;&#160;</a></span>is_invincible_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_invincible_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a943891f2c5a5225bba6d8cb9b936056d" name="a943891f2c5a5225bba6d8cb9b936056d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943891f2c5a5225bba6d8cb9b936056d">&#9670;&#160;</a></span>is_moving_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_moving_x_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a883ba5d9eab682d3f9a7ea0b6e942372" name="a883ba5d9eab682d3f9a7ea0b6e942372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883ba5d9eab682d3f9a7ea0b6e942372">&#9670;&#160;</a></span>is_oxygen_empty_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::is_oxygen_empty_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace8e7dbe7eec242775a2183a417ca04b" name="ace8e7dbe7eec242775a2183a417ca04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace8e7dbe7eec242775a2183a417ca04b">&#9670;&#160;</a></span>just_took_damage_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::just_took_damage_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb4f1ebc3871752450e11b69532938b5" name="acb4f1ebc3871752450e11b69532938b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb4f1ebc3871752450e11b69532938b5">&#9670;&#160;</a></span>kBlinkIntervalMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Player::kBlinkIntervalMs = 300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a973b3858eb8e0c933f742362af27e3bc" name="a973b3858eb8e0c933f742362af27e3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973b3858eb8e0c933f742362af27e3bc">&#9670;&#160;</a></span>kBlinkOnDurationMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Player::kBlinkOnDurationMs = 150</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60ddc5c5cff3e963d8fc217496f399b" name="aa60ddc5c5cff3e963d8fc217496f399b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60ddc5c5cff3e963d8fc217496f399b">&#9670;&#160;</a></span>kColliderHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kColliderHeight = 80.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96749bd6618b797d23b4d84b1384dfcd" name="a96749bd6618b797d23b4d84b1384dfcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96749bd6618b797d23b4d84b1384dfcd">&#9670;&#160;</a></span>kColliderWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kColliderWidth = 60.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9c66ded9161046640e7c1d8ef5d23ab" name="ae9c66ded9161046640e7c1d8ef5d23ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c66ded9161046640e7c1d8ef5d23ab">&#9670;&#160;</a></span>kDrawOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Player::kDrawOffset = { 64.0, 64.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{ 64.0, 64.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afc00504f3b2fd5e43f9b3a092ed29883" name="afc00504f3b2fd5e43f9b3a092ed29883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc00504f3b2fd5e43f9b3a092ed29883">&#9670;&#160;</a></span>kEndingAnimationDelaySec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kEndingAnimationDelaySec = 7.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aceb0438bb59089beb30db26aa856a6e4" name="aceb0438bb59089beb30db26aa856a6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceb0438bb59089beb30db26aa856a6e4">&#9670;&#160;</a></span>kEndingDrawOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Player::kEndingDrawOffset = { 96.0, 128.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  134</span>{ 96.0, 128.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a570cf5780bf5af9448729a76262c9960" name="a570cf5780bf5af9448729a76262c9960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570cf5780bf5af9448729a76262c9960">&#9670;&#160;</a></span>kInvincibleDurationSec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kInvincibleDurationSec = 2.7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58b305bef8e42f0b40f0c5a13d1c9373" name="a58b305bef8e42f0b40f0c5a13d1c9373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b305bef8e42f0b40f0c5a13d1c9373">&#9670;&#160;</a></span>kMaxOxygen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kMaxOxygen = 100.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a0d16a8d5271e50b82b4c2dbaabe7d6" name="a1a0d16a8d5271e50b82b4c2dbaabe7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0d16a8d5271e50b82b4c2dbaabe7d6">&#9670;&#160;</a></span>kOxygenDamageAmount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kOxygenDamageAmount = 20.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c66642eb2dc505a67effe1ce58dc92b" name="a1c66642eb2dc505a67effe1ce58dc92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c66642eb2dc505a67effe1ce58dc92b">&#9670;&#160;</a></span>kOxygenDrainPerFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kOxygenDrainPerFrame = 0.013</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37bf322b2735023244a476e66f64ce45" name="a37bf322b2735023244a476e66f64ce45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37bf322b2735023244a476e66f64ce45">&#9670;&#160;</a></span>kOxygenHorizontalExtraDrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kOxygenHorizontalExtraDrain = 0.006</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab10dee651622ae22b272a1f0866429c1" name="ab10dee651622ae22b272a1f0866429c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10dee651622ae22b272a1f0866429c1">&#9670;&#160;</a></span>kOxygenRecoveryPerFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kOxygenRecoveryPerFrame = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88c319d377bef57942975ef4eae7a459" name="a88c319d377bef57942975ef4eae7a459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c319d377bef57942975ef4eae7a459">&#9670;&#160;</a></span>kOxygenSwimCost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kOxygenSwimCost = 0.5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d46c6621010d356f3592efacb8dc103" name="a9d46c6621010d356f3592efacb8dc103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d46c6621010d356f3592efacb8dc103">&#9670;&#160;</a></span>kPhysicsHalfHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kPhysicsHalfHeight = 62.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab628fc1142d57e518ee541ca2e1eb0e2" name="ab628fc1142d57e518ee541ca2e1eb0e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab628fc1142d57e518ee541ca2e1eb0e2">&#9670;&#160;</a></span>kPhysicsHalfWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::kPhysicsHalfWidth = 25.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a5e81a3a26852072099d592f89676f5" name="a3a5e81a3a26852072099d592f89676f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5e81a3a26852072099d592f89676f5">&#9670;&#160;</a></span>oxygen_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::oxygen_ { 100.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  145</span>{ 100.0 };      <span class="comment">// 酸素量(体力と同義)</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5735d5b8e5adc1326bcd7dc78951d169" name="a5735d5b8e5adc1326bcd7dc78951d169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5735d5b8e5adc1326bcd7dc78951d169">&#9670;&#160;</a></span>pos_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Player::pos_ { 0.0, 0.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  109</span>{ 0.0, 0.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d56a56dbb7776f010965e7de2506bd1" name="a6d56a56dbb7776f010965e7de2506bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d56a56dbb7776f010965e7de2506bd1">&#9670;&#160;</a></span>rising_gravity_multiplier_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::rising_gravity_multiplier_ = 0.4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9146a7f6d2439e2151f0b6525727356b" name="a9146a7f6d2439e2151f0b6525727356b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9146a7f6d2439e2151f0b6525727356b">&#9670;&#160;</a></span>sound_controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sound_controller.html">SoundController</a> Player::sound_controller_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>サウンドコントローラー </p>
+
+</div>
+</div>
+<a id="acf09f38b4bd35fc14e3b3b3b748f0a8e" name="acf09f38b4bd35fc14e3b3b3b748f0a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf09f38b4bd35fc14e3b3b3b748f0a8e">&#9670;&#160;</a></span>swim_power_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::swim_power_ = -1.8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a718abab7d3c5f947b4e080861bea8766" name="a718abab7d3c5f947b4e080861bea8766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718abab7d3c5f947b4e080861bea8766">&#9670;&#160;</a></span>terminal_velocity_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Player::terminal_velocity_y_ = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a948db2ce46074af0cc13f75ddd3232ae" name="a948db2ce46074af0cc13f75ddd3232ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948db2ce46074af0cc13f75ddd3232ae">&#9670;&#160;</a></span>velocity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Player::velocity_ { 0.0, 0.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  110</span>{ 0.0, 0.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/Entitie/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+<li>src/Entitie/<a class="el" href="_player_8cpp.html">Player.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_player.html">Player</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

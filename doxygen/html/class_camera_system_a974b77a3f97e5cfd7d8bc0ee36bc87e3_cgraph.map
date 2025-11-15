@@ -1,0 +1,7 @@
+<map id="CameraSystem::GetCameraOffset" name="CameraSystem::GetCameraOffset">
+<area shape="rect" id="Node000001" title="カメラオフセットを取得する" alt="" coords="5,43,228,69"/>
+<area shape="rect" id="Node000002" href="$class_camera_system.html#a154a58ca736a1bc9cb4b27eadb25bc11" title="カメラ中心座標を作成する" alt="" coords="276,5,495,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,41,260,38,260,43,228,47"/>
+<area shape="rect" id="Node000003" href="$class_camera_system.html#a579af8227e36631553fe0c4cb5a40478" title="ビューサイズの半分を取得する" alt="" coords="286,72,485,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,65,271,70,270,75,228,71"/>
+</map>

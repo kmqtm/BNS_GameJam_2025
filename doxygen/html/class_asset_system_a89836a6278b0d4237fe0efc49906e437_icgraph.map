@@ -1,0 +1,7 @@
+<map id="AssetSystem::RegisterAndLoadAsset" name="AssetSystem::RegisterAndLoadAsset">
+<area shape="rect" id="Node000001" title="アセットを登録してロードする" alt="" coords="469,5,649,48"/>
+<area shape="rect" id="Node000002" href="$class_asset_system.html#a38216f3fc1a218b4cf6910e8ed455be9" title="指定したシーン名のアセットを準備する" alt="" coords="227,13,421,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,29,422,29,422,24,453,24"/>
+<area shape="rect" id="Node000003" href="$class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145" title="コンストラクタ" alt="" coords="5,13,179,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
+</map>

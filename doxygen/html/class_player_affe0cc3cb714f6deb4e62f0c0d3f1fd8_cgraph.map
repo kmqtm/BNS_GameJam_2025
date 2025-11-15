@@ -1,0 +1,5 @@
+<map id="Player::Player" name="Player::Player">
+<area shape="rect" id="Node000001" title="コンストラクタ" alt="" coords="5,5,109,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a9f80b81ed24b0053b6c3c7107c9b36a4" title="アニメーションをセットアップする" alt="" coords="157,5,322,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,16,141,16,141,21,109,21"/>
+</map>

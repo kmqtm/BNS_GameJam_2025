@@ -1,0 +1,5 @@
+<map id="EnemyDataSystem::GetInstance" name="EnemyDataSystem::GetInstance">
+<area shape="rect" id="Node000001" title="シングルトンインスタンスを取得する" alt="" coords="165,5,379,32"/>
+<area shape="rect" id="Node000002" href="$class_enemy.html#aef53170a2c1f62d9e563f56e7c0aa559" title="コンストラクタ" alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,21,117,21,117,16,150,16"/>
+</map>

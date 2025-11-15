@@ -1,0 +1,5 @@
+<map id="StationaryBehavior" name="StationaryBehavior">
+<area shape="rect" id="Node000001" title="その場から動かない敵の行動戦略" alt="" coords="5,80,137,107"/>
+<area shape="rect" id="Node000002" href="$class_i_behavior_strategy.html" title="敵の行動戦略を定義するインターフェース" alt="" coords="8,5,134,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,48,74,80,68,80,68,48"/>
+</map>

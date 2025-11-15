@@ -1,0 +1,5 @@
+<map id="EnemyDataSystem::LoadEnemyData" name="EnemyDataSystem::LoadEnemyData">
+<area shape="rect" id="Node000001" title="敵データをロードする" alt="" coords="266,13,506,40"/>
+<area shape="rect" id="Node000002" href="$class_enemy_data_system.html#afce455b4e7fe3c101636ca7fb0c7437b" title="コンストラクタ" alt="" coords="5,5,218,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,29,218,29,218,24,250,24"/>
+</map>

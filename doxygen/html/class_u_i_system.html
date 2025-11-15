@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: UISystem クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_u_i_system.html','','class_u_i_system-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UISystem クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>UIの描画を一元管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_u_i_system_8h_source.html">UISystem.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a092b9e2b03160541dad1ce8aeadec578" id="r_a092b9e2b03160541dad1ce8aeadec578"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a092b9e2b03160541dad1ce8aeadec578">UISystem</a> ()=default</td></tr>
+<tr class="memdesc:a092b9e2b03160541dad1ce8aeadec578"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:aa39768c3c2b444309bd00169e986c289" id="r_aa39768c3c2b444309bd00169e986c289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa39768c3c2b444309bd00169e986c289">Update</a> (double current_oxygen, double max_oxygen, double player_y, double start_y, double total_height, const s3d::Array&lt; s3d::Vec2 &gt; &amp;spot_positions)</td></tr>
+<tr class="memdesc:aa39768c3c2b444309bd00169e986c289"><td class="mdescLeft">&#160;</td><td class="mdescRight">UIの表示情報を更新する  <br /></td></tr>
+<tr class="memitem:abbac4728a46b71698610720eae29180b" id="r_abbac4728a46b71698610720eae29180b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbac4728a46b71698610720eae29180b">Draw</a> () const</td></tr>
+<tr class="memdesc:abbac4728a46b71698610720eae29180b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UIを描画する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:add73f52b3a30bfc6b1cf9e6da8c4779f" id="r_add73f52b3a30bfc6b1cf9e6da8c4779f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add73f52b3a30bfc6b1cf9e6da8c4779f">DrawOxygenGauge</a> () const</td></tr>
+<tr class="memdesc:add73f52b3a30bfc6b1cf9e6da8c4779f"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素ゲージを描画する  <br /></td></tr>
+<tr class="memitem:a6d292d581f03920f4e9610c738f5c7bd" id="r_a6d292d581f03920f4e9610c738f5c7bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d292d581f03920f4e9610c738f5c7bd">DrawProgressMeter</a> () const</td></tr>
+<tr class="memdesc:a6d292d581f03920f4e9610c738f5c7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">進捗メーターを描画する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ae2c6088eedb20843dbca6b25826c859d" id="r_ae2c6088eedb20843dbca6b25826c859d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2c6088eedb20843dbca6b25826c859d">current_oxygen_</a> = 0.0</td></tr>
+<tr class="memdesc:ae2c6088eedb20843dbca6b25826c859d"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の酸素量  <br /></td></tr>
+<tr class="memitem:a86c7be79ba6d233a62d0f78a0d9782a5" id="r_a86c7be79ba6d233a62d0f78a0d9782a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86c7be79ba6d233a62d0f78a0d9782a5">max_oxygen_</a> = 1.0</td></tr>
+<tr class="memdesc:a86c7be79ba6d233a62d0f78a0d9782a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大酸素量  <br /></td></tr>
+<tr class="memitem:a62d97dc5fff5ca5a7b7a24f8872c92e3" id="r_a62d97dc5fff5ca5a7b7a24f8872c92e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62d97dc5fff5ca5a7b7a24f8872c92e3">player_y_</a> = 0.0</td></tr>
+<tr class="memdesc:a62d97dc5fff5ca5a7b7a24f8872c92e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーのY座標  <br /></td></tr>
+<tr class="memitem:aa146723ab824a30be6ceb1114e7772a6" id="r_aa146723ab824a30be6ceb1114e7772a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa146723ab824a30be6ceb1114e7772a6">start_y_</a> = 0.0</td></tr>
+<tr class="memdesc:aa146723ab824a30be6ceb1114e7772a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタート位置のY座標  <br /></td></tr>
+<tr class="memitem:a928dd397657534366c2599ab06880bc7" id="r_a928dd397657534366c2599ab06880bc7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928dd397657534366c2599ab06880bc7">total_height_</a> = 0.0</td></tr>
+<tr class="memdesc:a928dd397657534366c2599ab06880bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステージの総高さ  <br /></td></tr>
+<tr class="memitem:aa2bdddb912cde9a2c2216b3ce38f7348" id="r_aa2bdddb912cde9a2c2216b3ce38f7348"><td class="memItemLeft" align="right" valign="top">s3d::Array&lt; s3d::Vec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2bdddb912cde9a2c2216b3ce38f7348">spot_positions_</a></td></tr>
+<tr class="memdesc:aa2bdddb912cde9a2c2216b3ce38f7348"><td class="mdescLeft">&#160;</td><td class="mdescRight">酸素スポット位置のリスト  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>UIの描画を一元管理する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a092b9e2b03160541dad1ce8aeadec578" name="a092b9e2b03160541dad1ce8aeadec578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092b9e2b03160541dad1ce8aeadec578">&#9670;&#160;</a></span>UISystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UISystem::UISystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="abbac4728a46b71698610720eae29180b" name="abbac4728a46b71698610720eae29180b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbac4728a46b71698610720eae29180b">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UISystem::Draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UIを描画する </p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_function" href="#add73f52b3a30bfc6b1cf9e6da8c4779f">DrawOxygenGauge</a>();</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="#a6d292d581f03920f4e9610c738f5c7bd">DrawProgressMeter</a>();</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+<div class="ttc" id="aclass_u_i_system_html_a6d292d581f03920f4e9610c738f5c7bd"><div class="ttname"><a href="#a6d292d581f03920f4e9610c738f5c7bd">UISystem::DrawProgressMeter</a></div><div class="ttdeci">void DrawProgressMeter() const</div><div class="ttdoc">進捗メーターを描画する</div><div class="ttdef"><b>Definition</b> UISystem.cpp:82</div></div>
+<div class="ttc" id="aclass_u_i_system_html_add73f52b3a30bfc6b1cf9e6da8c4779f"><div class="ttname"><a href="#add73f52b3a30bfc6b1cf9e6da8c4779f">UISystem::DrawOxygenGauge</a></div><div class="ttdeci">void DrawOxygenGauge() const</div><div class="ttdoc">酸素ゲージを描画する</div><div class="ttdef"><b>Definition</b> UISystem.cpp:50</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_u_i_system_abbac4728a46b71698610720eae29180b_cgraph.svg" width="383" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="add73f52b3a30bfc6b1cf9e6da8c4779f" name="add73f52b3a30bfc6b1cf9e6da8c4779f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add73f52b3a30bfc6b1cf9e6da8c4779f">&#9670;&#160;</a></span>DrawOxygenGauge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UISystem::DrawOxygenGauge </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>酸素ゲージを描画する </p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    RectF{ kOxygenGaugePos, kOxygenGaugeSize }.draw(kUIGaugeBackgroundColor);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> oxygen_ratio = <a class="code hl_variable" href="#ae2c6088eedb20843dbca6b25826c859d">current_oxygen_</a> / <a class="code hl_variable" href="#a86c7be79ba6d233a62d0f78a0d9782a5">max_oxygen_</a>;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    ColorF gauge_color;</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ae2c6088eedb20843dbca6b25826c859d">current_oxygen_</a> &gt; kOxygenWarningThreshold)</div>
+<div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        gauge_color = kOxygenColorSafe;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ae2c6088eedb20843dbca6b25826c859d">current_oxygen_</a> &gt; kOxygenDangerThreshold)</div>
+<div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        gauge_color = kOxygenColorWarning;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        gauge_color = kOxygenColorDanger;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> current_height = kOxygenGaugeSize.y * oxygen_ratio;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    RectF{</div>
+<div class="line"><span class="lineno">   73</span>        kOxygenGaugePos.x,</div>
+<div class="line"><span class="lineno">   74</span>        kOxygenGaugePos.y + (kOxygenGaugeSize.y - current_height),</div>
+<div class="line"><span class="lineno">   75</span>        kOxygenGaugeSize.x,</div>
+<div class="line"><span class="lineno">   76</span>        current_height</div>
+<div class="line"><span class="lineno">   77</span>    }.draw(gauge_color);</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    RectF{ kOxygenGaugePos, kOxygenGaugeSize }.drawFrame(2, 0, Palette::White);</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+<div class="ttc" id="aclass_u_i_system_html_a86c7be79ba6d233a62d0f78a0d9782a5"><div class="ttname"><a href="#a86c7be79ba6d233a62d0f78a0d9782a5">UISystem::max_oxygen_</a></div><div class="ttdeci">double max_oxygen_</div><div class="ttdoc">最大酸素量</div><div class="ttdef"><b>Definition</b> UISystem.h:43</div></div>
+<div class="ttc" id="aclass_u_i_system_html_ae2c6088eedb20843dbca6b25826c859d"><div class="ttname"><a href="#ae2c6088eedb20843dbca6b25826c859d">UISystem::current_oxygen_</a></div><div class="ttdeci">double current_oxygen_</div><div class="ttdoc">現在の酸素量</div><div class="ttdef"><b>Definition</b> UISystem.h:40</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_u_i_system_add73f52b3a30bfc6b1cf9e6da8c4779f_icgraph.svg" width="380" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6d292d581f03920f4e9610c738f5c7bd" name="a6d292d581f03920f4e9610c738f5c7bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d292d581f03920f4e9610c738f5c7bd">&#9670;&#160;</a></span>DrawProgressMeter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UISystem::DrawProgressMeter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>進捗メーターを描画する </p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> screen_height = Scene::Height();</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> screen_right_x = Scene::Width() - kProgressMeterWidth;</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> meter_center_x = screen_right_x + (kProgressMeterWidth / 2.0);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> total_travel = <a class="code hl_variable" href="#a928dd397657534366c2599ab06880bc7">total_height_</a> - <a class="code hl_variable" href="#aa146723ab824a30be6ceb1114e7772a6">start_y_</a>;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span>(total_travel &lt;= 0.0)</div>
+<div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">// 背景</span></div>
+<div class="line"><span class="lineno">   95</span>    RectF{ screen_right_x, 0, kProgressMeterWidth, screen_height }.draw(kUIGaugeBackgroundColor);</div>
+<div class="line"><span class="lineno">   96</span>    Line{ meter_center_x, 0, meter_center_x, screen_height }.draw(1, kProgressLineColor);</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">// 酸素スポットマーカー</span></div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pos : <a class="code hl_variable" href="#aa2bdddb912cde9a2c2216b3ce38f7348">spot_positions_</a>)</div>
+<div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">double</span> spot_ratio = (pos.y - <a class="code hl_variable" href="#aa146723ab824a30be6ceb1114e7772a6">start_y_</a>) / total_travel;</div>
+<div class="line"><span class="lineno">  102</span>        spot_ratio = Clamp(spot_ratio, 0.0, 1.0);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> marker_y = screen_height * spot_ratio;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>        RectF{ Arg::center(meter_center_x, marker_y), kProgressSpotMarkerWidth, kProgressMarkerHeight }.draw(kProgressSpotColor);</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    <span class="comment">// プレイヤーマーカー</span></div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordtype">double</span> progress_ratio = (<a class="code hl_variable" href="#a62d97dc5fff5ca5a7b7a24f8872c92e3">player_y_</a> - <a class="code hl_variable" href="#aa146723ab824a30be6ceb1114e7772a6">start_y_</a>) / total_travel;</div>
+<div class="line"><span class="lineno">  110</span>    progress_ratio = Clamp(progress_ratio, 0.0, 1.0);</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> player_marker_y = screen_height * progress_ratio;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    RectF{ Arg::center(meter_center_x, player_marker_y), kProgressPlayerMarkerWidth, kProgressMarkerHeight }.draw(kProgressPlayerColor);</div>
+<div class="line"><span class="lineno">  114</span>}</div>
+<div class="ttc" id="aclass_u_i_system_html_a62d97dc5fff5ca5a7b7a24f8872c92e3"><div class="ttname"><a href="#a62d97dc5fff5ca5a7b7a24f8872c92e3">UISystem::player_y_</a></div><div class="ttdeci">double player_y_</div><div class="ttdoc">プレイヤーのY座標</div><div class="ttdef"><b>Definition</b> UISystem.h:46</div></div>
+<div class="ttc" id="aclass_u_i_system_html_a928dd397657534366c2599ab06880bc7"><div class="ttname"><a href="#a928dd397657534366c2599ab06880bc7">UISystem::total_height_</a></div><div class="ttdeci">double total_height_</div><div class="ttdoc">ステージの総高さ</div><div class="ttdef"><b>Definition</b> UISystem.h:52</div></div>
+<div class="ttc" id="aclass_u_i_system_html_aa146723ab824a30be6ceb1114e7772a6"><div class="ttname"><a href="#aa146723ab824a30be6ceb1114e7772a6">UISystem::start_y_</a></div><div class="ttdeci">double start_y_</div><div class="ttdoc">スタート位置のY座標</div><div class="ttdef"><b>Definition</b> UISystem.h:49</div></div>
+<div class="ttc" id="aclass_u_i_system_html_aa2bdddb912cde9a2c2216b3ce38f7348"><div class="ttname"><a href="#aa2bdddb912cde9a2c2216b3ce38f7348">UISystem::spot_positions_</a></div><div class="ttdeci">s3d::Array&lt; s3d::Vec2 &gt; spot_positions_</div><div class="ttdoc">酸素スポット位置のリスト</div><div class="ttdef"><b>Definition</b> UISystem.h:55</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_u_i_system_a6d292d581f03920f4e9610c738f5c7bd_icgraph.svg" width="383" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa39768c3c2b444309bd00169e986c289" name="aa39768c3c2b444309bd00169e986c289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39768c3c2b444309bd00169e986c289">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UISystem::Update </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>current_oxygen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max_oxygen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>player_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>start_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>total_height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const s3d::Array&lt; s3d::Vec2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>spot_positions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UIの表示情報を更新する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_oxygen</td><td>現在の酸素量 </td></tr>
+    <tr><td class="paramname">max_oxygen</td><td>最大酸素量 </td></tr>
+    <tr><td class="paramname">player_y</td><td>プレイヤーのY座標 </td></tr>
+    <tr><td class="paramname">start_y</td><td>スタート位置のY座標 </td></tr>
+    <tr><td class="paramname">total_height</td><td>ステージの総高さ </td></tr>
+    <tr><td class="paramname">spot_positions</td><td>酸素スポット位置のリスト </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{</div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_variable" href="#ae2c6088eedb20843dbca6b25826c859d">current_oxygen_</a> = current_oxygen;</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_variable" href="#a86c7be79ba6d233a62d0f78a0d9782a5">max_oxygen_</a> = (max_oxygen &gt; 0.0) ? max_oxygen : 1.0;</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_variable" href="#a62d97dc5fff5ca5a7b7a24f8872c92e3">player_y_</a> = player_y;</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="#aa146723ab824a30be6ceb1114e7772a6">start_y_</a> = start_y;</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="#a928dd397657534366c2599ab06880bc7">total_height_</a> = total_height;</div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_variable" href="#aa2bdddb912cde9a2c2216b3ce38f7348">spot_positions_</a> = spot_positions;</div>
+<div class="line"><span class="lineno">   42</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="ae2c6088eedb20843dbca6b25826c859d" name="ae2c6088eedb20843dbca6b25826c859d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c6088eedb20843dbca6b25826c859d">&#9670;&#160;</a></span>current_oxygen_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UISystem::current_oxygen_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在の酸素量 </p>
+
+</div>
+</div>
+<a id="a86c7be79ba6d233a62d0f78a0d9782a5" name="a86c7be79ba6d233a62d0f78a0d9782a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c7be79ba6d233a62d0f78a0d9782a5">&#9670;&#160;</a></span>max_oxygen_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UISystem::max_oxygen_ = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大酸素量 </p>
+
+</div>
+</div>
+<a id="a62d97dc5fff5ca5a7b7a24f8872c92e3" name="a62d97dc5fff5ca5a7b7a24f8872c92e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d97dc5fff5ca5a7b7a24f8872c92e3">&#9670;&#160;</a></span>player_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UISystem::player_y_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>プレイヤーのY座標 </p>
+
+</div>
+</div>
+<a id="aa2bdddb912cde9a2c2216b3ce38f7348" name="aa2bdddb912cde9a2c2216b3ce38f7348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bdddb912cde9a2c2216b3ce38f7348">&#9670;&#160;</a></span>spot_positions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">s3d::Array&lt;s3d::Vec2&gt; UISystem::spot_positions_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>酸素スポット位置のリスト </p>
+
+</div>
+</div>
+<a id="aa146723ab824a30be6ceb1114e7772a6" name="aa146723ab824a30be6ceb1114e7772a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa146723ab824a30be6ceb1114e7772a6">&#9670;&#160;</a></span>start_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UISystem::start_y_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スタート位置のY座標 </p>
+
+</div>
+</div>
+<a id="a928dd397657534366c2599ab06880bc7" name="a928dd397657534366c2599ab06880bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928dd397657534366c2599ab06880bc7">&#9670;&#160;</a></span>total_height_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UISystem::total_height_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ステージの総高さ </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/System/<a class="el" href="_u_i_system_8h_source.html">UISystem.h</a></li>
+<li>src/System/<a class="el" href="_u_i_system_8cpp.html">UISystem.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_u_i_system.html">UISystem</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

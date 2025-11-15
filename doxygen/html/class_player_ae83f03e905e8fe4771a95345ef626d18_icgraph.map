@@ -1,0 +1,7 @@
+<map id="Player::MoveY" name="Player::MoveY">
+<area shape="rect" id="Node000001" title="Y軸方向の移動処理" alt="" coords="365,5,472,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a9dbda24f6f27cb247da724a92fdd873d" title="物理演算を更新する" alt="" coords="162,5,317,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,21,318,21,318,16,350,16"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a4b224bdee973f00772184b1e87970633" title="プレイヤーを更新する" alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

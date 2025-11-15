@@ -1,0 +1,7 @@
+<map id="AssetSystem::GetInstance" name="AssetSystem::GetInstance">
+<area shape="rect" id="Node000001" title="シングルトンインスタンスを取得する" alt="" coords="235,31,414,57"/>
+<area shape="rect" id="Node000002" href="$class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145" title="コンストラクタ" alt="" coords="9,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,35,183,31,183,26,220,30"/>
+<area shape="rect" id="Node000003" href="$class_game_scene.html#a921b4236d2a999c3b5edd8fe1d9086e1" title="デストラクタ" alt="" coords="5,56,187,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,58,187,62,187,57,219,53"/>
+</map>

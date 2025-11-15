@@ -1,0 +1,5 @@
+<map id="CollisionSystem::ColliderEntry" name="CollisionSystem::ColliderEntry">
+<area shape="rect" id="Node000001" title="コライダー登録用の構造体" alt="" coords="5,104,174,147"/>
+<area shape="rect" id="Node000002" href="$struct_collider.html" title="衝突判定を管理する構造体" alt="" coords="57,5,122,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,47,92,103,87,103,87,47"/>
+</map>

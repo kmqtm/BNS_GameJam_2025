@@ -1,0 +1,1123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: Stage クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_stage.html','','class_stage-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Stage クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Tiledで作成されたマップを管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_stage_8h_source.html">Stage.h</a>&gt;</code></p>
+<div class="dynheader">
+Stage 連携図</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage__coll__graph.svg" width="158" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a635602a35a967a2f052e1d02eea88606" id="r_a635602a35a967a2f052e1d02eea88606"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a635602a35a967a2f052e1d02eea88606">Stage</a> (const FilePath &amp;json_path, const FilePath &amp;tileset_path, const String &amp;collision_layer_name)</td></tr>
+<tr class="memdesc:a635602a35a967a2f052e1d02eea88606"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a215f2d5b06903cf06f44552a23e27fc7" id="r_a215f2d5b06903cf06f44552a23e27fc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a215f2d5b06903cf06f44552a23e27fc7">Draw</a> (const Vec2 &amp;camera_offset, const RectF &amp;view_rect) const</td></tr>
+<tr class="memdesc:a215f2d5b06903cf06f44552a23e27fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステージを描画する  <br /></td></tr>
+<tr class="memitem:a95f9531749e71dfe6c880295abeb9d8c" id="r_a95f9531749e71dfe6c880295abeb9d8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f9531749e71dfe6c880295abeb9d8c">IsSolid</a> (double world_x, double world_y) const</td></tr>
+<tr class="memdesc:a95f9531749e71dfe6c880295abeb9d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したワールド座標が壁タイル上かを判定する  <br /></td></tr>
+<tr class="memitem:a2bca3f0297d6fe0babba355a77a7359c" id="r_a2bca3f0297d6fe0babba355a77a7359c"><td class="memItemLeft" align="right" valign="top">const s3d::Array&lt; <a class="el" href="struct_spawn_info.html">SpawnInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bca3f0297d6fe0babba355a77a7359c">GetSpawnPoints</a> () const</td></tr>
+<tr class="memdesc:a2bca3f0297d6fe0babba355a77a7359c"><td class="mdescLeft">&#160;</td><td class="mdescRight">スポーン情報のリストを取得する  <br /></td></tr>
+<tr class="memitem:a2f16ed16dd395143683390ce4decac36" id="r_a2f16ed16dd395143683390ce4decac36"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f16ed16dd395143683390ce4decac36">GetWidth</a> () const</td></tr>
+<tr class="memdesc:a2f16ed16dd395143683390ce4decac36"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップの幅(タイル数)を取得する  <br /></td></tr>
+<tr class="memitem:a23daac63487bb433207e58eba8ab21d9" id="r_a23daac63487bb433207e58eba8ab21d9"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23daac63487bb433207e58eba8ab21d9">GetHeight</a> () const</td></tr>
+<tr class="memdesc:a23daac63487bb433207e58eba8ab21d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップの高さ(タイル数)を取得する  <br /></td></tr>
+<tr class="memitem:aa1ee7cbc0b2b77c60aba3665038c2e91" id="r_aa1ee7cbc0b2b77c60aba3665038c2e91"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1ee7cbc0b2b77c60aba3665038c2e91">GetTileSize</a> () const</td></tr>
+<tr class="memdesc:aa1ee7cbc0b2b77c60aba3665038c2e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルサイズを取得する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a046289fe3fa7e0cc0c6b6c039a3e8d16" id="r_a046289fe3fa7e0cc0c6b6c039a3e8d16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a046289fe3fa7e0cc0c6b6c039a3e8d16">LoadFromJson</a> (const FilePath &amp;json_path)</td></tr>
+<tr class="memdesc:a046289fe3fa7e0cc0c6b6c039a3e8d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSONからマップデータを読み込む  <br /></td></tr>
+<tr class="memitem:af45be338beccbbe57fc49b79572282d8" id="r_af45be338beccbbe57fc49b79572282d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af45be338beccbbe57fc49b79572282d8">ParseTileLayer</a> (const JSON &amp;layer_json)</td></tr>
+<tr class="memdesc:af45be338beccbbe57fc49b79572282d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルレイヤーを解析する  <br /></td></tr>
+<tr class="memitem:ab7eb2696fab166bc7924120333715077" id="r_ab7eb2696fab166bc7924120333715077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7eb2696fab166bc7924120333715077">ParseObjectLayer</a> (const JSON &amp;layer_json)</td></tr>
+<tr class="memdesc:ab7eb2696fab166bc7924120333715077"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトレイヤーを解析する  <br /></td></tr>
+<tr class="memitem:a2688bb80c7887089f15bba99b0da6a4f" id="r_a2688bb80c7887089f15bba99b0da6a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2688bb80c7887089f15bba99b0da6a4f">CreateTileRegions</a> ()</td></tr>
+<tr class="memdesc:a2688bb80c7887089f15bba99b0da6a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルテクスチャリージョンを生成する  <br /></td></tr>
+<tr class="memitem:a5a4516bbbf1bebe3ba0ee9611791523b" id="r_a5a4516bbbf1bebe3ba0ee9611791523b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a4516bbbf1bebe3ba0ee9611791523b">FindCollisionLayer</a> ()</td></tr>
+<tr class="memdesc:a5a4516bbbf1bebe3ba0ee9611791523b"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突判定レイヤーを探索する  <br /></td></tr>
+<tr class="memitem:a66e4f07a9f7811afe745b834d2743e97" id="r_a66e4f07a9f7811afe745b834d2743e97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66e4f07a9f7811afe745b834d2743e97">DrawLayerTiles</a> (const <a class="el" href="struct_tile_map_layer.html">TileMapLayer</a> &amp;layer, int32 start_x, int32 start_y, int32 end_x, int32 end_y, const Vec2 &amp;camera_offset) const</td></tr>
+<tr class="memdesc:a66e4f07a9f7811afe745b834d2743e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイヤーのタイルを描画する  <br /></td></tr>
+<tr class="memitem:ad9f61bd78a0378947176faf7c6b9d5e8" id="r_ad9f61bd78a0378947176faf7c6b9d5e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f61bd78a0378947176faf7c6b9d5e8">ComputeDrawRange</a> (const RectF &amp;view_rect, int32 &amp;out_start_x, int32 &amp;out_start_y, int32 &amp;out_end_x, int32 &amp;out_end_y) const</td></tr>
+<tr class="memdesc:ad9f61bd78a0378947176faf7c6b9d5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー矩形から描画範囲を計算する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a49aa8cd0374c6fa45ab10b544ac53851" id="r_a49aa8cd0374c6fa45ab10b544ac53851"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a> = 0</td></tr>
+<tr class="memdesc:a49aa8cd0374c6fa45ab10b544ac53851"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップの幅(タイル数)  <br /></td></tr>
+<tr class="memitem:a904f47c26bf2c2f1edf08d35512b4612" id="r_a904f47c26bf2c2f1edf08d35512b4612"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a> = 0</td></tr>
+<tr class="memdesc:a904f47c26bf2c2f1edf08d35512b4612"><td class="mdescLeft">&#160;</td><td class="mdescRight">マップの高さ(タイル数)  <br /></td></tr>
+<tr class="memitem:a8735c40ee2a56eec9de8789f411b872c" id="r_a8735c40ee2a56eec9de8789f411b872c"><td class="memItemLeft" align="right" valign="top">int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a> = 16</td></tr>
+<tr class="memdesc:a8735c40ee2a56eec9de8789f411b872c"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルサイズ(ピクセル)  <br /></td></tr>
+<tr class="memitem:a8369f1ee5b499a4862cdc32696f6a956" id="r_a8369f1ee5b499a4862cdc32696f6a956"><td class="memItemLeft" align="right" valign="top">Array&lt; <a class="el" href="struct_tile_map_layer.html">TileMapLayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8369f1ee5b499a4862cdc32696f6a956">layers_</a></td></tr>
+<tr class="memdesc:a8369f1ee5b499a4862cdc32696f6a956"><td class="mdescLeft">&#160;</td><td class="mdescRight">すべてのタイルマップレイヤー  <br /></td></tr>
+<tr class="memitem:a0f0ca9b9159463e3cd4d69fbc2d426c6" id="r_a0f0ca9b9159463e3cd4d69fbc2d426c6"><td class="memItemLeft" align="right" valign="top">Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">tile_texture_</a></td></tr>
+<tr class="memdesc:a0f0ca9b9159463e3cd4d69fbc2d426c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルセットテクスチャ  <br /></td></tr>
+<tr class="memitem:a380236d0ce2c455fae6622a09a22470c" id="r_a380236d0ce2c455fae6622a09a22470c"><td class="memItemLeft" align="right" valign="top">Array&lt; TextureRegion &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380236d0ce2c455fae6622a09a22470c">tile_regions_</a></td></tr>
+<tr class="memdesc:a380236d0ce2c455fae6622a09a22470c"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイルテクスチャリージョンのリスト  <br /></td></tr>
+<tr class="memitem:a1cc76748e9655e3086fbacd43b0e8754" id="r_a1cc76748e9655e3086fbacd43b0e8754"><td class="memItemLeft" align="right" valign="top">Array&lt; <a class="el" href="struct_spawn_info.html">SpawnInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cc76748e9655e3086fbacd43b0e8754">spawn_points_</a></td></tr>
+<tr class="memdesc:a1cc76748e9655e3086fbacd43b0e8754"><td class="mdescLeft">&#160;</td><td class="mdescRight">スポーン情報のリスト  <br /></td></tr>
+<tr class="memitem:a132d931a4431af5a7eedb6f8201c3229" id="r_a132d931a4431af5a7eedb6f8201c3229"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a132d931a4431af5a7eedb6f8201c3229">collision_layer_name_</a></td></tr>
+<tr class="memdesc:a132d931a4431af5a7eedb6f8201c3229"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタで受け取った衝突判定レイヤー名  <br /></td></tr>
+<tr class="memitem:ad1b7b579a4e1afc0d1b9a4e1944e424b" id="r_ad1b7b579a4e1afc0d1b9a4e1944e424b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_tile_map_layer.html">TileMapLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a> = nullptr</td></tr>
+<tr class="memdesc:ad1b7b579a4e1afc0d1b9a4e1944e424b"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突判定レイヤーへのポインタ  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>Tiledで作成されたマップを管理する </p>
+<p>JSONファイルから読み込んだタイルマップの描画，衝突判定， スポーン情報の管理を行う </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a635602a35a967a2f052e1d02eea88606" name="a635602a35a967a2f052e1d02eea88606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635602a35a967a2f052e1d02eea88606">&#9670;&#160;</a></span>Stage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stage::Stage </td>
+          <td>(</td>
+          <td class="paramtype">const FilePath &amp;</td>          <td class="paramname"><span class="paramname"><em>json_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FilePath &amp;</td>          <td class="paramname"><span class="paramname"><em>tileset_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>collision_layer_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json_path</td><td>マップデータのJSONファイルパス </td></tr>
+    <tr><td class="paramname">tileset_path</td><td>タイルセット画像のファイルパス </td></tr>
+    <tr><td class="paramname">collision_layer_name</td><td>衝突判定用レイヤー名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>    : <a class="code hl_variable" href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">tile_texture_</a>(tileset_path)</div>
+<div class="line"><span class="lineno">   10</span>    , <a class="code hl_variable" href="#a132d931a4431af5a7eedb6f8201c3229">collision_layer_name_</a>(collision_layer_name)</div>
+<div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_function" href="#a046289fe3fa7e0cc0c6b6c039a3e8d16">LoadFromJson</a>(json_path);</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_function" href="#a2688bb80c7887089f15bba99b0da6a4f">CreateTileRegions</a>();</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    <span class="comment">// 当たり判定レイヤーを検索してポインタを保持</span></div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="#a5a4516bbbf1bebe3ba0ee9611791523b">FindCollisionLayer</a>();</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    <span class="comment">// 見つからなかった場合</span></div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a>)</div>
+<div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">throw</span> Error{ U<span class="stringliteral">&quot;Stage: 当たり判定レイヤー &#39;{}&#39; が見つかりませんでした．&quot;</span>_fmt(<a class="code hl_variable" href="#a132d931a4431af5a7eedb6f8201c3229">collision_layer_name_</a>) };</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   23</span>}</div>
+<div class="ttc" id="aclass_stage_html_a046289fe3fa7e0cc0c6b6c039a3e8d16"><div class="ttname"><a href="#a046289fe3fa7e0cc0c6b6c039a3e8d16">Stage::LoadFromJson</a></div><div class="ttdeci">void LoadFromJson(const FilePath &amp;json_path)</div><div class="ttdoc">JSONからマップデータを読み込む</div><div class="ttdef"><b>Definition</b> Stage.cpp:56</div></div>
+<div class="ttc" id="aclass_stage_html_a0f0ca9b9159463e3cd4d69fbc2d426c6"><div class="ttname"><a href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">Stage::tile_texture_</a></div><div class="ttdeci">Texture tile_texture_</div><div class="ttdoc">タイルセットテクスチャ</div><div class="ttdef"><b>Definition</b> Stage.h:73</div></div>
+<div class="ttc" id="aclass_stage_html_a132d931a4431af5a7eedb6f8201c3229"><div class="ttname"><a href="#a132d931a4431af5a7eedb6f8201c3229">Stage::collision_layer_name_</a></div><div class="ttdeci">String collision_layer_name_</div><div class="ttdoc">コンストラクタで受け取った衝突判定レイヤー名</div><div class="ttdef"><b>Definition</b> Stage.h:82</div></div>
+<div class="ttc" id="aclass_stage_html_a2688bb80c7887089f15bba99b0da6a4f"><div class="ttname"><a href="#a2688bb80c7887089f15bba99b0da6a4f">Stage::CreateTileRegions</a></div><div class="ttdeci">void CreateTileRegions()</div><div class="ttdoc">タイルテクスチャリージョンを生成する</div><div class="ttdef"><b>Definition</b> Stage.cpp:38</div></div>
+<div class="ttc" id="aclass_stage_html_a5a4516bbbf1bebe3ba0ee9611791523b"><div class="ttname"><a href="#a5a4516bbbf1bebe3ba0ee9611791523b">Stage::FindCollisionLayer</a></div><div class="ttdeci">void FindCollisionLayer()</div><div class="ttdoc">衝突判定レイヤーを探索する</div><div class="ttdef"><b>Definition</b> Stage.cpp:25</div></div>
+<div class="ttc" id="aclass_stage_html_ad1b7b579a4e1afc0d1b9a4e1944e424b"><div class="ttname"><a href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">Stage::collision_layer_</a></div><div class="ttdeci">const TileMapLayer * collision_layer_</div><div class="ttdoc">衝突判定レイヤーへのポインタ</div><div class="ttdef"><b>Definition</b> Stage.h:85</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a635602a35a967a2f052e1d02eea88606_cgraph.svg" width="543" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad9f61bd78a0378947176faf7c6b9d5e8" name="ad9f61bd78a0378947176faf7c6b9d5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f61bd78a0378947176faf7c6b9d5e8">&#9670;&#160;</a></span>ComputeDrawRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::ComputeDrawRange </td>
+          <td>(</td>
+          <td class="paramtype">const RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>view_rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32 &amp;</td>          <td class="paramname"><span class="paramname"><em>out_start_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32 &amp;</td>          <td class="paramname"><span class="paramname"><em>out_start_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32 &amp;</td>          <td class="paramname"><span class="paramname"><em>out_end_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32 &amp;</td>          <td class="paramname"><span class="paramname"><em>out_end_y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ビュー矩形から描画範囲を計算する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view_rect</td><td>ビュー矩形 </td></tr>
+    <tr><td class="paramname">out_start_x</td><td>出力:描画開始X(タイル座標) </td></tr>
+    <tr><td class="paramname">out_start_y</td><td>出力:描画開始Y(タイル座標) </td></tr>
+    <tr><td class="paramname">out_end_x</td><td>出力:描画終了X(タイル座標) </td></tr>
+    <tr><td class="paramname">out_end_y</td><td>出力:描画終了Y(タイル座標) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{</div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment">// 描画範囲の計算にstd::floorを使用し，負の座標でも正確に動作するようにする</span></div>
+<div class="line"><span class="lineno">  128</span>    out_start_x = Max(0, <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::floor(view_rect.x / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>)));</div>
+<div class="line"><span class="lineno">  129</span>    out_start_y = Max(0, <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::floor(view_rect.y / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>)));</div>
+<div class="line"><span class="lineno">  130</span>    out_end_x = Min(<a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>, <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::ceil(view_rect.tr().x / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>)));</div>
+<div class="line"><span class="lineno">  131</span>    out_end_y = Min(<a class="code hl_variable" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a>, <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::ceil(view_rect.br().y / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>)));</div>
+<div class="line"><span class="lineno">  132</span>}</div>
+<div class="ttc" id="aclass_stage_html_a49aa8cd0374c6fa45ab10b544ac53851"><div class="ttname"><a href="#a49aa8cd0374c6fa45ab10b544ac53851">Stage::map_width_</a></div><div class="ttdeci">int32 map_width_</div><div class="ttdoc">マップの幅(タイル数)</div><div class="ttdef"><b>Definition</b> Stage.h:61</div></div>
+<div class="ttc" id="aclass_stage_html_a8735c40ee2a56eec9de8789f411b872c"><div class="ttname"><a href="#a8735c40ee2a56eec9de8789f411b872c">Stage::tile_size_</a></div><div class="ttdeci">int32 tile_size_</div><div class="ttdoc">タイルサイズ(ピクセル)</div><div class="ttdef"><b>Definition</b> Stage.h:67</div></div>
+<div class="ttc" id="aclass_stage_html_a904f47c26bf2c2f1edf08d35512b4612"><div class="ttname"><a href="#a904f47c26bf2c2f1edf08d35512b4612">Stage::map_height_</a></div><div class="ttdeci">int32 map_height_</div><div class="ttdoc">マップの高さ(タイル数)</div><div class="ttdef"><b>Definition</b> Stage.h:64</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_ad9f61bd78a0378947176faf7c6b9d5e8_icgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2688bb80c7887089f15bba99b0da6a4f" name="a2688bb80c7887089f15bba99b0da6a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2688bb80c7887089f15bba99b0da6a4f">&#9670;&#160;</a></span>CreateTileRegions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::CreateTileRegions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルテクスチャリージョンを生成する </p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keyword">const</span> int32 tiles_x = (<a class="code hl_variable" href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">tile_texture_</a>.width() / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>);</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keyword">const</span> int32 tiles_y = (<a class="code hl_variable" href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">tile_texture_</a>.height() / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>);</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">for</span>(int32 tile_y = 0; tile_y &lt; tiles_y; ++tile_y)</div>
+<div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">for</span>(int32 tile_x = 0; tile_x &lt; tiles_x; ++tile_x)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> x = tile_x * <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>;</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> y = tile_y * <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> size = <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="#a380236d0ce2c455fae6622a09a22470c">tile_regions_</a> &lt;&lt; <a class="code hl_variable" href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">tile_texture_</a>(x, y, size, size);</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclass_stage_html_a380236d0ce2c455fae6622a09a22470c"><div class="ttname"><a href="#a380236d0ce2c455fae6622a09a22470c">Stage::tile_regions_</a></div><div class="ttdeci">Array&lt; TextureRegion &gt; tile_regions_</div><div class="ttdoc">タイルテクスチャリージョンのリスト</div><div class="ttdef"><b>Definition</b> Stage.h:76</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a2688bb80c7887089f15bba99b0da6a4f_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a215f2d5b06903cf06f44552a23e27fc7" name="a215f2d5b06903cf06f44552a23e27fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215f2d5b06903cf06f44552a23e27fc7">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::Draw </td>
+          <td>(</td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>camera_offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RectF &amp;</td>          <td class="paramname"><span class="paramname"><em>view_rect</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ステージを描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_offset</td><td>カメラオフセット </td></tr>
+    <tr><td class="paramname">view_rect</td><td>ビュー矩形 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>{</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keyword">const</span> ScopedRenderStates2D sampler{ SamplerState::ClampNearest };</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    int32 start_x, start_y, end_x, end_y;</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_function" href="#ad9f61bd78a0378947176faf7c6b9d5e8">ComputeDrawRange</a>(view_rect, start_x, start_y, end_x, end_y);</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="#a8369f1ee5b499a4862cdc32696f6a956">layers_</a>)</div>
+<div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="comment">// 当たり判定レイヤーは描画しない</span></div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span>(layer.name == <a class="code hl_variable" href="#a132d931a4431af5a7eedb6f8201c3229">collision_layer_name_</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_function" href="#a66e4f07a9f7811afe745b834d2743e97">DrawLayerTiles</a>(layer, start_x, start_y, end_x, end_y, camera_offset);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+<div class="ttc" id="aclass_stage_html_a66e4f07a9f7811afe745b834d2743e97"><div class="ttname"><a href="#a66e4f07a9f7811afe745b834d2743e97">Stage::DrawLayerTiles</a></div><div class="ttdeci">void DrawLayerTiles(const TileMapLayer &amp;layer, int32 start_x, int32 start_y, int32 end_x, int32 end_y, const Vec2 &amp;camera_offset) const</div><div class="ttdoc">レイヤーのタイルを描画する</div><div class="ttdef"><b>Definition</b> Stage.cpp:134</div></div>
+<div class="ttc" id="aclass_stage_html_a8369f1ee5b499a4862cdc32696f6a956"><div class="ttname"><a href="#a8369f1ee5b499a4862cdc32696f6a956">Stage::layers_</a></div><div class="ttdeci">Array&lt; TileMapLayer &gt; layers_</div><div class="ttdoc">すべてのタイルマップレイヤー</div><div class="ttdef"><b>Definition</b> Stage.h:70</div></div>
+<div class="ttc" id="aclass_stage_html_ad9f61bd78a0378947176faf7c6b9d5e8"><div class="ttname"><a href="#ad9f61bd78a0378947176faf7c6b9d5e8">Stage::ComputeDrawRange</a></div><div class="ttdeci">void ComputeDrawRange(const RectF &amp;view_rect, int32 &amp;out_start_x, int32 &amp;out_start_y, int32 &amp;out_end_x, int32 &amp;out_end_y) const</div><div class="ttdoc">ビュー矩形から描画範囲を計算する</div><div class="ttdef"><b>Definition</b> Stage.cpp:125</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a215f2d5b06903cf06f44552a23e27fc7_cgraph.svg" width="339" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a66e4f07a9f7811afe745b834d2743e97" name="a66e4f07a9f7811afe745b834d2743e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e4f07a9f7811afe745b834d2743e97">&#9670;&#160;</a></span>DrawLayerTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::DrawLayerTiles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tile_map_layer.html">TileMapLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>start_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>start_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>end_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>end_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>camera_offset</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>レイヤーのタイルを描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>描画するレイヤー </td></tr>
+    <tr><td class="paramname">start_x</td><td>描画開始X(タイル座標) </td></tr>
+    <tr><td class="paramname">start_y</td><td>描画開始Y(タイル座標) </td></tr>
+    <tr><td class="paramname">end_x</td><td>描画終了X(タイル座標) </td></tr>
+    <tr><td class="paramname">end_y</td><td>描画終了Y(タイル座標) </td></tr>
+    <tr><td class="paramname">camera_offset</td><td>カメラオフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>{</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span>(int32 y = start_y; y &lt; end_y; ++y)</div>
+<div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">for</span>(int32 x = start_x; x &lt; end_x; ++x)</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keyword">const</span> int32 tile_id = layer.<a class="code hl_variable" href="struct_tile_map_layer.html#a22ee0f012c352df67009f0f6e5a96071">tiles</a>[y][x];</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span>(tile_id &lt;= 0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>            <span class="keyword">const</span> Vec2 world_pos = Vec2{ x * <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>, y * <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a> };</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keyword">const</span> Vec2 draw_pos = world_pos - camera_offset;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>            <span class="comment">// 整数にスナップ</span></div>
+<div class="line"><span class="lineno">  147</span>            <a class="code hl_variable" href="#a380236d0ce2c455fae6622a09a22470c">tile_regions_</a>[tile_id - 1].draw(s3d::Floor(draw_pos));</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>}</div>
+<div class="ttc" id="astruct_tile_map_layer_html_a22ee0f012c352df67009f0f6e5a96071"><div class="ttname"><a href="struct_tile_map_layer.html#a22ee0f012c352df67009f0f6e5a96071">TileMapLayer::tiles</a></div><div class="ttdeci">Grid&lt; int32 &gt; tiles</div><div class="ttdoc">タイルIDのグリッド</div><div class="ttdef"><b>Definition</b> Stage.h:16</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a66e4f07a9f7811afe745b834d2743e97_icgraph.svg" width="308" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5a4516bbbf1bebe3ba0ee9611791523b" name="a5a4516bbbf1bebe3ba0ee9611791523b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4516bbbf1bebe3ba0ee9611791523b">&#9670;&#160;</a></span>FindCollisionLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::FindCollisionLayer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突判定レイヤーを探索する </p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_variable" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="#a8369f1ee5b499a4862cdc32696f6a956">layers_</a>)</div>
+<div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span>(layer.name == <a class="code hl_variable" href="#a132d931a4431af5a7eedb6f8201c3229">collision_layer_name_</a>)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a> = &amp;layer;</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a5a4516bbbf1bebe3ba0ee9611791523b_icgraph.svg" width="327" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a23daac63487bb433207e58eba8ab21d9" name="a23daac63487bb433207e58eba8ab21d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23daac63487bb433207e58eba8ab21d9">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マップの高さ(タイル数)を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>マップの高さ </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2bca3f0297d6fe0babba355a77a7359c" name="a2bca3f0297d6fe0babba355a77a7359c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bca3f0297d6fe0babba355a77a7359c">&#9670;&#160;</a></span>GetSpawnPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const s3d::Array&lt; <a class="el" href="struct_spawn_info.html">SpawnInfo</a> &gt; &amp; Stage::GetSpawnPoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スポーン情報のリストを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>スポーン情報のリスト </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1cc76748e9655e3086fbacd43b0e8754">spawn_points_</a>;</div>
+<div class="line"><span class="lineno">  123</span>}</div>
+<div class="ttc" id="aclass_stage_html_a1cc76748e9655e3086fbacd43b0e8754"><div class="ttname"><a href="#a1cc76748e9655e3086fbacd43b0e8754">Stage::spawn_points_</a></div><div class="ttdeci">Array&lt; SpawnInfo &gt; spawn_points_</div><div class="ttdoc">スポーン情報のリスト</div><div class="ttdef"><b>Definition</b> Stage.h:79</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa1ee7cbc0b2b77c60aba3665038c2e91" name="aa1ee7cbc0b2b77c60aba3665038c2e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ee7cbc0b2b77c60aba3665038c2e91">&#9670;&#160;</a></span>GetTileSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::GetTileSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルサイズを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>タイルサイズ(ピクセル) </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_aa1ee7cbc0b2b77c60aba3665038c2e91_icgraph.svg" width="707" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2f16ed16dd395143683390ce4decac36" name="a2f16ed16dd395143683390ce4decac36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f16ed16dd395143683390ce4decac36">&#9670;&#160;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マップの幅(タイル数)を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>マップの幅 </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a95f9531749e71dfe6c880295abeb9d8c" name="a95f9531749e71dfe6c880295abeb9d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f9531749e71dfe6c880295abeb9d8c">&#9670;&#160;</a></span>IsSolid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stage::IsSolid </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したワールド座標が壁タイル上かを判定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_x</td><td>ワールド座標X </td></tr>
+    <tr><td class="paramname">world_y</td><td>ワールド座標Y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>壁タイル上の場合はtrue </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>{</div>
+<div class="line"><span class="lineno">  171</span>    <span class="comment">// 当たり判定レイヤーがコンストラクタで正常に設定されていない場合は常に「壁なし」</span></div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a>)</div>
+<div class="line"><span class="lineno">  173</span>    {</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>    <span class="comment">// ワールド座標(px)をタイル座標(グリッドのインデックス)に変換</span></div>
+<div class="line"><span class="lineno">  178</span>    <span class="comment">// (floorを使いマイナス座標に対応)</span></div>
+<div class="line"><span class="lineno">  179</span>    <span class="keyword">const</span> int32 tile_x = <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::floor(world_x / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>));</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keyword">const</span> int32 tile_y = <span class="keyword">static_cast&lt;</span>int32<span class="keyword">&gt;</span>(std::floor(world_y / <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a>));</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    <span class="comment">// マップの範囲外かチェック</span></div>
+<div class="line"><span class="lineno">  183</span>    <span class="comment">// (範囲外は壁として扱う)</span></div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordflow">if</span>((tile_x &lt; 0) || (tile_x &gt;= <a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>) || (tile_y &lt; 0) || (tile_y &gt;= <a class="code hl_variable" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a>))</div>
+<div class="line"><span class="lineno">  185</span>    {</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>    <span class="comment">// ID &gt; 0 なら「壁あり」と判定</span></div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">collision_layer_</a>-&gt;tiles[tile_y][tile_x] &gt; 0);</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a95f9531749e71dfe6c880295abeb9d8c_icgraph.svg" width="679" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a046289fe3fa7e0cc0c6b6c039a3e8d16" name="a046289fe3fa7e0cc0c6b6c039a3e8d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046289fe3fa7e0cc0c6b6c039a3e8d16">&#9670;&#160;</a></span>LoadFromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::LoadFromJson </td>
+          <td>(</td>
+          <td class="paramtype">const FilePath &amp;</td>          <td class="paramname"><span class="paramname"><em>json_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSONからマップデータを読み込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json_path</td><td>JSONファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keyword">const</span> JSON json = JSON::Load(json_path);</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(not json)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">throw</span> Error{ U<span class="stringliteral">&quot;Stage::LoadFromJson(): JSONファイルの読み込みに失敗しました → {}&quot;</span>_fmt(json_path) };</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a> = json[U<span class="stringliteral">&quot;width&quot;</span>].get&lt;int32&gt;();</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_variable" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a> = json[U<span class="stringliteral">&quot;height&quot;</span>].get&lt;int32&gt;();</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_variable" href="#a8735c40ee2a56eec9de8789f411b872c">tile_size_</a> = json[U<span class="stringliteral">&quot;tilewidth&quot;</span>].get&lt;int32&gt;();</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : json[U<span class="stringliteral">&quot;layers&quot;</span>].arrayView())</div>
+<div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keyword">const</span> String type = layer[U<span class="stringliteral">&quot;type&quot;</span>].getString();</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span>(type == U<span class="stringliteral">&quot;tilelayer&quot;</span>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="#af45be338beccbbe57fc49b79572282d8">ParseTileLayer</a>(layer);</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == U<span class="stringliteral">&quot;objectgroup&quot;</span>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="#ab7eb2696fab166bc7924120333715077">ParseObjectLayer</a>(layer);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+<div class="ttc" id="aclass_stage_html_ab7eb2696fab166bc7924120333715077"><div class="ttname"><a href="#ab7eb2696fab166bc7924120333715077">Stage::ParseObjectLayer</a></div><div class="ttdeci">void ParseObjectLayer(const JSON &amp;layer_json)</div><div class="ttdoc">オブジェクトレイヤーを解析する</div><div class="ttdef"><b>Definition</b> Stage.cpp:102</div></div>
+<div class="ttc" id="aclass_stage_html_af45be338beccbbe57fc49b79572282d8"><div class="ttname"><a href="#af45be338beccbbe57fc49b79572282d8">Stage::ParseTileLayer</a></div><div class="ttdeci">void ParseTileLayer(const JSON &amp;layer_json)</div><div class="ttdoc">タイルレイヤーを解析する</div><div class="ttdef"><b>Definition</b> Stage.cpp:82</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a046289fe3fa7e0cc0c6b6c039a3e8d16_cgraph.svg" width="376" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_a046289fe3fa7e0cc0c6b6c039a3e8d16_icgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab7eb2696fab166bc7924120333715077" name="ab7eb2696fab166bc7924120333715077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7eb2696fab166bc7924120333715077">&#9670;&#160;</a></span>ParseObjectLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::ParseObjectLayer </td>
+          <td>(</td>
+          <td class="paramtype">const JSON &amp;</td>          <td class="paramname"><span class="paramname"><em>layer_json</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトレイヤーを解析する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer_json</td><td>オブジェクトレイヤーのJSONデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span>(layer_json[U<span class="stringliteral">&quot;name&quot;</span>].getString() != U<span class="stringliteral">&quot;spawn_layer&quot;</span>)</div>
+<div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">object</span> : layer_json[U<span class="stringliteral">&quot;objects&quot;</span>].arrayView())</div>
+<div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        SpawnInfo info;</div>
+<div class="line"><span class="lineno">  112</span>        info.<a class="code hl_variable" href="struct_spawn_info.html#a9192886da358e63df0e3648fd9247ae2">type</a> = <span class="keywordtype">object</span>[U<span class="stringliteral">&quot;type&quot;</span>].getString();</div>
+<div class="line"><span class="lineno">  113</span>        info.<a class="code hl_variable" href="struct_spawn_info.html#a04a15a0c0f82e52fb1ff98dec6abbc1f">pos</a> = { <span class="keywordtype">object</span>[U<span class="stringliteral">&quot;x&quot;</span>].get&lt;<span class="keywordtype">double</span>&gt;(), <span class="keywordtype">object</span>[U<span class="stringliteral">&quot;y&quot;</span>].get&lt;double&gt;() };</div>
+<div class="line"><span class="lineno">  114</span>        info.<a class="code hl_variable" href="struct_spawn_info.html#af4990c535ab061b3394205b3a4d12cc0">size</a> = { <span class="keywordtype">object</span>[U<span class="stringliteral">&quot;width&quot;</span>].get&lt;<span class="keywordtype">double</span>&gt;(), <span class="keywordtype">object</span>[U<span class="stringliteral">&quot;height&quot;</span>].get&lt;double&gt;() };</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="#a1cc76748e9655e3086fbacd43b0e8754">spawn_points_</a>.push_back(info);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+<div class="ttc" id="astruct_spawn_info_html_a04a15a0c0f82e52fb1ff98dec6abbc1f"><div class="ttname"><a href="struct_spawn_info.html#a04a15a0c0f82e52fb1ff98dec6abbc1f">SpawnInfo::pos</a></div><div class="ttdeci">Vec2 pos</div><div class="ttdoc">オブジェクトの位置(ワールド座標,左上基準)</div><div class="ttdef"><b>Definition</b> SpawnInfo.h:18</div></div>
+<div class="ttc" id="astruct_spawn_info_html_a9192886da358e63df0e3648fd9247ae2"><div class="ttname"><a href="struct_spawn_info.html#a9192886da358e63df0e3648fd9247ae2">SpawnInfo::type</a></div><div class="ttdeci">String type</div><div class="ttdoc">オブジェクトの種類(Tiledで設定されたクラス)</div><div class="ttdef"><b>Definition</b> SpawnInfo.h:15</div></div>
+<div class="ttc" id="astruct_spawn_info_html_af4990c535ab061b3394205b3a4d12cc0"><div class="ttname"><a href="struct_spawn_info.html#af4990c535ab061b3394205b3a4d12cc0">SpawnInfo::size</a></div><div class="ttdeci">Vec2 size</div><div class="ttdoc">オブジェクトのサイズ(幅と高さ)</div><div class="ttdef"><b>Definition</b> SpawnInfo.h:21</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_ab7eb2696fab166bc7924120333715077_icgraph.svg" width="522" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af45be338beccbbe57fc49b79572282d8" name="af45be338beccbbe57fc49b79572282d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45be338beccbbe57fc49b79572282d8">&#9670;&#160;</a></span>ParseTileLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::ParseTileLayer </td>
+          <td>(</td>
+          <td class="paramtype">const JSON &amp;</td>          <td class="paramname"><span class="paramname"><em>layer_json</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルレイヤーを解析する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer_json</td><td>タイルレイヤーのJSONデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    TileMapLayer new_layer;</div>
+<div class="line"><span class="lineno">   85</span>    new_layer.<a class="code hl_variable" href="struct_tile_map_layer.html#a3d940d25d0104b0dee4d62edb85b20c8">name</a> = layer_json[U<span class="stringliteral">&quot;name&quot;</span>].getString();</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    Grid&lt;int32&gt; grid(<a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>, <a class="code hl_variable" href="#a904f47c26bf2c2f1edf08d35512b4612">map_height_</a>);</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; data = layer_json[U<span class="stringliteral">&quot;data&quot;</span>].arrayView();</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> data_size = layer_json[U<span class="stringliteral">&quot;data&quot;</span>].size();</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; data_size; ++i)</div>
+<div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keyword">const</span> int32 x = <span class="keyword">static_cast&lt;</span>s3d::int32<span class="keyword">&gt;</span>(i) % <a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>;</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keyword">const</span> int32 y = <span class="keyword">static_cast&lt;</span>s3d::int32<span class="keyword">&gt;</span>(i) / <a class="code hl_variable" href="#a49aa8cd0374c6fa45ab10b544ac53851">map_width_</a>;</div>
+<div class="line"><span class="lineno">   95</span>        grid[y][x] = data[i].get&lt;int32&gt;();</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    new_layer.<a class="code hl_variable" href="struct_tile_map_layer.html#a22ee0f012c352df67009f0f6e5a96071">tiles</a> = std::move(grid);</div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_variable" href="#a8369f1ee5b499a4862cdc32696f6a956">layers_</a> &lt;&lt; std::move(new_layer);</div>
+<div class="line"><span class="lineno">  100</span>}</div>
+<div class="ttc" id="astruct_tile_map_layer_html_a3d940d25d0104b0dee4d62edb85b20c8"><div class="ttname"><a href="struct_tile_map_layer.html#a3d940d25d0104b0dee4d62edb85b20c8">TileMapLayer::name</a></div><div class="ttdeci">String name</div><div class="ttdoc">レイヤー名</div><div class="ttdef"><b>Definition</b> Stage.h:13</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_stage_af45be338beccbbe57fc49b79572282d8_icgraph.svg" width="504" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="ad1b7b579a4e1afc0d1b9a4e1944e424b" name="ad1b7b579a4e1afc0d1b9a4e1944e424b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b7b579a4e1afc0d1b9a4e1944e424b">&#9670;&#160;</a></span>collision_layer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_tile_map_layer.html">TileMapLayer</a>* Stage::collision_layer_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突判定レイヤーへのポインタ </p>
+
+</div>
+</div>
+<a id="a132d931a4431af5a7eedb6f8201c3229" name="a132d931a4431af5a7eedb6f8201c3229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132d931a4431af5a7eedb6f8201c3229">&#9670;&#160;</a></span>collision_layer_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Stage::collision_layer_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタで受け取った衝突判定レイヤー名 </p>
+
+</div>
+</div>
+<a id="a8369f1ee5b499a4862cdc32696f6a956" name="a8369f1ee5b499a4862cdc32696f6a956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8369f1ee5b499a4862cdc32696f6a956">&#9670;&#160;</a></span>layers_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;<a class="el" href="struct_tile_map_layer.html">TileMapLayer</a>&gt; Stage::layers_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>すべてのタイルマップレイヤー </p>
+
+</div>
+</div>
+<a id="a904f47c26bf2c2f1edf08d35512b4612" name="a904f47c26bf2c2f1edf08d35512b4612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904f47c26bf2c2f1edf08d35512b4612">&#9670;&#160;</a></span>map_height_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::map_height_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マップの高さ(タイル数) </p>
+
+</div>
+</div>
+<a id="a49aa8cd0374c6fa45ab10b544ac53851" name="a49aa8cd0374c6fa45ab10b544ac53851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49aa8cd0374c6fa45ab10b544ac53851">&#9670;&#160;</a></span>map_width_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::map_width_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マップの幅(タイル数) </p>
+
+</div>
+</div>
+<a id="a1cc76748e9655e3086fbacd43b0e8754" name="a1cc76748e9655e3086fbacd43b0e8754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc76748e9655e3086fbacd43b0e8754">&#9670;&#160;</a></span>spawn_points_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;<a class="el" href="struct_spawn_info.html">SpawnInfo</a>&gt; Stage::spawn_points_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スポーン情報のリスト </p>
+
+</div>
+</div>
+<a id="a380236d0ce2c455fae6622a09a22470c" name="a380236d0ce2c455fae6622a09a22470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380236d0ce2c455fae6622a09a22470c">&#9670;&#160;</a></span>tile_regions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;TextureRegion&gt; Stage::tile_regions_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルテクスチャリージョンのリスト </p>
+
+</div>
+</div>
+<a id="a8735c40ee2a56eec9de8789f411b872c" name="a8735c40ee2a56eec9de8789f411b872c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8735c40ee2a56eec9de8789f411b872c">&#9670;&#160;</a></span>tile_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32 Stage::tile_size_ = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルサイズ(ピクセル) </p>
+
+</div>
+</div>
+<a id="a0f0ca9b9159463e3cd4d69fbc2d426c6" name="a0f0ca9b9159463e3cd4d69fbc2d426c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f0ca9b9159463e3cd4d69fbc2d426c6">&#9670;&#160;</a></span>tile_texture_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture Stage::tile_texture_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タイルセットテクスチャ </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/World/<a class="el" href="_stage_8h_source.html">Stage.h</a></li>
+<li>src/World/<a class="el" href="_stage_8cpp.html">Stage.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_stage.html">Stage</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

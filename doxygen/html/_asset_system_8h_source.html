@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/System/AssetSystem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_asset_system_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AssetSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_asset_system_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_asset_system.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">static</span> <a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a>&amp; <a class="code hl_function" href="class_asset_system.html#ac182714115a88042762b2c178a6865ca">GetInstance</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324">   24</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324">LoadMode</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">   26</a></span>        <a class="code hl_enumvalue" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">Auto</a>,   </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">   27</a></span>        <a class="code hl_enumvalue" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">Sync</a>,   </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">   28</a></span>        <a class="code hl_enumvalue" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">Async</a>   </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_asset_system.html#a38216f3fc1a218b4cf6910e8ed455be9">PrepareAssets</a>(<span class="keyword">const</span> String&amp; scene_name);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_asset_system.html#ab7a0d836fbd30a0f29e661f9832a15b4">UnregisterAssets</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc">IsSceneAssetsReady</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_asset_system.html#a88219cddf418f7a49d68ec447eb8ed13">WaitUntilReady</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">   46</a></span>    <a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_asset_system.html#af585580f85ed1c4eaf30b2b2de0156b5">   49</a></span>    <a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a>&amp; <a class="code hl_function" href="class_asset_system.html#af585580f85ed1c4eaf30b2b2de0156b5">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="class_asset_system.html#aed9f592fdf9bfe9af1df040c18e97754">AssetSystem</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_asset_system.html#a84c29f36ac79b28eebef7bf12778430c">   56</a></span>    JSON <a class="code hl_variable" href="class_asset_system.html#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_asset_system.html#a331ce0c5847cff3bcc955be4adb3d5c5">   59</a></span>    String <a class="code hl_variable" href="class_asset_system.html#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_asset_system.html#a5fd5308f6f828605011d7589bd4176a7">   62</a></span>    <span class="keyword">const</span> Array&lt;String&gt; <a class="code hl_variable" href="class_asset_system.html#a5fd5308f6f828605011d7589bd4176a7">asset_types_</a> = { U<span class="stringliteral">&quot;Font&quot;</span>, U<span class="stringliteral">&quot;Sound&quot;</span>, U<span class="stringliteral">&quot;Texture&quot;</span> };</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_asset_system.html#a89836a6278b0d4237fe0efc49906e437">RegisterAndLoadAsset</a>(<span class="keyword">const</span> String&amp; asset_type, <span class="keyword">const</span> String&amp; asset_filepath, <a class="code hl_enumeration" href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324">LoadMode</a> mode);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_asset_system.html#a6af9bda56fa2ed84717983f7f54784bc">   71</a></span>    Array&lt;std::pair&lt;String, String&gt;&gt; <a class="code hl_variable" href="class_asset_system.html#a6af9bda56fa2ed84717983f7f54784bc">registered_assets_</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_asset_system.html#a5973b962623451f754298ad7657efd50">   74</a></span>    Array&lt;std::pair&lt;String, String&gt;&gt; <a class="code hl_variable" href="class_asset_system.html#a5973b962623451f754298ad7657efd50">pending_assets_</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+</div>
+<div class="ttc" id="aclass_asset_system_html_a01eef25242d94de3e93ac0644a269127"><div class="ttname"><a href="class_asset_system.html#a01eef25242d94de3e93ac0644a269127">AssetSystem::AssetSystem</a></div><div class="ttdeci">AssetSystem(const AssetSystem &amp;)=delete</div><div class="ttdoc">コピーコンストラクタ(削除)</div></div>
+<div class="ttc" id="aclass_asset_system_html_a331ce0c5847cff3bcc955be4adb3d5c5"><div class="ttname"><a href="class_asset_system.html#a331ce0c5847cff3bcc955be4adb3d5c5">AssetSystem::current_scene_name_</a></div><div class="ttdeci">String current_scene_name_</div><div class="ttdoc">現在対象となっているシーン名</div><div class="ttdef"><b>Definition</b> AssetSystem.h:59</div></div>
+<div class="ttc" id="aclass_asset_system_html_a38216f3fc1a218b4cf6910e8ed455be9"><div class="ttname"><a href="class_asset_system.html#a38216f3fc1a218b4cf6910e8ed455be9">AssetSystem::PrepareAssets</a></div><div class="ttdeci">void PrepareAssets(const String &amp;scene_name)</div><div class="ttdoc">指定したシーン名のアセットを準備する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:56</div></div>
+<div class="ttc" id="aclass_asset_system_html_a5973b962623451f754298ad7657efd50"><div class="ttname"><a href="class_asset_system.html#a5973b962623451f754298ad7657efd50">AssetSystem::pending_assets_</a></div><div class="ttdeci">Array&lt; std::pair&lt; String, String &gt; &gt; pending_assets_</div><div class="ttdoc">非同期ロード中のアセット一覧(種類,基本名)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:74</div></div>
+<div class="ttc" id="aclass_asset_system_html_a5fd5308f6f828605011d7589bd4176a7"><div class="ttname"><a href="class_asset_system.html#a5fd5308f6f828605011d7589bd4176a7">AssetSystem::asset_types_</a></div><div class="ttdeci">const Array&lt; String &gt; asset_types_</div><div class="ttdoc">対象とするアセットの種類</div><div class="ttdef"><b>Definition</b> AssetSystem.h:62</div></div>
+<div class="ttc" id="aclass_asset_system_html_a6af9bda56fa2ed84717983f7f54784bc"><div class="ttname"><a href="class_asset_system.html#a6af9bda56fa2ed84717983f7f54784bc">AssetSystem::registered_assets_</a></div><div class="ttdeci">Array&lt; std::pair&lt; String, String &gt; &gt; registered_assets_</div><div class="ttdoc">登録されたアセットの一覧(種類,基本名)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:71</div></div>
+<div class="ttc" id="aclass_asset_system_html_a84c29f36ac79b28eebef7bf12778430c"><div class="ttname"><a href="class_asset_system.html#a84c29f36ac79b28eebef7bf12778430c">AssetSystem::asset_json_</a></div><div class="ttdeci">JSON asset_json_</div><div class="ttdoc">アセット情報を定義したJSONデータ</div><div class="ttdef"><b>Definition</b> AssetSystem.h:56</div></div>
+<div class="ttc" id="aclass_asset_system_html_a8699ee18bd398670439d3b6340e1f1dc"><div class="ttname"><a href="class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc">AssetSystem::IsSceneAssetsReady</a></div><div class="ttdeci">bool IsSceneAssetsReady()</div><div class="ttdoc">現在のシーンのアセット非同期ロードが完了したか</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:142</div></div>
+<div class="ttc" id="aclass_asset_system_html_a88219cddf418f7a49d68ec447eb8ed13"><div class="ttname"><a href="class_asset_system.html#a88219cddf418f7a49d68ec447eb8ed13">AssetSystem::WaitUntilReady</a></div><div class="ttdeci">void WaitUntilReady()</div><div class="ttdoc">非同期ロードが完了するまで待機する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:178</div></div>
+<div class="ttc" id="aclass_asset_system_html_a89836a6278b0d4237fe0efc49906e437"><div class="ttname"><a href="class_asset_system.html#a89836a6278b0d4237fe0efc49906e437">AssetSystem::RegisterAndLoadAsset</a></div><div class="ttdeci">void RegisterAndLoadAsset(const String &amp;asset_type, const String &amp;asset_filepath, LoadMode mode)</div><div class="ttdoc">アセットを登録してロードする</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:186</div></div>
+<div class="ttc" id="aclass_asset_system_html_ab7a0d836fbd30a0f29e661f9832a15b4"><div class="ttname"><a href="class_asset_system.html#ab7a0d836fbd30a0f29e661f9832a15b4">AssetSystem::UnregisterAssets</a></div><div class="ttdeci">void UnregisterAssets()</div><div class="ttdoc">現在のシーンのアセット登録をすべて解除する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:100</div></div>
+<div class="ttc" id="aclass_asset_system_html_ac182714115a88042762b2c178a6865ca"><div class="ttname"><a href="class_asset_system.html#ac182714115a88042762b2c178a6865ca">AssetSystem::GetInstance</a></div><div class="ttdeci">static AssetSystem &amp; GetInstance()</div><div class="ttdoc">シングルトンインスタンスを取得する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:5</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324"><div class="ttname"><a href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324">AssetSystem::LoadMode</a></div><div class="ttdeci">LoadMode</div><div class="ttdoc">アセットのロードモード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:25</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb"><div class="ttname"><a href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">AssetSystem::LoadMode::Auto</a></div><div class="ttdeci">@ Auto</div><div class="ttdoc">自動判別(デフォルト)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:26</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6"><div class="ttname"><a href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a></div><div class="ttdeci">@ Async</div><div class="ttdoc">非同期ロード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:28</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f"><div class="ttname"><a href="class_asset_system.html#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">AssetSystem::LoadMode::Sync</a></div><div class="ttdeci">@ Sync</div><div class="ttdoc">同期ロード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:27</div></div>
+<div class="ttc" id="aclass_asset_system_html_aed9f592fdf9bfe9af1df040c18e97754"><div class="ttname"><a href="class_asset_system.html#aed9f592fdf9bfe9af1df040c18e97754">AssetSystem::AssetSystem</a></div><div class="ttdeci">AssetSystem()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:12</div></div>
+<div class="ttc" id="aclass_asset_system_html_af585580f85ed1c4eaf30b2b2de0156b5"><div class="ttname"><a href="class_asset_system.html#af585580f85ed1c4eaf30b2b2de0156b5">AssetSystem::operator=</a></div><div class="ttdeci">AssetSystem &amp; operator=(const AssetSystem &amp;)=delete</div><div class="ttdoc">コピー代入演算子(削除)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_asset_system_8h.html">AssetSystem.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

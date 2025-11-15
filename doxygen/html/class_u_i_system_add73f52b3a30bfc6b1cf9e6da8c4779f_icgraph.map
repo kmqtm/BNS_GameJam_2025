@@ -1,0 +1,5 @@
+<map id="UISystem::DrawOxygenGauge" name="UISystem::DrawOxygenGauge">
+<area shape="rect" id="Node000001" title="酸素ゲージを描画する" alt="" coords="173,5,375,32"/>
+<area shape="rect" id="Node000002" href="$class_u_i_system.html#abbac4728a46b71698610720eae29180b" title="UIを描画する" alt="" coords="5,5,125,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,21,125,21,125,16,157,16"/>
+</map>

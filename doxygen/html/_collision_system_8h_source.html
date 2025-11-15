@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/System/CollisionSystem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_collision_system_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CollisionSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_collision_system_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_collider_8h.html">../Component/Collider.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;variant&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_collision_system.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_collision_system.html">CollisionSystem</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_system.html#a5807f9ca7a01279114efa2b7902fb8c1">RegisterPlayer</a>(<a class="code hl_struct" href="struct_collider.html">Collider</a>* player_collider);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_system.html#a3f7054ef658b24b1a5c989ec63be5f10">RegisterOther</a>(<a class="code hl_struct" href="struct_collider.html">Collider</a>* other_collider, uint32_t entity_id);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_system.html#a501bb27d981ccc146a2015d73519995c">ClearResults</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_system.html#af606574fc2a2716cc06096ca9025c57d">ResolveCollisions</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_system.html#a61cfd02bd0dbe8d88f1ecf3a8f117626">Clear</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_collision_system_1_1_collider_entry.html">   37</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_collision_system_1_1_collider_entry.html">ColliderEntry</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_collision_system_1_1_collider_entry.html#af08db4236182316200d27be9e5d2fe6e">   39</a></span>        <a class="code hl_struct" href="struct_collider.html">Collider</a>* <a class="code hl_variable" href="struct_collision_system_1_1_collider_entry.html#af08db4236182316200d27be9e5d2fe6e">collider</a>;  </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_collision_system_1_1_collider_entry.html#a0d2e16008cf16824fde6be370ec01922">   40</a></span>        uint32_t <a class="code hl_variable" href="struct_collision_system_1_1_collider_entry.html#a0d2e16008cf16824fde6be370ec01922">entity_id</a>;  </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_collision_system.html#a7fc867e90a614c7adb4e660a58408a08">   44</a></span>    <a class="code hl_struct" href="struct_collider.html">Collider</a>* <a class="code hl_variable" href="class_collision_system.html#a7fc867e90a614c7adb4e660a58408a08">player_collider_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_collision_system.html#a645347d007328033ea10bcb3ca77d63d">   47</a></span>    std::vector&lt;ColliderEntry&gt; <a class="code hl_variable" href="class_collision_system.html#a645347d007328033ea10bcb3ca77d63d">other_colliders_</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_collision_system.html#ad2e14941d2a801bde8506295e8dcd0ff">CheckIntersection</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="_collider_8h.html#ac1f78c739f46f8ec826d4b3ab987d421">ShapeVariant</a>&amp; shape1, <span class="keyword">const</span> <a class="code hl_typedef" href="_collider_8h.html#ac1f78c739f46f8ec826d4b3ab987d421">ShapeVariant</a>&amp; shape2) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="ttc" id="a_collider_8h_html"><div class="ttname"><a href="_collider_8h.html">Collider.h</a></div><div class="ttdoc">衝突判定用のコンポーネント定義</div></div>
+<div class="ttc" id="a_collider_8h_html_ac1f78c739f46f8ec826d4b3ab987d421"><div class="ttname"><a href="_collider_8h.html#ac1f78c739f46f8ec826d4b3ab987d421">ShapeVariant</a></div><div class="ttdeci">std::variant&lt; s3d::Circle, s3d::RectF, s3d::Line &gt; ShapeVariant</div><div class="ttdoc">衝突判定で使用可能な図形</div><div class="ttdef"><b>Definition</b> Collider.h:21</div></div>
+<div class="ttc" id="aclass_collision_system_html"><div class="ttname"><a href="class_collision_system.html">CollisionSystem</a></div><div class="ttdoc">プレイヤーと他のオブジェクト間の衝突判定を管理する</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:15</div></div>
+<div class="ttc" id="aclass_collision_system_html_a3f7054ef658b24b1a5c989ec63be5f10"><div class="ttname"><a href="class_collision_system.html#a3f7054ef658b24b1a5c989ec63be5f10">CollisionSystem::RegisterOther</a></div><div class="ttdeci">void RegisterOther(Collider *other_collider, uint32_t entity_id)</div><div class="ttdoc">プレイヤー以外のコライダーを登録する</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:8</div></div>
+<div class="ttc" id="aclass_collision_system_html_a501bb27d981ccc146a2015d73519995c"><div class="ttname"><a href="class_collision_system.html#a501bb27d981ccc146a2015d73519995c">CollisionSystem::ClearResults</a></div><div class="ttdeci">void ClearResults()</div><div class="ttdoc">登録されたすべてのコライダーの衝突結果をクリアする</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:16</div></div>
+<div class="ttc" id="aclass_collision_system_html_a5807f9ca7a01279114efa2b7902fb8c1"><div class="ttname"><a href="class_collision_system.html#a5807f9ca7a01279114efa2b7902fb8c1">CollisionSystem::RegisterPlayer</a></div><div class="ttdeci">void RegisterPlayer(Collider *player_collider)</div><div class="ttdoc">プレイヤーのコライダーを登録する</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:3</div></div>
+<div class="ttc" id="aclass_collision_system_html_a61cfd02bd0dbe8d88f1ecf3a8f117626"><div class="ttname"><a href="class_collision_system.html#a61cfd02bd0dbe8d88f1ecf3a8f117626">CollisionSystem::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">登録されているすべてのコライダーをクリアする</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:66</div></div>
+<div class="ttc" id="aclass_collision_system_html_a645347d007328033ea10bcb3ca77d63d"><div class="ttname"><a href="class_collision_system.html#a645347d007328033ea10bcb3ca77d63d">CollisionSystem::other_colliders_</a></div><div class="ttdeci">std::vector&lt; ColliderEntry &gt; other_colliders_</div><div class="ttdoc">その他のコライダーリスト</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:47</div></div>
+<div class="ttc" id="aclass_collision_system_html_a7fc867e90a614c7adb4e660a58408a08"><div class="ttname"><a href="class_collision_system.html#a7fc867e90a614c7adb4e660a58408a08">CollisionSystem::player_collider_</a></div><div class="ttdeci">Collider * player_collider_</div><div class="ttdoc">プレイヤーのコライダー</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:44</div></div>
+<div class="ttc" id="aclass_collision_system_html_ad2e14941d2a801bde8506295e8dcd0ff"><div class="ttname"><a href="class_collision_system.html#ad2e14941d2a801bde8506295e8dcd0ff">CollisionSystem::CheckIntersection</a></div><div class="ttdeci">bool CheckIntersection(const ShapeVariant &amp;shape1, const ShapeVariant &amp;shape2) const</div><div class="ttdoc">2つの図形の衝突判定を実行する</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:72</div></div>
+<div class="ttc" id="aclass_collision_system_html_af606574fc2a2716cc06096ca9025c57d"><div class="ttname"><a href="class_collision_system.html#af606574fc2a2716cc06096ca9025c57d">CollisionSystem::ResolveCollisions</a></div><div class="ttdeci">void ResolveCollisions()</div><div class="ttdoc">プレイヤーと他のオブジェクトの衝突判定を実行する</div><div class="ttdef"><b>Definition</b> CollisionSystem.cpp:34</div></div>
+<div class="ttc" id="astruct_collider_html"><div class="ttname"><a href="struct_collider.html">Collider</a></div><div class="ttdoc">衝突判定を管理する構造体</div><div class="ttdef"><b>Definition</b> Collider.h:25</div></div>
+<div class="ttc" id="astruct_collision_system_1_1_collider_entry_html"><div class="ttname"><a href="struct_collision_system_1_1_collider_entry.html">CollisionSystem::ColliderEntry</a></div><div class="ttdoc">コライダー登録用の構造体</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:38</div></div>
+<div class="ttc" id="astruct_collision_system_1_1_collider_entry_html_a0d2e16008cf16824fde6be370ec01922"><div class="ttname"><a href="struct_collision_system_1_1_collider_entry.html#a0d2e16008cf16824fde6be370ec01922">CollisionSystem::ColliderEntry::entity_id</a></div><div class="ttdeci">uint32_t entity_id</div><div class="ttdoc">エンティティID</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:40</div></div>
+<div class="ttc" id="astruct_collision_system_1_1_collider_entry_html_af08db4236182316200d27be9e5d2fe6e"><div class="ttname"><a href="struct_collision_system_1_1_collider_entry.html#af08db4236182316200d27be9e5d2fe6e">CollisionSystem::ColliderEntry::collider</a></div><div class="ttdeci">Collider * collider</div><div class="ttdoc">コライダーポインタ</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_collision_system_8h.html">CollisionSystem.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

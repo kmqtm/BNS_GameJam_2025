@@ -1,0 +1,5 @@
+<map id="GameScene" name="GameScene">
+<area shape="rect" id="Node000001" title="ゲームシーンを管理する" alt="" coords="5,80,99,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="7,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,48,55,80,49,80,49,48"/>
+</map>

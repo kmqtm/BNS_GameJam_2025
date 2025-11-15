@@ -1,0 +1,5 @@
+<map id="AnimationController" name="AnimationController">
+<area shape="rect" id="Node000001" title="アニメーション再生を管理する" alt="" coords="5,104,141,131"/>
+<area shape="rect" id="Node000002" href="$struct_animation.html" title="アニメーション再生に必要な情報を保持する構造体" alt="" coords="33,5,113,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,48,76,104,70,104,70,48"/>
+</map>

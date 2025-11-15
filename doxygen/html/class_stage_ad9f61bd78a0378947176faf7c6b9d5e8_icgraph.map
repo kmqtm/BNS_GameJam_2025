@@ -1,0 +1,5 @@
+<map id="Stage::ComputeDrawRange" name="Stage::ComputeDrawRange">
+<area shape="rect" id="Node000001" title="ビュー矩形から描画範囲を計算する" alt="" coords="148,5,333,32"/>
+<area shape="rect" id="Node000002" href="$class_stage.html#a215f2d5b06903cf06f44552a23e27fc7" title="ステージを描画する" alt="" coords="5,5,100,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,21,100,21,100,16,132,16"/>
+</map>

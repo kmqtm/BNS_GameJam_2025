@@ -1,0 +1,9 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" href="$class_i_behavior_strategy.html" title="敵の行動戦略を定義するインターフェース" alt="" coords="5,56,131,83"/>
+<area shape="rect" id="Node000001" href="$class_back_and_forth_behavior.html" title="一定距離前後に往復する敵の行動戦略" alt="" coords="179,5,334,32"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="134,49,203,30,205,35,136,54"/>
+<area shape="rect" id="Node000002" href="$class_patrol_behavior.html" title="左右に巡回する敵の行動戦略" alt="" coords="203,56,310,83"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="146,67,203,67,203,72,146,72"/>
+<area shape="rect" id="Node000003" href="$class_stationary_behavior.html" title="その場から動かない敵の行動戦略" alt="" coords="191,107,322,133"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="136,85,205,103,203,109,134,90"/>
+</map>

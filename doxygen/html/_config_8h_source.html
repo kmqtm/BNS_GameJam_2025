@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/Core/Config.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_config_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Config.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_config_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="_config_8h.html#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">    9</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> Size <a class="code hl_variable" href="_config_8h.html#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">kSceneSize</a> = { 704, 900 };</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_config_8h.html#a4c675c65b7e7f3d0cdfd9b05c644327b">   12</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> ColorF <a class="code hl_variable" href="_config_8h.html#a4c675c65b7e7f3d0cdfd9b05c644327b">kBackgroundColor</a> = ColorF{ 0.8, 0.9, 1.0 };</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_config_8h.html#ab121746c70d1bcde449ab4bd2e676855">   15</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> ColorF <a class="code hl_variable" href="_config_8h.html#ab121746c70d1bcde449ab4bd2e676855">kGameBackgroundColor</a> = ColorF{ 0.4, 0.7, 1.0 };</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871">   18</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a> : int8</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">   20</a></span>    <a class="code hl_enumvalue" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">kTitle</a> = 0,  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">   21</a></span>    <a class="code hl_enumvalue" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</a>,       </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_config_8h.html#aaea305de8385c40a637a08e6e3c9d031">   25</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_config_8h.html#aaea305de8385c40a637a08e6e3c9d031">App</a> = s3d::SceneManager&lt;SceneID&gt;;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_config_8h.html#ad475090b87f406cb3ff3562105a10251">   28</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#ad475090b87f406cb3ff3562105a10251">kInputOK</a>{ KeyEnter };</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_config_8h.html#af57baa81603a60e0088da1c8be6680dd">   31</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#af57baa81603a60e0088da1c8be6680dd">kInputCancel</a>{ KeyEscape };</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_config_8h.html#a4084901ed266524f2686dfe9165b3611">   34</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#a4084901ed266524f2686dfe9165b3611">kInputLeft</a>{ KeyLeft, KeyA };</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_config_8h.html#aeb82e98dd9d59993bfa121612a706012">   37</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#aeb82e98dd9d59993bfa121612a706012">kInputRight</a>{ KeyRight, KeyD };</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_config_8h.html#a174ae0b715566433c96e054b348adddd">   40</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#a174ae0b715566433c96e054b348adddd">kInputUp</a>{ KeyUp, KeyW };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_config_8h.html#aada946ad2629bcb7ea78d94206293636">   43</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#aada946ad2629bcb7ea78d94206293636">kInputDown</a>{ KeyDown, KeyS };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_config_8h.html#ac5411287b9f05244aa0f067b14a16f48">   46</a></span><span class="keyword">const</span> InputGroup <a class="code hl_variable" href="_config_8h.html#ac5411287b9f05244aa0f067b14a16f48">kInputAction1</a>{ KeySpace };</div>
+<div class="ttc" id="a_config_8h_html_a174ae0b715566433c96e054b348adddd"><div class="ttname"><a href="_config_8h.html#a174ae0b715566433c96e054b348adddd">kInputUp</a></div><div class="ttdeci">const InputGroup kInputUp</div><div class="ttdoc">上移動キー</div><div class="ttdef"><b>Definition</b> Config.h:40</div></div>
+<div class="ttc" id="a_config_8h_html_a3b8841eb4f4bcd8fa09fb6a8cb3394ba"><div class="ttname"><a href="_config_8h.html#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">kSceneSize</a></div><div class="ttdeci">constexpr Size kSceneSize</div><div class="ttdoc">ゲームシーンのサイズ(ピクセル)</div><div class="ttdef"><b>Definition</b> Config.h:9</div></div>
+<div class="ttc" id="a_config_8h_html_a4084901ed266524f2686dfe9165b3611"><div class="ttname"><a href="_config_8h.html#a4084901ed266524f2686dfe9165b3611">kInputLeft</a></div><div class="ttdeci">const InputGroup kInputLeft</div><div class="ttdoc">左移動キー</div><div class="ttdef"><b>Definition</b> Config.h:34</div></div>
+<div class="ttc" id="a_config_8h_html_a4c675c65b7e7f3d0cdfd9b05c644327b"><div class="ttname"><a href="_config_8h.html#a4c675c65b7e7f3d0cdfd9b05c644327b">kBackgroundColor</a></div><div class="ttdeci">constexpr ColorF kBackgroundColor</div><div class="ttdoc">メニューシーンの背景色</div><div class="ttdef"><b>Definition</b> Config.h:12</div></div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871"><div class="ttname"><a href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a></div><div class="ttdeci">SceneID</div><div class="ttdoc">シーンを識別するID</div><div class="ttdef"><b>Definition</b> Config.h:19</div></div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659"><div class="ttname"><a href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">SceneID::kTitle</a></div><div class="ttdeci">@ kTitle</div><div class="ttdoc">タイトルシーン</div><div class="ttdef"><b>Definition</b> Config.h:20</div></div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca"><div class="ttname"><a href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">SceneID::kGame</a></div><div class="ttdeci">@ kGame</div><div class="ttdoc">ゲームシーン</div><div class="ttdef"><b>Definition</b> Config.h:21</div></div>
+<div class="ttc" id="a_config_8h_html_aada946ad2629bcb7ea78d94206293636"><div class="ttname"><a href="_config_8h.html#aada946ad2629bcb7ea78d94206293636">kInputDown</a></div><div class="ttdeci">const InputGroup kInputDown</div><div class="ttdoc">下移動キー</div><div class="ttdef"><b>Definition</b> Config.h:43</div></div>
+<div class="ttc" id="a_config_8h_html_aaea305de8385c40a637a08e6e3c9d031"><div class="ttname"><a href="_config_8h.html#aaea305de8385c40a637a08e6e3c9d031">App</a></div><div class="ttdeci">s3d::SceneManager&lt; SceneID &gt; App</div><div class="ttdoc">Siv3DのシーンマネージャーにSceneIDを適用した型</div><div class="ttdef"><b>Definition</b> Config.h:25</div></div>
+<div class="ttc" id="a_config_8h_html_ab121746c70d1bcde449ab4bd2e676855"><div class="ttname"><a href="_config_8h.html#ab121746c70d1bcde449ab4bd2e676855">kGameBackgroundColor</a></div><div class="ttdeci">constexpr ColorF kGameBackgroundColor</div><div class="ttdoc">ゲームシーンの背景色</div><div class="ttdef"><b>Definition</b> Config.h:15</div></div>
+<div class="ttc" id="a_config_8h_html_ac5411287b9f05244aa0f067b14a16f48"><div class="ttname"><a href="_config_8h.html#ac5411287b9f05244aa0f067b14a16f48">kInputAction1</a></div><div class="ttdeci">const InputGroup kInputAction1</div><div class="ttdoc">アクション1キー</div><div class="ttdef"><b>Definition</b> Config.h:46</div></div>
+<div class="ttc" id="a_config_8h_html_ad475090b87f406cb3ff3562105a10251"><div class="ttname"><a href="_config_8h.html#ad475090b87f406cb3ff3562105a10251">kInputOK</a></div><div class="ttdeci">const InputGroup kInputOK</div><div class="ttdoc">決定キー</div><div class="ttdef"><b>Definition</b> Config.h:28</div></div>
+<div class="ttc" id="a_config_8h_html_aeb82e98dd9d59993bfa121612a706012"><div class="ttname"><a href="_config_8h.html#aeb82e98dd9d59993bfa121612a706012">kInputRight</a></div><div class="ttdeci">const InputGroup kInputRight</div><div class="ttdoc">右移動キー</div><div class="ttdef"><b>Definition</b> Config.h:37</div></div>
+<div class="ttc" id="a_config_8h_html_af57baa81603a60e0088da1c8be6680dd"><div class="ttname"><a href="_config_8h.html#af57baa81603a60e0088da1c8be6680dd">kInputCancel</a></div><div class="ttdeci">const InputGroup kInputCancel</div><div class="ttdoc">キャンセルキー</div><div class="ttdef"><b>Definition</b> Config.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a href="_config_8h.html">Config.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

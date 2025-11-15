@@ -1,0 +1,5 @@
+<map id="Player::OnSwimPressed" name="Player::OnSwimPressed">
+<area shape="rect" id="Node000001" title="泳ぎ入力時の処理" alt="" coords="5,5,170,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#ac7d159c578eb4da86911b484b499766c" title="酸素量を変更する" alt="" coords="218,5,368,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="Player::HandleCollisions" name="Player::HandleCollisions">
+<area shape="rect" id="Node000001" title="衝突処理を実行する" alt="" coords="5,31,170,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a34183eba5b1c359a41c87f8ce9b06f98" title="酸素を回復する" alt="" coords="218,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,31,202,28,203,33,171,37"/>
+<area shape="rect" id="Node000004" href="$class_player.html#a79060b32a95ca6e3f7a482b9ed45fa07" title="ダメージを受ける" alt="" coords="226,56,370,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,51,211,56,211,62,170,57"/>
+<area shape="rect" id="Node000003" href="$class_player.html#ac7d159c578eb4da86911b484b499766c" title="酸素量を変更する" alt="" coords="426,31,576,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,26,411,30,410,35,378,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="370,58,410,53,411,58,370,63"/>
+</map>

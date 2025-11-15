@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/Main.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_main_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Main.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_config_8h_source.html">Core/Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_game_scene_8h_source.html">Scene/GameScene.h</a>&quot;</code><br />
+<code>#include &lt;Siv3D.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Main.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="_main_8cpp__incl.svg" width="1663" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9a88639b57af45dfd4b61ca8021a8c03" id="r_a9a88639b57af45dfd4b61ca8021a8c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a88639b57af45dfd4b61ca8021a8c03">Main</a> ()</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a9a88639b57af45dfd4b61ca8021a8c03" name="a9a88639b57af45dfd4b61ca8021a8c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a88639b57af45dfd4b61ca8021a8c03">&#9670;&#160;</a></span>Main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
+<div class="line"><span class="lineno">    8</span>    <span class="comment">// ウィンドウの初期設定</span></div>
+<div class="line"><span class="lineno">    9</span>    Window::SetTitle(U<span class="stringliteral">&quot;シンカイサンタ&quot;</span>);</div>
+<div class="line"><span class="lineno">   10</span>    Window::SetStyle(WindowStyle::Sizable);</div>
+<div class="line"><span class="lineno">   11</span>    Scene::SetTextureFilter(TextureFilter::Nearest);</div>
+<div class="line"><span class="lineno">   12</span>    Window::Resize(<a class="code hl_variable" href="_config_8h.html#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">kSceneSize</a>);</div>
+<div class="line"><span class="lineno">   13</span>    Scene::SetLetterbox(ColorF{ 0, 0, 0 });</div>
+<div class="line"><span class="lineno">   14</span>    Scene::SetResizeMode(ResizeMode::Keep);</div>
+<div class="line"><span class="lineno">   15</span>    Window::Maximize();</div>
+<div class="line"><span class="lineno">   16</span>    Graphics::SetVSyncEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    <span class="comment">// FPS固定のためのストップウォッチ</span></div>
+<div class="line"><span class="lineno">   19</span>    Stopwatch FPS_SW;</div>
+<div class="line"><span class="lineno">   20</span>    FPS_SW.start();</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>    <span class="comment">// シーンマネージャーを作成</span></div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_typedef" href="_config_8h.html#aaea305de8385c40a637a08e6e3c9d031">App</a> manager;</div>
+<div class="line"><span class="lineno">   24</span>    manager.add&lt;<a class="code hl_class" href="class_game_scene.html">GameScene</a>&gt;(<a class="code hl_enumvalue" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">SceneID::kGame</a>);</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    manager.init(<a class="code hl_enumvalue" href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">SceneID::kGame</a>, 1000.0ms / 60);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    <span class="comment">// ウィンドウを閉じるユーザアクションのみを終了操作に設定</span></div>
+<div class="line"><span class="lineno">   29</span>    System::SetTerminationTriggers(UserAction::CloseButtonClicked);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">while</span>(System::Update())</div>
+<div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span>(not manager.update())</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>        <span class="comment">// 1/60秒が経過するまでループ</span></div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">while</span>(FPS_SW.msF() &lt; 1000.0 / 60) {}</div>
+<div class="line"><span class="lineno">   40</span>        <span class="comment">//ストップウォッチをリスタート</span></div>
+<div class="line"><span class="lineno">   41</span>        FPS_SW.restart();</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="line"><span class="lineno">   43</span>}</div>
+<div class="ttc" id="a_config_8h_html_a3b8841eb4f4bcd8fa09fb6a8cb3394ba"><div class="ttname"><a href="_config_8h.html#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">kSceneSize</a></div><div class="ttdeci">constexpr Size kSceneSize</div><div class="ttdoc">ゲームシーンのサイズ(ピクセル)</div><div class="ttdef"><b>Definition</b> Config.h:9</div></div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca"><div class="ttname"><a href="_config_8h.html#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">SceneID::kGame</a></div><div class="ttdeci">@ kGame</div><div class="ttdoc">ゲームシーン</div><div class="ttdef"><b>Definition</b> Config.h:21</div></div>
+<div class="ttc" id="a_config_8h_html_aaea305de8385c40a637a08e6e3c9d031"><div class="ttname"><a href="_config_8h.html#aaea305de8385c40a637a08e6e3c9d031">App</a></div><div class="ttdeci">s3d::SceneManager&lt; SceneID &gt; App</div><div class="ttdoc">Siv3DのシーンマネージャーにSceneIDを適用した型</div><div class="ttdef"><b>Definition</b> Config.h:25</div></div>
+<div class="ttc" id="aclass_game_scene_html"><div class="ttname"><a href="class_game_scene.html">GameScene</a></div><div class="ttdoc">ゲームシーンを管理する</div><div class="ttdef"><b>Definition</b> GameScene.h:29</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_main_8cpp.html">Main.cpp</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

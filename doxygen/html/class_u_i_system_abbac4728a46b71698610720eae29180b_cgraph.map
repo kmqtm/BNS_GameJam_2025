@@ -1,0 +1,7 @@
+<map id="UISystem::Draw" name="UISystem::Draw">
+<area shape="rect" id="Node000001" title="UIを描画する" alt="" coords="5,31,125,57"/>
+<area shape="rect" id="Node000002" href="$class_u_i_system.html#add73f52b3a30bfc6b1cf9e6da8c4779f" title="酸素ゲージを描画する" alt="" coords="174,5,376,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,34,158,30,159,35,125,39"/>
+<area shape="rect" id="Node000003" href="$class_u_i_system.html#a6d292d581f03920f4e9610c738f5c7bd" title="進捗メーターを描画する" alt="" coords="173,56,377,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,49,157,52,157,58,125,54"/>
+</map>

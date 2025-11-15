@@ -1,0 +1,9 @@
+<map id="IBehaviorStrategy" name="IBehaviorStrategy">
+<area shape="rect" id="Node000001" title="敵の行動戦略を定義するインターフェース" alt="" coords="175,5,300,32"/>
+<area shape="rect" id="Node000002" href="$class_back_and_forth_behavior.html" title="一定距離前後に往復する敵の行動戦略" alt="" coords="5,80,161,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,41,111,82,109,77,196,37"/>
+<area shape="rect" id="Node000003" href="$class_patrol_behavior.html" title="左右に巡回する敵の行動戦略" alt="" coords="184,80,291,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,48,240,80,235,80,235,48"/>
+<area shape="rect" id="Node000004" href="$class_stationary_behavior.html" title="その場から動かない敵の行動戦略" alt="" coords="315,80,446,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="277,37,356,77,354,82,275,42"/>
+</map>

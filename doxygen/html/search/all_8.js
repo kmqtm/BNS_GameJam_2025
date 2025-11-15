@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['ibehaviorstrategy_0',['IBehaviorStrategy',['../class_i_behavior_strategy.html',1,'IBehaviorStrategy'],['../class_enemy.html#ab5104eb64e4ab3ee78f4fa915c58b017',1,'Enemy::IBehaviorStrategy()']]],
+  ['ibehaviorstrategy_2eh_1',['IBehaviorStrategy.h',['../_i_behavior_strategy_8h.html',1,'']]],
+  ['initial_5ffacing_5fright_2',['initial_facing_right',['../struct_enemy_data_system_1_1_enemy_spec.html#ae3b331c1c5189116e2ffe572bff4cd03',1,'EnemyDataSystem::EnemySpec']]],
+  ['initial_5fvelocity_5fx_3',['initial_velocity_x',['../struct_enemy_data_system_1_1_enemy_spec.html#a997c11240fcbef69e91ca3b41e98adf8',1,'EnemyDataSystem::EnemySpec']]],
+  ['invincible_5ftimer_5f_4',['invincible_timer_',['../class_player.html#a4cd3b53582b06799ef137766bd986320',1,'Player']]],
+  ['is_5falive_5f_5',['is_alive_',['../class_enemy.html#a04417b15ad5c94524a36f7ddbc294584',1,'Enemy']]],
+  ['is_5fcolliding_6',['is_colliding',['../struct_collider.html#a858ef0927800ddc75eccacea8ce4c9f6',1,'Collider']]],
+  ['is_5ffacing_5fright_5f_7',['is_facing_right_',['../class_enemy.html#ac7804ce1a6846b160d501be6e6ddb803',1,'Enemy::is_facing_right_'],['../class_player.html#a9720f18c743b7e984a4c4593c4fb5d88',1,'Player::is_facing_right_']]],
+  ['is_5fgrounded_5f_8',['is_grounded_',['../class_player.html#a84de165a09d93bc70a59aee445902a71',1,'Player']]],
+  ['is_5fin_5fending_5f_9',['is_in_ending_',['../class_player.html#a81a4b0eff0c8920e74bac0f03cdc7e40',1,'Player']]],
+  ['is_5fintro_5ffinished_5f_10',['is_intro_finished_',['../class_game_scene.html#a51bb879d96662711ff93191ab1396efe',1,'GameScene']]],
+  ['is_5finvincible_5f_11',['is_invincible_',['../class_player.html#a1b6c42ba7dc2c6fa213780f3af1943bc',1,'Player']]],
+  ['is_5flooping_12',['is_looping',['../struct_animation.html#a4906270e700b1cb1422a751c6847ef45',1,'Animation::is_looping'],['../struct_enemy_data_system_1_1_animation_spec.html#aed08d76c7f70110f6c76bd66710bc8f7',1,'EnemyDataSystem::AnimationSpec::is_looping']]],
+  ['is_5fmoving_5fx_5f_13',['is_moving_x_',['../class_player.html#a943891f2c5a5225bba6d8cb9b936056d',1,'Player']]],
+  ['is_5foxygen_5fempty_5f_14',['is_oxygen_empty_',['../class_player.html#a883ba5d9eab682d3f9a7ea0b6e942372',1,'Player']]],
+  ['isalive_15',['IsAlive',['../class_enemy.html#a9430d173b04d905722ab1f022c0d7560',1,'Enemy']]],
+  ['isloaded_16',['IsLoaded',['../class_enemy_data_system.html#acf1448f15bf85d29c0391a3067608e06',1,'EnemyDataSystem']]],
+  ['isoxygenempty_17',['IsOxygenEmpty',['../class_player.html#abf577519cc0265417050b596ee5651dd',1,'Player']]],
+  ['isplaying_18',['IsPlaying',['../class_animation_controller.html#a8b7d4512f1f0c26816b3574861b7feb5',1,'AnimationController::IsPlaying()'],['../class_sound_controller.html#af5f88ac95ec173e5b999fe5e548b8b9d',1,'SoundController::IsPlaying()']]],
+  ['issceneassetsready_19',['IsSceneAssetsReady',['../class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc',1,'AssetSystem']]],
+  ['issolid_20',['IsSolid',['../class_stage.html#a95f9531749e71dfe6c880295abeb9d8c',1,'Stage']]]
+];

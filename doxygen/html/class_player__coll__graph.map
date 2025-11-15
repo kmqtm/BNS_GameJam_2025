@@ -1,0 +1,11 @@
+<map id="Player" name="Player">
+<area shape="rect" id="Node000001" title="プレイヤーを管理する" alt="" coords="133,203,191,229"/>
+<area shape="rect" id="Node000002" href="$struct_collider.html" title="衝突判定を管理する構造体" alt="" coords="5,104,71,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,139,109,177,143,200,140,204,106,181,61,143"/>
+<area shape="rect" id="Node000003" href="$class_animation_controller.html" title="アニメーション再生を管理する" alt="" coords="94,104,230,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,146,165,202,159,202,159,146"/>
+<area shape="rect" id="Node000004" href="$struct_animation.html" title="アニメーション再生に必要な情報を保持する構造体" alt="" coords="122,5,202,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="165,48,165,104,159,104,159,48"/>
+<area shape="rect" id="Node000005" href="$class_sound_controller.html" title="サウンド再生を管理する" alt="" coords="254,104,368,131"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="301,146,288,164,272,181,232,202,192,213,191,208,230,197,268,177,284,161,296,143"/>
+</map>

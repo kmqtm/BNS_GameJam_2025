@@ -1,0 +1,9 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="Node000001" title="敵を管理する" alt="" coords="108,203,171,229"/>
+<area shape="rect" id="Node000002" href="$class_animation_controller.html" title="アニメーション再生を管理する" alt="" coords="5,104,141,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,146,71,162,76,177,91,192,109,203,107,207,87,197,72,180,66,163,65,146"/>
+<area shape="rect" id="Node000003" href="$struct_animation.html" title="アニメーション再生に必要な情報を保持する構造体" alt="" coords="33,5,113,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,48,76,104,70,104,70,48"/>
+<area shape="rect" id="Node000004" href="$struct_collider.html" title="衝突判定を管理する構造体" alt="" coords="174,104,239,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,147,179,180,157,204,153,200,175,177,193,144"/>
+</map>

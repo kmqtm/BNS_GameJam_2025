@@ -1,0 +1,9 @@
+<map id="CameraSystem::ComputeCameraCenter" name="CameraSystem::ComputeCameraCenter">
+<area shape="rect" id="Node000001" title="カメラ中心座標を作成する" alt="" coords="522,23,741,65"/>
+<area shape="rect" id="Node000002" href="$class_camera_system.html#a974b77a3f97e5cfd7d8bc0ee36bc87e3" title="カメラオフセットを取得する" alt="" coords="252,5,474,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="506,35,474,32,475,27,507,30"/>
+<area shape="rect" id="Node000004" href="$class_camera_system.html#ac2a02c40c7d6c3a9876461ab771796c8" title="カメラを更新する" alt="" coords="282,56,444,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="507,58,445,64,444,59,506,53"/>
+<area shape="rect" id="Node000003" href="$class_camera_system.html#aa2deafb88dba2bffe23d35ac6e4230bd" title="ビュー矩形を取得する" alt="" coords="5,5,204,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,21,204,21,204,16,236,16"/>
+</map>

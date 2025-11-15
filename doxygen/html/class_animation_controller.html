@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: AnimationController クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_animation_controller.html','','class_animation_controller-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AnimationController クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>アニメーション再生を管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animation_controller_8h_source.html">AnimationController.h</a>&gt;</code></p>
+<div class="dynheader">
+AnimationController 連携図</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_animation_controller__coll__graph.svg" width="196" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a13976b0254122a71974b37ebc93b8526" id="r_a13976b0254122a71974b37ebc93b8526"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13976b0254122a71974b37ebc93b8526">AnimationController</a> ()</td></tr>
+<tr class="memdesc:a13976b0254122a71974b37ebc93b8526"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:adbe6fabacec92f3b4949e00c82165954" id="r_adbe6fabacec92f3b4949e00c82165954"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbe6fabacec92f3b4949e00c82165954">AddAnimation</a> (const String &amp;name, const <a class="el" href="struct_animation.html">Animation</a> &amp;animation)</td></tr>
+<tr class="memdesc:adbe6fabacec92f3b4949e00c82165954"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションを登録する  <br /></td></tr>
+<tr class="memitem:a81ce88f4b5e47116844bdb7678c1dd5f" id="r_a81ce88f4b5e47116844bdb7678c1dd5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81ce88f4b5e47116844bdb7678c1dd5f">Play</a> (const String &amp;name)</td></tr>
+<tr class="memdesc:a81ce88f4b5e47116844bdb7678c1dd5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したアニメーションの再生を開始する  <br /></td></tr>
+<tr class="memitem:a8b7d4512f1f0c26816b3574861b7feb5" id="r_a8b7d4512f1f0c26816b3574861b7feb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b7d4512f1f0c26816b3574861b7feb5">IsPlaying</a> (const String &amp;animation_name) const</td></tr>
+<tr class="memdesc:a8b7d4512f1f0c26816b3574861b7feb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したアニメーションが再生中かを判定する  <br /></td></tr>
+<tr class="memitem:a47be807ad0c8eb197bd0b5b0214bab7e" id="r_a47be807ad0c8eb197bd0b5b0214bab7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47be807ad0c8eb197bd0b5b0214bab7e">Update</a> ()</td></tr>
+<tr class="memdesc:a47be807ad0c8eb197bd0b5b0214bab7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションを1フレーム進める  <br /></td></tr>
+<tr class="memitem:a674aea6c0976f31049797023b78593df" id="r_a674aea6c0976f31049797023b78593df"><td class="memItemLeft" align="right" valign="top">s3d::Optional&lt; TextureAsset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a674aea6c0976f31049797023b78593df">GetCurrentTextureAsset</a> () const</td></tr>
+<tr class="memdesc:a674aea6c0976f31049797023b78593df"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のフレームのテクスチャを取得する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ab3bb8202cb898ec29d0cd858c3b38993" id="r_ab3bb8202cb898ec29d0cd858c3b38993"><td class="memItemLeft" align="right" valign="top">HashTable&lt; String, <a class="el" href="struct_animation.html">Animation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3bb8202cb898ec29d0cd858c3b38993">animations_</a></td></tr>
+<tr class="memdesc:ab3bb8202cb898ec29d0cd858c3b38993"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録されたアニメーション(識別名とアニメーションデータのマッピング)  <br /></td></tr>
+<tr class="memitem:aac9eed62d0bd4aca37ca0de62ffcc495" id="r_aac9eed62d0bd4aca37ca0de62ffcc495"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9eed62d0bd4aca37ca0de62ffcc495">current_animation_name_</a></td></tr>
+<tr class="memdesc:aac9eed62d0bd4aca37ca0de62ffcc495"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在再生中のアニメーションの識別名  <br /></td></tr>
+<tr class="memitem:a5d02ad45ac426c098b33a26d87561ec5" id="r_a5d02ad45ac426c098b33a26d87561ec5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a></td></tr>
+<tr class="memdesc:a5d02ad45ac426c098b33a26d87561ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在再生中のフレームインデックス  <br /></td></tr>
+<tr class="memitem:a5180fbb69ae37e58379d812acb6d31dc" id="r_a5180fbb69ae37e58379d812acb6d31dc"><td class="memItemLeft" align="right" valign="top">Stopwatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5180fbb69ae37e58379d812acb6d31dc">frame_timer_</a></td></tr>
+<tr class="memdesc:a5180fbb69ae37e58379d812acb6d31dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム表示時間を計測するストップウォッチ  <br /></td></tr>
+<tr class="memitem:a8e7aab80058f8a4dc42a168d67ce5d3a" id="r_a8e7aab80058f8a4dc42a168d67ce5d3a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_animation.html">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a> = nullptr</td></tr>
+<tr class="memdesc:a8e7aab80058f8a4dc42a168d67ce5d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のアニメーションデータへのキャッシュポインタ  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>アニメーション再生を管理する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a13976b0254122a71974b37ebc93b8526" name="a13976b0254122a71974b37ebc93b8526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13976b0254122a71974b37ebc93b8526">&#9670;&#160;</a></span>AnimationController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationController::AnimationController </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    : <a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a>{ 0 }</div>
+<div class="line"><span class="lineno">    5</span>    , <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>{ <span class="keyword">nullptr</span> }</div>
+<div class="line"><span class="lineno">    6</span>{</div>
+<div class="line"><span class="lineno">    7</span>}</div>
+<div class="ttc" id="aclass_animation_controller_html_a5d02ad45ac426c098b33a26d87561ec5"><div class="ttname"><a href="#a5d02ad45ac426c098b33a26d87561ec5">AnimationController::current_frame_index_</a></div><div class="ttdeci">size_t current_frame_index_</div><div class="ttdoc">現在再生中のフレームインデックス</div><div class="ttdef"><b>Definition</b> AnimationController.h:46</div></div>
+<div class="ttc" id="aclass_animation_controller_html_a8e7aab80058f8a4dc42a168d67ce5d3a"><div class="ttname"><a href="#a8e7aab80058f8a4dc42a168d67ce5d3a">AnimationController::current_animation_</a></div><div class="ttdeci">const Animation * current_animation_</div><div class="ttdoc">現在のアニメーションデータへのキャッシュポインタ</div><div class="ttdef"><b>Definition</b> AnimationController.h:52</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="adbe6fabacec92f3b4949e00c82165954" name="adbe6fabacec92f3b4949e00c82165954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe6fabacec92f3b4949e00c82165954">&#9670;&#160;</a></span>AddAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimationController::AddAnimation </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_animation.html">Animation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>animation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーションを登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>識別名 </td></tr>
+    <tr><td class="paramname">animation</td><td>アニメーションデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{</div>
+<div class="line"><span class="lineno">   11</span>    <a class="code hl_variable" href="#ab3bb8202cb898ec29d0cd858c3b38993">animations_</a>[name] = animation;</div>
+<div class="line"><span class="lineno">   12</span>}</div>
+<div class="ttc" id="aclass_animation_controller_html_ab3bb8202cb898ec29d0cd858c3b38993"><div class="ttname"><a href="#ab3bb8202cb898ec29d0cd858c3b38993">AnimationController::animations_</a></div><div class="ttdeci">HashTable&lt; String, Animation &gt; animations_</div><div class="ttdoc">登録されたアニメーション(識別名とアニメーションデータのマッピング)</div><div class="ttdef"><b>Definition</b> AnimationController.h:40</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a674aea6c0976f31049797023b78593df" name="a674aea6c0976f31049797023b78593df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674aea6c0976f31049797023b78593df">&#9670;&#160;</a></span>GetCurrentTextureAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s3d::Optional&lt; TextureAsset &gt; AnimationController::GetCurrentTextureAsset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のフレームのテクスチャを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>テクスチャアセット。再生中でない場合はnullopt </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>)</div>
+<div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> s3d::none;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keyword">const</span> String&amp; asset_name = <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>-&gt;texture_asset_names[<a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a>];</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span>(not TextureAsset::IsRegistered(asset_name))</div>
+<div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        Print &lt;&lt; U<span class="stringliteral">&quot;エラー: アセット名&#39;{}&#39;は登録されていません．&quot;</span>_fmt(asset_name);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> s3d::none;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> TextureAsset(asset_name);</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b7d4512f1f0c26816b3574861b7feb5" name="a8b7d4512f1f0c26816b3574861b7feb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7d4512f1f0c26816b3574861b7feb5">&#9670;&#160;</a></span>IsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AnimationController::IsPlaying </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>animation_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したアニメーションが再生中かを判定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animation_name</td><td>確認するアニメーションの識別名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>再生中の場合はtrue，それ以外の場合はfalse </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#aac9eed62d0bd4aca37ca0de62ffcc495">current_animation_name_</a> == animation_name;</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="aclass_animation_controller_html_aac9eed62d0bd4aca37ca0de62ffcc495"><div class="ttname"><a href="#aac9eed62d0bd4aca37ca0de62ffcc495">AnimationController::current_animation_name_</a></div><div class="ttdeci">String current_animation_name_</div><div class="ttdoc">現在再生中のアニメーションの識別名</div><div class="ttdef"><b>Definition</b> AnimationController.h:43</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81ce88f4b5e47116844bdb7678c1dd5f" name="a81ce88f4b5e47116844bdb7678c1dd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ce88f4b5e47116844bdb7678c1dd5f">&#9670;&#160;</a></span>Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimationController::Play </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したアニメーションの再生を開始する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>再生するアニメーションの識別名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#ab3bb8202cb898ec29d0cd858c3b38993">animations_</a>.contains(name))</div>
+<div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aac9eed62d0bd4aca37ca0de62ffcc495">current_animation_name_</a> == name)</div>
+<div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_variable" href="#aac9eed62d0bd4aca37ca0de62ffcc495">current_animation_name_</a> = name;</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a> = 0;</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="#a5180fbb69ae37e58379d812acb6d31dc">frame_timer_</a>.restart();</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>    <span class="comment">// アニメーションデータへのポインタをキャッシュ</span></div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a> = &amp;<a class="code hl_variable" href="#ab3bb8202cb898ec29d0cd858c3b38993">animations_</a>.at(name);</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aclass_animation_controller_html_a5180fbb69ae37e58379d812acb6d31dc"><div class="ttname"><a href="#a5180fbb69ae37e58379d812acb6d31dc">AnimationController::frame_timer_</a></div><div class="ttdeci">Stopwatch frame_timer_</div><div class="ttdoc">フレーム表示時間を計測するストップウォッチ</div><div class="ttdef"><b>Definition</b> AnimationController.h:49</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a47be807ad0c8eb197bd0b5b0214bab7e" name="a47be807ad0c8eb197bd0b5b0214bab7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47be807ad0c8eb197bd0b5b0214bab7e">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimationController::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーションを1フレーム進める </p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>)</div>
+<div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a5180fbb69ae37e58379d812acb6d31dc">frame_timer_</a>.sF() &lt; <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>-&gt;frame_duration_sec)</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a>++;</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#a5180fbb69ae37e58379d812acb6d31dc">frame_timer_</a>.restart();</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a> &gt;= <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>-&gt;texture_asset_names.size())</div>
+<div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>-&gt;is_looping)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a> = 0;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_variable" href="#a5d02ad45ac426c098b33a26d87561ec5">current_frame_index_</a> = <a class="code hl_variable" href="#a8e7aab80058f8a4dc42a168d67ce5d3a">current_animation_</a>-&gt;texture_asset_names.size() - 1;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="ab3bb8202cb898ec29d0cd858c3b38993" name="ab3bb8202cb898ec29d0cd858c3b38993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bb8202cb898ec29d0cd858c3b38993">&#9670;&#160;</a></span>animations_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashTable&lt;String, <a class="el" href="struct_animation.html">Animation</a>&gt; AnimationController::animations_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>登録されたアニメーション(識別名とアニメーションデータのマッピング) </p>
+
+</div>
+</div>
+<a id="a8e7aab80058f8a4dc42a168d67ce5d3a" name="a8e7aab80058f8a4dc42a168d67ce5d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7aab80058f8a4dc42a168d67ce5d3a">&#9670;&#160;</a></span>current_animation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_animation.html">Animation</a>* AnimationController::current_animation_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在のアニメーションデータへのキャッシュポインタ </p>
+
+</div>
+</div>
+<a id="aac9eed62d0bd4aca37ca0de62ffcc495" name="aac9eed62d0bd4aca37ca0de62ffcc495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9eed62d0bd4aca37ca0de62ffcc495">&#9670;&#160;</a></span>current_animation_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String AnimationController::current_animation_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在再生中のアニメーションの識別名 </p>
+
+</div>
+</div>
+<a id="a5d02ad45ac426c098b33a26d87561ec5" name="a5d02ad45ac426c098b33a26d87561ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d02ad45ac426c098b33a26d87561ec5">&#9670;&#160;</a></span>current_frame_index_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t AnimationController::current_frame_index_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在再生中のフレームインデックス </p>
+
+</div>
+</div>
+<a id="a5180fbb69ae37e58379d812acb6d31dc" name="a5180fbb69ae37e58379d812acb6d31dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5180fbb69ae37e58379d812acb6d31dc">&#9670;&#160;</a></span>frame_timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stopwatch AnimationController::frame_timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フレーム表示時間を計測するストップウォッチ </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/Component/<a class="el" href="_animation_controller_8h_source.html">AnimationController.h</a></li>
+<li>src/Component/<a class="el" href="_animation_controller_8cpp.html">AnimationController.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_animation_controller.html">AnimationController</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

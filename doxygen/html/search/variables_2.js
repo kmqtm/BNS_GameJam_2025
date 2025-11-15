@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['camera_5f_0',['camera_',['../class_camera_system.html#a7cd30da69efbd7fe1a404a1d77e50497',1,'CameraSystem']]],
+  ['camera_5fmanager_5f_1',['camera_manager_',['../class_game_scene.html#ae02f3fc820bd84d4ecaadaf2737e3e3e',1,'GameScene']]],
+  ['collided_5ftags_2',['collided_tags',['../struct_collider.html#a3620f8d0a4af25a2b7c0073fb888810a',1,'Collider']]],
+  ['collider_3',['collider',['../class_player.html#a10fd723bd44718d2b5c3ad12f7fd8ef5',1,'Player::collider'],['../struct_collision_system_1_1_collider_entry.html#af08db4236182316200d27be9e5d2fe6e',1,'CollisionSystem::ColliderEntry::collider']]],
+  ['collider_5f_4',['collider_',['../class_enemy.html#a8507370f060194fb572ff108b9475615',1,'Enemy::collider_'],['../class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e',1,'OxygenSpot::collider_']]],
+  ['collider_5fheight_5',['collider_height',['../struct_enemy_data_system_1_1_enemy_spec.html#a90e1da957677337dca00d2ed6d5274ea',1,'EnemyDataSystem::EnemySpec']]],
+  ['collider_5fradius_6',['collider_radius',['../struct_enemy_data_system_1_1_enemy_spec.html#a81ddbf3cc1c11c958bc3742183dc7f6b',1,'EnemyDataSystem::EnemySpec']]],
+  ['collider_5fshape_7',['collider_shape',['../struct_enemy_data_system_1_1_enemy_spec.html#ab1364f30a08775fac50216d01a544d1f',1,'EnemyDataSystem::EnemySpec']]],
+  ['collider_5fwidth_8',['collider_width',['../struct_enemy_data_system_1_1_enemy_spec.html#a9323bd24cc9f9637cc785db8075fe2c4',1,'EnemyDataSystem::EnemySpec']]],
+  ['collision_5flayer_5f_9',['collision_layer_',['../class_stage.html#ad1b7b579a4e1afc0d1b9a4e1944e424b',1,'Stage']]],
+  ['collision_5flayer_5fname_5f_10',['collision_layer_name_',['../class_stage.html#a132d931a4431af5a7eedb6f8201c3229',1,'Stage']]],
+  ['collision_5fmanager_5f_11',['collision_manager_',['../class_game_scene.html#a2e50b365a5b44298a88b522c2b215382',1,'GameScene']]],
+  ['collision_5foffset_12',['collision_offset',['../struct_enemy_data_system_1_1_enemy_spec.html#ad74c02d228d2494c8edf803075abd8d0',1,'EnemyDataSystem::EnemySpec']]],
+  ['collision_5foffset_5f_13',['collision_offset_',['../class_enemy.html#ac9fd8873c3b673f8fe9d3670f7b0a32a',1,'Enemy']]],
+  ['current_5fanimation_5f_14',['current_animation_',['../class_animation_controller.html#a8e7aab80058f8a4dc42a168d67ce5d3a',1,'AnimationController']]],
+  ['current_5fanimation_5fname_5f_15',['current_animation_name_',['../class_animation_controller.html#aac9eed62d0bd4aca37ca0de62ffcc495',1,'AnimationController']]],
+  ['current_5fframe_5findex_5f_16',['current_frame_index_',['../class_animation_controller.html#a5d02ad45ac426c098b33a26d87561ec5',1,'AnimationController']]],
+  ['current_5foxygen_5f_17',['current_oxygen_',['../class_u_i_system.html#ae2c6088eedb20843dbca6b25826c859d',1,'UISystem']]],
+  ['current_5fplaying_5fbgm_5fasset_5f_18',['current_playing_bgm_asset_',['../class_game_scene.html#a8939149550ec6173266a918dbc3c675d',1,'GameScene']]],
+  ['current_5fscene_5fname_5f_19',['current_scene_name_',['../class_asset_system.html#a331ce0c5847cff3bcc955be4adb3d5c5',1,'AssetSystem']]],
+  ['current_5fstate_5f_20',['current_state_',['../class_game_scene.html#aa4789bb9a02b48fc4facf16962ca4a75',1,'GameScene']]],
+  ['current_5fy_5f_21',['current_y_',['../class_camera_system.html#a74150033e1c4748c194119c8b20321ae',1,'CameraSystem']]]
+];

@@ -1,0 +1,14 @@
+<map id="GameScene::~GameScene" name="GameScene::~GameScene">
+<area shape="rect" id="Node000001" title="デストラクタ" alt="" coords="5,55,187,81"/>
+<area shape="rect" id="Node000002" href="$class_asset_system.html#ac182714115a88042762b2c178a6865ca" title="シングルトンインスタンスを取得する" alt="" coords="250,29,429,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,56,234,51,235,56,188,61"/>
+<area shape="rect" id="Node000004" href="$class_asset_system.html#ab7a0d836fbd30a0f29e661f9832a15b4" title="現在のシーンのアセット登録をすべて解除する" alt="" coords="235,80,444,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="188,75,220,78,219,83,187,80"/>
+<area shape="rect" id="Node000003" href="$class_asset_system.html#a01eef25242d94de3e93ac0644a269127" title="コピーコンストラクタ(削除)" alt="" coords="498,29,685,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,40,483,40,483,45,429,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="550,31,543,21,548,11,565,5,592,3,621,5,637,12,635,17,620,10,592,8,566,10,551,15,548,20,555,27"/>
+<area shape="rect" id="Node000005" href="$class_asset_system.html#a88219cddf418f7a49d68ec447eb8ed13" title="非同期ロードが完了するまで待機する" alt="" coords="492,80,691,107"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="444,91,476,91,476,96,444,96"/>
+<area shape="rect" id="Node000006" href="$class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc" title="現在のシーンのアセット非同期ロードが完了したか" alt="" coords="739,72,937,115"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="692,91,724,91,724,96,692,96"/>
+</map>

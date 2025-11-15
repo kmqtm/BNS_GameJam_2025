@@ -1,0 +1,9 @@
+<map id="CameraSystem::GetViewRect" name="CameraSystem::GetViewRect">
+<area shape="rect" id="Node000001" title="ビュー矩形を取得する" alt="" coords="5,43,204,69"/>
+<area shape="rect" id="Node000002" href="$class_camera_system.html#a974b77a3f97e5cfd7d8bc0ee36bc87e3" title="カメラオフセットを取得する" alt="" coords="252,43,474,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,53,236,53,236,59,204,59"/>
+<area shape="rect" id="Node000003" href="$class_camera_system.html#a154a58ca736a1bc9cb4b27eadb25bc11" title="カメラ中心座標を作成する" alt="" coords="522,5,741,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,41,506,38,507,43,475,47"/>
+<area shape="rect" id="Node000004" href="$class_camera_system.html#a579af8227e36631553fe0c4cb5a40478" title="ビューサイズの半分を取得する" alt="" coords="532,72,731,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="475,65,517,70,516,75,474,71"/>
+</map>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/System/CameraSystem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_camera_system_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CameraSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_system_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor"># include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_camera_system.html">    9</a></span><span class="keyword">class </span><a class="code hl_function" href="class_camera_system.html#a1bd1d2f47e503cee710a40522edf9f93">CameraSystem</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="class_camera_system.html#a1bd1d2f47e503cee710a40522edf9f93">CameraSystem</a>(<span class="keywordtype">double</span> fixed_world_x, <span class="keyword">const</span> Size&amp; view_size);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_system.html#a6811d7221823bae39e36c65842c1077b">SetTargetY</a>(<span class="keywordtype">double</span> target_y);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_system.html#af03fcc446d455a32cb9bafcf234a3930">SetYOffsetRatio</a>(<span class="keywordtype">double</span> ratio);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_system.html#ac2a02c40c7d6c3a9876461ab771796c8">Update</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    Vec2 <a class="code hl_function" href="class_camera_system.html#a974b77a3f97e5cfd7d8bc0ee36bc87e3">GetCameraOffset</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    RectF <a class="code hl_function" href="class_camera_system.html#aa2deafb88dba2bffe23d35ac6e4230bd">GetViewRect</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_camera_system.html#a7cd30da69efbd7fe1a404a1d77e50497">   38</a></span>    Camera2D <a class="code hl_variable" href="class_camera_system.html#a7cd30da69efbd7fe1a404a1d77e50497">camera_</a>{ Vec2::Zero(), 1.0, Camera2DParameters::NoControl() };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_camera_system.html#a7c0097471d3ae10db9451d95833a82a3">   41</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_camera_system.html#a7c0097471d3ae10db9451d95833a82a3">fixed_world_x_</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_camera_system.html#ad0f5d92a33f7da5ca2e4cb601d362131">   44</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_camera_system.html#ad0f5d92a33f7da5ca2e4cb601d362131">y_offset_</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_camera_system.html#a54643cc4048c7cad3349a0899e29183a">   47</a></span>    Size <a class="code hl_variable" href="class_camera_system.html#a54643cc4048c7cad3349a0899e29183a">view_size_</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_camera_system.html#a7054aeb52932bb13f3870c7209f0ef92">   50</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_camera_system.html#a7054aeb52932bb13f3870c7209f0ef92">target_y_</a> = 0.0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_camera_system.html#a74150033e1c4748c194119c8b20321ae">   53</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_camera_system.html#a74150033e1c4748c194119c8b20321ae">current_y_</a> = 0.0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_camera_system.html#a5e67f39df251b89b9b2c5509018d079e">ComputeGoalY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_camera_system.html#a5d1c042584093e6114683962330c8a3d">SmoothTo</a>(<span class="keywordtype">double</span> current, <span class="keywordtype">double</span> goal, <span class="keywordtype">double</span> factor) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    Vec2 <a class="code hl_function" href="class_camera_system.html#a154a58ca736a1bc9cb4b27eadb25bc11">ComputeCameraCenter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    Vec2 <a class="code hl_function" href="class_camera_system.html#a579af8227e36631553fe0c4cb5a40478">HalfViewSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="ttc" id="aclass_camera_system_html_a154a58ca736a1bc9cb4b27eadb25bc11"><div class="ttname"><a href="class_camera_system.html#a154a58ca736a1bc9cb4b27eadb25bc11">CameraSystem::ComputeCameraCenter</a></div><div class="ttdeci">Vec2 ComputeCameraCenter() const</div><div class="ttdoc">カメラ中心座標を作成する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:39</div></div>
+<div class="ttc" id="aclass_camera_system_html_a1bd1d2f47e503cee710a40522edf9f93"><div class="ttname"><a href="class_camera_system.html#a1bd1d2f47e503cee710a40522edf9f93">CameraSystem::CameraSystem</a></div><div class="ttdeci">CameraSystem(double fixed_world_x, const Size &amp;view_size)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:6</div></div>
+<div class="ttc" id="aclass_camera_system_html_a54643cc4048c7cad3349a0899e29183a"><div class="ttname"><a href="class_camera_system.html#a54643cc4048c7cad3349a0899e29183a">CameraSystem::view_size_</a></div><div class="ttdeci">Size view_size_</div><div class="ttdoc">ビューサイズ</div><div class="ttdef"><b>Definition</b> CameraSystem.h:47</div></div>
+<div class="ttc" id="aclass_camera_system_html_a579af8227e36631553fe0c4cb5a40478"><div class="ttname"><a href="class_camera_system.html#a579af8227e36631553fe0c4cb5a40478">CameraSystem::HalfViewSize</a></div><div class="ttdeci">Vec2 HalfViewSize() const</div><div class="ttdoc">ビューサイズの半分を取得する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:44</div></div>
+<div class="ttc" id="aclass_camera_system_html_a5d1c042584093e6114683962330c8a3d"><div class="ttname"><a href="class_camera_system.html#a5d1c042584093e6114683962330c8a3d">CameraSystem::SmoothTo</a></div><div class="ttdeci">double SmoothTo(double current, double goal, double factor) const</div><div class="ttdoc">現在値を目標に滑らかに補間する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:33</div></div>
+<div class="ttc" id="aclass_camera_system_html_a5e67f39df251b89b9b2c5509018d079e"><div class="ttname"><a href="class_camera_system.html#a5e67f39df251b89b9b2c5509018d079e">CameraSystem::ComputeGoalY</a></div><div class="ttdeci">double ComputeGoalY() const</div><div class="ttdoc">カメラ中心の目標Yを計算する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:27</div></div>
+<div class="ttc" id="aclass_camera_system_html_a6811d7221823bae39e36c65842c1077b"><div class="ttname"><a href="class_camera_system.html#a6811d7221823bae39e36c65842c1077b">CameraSystem::SetTargetY</a></div><div class="ttdeci">void SetTargetY(double target_y)</div><div class="ttdoc">カメラのターゲットY座標を設定する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:16</div></div>
+<div class="ttc" id="aclass_camera_system_html_a7054aeb52932bb13f3870c7209f0ef92"><div class="ttname"><a href="class_camera_system.html#a7054aeb52932bb13f3870c7209f0ef92">CameraSystem::target_y_</a></div><div class="ttdeci">double target_y_</div><div class="ttdoc">ターゲットのY座標</div><div class="ttdef"><b>Definition</b> CameraSystem.h:50</div></div>
+<div class="ttc" id="aclass_camera_system_html_a74150033e1c4748c194119c8b20321ae"><div class="ttname"><a href="class_camera_system.html#a74150033e1c4748c194119c8b20321ae">CameraSystem::current_y_</a></div><div class="ttdeci">double current_y_</div><div class="ttdoc">現在のカメラのY座標</div><div class="ttdef"><b>Definition</b> CameraSystem.h:53</div></div>
+<div class="ttc" id="aclass_camera_system_html_a7c0097471d3ae10db9451d95833a82a3"><div class="ttname"><a href="class_camera_system.html#a7c0097471d3ae10db9451d95833a82a3">CameraSystem::fixed_world_x_</a></div><div class="ttdeci">double fixed_world_x_</div><div class="ttdoc">X座標(固定)</div><div class="ttdef"><b>Definition</b> CameraSystem.h:41</div></div>
+<div class="ttc" id="aclass_camera_system_html_a7cd30da69efbd7fe1a404a1d77e50497"><div class="ttname"><a href="class_camera_system.html#a7cd30da69efbd7fe1a404a1d77e50497">CameraSystem::camera_</a></div><div class="ttdeci">Camera2D camera_</div><div class="ttdoc">2Dカメラ</div><div class="ttdef"><b>Definition</b> CameraSystem.h:38</div></div>
+<div class="ttc" id="aclass_camera_system_html_a974b77a3f97e5cfd7d8bc0ee36bc87e3"><div class="ttname"><a href="class_camera_system.html#a974b77a3f97e5cfd7d8bc0ee36bc87e3">CameraSystem::GetCameraOffset</a></div><div class="ttdeci">Vec2 GetCameraOffset() const</div><div class="ttdoc">カメラオフセットを取得する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:60</div></div>
+<div class="ttc" id="aclass_camera_system_html_aa2deafb88dba2bffe23d35ac6e4230bd"><div class="ttname"><a href="class_camera_system.html#aa2deafb88dba2bffe23d35ac6e4230bd">CameraSystem::GetViewRect</a></div><div class="ttdeci">RectF GetViewRect() const</div><div class="ttdoc">ビュー矩形を取得する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:67</div></div>
+<div class="ttc" id="aclass_camera_system_html_ac2a02c40c7d6c3a9876461ab771796c8"><div class="ttname"><a href="class_camera_system.html#ac2a02c40c7d6c3a9876461ab771796c8">CameraSystem::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">カメラを更新する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:49</div></div>
+<div class="ttc" id="aclass_camera_system_html_ad0f5d92a33f7da5ca2e4cb601d362131"><div class="ttname"><a href="class_camera_system.html#ad0f5d92a33f7da5ca2e4cb601d362131">CameraSystem::y_offset_</a></div><div class="ttdeci">double y_offset_</div><div class="ttdoc">Y軸のオフセット値</div><div class="ttdef"><b>Definition</b> CameraSystem.h:44</div></div>
+<div class="ttc" id="aclass_camera_system_html_af03fcc446d455a32cb9bafcf234a3930"><div class="ttname"><a href="class_camera_system.html#af03fcc446d455a32cb9bafcf234a3930">CameraSystem::SetYOffsetRatio</a></div><div class="ttdeci">void SetYOffsetRatio(double ratio)</div><div class="ttdoc">カメラのY軸オフセット比率を変更する</div><div class="ttdef"><b>Definition</b> CameraSystem.cpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_camera_system_8h.html">CameraSystem.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

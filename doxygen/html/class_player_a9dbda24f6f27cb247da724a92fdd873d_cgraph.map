@@ -1,0 +1,19 @@
+<map id="Player::UpdatePhysics" name="Player::UpdatePhysics">
+<area shape="rect" id="Node000001" title="物理演算を更新する" alt="" coords="5,107,161,133"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a6540d726e6044e7a98d720484cba0b96" title="摩擦を適用する" alt="" coords="237,5,380,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,104,148,73,208,42,226,35,228,40,210,46,151,77,105,108"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a34222904c837a901c35e95924e1dc2b7" title="重力を適用する" alt="" coords="238,56,379,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,103,231,84,232,89,146,109"/>
+<area shape="rect" id="Node000004" href="$class_player.html#abfeffb1320e2b63619161ae38b792e11" title="X軸方向の移動処理" alt="" coords="255,157,362,184"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,131,240,153,239,158,145,137"/>
+<area shape="rect" id="Node000007" href="$class_player.html#ae83f03e905e8fe4771a95345ef626d18" title="Y軸方向の移動処理" alt="" coords="255,107,362,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="161,117,239,117,239,123,161,123"/>
+<area shape="rect" id="Node000008" href="$class_player.html#a17e6f8a992c713d22e0e833398a3395b" title="コライダー位置を更新する" alt="" coords="209,208,408,235"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="105,132,151,163,210,194,228,200,226,205,208,198,148,167,102,136"/>
+<area shape="rect" id="Node000005" href="$class_stage.html#aa1ee7cbc0b2b77c60aba3665038c2e91" title="タイルサイズを取得する" alt="" coords="456,107,587,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="362,155,447,135,448,140,363,161"/>
+<area shape="rect" id="Node000006" href="$class_stage.html#a95f9531749e71dfe6c880295abeb9d8c" title="指定したワールド座標が壁タイル上かを判定する" alt="" coords="470,157,573,184"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="362,168,454,168,454,173,362,173"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="362,117,440,117,440,123,362,123"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="363,130,455,152,454,158,362,135"/>
+</map>

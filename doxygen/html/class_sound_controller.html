@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: SoundController クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_sound_controller.html','','class_sound_controller-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SoundController クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>サウンド再生を管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sound_controller_8h_source.html">SoundController.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae9d4c141022e6955993e3633263b61f2" id="r_ae9d4c141022e6955993e3633263b61f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9d4c141022e6955993e3633263b61f2">SoundController</a> ()</td></tr>
+<tr class="memdesc:ae9d4c141022e6955993e3633263b61f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:ae63145adc9c2a5e9be1d3ae201eca8c5" id="r_ae63145adc9c2a5e9be1d3ae201eca8c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae63145adc9c2a5e9be1d3ae201eca8c5">Play</a> (const String &amp;asset_name, bool loop=false)</td></tr>
+<tr class="memdesc:ae63145adc9c2a5e9be1d3ae201eca8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">サウンドを再生する  <br /></td></tr>
+<tr class="memitem:aa75333d76f825299d5c28147b2ed00fd" id="r_aa75333d76f825299d5c28147b2ed00fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa75333d76f825299d5c28147b2ed00fd">Stop</a> (const String &amp;asset_name)</td></tr>
+<tr class="memdesc:aa75333d76f825299d5c28147b2ed00fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したサウンドを停止する  <br /></td></tr>
+<tr class="memitem:abe3bd613299254697f9944c1097e1c40" id="r_abe3bd613299254697f9944c1097e1c40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3bd613299254697f9944c1097e1c40">StopAll</a> ()</td></tr>
+<tr class="memdesc:abe3bd613299254697f9944c1097e1c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生中のすべてのサウンドを停止する  <br /></td></tr>
+<tr class="memitem:af5f88ac95ec173e5b999fe5e548b8b9d" id="r_af5f88ac95ec173e5b999fe5e548b8b9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5f88ac95ec173e5b999fe5e548b8b9d">IsPlaying</a> (const String &amp;asset_name) const</td></tr>
+<tr class="memdesc:af5f88ac95ec173e5b999fe5e548b8b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したサウンドが再生中かを判定する  <br /></td></tr>
+<tr class="memitem:a02a48d78bc21c9214448134eecedb48a" id="r_a02a48d78bc21c9214448134eecedb48a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a48d78bc21c9214448134eecedb48a">SetVolume</a> (const String &amp;asset_name, double volume)</td></tr>
+<tr class="memdesc:a02a48d78bc21c9214448134eecedb48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したサウンドの音量を設定する  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>サウンド再生を管理する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="ae9d4c141022e6955993e3633263b61f2" name="ae9d4c141022e6955993e3633263b61f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d4c141022e6955993e3633263b61f2">&#9670;&#160;</a></span>SoundController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundController::SoundController </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="af5f88ac95ec173e5b999fe5e548b8b9d" name="af5f88ac95ec173e5b999fe5e548b8b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f88ac95ec173e5b999fe5e548b8b9d">&#9670;&#160;</a></span>IsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SoundController::IsPlaying </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定したサウンドが再生中かを判定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asset_name</td><td>確認するサウンドのアセット名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>再生中の場合はtrue，それ以外の場合はfalse </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span>(not AudioAsset::IsRegistered(asset_name))</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> AudioAsset(asset_name).isPlaying();</div>
+<div class="line"><span class="lineno">   57</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae63145adc9c2a5e9be1d3ae201eca8c5" name="ae63145adc9c2a5e9be1d3ae201eca8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63145adc9c2a5e9be1d3ae201eca8c5">&#9670;&#160;</a></span>Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundController::Play </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>サウンドを再生する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asset_name</td><td>サウンドのアセット名 </td></tr>
+    <tr><td class="paramname">loop</td><td>ループ再生するか(デフォルト:false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>{</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">if</span>(not AudioAsset::IsRegistered(asset_name))</div>
+<div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>        Print &lt;&lt; U<span class="stringliteral">&quot;エラー: 音声アセット&#39;{}&#39;は登録されていません．&quot;</span>_fmt(asset_name);</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    <span class="comment">// 登録はされているが準備(ロード)が完了していない場合は再生しない（非同期ロードの完了を待つ）</span></div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">if</span>(not AudioAsset::IsReady(asset_name))</div>
+<div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="comment">// 非ブロッキング:まだロードされていないので再生リクエストを無視</span></div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>    <span class="comment">//既に再生中の場合は停止してから再生</span></div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">if</span>(AudioAsset(asset_name).isPlaying())</div>
+<div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        AudioAsset(asset_name).stop();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    AudioAsset(asset_name).setLoop(loop);</div>
+<div class="line"><span class="lineno">   29</span>    AudioAsset(asset_name).play();</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a02a48d78bc21c9214448134eecedb48a" name="a02a48d78bc21c9214448134eecedb48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a48d78bc21c9214448134eecedb48a">&#9670;&#160;</a></span>SetVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundController::SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したサウンドの音量を設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asset_name</td><td>サウンドのアセット名 </td></tr>
+    <tr><td class="paramname">volume</td><td>設定する音量(0.0～1.0の範囲) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span>(AudioAsset::IsRegistered(asset_name))</div>
+<div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        AudioAsset(asset_name).setVolume(volume);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa75333d76f825299d5c28147b2ed00fd" name="aa75333d76f825299d5c28147b2ed00fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa75333d76f825299d5c28147b2ed00fd">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundController::Stop </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したサウンドを停止する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asset_name</td><td>停止するサウンドのアセット名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span>(AudioAsset::IsRegistered(asset_name))</div>
+<div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        AudioAsset(asset_name).stop();</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe3bd613299254697f9944c1097e1c40" name="abe3bd613299254697f9944c1097e1c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3bd613299254697f9944c1097e1c40">&#9670;&#160;</a></span>StopAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundController::StopAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>再生中のすべてのサウンドを停止する </p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>{</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keyword">const</span> <span class="keyword">auto</span> assets = AudioAsset::Enumerate();</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [name, info] : assets)</div>
+<div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        AudioAsset(name).stop();</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/Component/<a class="el" href="_sound_controller_8h_source.html">SoundController.h</a></li>
+<li>src/Component/<a class="el" href="_sound_controller_8cpp.html">SoundController.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_sound_controller.html">SoundController</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

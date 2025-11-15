@@ -1,0 +1,8 @@
+<map id="src/World/Stage.h" name="src/World/Stage.h">
+<area shape="rect" id="Node000001" title="ステージ管理の定義" alt="" coords="31,5,156,32"/>
+<area shape="rect" id="Node000002" href="$_spawn_info_8h.html" title="スポーン情報の定義" alt="" coords="5,80,100,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,34,69,68,65,65,84,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="53,155,135,181"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="101,32,114,80,113,112,107,141,101,139,108,111,109,80,96,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,106,82,140,77,143,57,109"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="BackAndForthBehavior" name="BackAndForthBehavior">
+<area shape="rect" id="Node000001" title="一定距離前後に往復する敵の行動戦略" alt="" coords="5,80,161,107"/>
+<area shape="rect" id="Node000002" href="$class_i_behavior_strategy.html" title="敵の行動戦略を定義するインターフェース" alt="" coords="20,5,146,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,48,86,80,80,80,80,48"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="GameScene::update" name="GameScene::update">
+<area shape="rect" id="Node000001" title="シーンを更新する" alt="" coords="5,81,146,108"/>
+<area shape="rect" id="Node000002" href="$class_game_scene.html#a023567377dcb2a8caadf8f6cab2cb4a4" title="最も近いリスポーン地点を探索する" alt="" coords="194,5,448,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,78,145,59,193,41,222,33,223,39,194,47,147,64,106,83"/>
+<area shape="rect" id="Node000003" href="$class_game_scene.html#ad736ded9ab220b8f39601204775908ff" title="プレイヤーが死亡した時の処理" alt="" coords="230,56,412,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,85,214,78,214,83,146,90"/>
+<area shape="rect" id="Node000004" href="$class_game_scene.html#a1717f5abe6408c41d43fc54a5e2c5314" title="BGM再生を開始または遅延させる" alt="" coords="506,107,712,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,95,491,112,491,117,146,101"/>
+<area shape="rect" id="Node000005" href="$class_game_scene.html#a90075ad52095e3d625ae3aa13fada7e8" title="BGMを更新する" alt="" coords="234,157,408,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="112,106,194,136,245,150,244,156,193,141,110,111"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="401,154,514,134,515,139,401,159"/>
+<area shape="rect" id="Node000006" href="$class_game_scene.html#aa563b355724487c1568bd4ab41c4d95d" title="保留中のBGM再生を処理する" alt="" coords="496,157,722,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="408,168,481,168,481,173,408,173"/>
+</map>

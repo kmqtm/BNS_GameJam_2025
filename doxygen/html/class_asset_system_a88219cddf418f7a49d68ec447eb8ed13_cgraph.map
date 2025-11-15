@@ -1,0 +1,5 @@
+<map id="AssetSystem::WaitUntilReady" name="AssetSystem::WaitUntilReady">
+<area shape="rect" id="Node000001" title="非同期ロードが完了するまで待機する" alt="" coords="5,13,205,40"/>
+<area shape="rect" id="Node000002" href="$class_asset_system.html#a8699ee18bd398670439d3b6340e1f1dc" title="現在のシーンのアセット非同期ロードが完了したか" alt="" coords="253,5,450,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,24,237,24,237,29,205,29"/>
+</map>

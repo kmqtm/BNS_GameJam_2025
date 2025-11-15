@@ -1,0 +1,10 @@
+<map id="GameScene::StartOrDeferBGM" name="GameScene::StartOrDeferBGM">
+<area shape="rect" id="Node000001" title="BGM再生を開始または遅延させる" alt="" coords="415,56,620,83"/>
+<area shape="rect" id="Node000002" href="$class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145" title="コンストラクタ" alt="" coords="194,5,367,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="436,55,346,35,347,30,438,50"/>
+<area shape="rect" id="Node000003" href="$class_game_scene.html#a70464c5d4ccd05d39a9cb168e332c93a" title="シーンを更新する" alt="" coords="5,81,146,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,79,146,93,146,88,399,73"/>
+<area shape="rect" id="Node000004" href="$class_game_scene.html#a90075ad52095e3d625ae3aa13fada7e8" title="BGMを更新する" alt="" coords="194,107,367,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="438,89,347,109,346,103,436,84"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="178,110,146,106,147,101,178,105"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CameraSystem::GetCameraOffset" name="CameraSystem::GetCameraOffset">
+<area shape="rect" id="Node000001" title="カメラオフセットを取得する" alt="" coords="252,5,474,32"/>
+<area shape="rect" id="Node000002" href="$class_camera_system.html#aa2deafb88dba2bffe23d35ac6e4230bd" title="ビュー矩形を取得する" alt="" coords="5,5,204,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,21,204,21,204,16,236,16"/>
+</map>

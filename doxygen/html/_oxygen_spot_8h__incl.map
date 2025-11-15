@@ -1,0 +1,22 @@
+<map id="src/Entitie/OxygenSpot.h" name="src/Entitie/OxygenSpot.h">
+<area shape="rect" id="Node000001" title="酸素スポットクラスの定義" alt="" coords="247,5,414,32"/>
+<area shape="rect" id="Node000002" href="$_animation_controller_8h.html" title="アニメーション再生管理クラス" alt="" coords="5,80,235,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,35,172,77,170,72,293,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="256,229,338,256"/>
+<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="323,34,310,55,300,81,294,116,292,152,296,214,291,214,287,152,288,115,295,79,306,53,319,31"/>
+<area shape="rect" id="Node000005" href="$_collider_8h.html" title="衝突判定用のコンポーネント定義" alt="" coords="310,80,469,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="343,31,372,66,368,69,339,34"/>
+<area shape="rect" id="Node000007" href="$_stage_8h.html" title="ステージ管理の定義" alt="" coords="493,80,608,107"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="370,30,498,72,497,77,368,35"/>
+<area shape="rect" id="Node000003" href="$_animation_8h.html" title="アニメーションパターンの定義" alt="" coords="80,155,170,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,107,126,139,121,139,118,107"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="137,105,272,217,269,221,133,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="156,179,254,220,252,225,154,184"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="383,108,350,156,314,217,309,214,346,153,378,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="360,155,421,181"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="392,107,393,139,387,139,387,107"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="538,109,493,145,435,184,346,226,344,221,432,179,490,140,534,105"/>
+<area shape="rect" id="Node000008" href="$_spawn_info_8h.html" title="スポーン情報の定義" alt="" coords="501,155,595,181"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="553,107,552,139,546,139,548,107"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="505,184,354,228,353,223,504,179"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="GameScene::UpdateBGM" name="GameScene::UpdateBGM">
+<area shape="rect" id="Node000001" title="BGMを更新する" alt="" coords="5,31,179,57"/>
+<area shape="rect" id="Node000002" href="$class_game_scene.html#aa563b355724487c1568bd4ab41c4d95d" title="保留中のBGM再生を処理する" alt="" coords="227,5,453,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,32,211,29,211,35,179,38"/>
+<area shape="rect" id="Node000003" href="$class_game_scene.html#a1717f5abe6408c41d43fc54a5e2c5314" title="BGM再生を開始または遅延させる" alt="" coords="237,56,442,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,50,222,55,222,60,179,56"/>
+</map>

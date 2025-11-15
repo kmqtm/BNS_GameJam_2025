@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/Scene/GameScene.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_game_scene_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameScene.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_scene_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_sound_controller_8h.html">../Component/SoundController.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_config_8h.html">../Core/Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_enemy_8h.html">../Entitie/Enemy.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_oxygen_spot_8h.html">../Entitie/OxygenSpot.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_player_8h.html">../Entitie/Player.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_camera_system_8h.html">../System/CameraSystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_collision_system_8h.html">../System/CollisionSystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_system_8h.html">../System/UISystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_stage_8h.html">../World/Stage.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285">   19</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285">GameState</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ab78a3223503896721cca1303f776159b">   21</a></span>    <a class="code hl_enumvalue" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ab78a3223503896721cca1303f776159b">Title</a>,      </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ac9dbb2b7c84159b632d71e512eba8428">   22</a></span>    <a class="code hl_enumvalue" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ac9dbb2b7c84159b632d71e512eba8428">Playing</a>,    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a753c34bcdd8eac2abb9042f7a93c2e75">   23</a></span>    <a class="code hl_enumvalue" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a753c34bcdd8eac2abb9042f7a93c2e75">Ending</a>,     </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a8f347bc7cebca9fa6d97e70c6bc29eb3">   24</a></span>    <a class="code hl_enumvalue" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a8f347bc7cebca9fa6d97e70c6bc29eb3">GameOver</a>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_game_scene.html">   28</a></span><span class="keyword">class </span><a class="code hl_function" href="class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145">GameScene</a> : <span class="keyword">public</span> App::Scene</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145">GameScene</a>(<span class="keyword">const</span> InitData&amp; init);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_game_scene.html#a921b4236d2a999c3b5edd8fe1d9086e1">~GameScene</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#a70464c5d4ccd05d39a9cb168e332c93a">update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#a9412458ba13451e343dd83b48c7eef13">draw</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#a2ed65c70bb08a871fb40b321bfa59457">SpawnEntities</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#ad736ded9ab220b8f39601204775908ff">OnPlayerDied</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Vec2 <a class="code hl_function" href="class_game_scene.html#a023567377dcb2a8caadf8f6cab2cb4a4">FindNearestRespawnSpot</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#a90075ad52095e3d625ae3aa13fada7e8">UpdateBGM</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#a1717f5abe6408c41d43fc54a5e2c5314">StartOrDeferBGM</a>(<span class="keyword">const</span> String&amp; asset, <span class="keywordtype">bool</span> loop);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_scene.html#aa563b355724487c1568bd4ab41c4d95d">ProcessPendingBGM</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_game_scene.html#a6fbc09fbe0d70c9dd0eb4e54f868b0ed">   67</a></span>    <a class="code hl_class" href="class_stage.html">Stage</a> <a class="code hl_variable" href="class_game_scene.html#a6fbc09fbe0d70c9dd0eb4e54f868b0ed">stage_</a>{ U<span class="stringliteral">&quot;asset/Stage/v3/tilemap_v3.json&quot;</span>, U<span class="stringliteral">&quot;asset/Stage/v3/tileset.png&quot;</span>, U<span class="stringliteral">&quot;collision_layer&quot;</span> };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_game_scene.html#ae02f3fc820bd84d4ecaadaf2737e3e3e">   70</a></span>    <a class="code hl_class" href="class_camera_system.html">CameraSystem</a> <a class="code hl_variable" href="class_game_scene.html#ae02f3fc820bd84d4ecaadaf2737e3e3e">camera_manager_</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_game_scene.html#a946044ac0695cd89013dd6c22335f394">   73</a></span>    <a class="code hl_class" href="class_player.html">Player</a> <a class="code hl_variable" href="class_game_scene.html#a946044ac0695cd89013dd6c22335f394">player_</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_game_scene.html#aa4789bb9a02b48fc4facf16962ca4a75">   76</a></span>    <a class="code hl_enumeration" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285">GameState</a> <a class="code hl_variable" href="class_game_scene.html#aa4789bb9a02b48fc4facf16962ca4a75">current_state_</a> = <a class="code hl_enumvalue" href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ab78a3223503896721cca1303f776159b">GameState::Title</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_game_scene.html#afce5ddb19d7e812786caad6456fbf97a">   79</a></span>    s3d::Array&lt;Enemy&gt; <a class="code hl_variable" href="class_game_scene.html#afce5ddb19d7e812786caad6456fbf97a">enemies_</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_game_scene.html#a09e7b014bdd0405bb6b240282b490d1e">   82</a></span>    s3d::Array&lt;OxygenSpot&gt; <a class="code hl_variable" href="class_game_scene.html#a09e7b014bdd0405bb6b240282b490d1e">oxygen_spots_</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_game_scene.html#a2e50b365a5b44298a88b522c2b215382">   85</a></span>    <a class="code hl_class" href="class_collision_system.html">CollisionSystem</a> <a class="code hl_variable" href="class_game_scene.html#a2e50b365a5b44298a88b522c2b215382">collision_manager_</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_game_scene.html#aa6b380e426f6968c9fd2719b7305b350">   88</a></span>    <a class="code hl_class" href="class_sound_controller.html">SoundController</a> <a class="code hl_variable" href="class_game_scene.html#aa6b380e426f6968c9fd2719b7305b350">bgm_controller_</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_game_scene.html#a51bb879d96662711ff93191ab1396efe">   91</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_scene.html#a51bb879d96662711ff93191ab1396efe">is_intro_finished_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_game_scene.html#a17bd10c9c9a893337f882ac2cc29fa2c">   94</a></span>    String <a class="code hl_variable" href="class_game_scene.html#a17bd10c9c9a893337f882ac2cc29fa2c">pending_bgm_asset_</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_game_scene.html#a8d18c87d67bcb9a95a199f778abf1fdd">   97</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_scene.html#a8d18c87d67bcb9a95a199f778abf1fdd">pending_bgm_loop_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_game_scene.html#a8939149550ec6173266a918dbc3c675d">  100</a></span>    String <a class="code hl_variable" href="class_game_scene.html#a8939149550ec6173266a918dbc3c675d">current_playing_bgm_asset_</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_game_scene.html#ad923df88ccb29eab3d1f2bc2b461e833">  103</a></span>    Vec2 <a class="code hl_variable" href="class_game_scene.html#ad923df88ccb29eab3d1f2bc2b461e833">player_start_pos_</a> = Vec2::Zero();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_game_scene.html#a15264bb76160d136a34c374410988428">  106</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#a15264bb76160d136a34c374410988428">map_total_height_</a> = 0.0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_game_scene.html#a880152ec2737823c876cd92d531c67b9">  109</a></span>    <span class="keyword">mutable</span> std::unordered_map&lt;String, double&gt; <a class="code hl_variable" href="class_game_scene.html#a880152ec2737823c876cd92d531c67b9">background_activation_times_</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_game_scene.html#a1667d8b21db6a212188a718f85ebe73e">  112</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> ColorF <a class="code hl_variable" href="class_game_scene.html#a1667d8b21db6a212188a718f85ebe73e">kDeepSeaColor</a> = ColorF{ 0.0, 0.1, 0.3 };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_game_scene.html#a65a5770ebd2e996edcdc27cac7a69b62">  115</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#a65a5770ebd2e996edcdc27cac7a69b62">kTitleEndingCameraOffsetYRatio</a> = -1.0 / 4.9;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_game_scene.html#a5b0377e5605ea62f8779d2aa4f5e074f">  118</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#a5b0377e5605ea62f8779d2aa4f5e074f">kPlayingCameraOffsetYRatio</a> = 1.0 / 6.0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_game_scene.html#af61de4ec45054c4ad819aa667e2d6aab">  121</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#af61de4ec45054c4ad819aa667e2d6aab">kEndingZoneY</a> = 7650.0;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_game_scene.html#a72703a1b0603a5d7e1b24629995ad14d">  124</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#a72703a1b0603a5d7e1b24629995ad14d">ending_start_time_</a> = -1.0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_game_scene.html#aae92d7d7647fb42ea773a6820baffb1d">  127</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#aae92d7d7647fb42ea773a6820baffb1d">kOctopusSmileDelay</a> = 7.0 + 8.6;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_game_scene.html#acba19c430989f22697747e855c60cb1a">  130</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_game_scene.html#acba19c430989f22697747e855c60cb1a">kEndingDarkenAlpha</a> = 0.45;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_game_scene.html#a64b8a743a881765b83832940b6a1f18c">  133</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> StringView <a class="code hl_variable" href="class_game_scene.html#a64b8a743a881765b83832940b6a1f18c">kEndingOverlayTexture</a> = U<span class="stringliteral">&quot;ending_text&quot;</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_game_scene.html#ac86ef266e524e23cde48487fa5e68cbd">  136</a></span>    <a class="code hl_class" href="class_u_i_system.html">UISystem</a> <a class="code hl_variable" href="class_game_scene.html#ac86ef266e524e23cde48487fa5e68cbd">ui_manager_</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
+</div>
+<div class="ttc" id="a_camera_system_8h_html"><div class="ttname"><a href="_camera_system_8h.html">CameraSystem.h</a></div><div class="ttdoc">カメラ管理システムの定義</div></div>
+<div class="ttc" id="a_collision_system_8h_html"><div class="ttname"><a href="_collision_system_8h.html">CollisionSystem.h</a></div><div class="ttdoc">衝突判定システムの定義</div></div>
+<div class="ttc" id="a_config_8h_html"><div class="ttname"><a href="_config_8h.html">Config.h</a></div><div class="ttdoc">ゲーム設定の定義</div></div>
+<div class="ttc" id="a_enemy_8h_html"><div class="ttname"><a href="_enemy_8h.html">Enemy.h</a></div><div class="ttdoc">敵クラスの定義</div></div>
+<div class="ttc" id="a_game_scene_8h_html_a7899b65f1ea0f655e4bbf8d2a5714285"><div class="ttname"><a href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285">GameState</a></div><div class="ttdeci">GameState</div><div class="ttdoc">ゲームの状態</div><div class="ttdef"><b>Definition</b> GameScene.h:20</div></div>
+<div class="ttc" id="a_game_scene_8h_html_a7899b65f1ea0f655e4bbf8d2a5714285a753c34bcdd8eac2abb9042f7a93c2e75"><div class="ttname"><a href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a753c34bcdd8eac2abb9042f7a93c2e75">GameState::Ending</a></div><div class="ttdeci">@ Ending</div><div class="ttdoc">エンディング</div><div class="ttdef"><b>Definition</b> GameScene.h:23</div></div>
+<div class="ttc" id="a_game_scene_8h_html_a7899b65f1ea0f655e4bbf8d2a5714285a8f347bc7cebca9fa6d97e70c6bc29eb3"><div class="ttname"><a href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a8f347bc7cebca9fa6d97e70c6bc29eb3">GameState::GameOver</a></div><div class="ttdeci">@ GameOver</div><div class="ttdoc">ゲームオーバー</div><div class="ttdef"><b>Definition</b> GameScene.h:24</div></div>
+<div class="ttc" id="a_game_scene_8h_html_a7899b65f1ea0f655e4bbf8d2a5714285ab78a3223503896721cca1303f776159b"><div class="ttname"><a href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ab78a3223503896721cca1303f776159b">GameState::Title</a></div><div class="ttdeci">@ Title</div><div class="ttdoc">タイトル画面</div><div class="ttdef"><b>Definition</b> GameScene.h:21</div></div>
+<div class="ttc" id="a_game_scene_8h_html_a7899b65f1ea0f655e4bbf8d2a5714285ac9dbb2b7c84159b632d71e512eba8428"><div class="ttname"><a href="_game_scene_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ac9dbb2b7c84159b632d71e512eba8428">GameState::Playing</a></div><div class="ttdeci">@ Playing</div><div class="ttdoc">ゲーム中</div><div class="ttdef"><b>Definition</b> GameScene.h:22</div></div>
+<div class="ttc" id="a_oxygen_spot_8h_html"><div class="ttname"><a href="_oxygen_spot_8h.html">OxygenSpot.h</a></div><div class="ttdoc">酸素スポットクラスの定義</div></div>
+<div class="ttc" id="a_player_8h_html"><div class="ttname"><a href="_player_8h.html">Player.h</a></div><div class="ttdoc">プレイヤークラスの定義</div></div>
+<div class="ttc" id="a_sound_controller_8h_html"><div class="ttname"><a href="_sound_controller_8h.html">SoundController.h</a></div><div class="ttdoc">サウンド再生管理クラス</div></div>
+<div class="ttc" id="a_stage_8h_html"><div class="ttname"><a href="_stage_8h.html">Stage.h</a></div><div class="ttdoc">ステージ管理の定義</div></div>
+<div class="ttc" id="a_u_i_system_8h_html"><div class="ttname"><a href="_u_i_system_8h.html">UISystem.h</a></div><div class="ttdoc">UI表示管理システムの定義</div></div>
+<div class="ttc" id="aclass_camera_system_html"><div class="ttname"><a href="class_camera_system.html">CameraSystem</a></div><div class="ttdoc">2Dカメラを管理する</div><div class="ttdef"><b>Definition</b> CameraSystem.h:10</div></div>
+<div class="ttc" id="aclass_collision_system_html"><div class="ttname"><a href="class_collision_system.html">CollisionSystem</a></div><div class="ttdoc">プレイヤーと他のオブジェクト間の衝突判定を管理する</div><div class="ttdef"><b>Definition</b> CollisionSystem.h:15</div></div>
+<div class="ttc" id="aclass_game_scene_html_a023567377dcb2a8caadf8f6cab2cb4a4"><div class="ttname"><a href="class_game_scene.html#a023567377dcb2a8caadf8f6cab2cb4a4">GameScene::FindNearestRespawnSpot</a></div><div class="ttdeci">Vec2 FindNearestRespawnSpot() const</div><div class="ttdoc">最も近いリスポーン地点を探索する</div><div class="ttdef"><b>Definition</b> GameScene.cpp:309</div></div>
+<div class="ttc" id="aclass_game_scene_html_a09e7b014bdd0405bb6b240282b490d1e"><div class="ttname"><a href="class_game_scene.html#a09e7b014bdd0405bb6b240282b490d1e">GameScene::oxygen_spots_</a></div><div class="ttdeci">s3d::Array&lt; OxygenSpot &gt; oxygen_spots_</div><div class="ttdoc">酸素スポットのリスト</div><div class="ttdef"><b>Definition</b> GameScene.h:82</div></div>
+<div class="ttc" id="aclass_game_scene_html_a15264bb76160d136a34c374410988428"><div class="ttname"><a href="class_game_scene.html#a15264bb76160d136a34c374410988428">GameScene::map_total_height_</a></div><div class="ttdeci">double map_total_height_</div><div class="ttdoc">ステージの総高さ</div><div class="ttdef"><b>Definition</b> GameScene.h:106</div></div>
+<div class="ttc" id="aclass_game_scene_html_a1667d8b21db6a212188a718f85ebe73e"><div class="ttname"><a href="class_game_scene.html#a1667d8b21db6a212188a718f85ebe73e">GameScene::kDeepSeaColor</a></div><div class="ttdeci">static constexpr ColorF kDeepSeaColor</div><div class="ttdoc">深海の背景色</div><div class="ttdef"><b>Definition</b> GameScene.h:112</div></div>
+<div class="ttc" id="aclass_game_scene_html_a1717f5abe6408c41d43fc54a5e2c5314"><div class="ttname"><a href="class_game_scene.html#a1717f5abe6408c41d43fc54a5e2c5314">GameScene::StartOrDeferBGM</a></div><div class="ttdeci">void StartOrDeferBGM(const String &amp;asset, bool loop)</div><div class="ttdoc">BGM再生を開始または遅延させる</div><div class="ttdef"><b>Definition</b> GameScene.cpp:34</div></div>
+<div class="ttc" id="aclass_game_scene_html_a17bd10c9c9a893337f882ac2cc29fa2c"><div class="ttname"><a href="class_game_scene.html#a17bd10c9c9a893337f882ac2cc29fa2c">GameScene::pending_bgm_asset_</a></div><div class="ttdeci">String pending_bgm_asset_</div><div class="ttdoc">保留中のBGMアセット名</div><div class="ttdef"><b>Definition</b> GameScene.h:94</div></div>
+<div class="ttc" id="aclass_game_scene_html_a2e50b365a5b44298a88b522c2b215382"><div class="ttname"><a href="class_game_scene.html#a2e50b365a5b44298a88b522c2b215382">GameScene::collision_manager_</a></div><div class="ttdeci">CollisionSystem collision_manager_</div><div class="ttdoc">衝突判定システム</div><div class="ttdef"><b>Definition</b> GameScene.h:85</div></div>
+<div class="ttc" id="aclass_game_scene_html_a2ed65c70bb08a871fb40b321bfa59457"><div class="ttname"><a href="class_game_scene.html#a2ed65c70bb08a871fb40b321bfa59457">GameScene::SpawnEntities</a></div><div class="ttdeci">void SpawnEntities()</div><div class="ttdoc">エンティティをスポーンする</div><div class="ttdef"><b>Definition</b> GameScene.cpp:75</div></div>
+<div class="ttc" id="aclass_game_scene_html_a51bb879d96662711ff93191ab1396efe"><div class="ttname"><a href="class_game_scene.html#a51bb879d96662711ff93191ab1396efe">GameScene::is_intro_finished_</a></div><div class="ttdeci">bool is_intro_finished_</div><div class="ttdoc">イントロが終了したか</div><div class="ttdef"><b>Definition</b> GameScene.h:91</div></div>
+<div class="ttc" id="aclass_game_scene_html_a5b0377e5605ea62f8779d2aa4f5e074f"><div class="ttname"><a href="class_game_scene.html#a5b0377e5605ea62f8779d2aa4f5e074f">GameScene::kPlayingCameraOffsetYRatio</a></div><div class="ttdeci">static constexpr double kPlayingCameraOffsetYRatio</div><div class="ttdoc">ゲームプレイ用のカメラオフセット比率</div><div class="ttdef"><b>Definition</b> GameScene.h:118</div></div>
+<div class="ttc" id="aclass_game_scene_html_a64b8a743a881765b83832940b6a1f18c"><div class="ttname"><a href="class_game_scene.html#a64b8a743a881765b83832940b6a1f18c">GameScene::kEndingOverlayTexture</a></div><div class="ttdeci">static constexpr StringView kEndingOverlayTexture</div><div class="ttdoc">エンディング画像のアセット名</div><div class="ttdef"><b>Definition</b> GameScene.h:133</div></div>
+<div class="ttc" id="aclass_game_scene_html_a65a5770ebd2e996edcdc27cac7a69b62"><div class="ttname"><a href="class_game_scene.html#a65a5770ebd2e996edcdc27cac7a69b62">GameScene::kTitleEndingCameraOffsetYRatio</a></div><div class="ttdeci">static constexpr double kTitleEndingCameraOffsetYRatio</div><div class="ttdoc">タイトル・エンディング画面用のカメラオフセット比率</div><div class="ttdef"><b>Definition</b> GameScene.h:115</div></div>
+<div class="ttc" id="aclass_game_scene_html_a6fbc09fbe0d70c9dd0eb4e54f868b0ed"><div class="ttname"><a href="class_game_scene.html#a6fbc09fbe0d70c9dd0eb4e54f868b0ed">GameScene::stage_</a></div><div class="ttdeci">Stage stage_</div><div class="ttdoc">ステージ</div><div class="ttdef"><b>Definition</b> GameScene.h:67</div></div>
+<div class="ttc" id="aclass_game_scene_html_a70464c5d4ccd05d39a9cb168e332c93a"><div class="ttname"><a href="class_game_scene.html#a70464c5d4ccd05d39a9cb168e332c93a">GameScene::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">シーンを更新する</div><div class="ttdef"><b>Definition</b> GameScene.cpp:151</div></div>
+<div class="ttc" id="aclass_game_scene_html_a72703a1b0603a5d7e1b24629995ad14d"><div class="ttname"><a href="class_game_scene.html#a72703a1b0603a5d7e1b24629995ad14d">GameScene::ending_start_time_</a></div><div class="ttdeci">double ending_start_time_</div><div class="ttdoc">エンディング開始からの経過時間</div><div class="ttdef"><b>Definition</b> GameScene.h:124</div></div>
+<div class="ttc" id="aclass_game_scene_html_a880152ec2737823c876cd92d531c67b9"><div class="ttname"><a href="class_game_scene.html#a880152ec2737823c876cd92d531c67b9">GameScene::background_activation_times_</a></div><div class="ttdeci">std::unordered_map&lt; String, double &gt; background_activation_times_</div><div class="ttdoc">背景オブジェクトのアクティブ化時刻</div><div class="ttdef"><b>Definition</b> GameScene.h:109</div></div>
+<div class="ttc" id="aclass_game_scene_html_a8939149550ec6173266a918dbc3c675d"><div class="ttname"><a href="class_game_scene.html#a8939149550ec6173266a918dbc3c675d">GameScene::current_playing_bgm_asset_</a></div><div class="ttdeci">String current_playing_bgm_asset_</div><div class="ttdoc">現在再生中のBGMアセット名</div><div class="ttdef"><b>Definition</b> GameScene.h:100</div></div>
+<div class="ttc" id="aclass_game_scene_html_a8d18c87d67bcb9a95a199f778abf1fdd"><div class="ttname"><a href="class_game_scene.html#a8d18c87d67bcb9a95a199f778abf1fdd">GameScene::pending_bgm_loop_</a></div><div class="ttdeci">bool pending_bgm_loop_</div><div class="ttdoc">保留中のBGMループフラグ</div><div class="ttdef"><b>Definition</b> GameScene.h:97</div></div>
+<div class="ttc" id="aclass_game_scene_html_a90075ad52095e3d625ae3aa13fada7e8"><div class="ttname"><a href="class_game_scene.html#a90075ad52095e3d625ae3aa13fada7e8">GameScene::UpdateBGM</a></div><div class="ttdeci">void UpdateBGM()</div><div class="ttdoc">BGMを更新する</div><div class="ttdef"><b>Definition</b> GameScene.cpp:105</div></div>
+<div class="ttc" id="aclass_game_scene_html_a921b4236d2a999c3b5edd8fe1d9086e1"><div class="ttname"><a href="class_game_scene.html#a921b4236d2a999c3b5edd8fe1d9086e1">GameScene::~GameScene</a></div><div class="ttdeci">~GameScene() override</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition</b> GameScene.cpp:28</div></div>
+<div class="ttc" id="aclass_game_scene_html_a9412458ba13451e343dd83b48c7eef13"><div class="ttname"><a href="class_game_scene.html#a9412458ba13451e343dd83b48c7eef13">GameScene::draw</a></div><div class="ttdeci">void draw() const override</div><div class="ttdoc">シーンを描画する</div><div class="ttdef"><b>Definition</b> GameScene.cpp:338</div></div>
+<div class="ttc" id="aclass_game_scene_html_a946044ac0695cd89013dd6c22335f394"><div class="ttname"><a href="class_game_scene.html#a946044ac0695cd89013dd6c22335f394">GameScene::player_</a></div><div class="ttdeci">Player player_</div><div class="ttdoc">プレイヤー</div><div class="ttdef"><b>Definition</b> GameScene.h:73</div></div>
+<div class="ttc" id="aclass_game_scene_html_aa0fa2a98f139524a96ffb9d25252b145"><div class="ttname"><a href="class_game_scene.html#aa0fa2a98f139524a96ffb9d25252b145">GameScene::GameScene</a></div><div class="ttdeci">GameScene(const InitData &amp;init)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> GameScene.cpp:9</div></div>
+<div class="ttc" id="aclass_game_scene_html_aa4789bb9a02b48fc4facf16962ca4a75"><div class="ttname"><a href="class_game_scene.html#aa4789bb9a02b48fc4facf16962ca4a75">GameScene::current_state_</a></div><div class="ttdeci">GameState current_state_</div><div class="ttdoc">現在のゲーム状態</div><div class="ttdef"><b>Definition</b> GameScene.h:76</div></div>
+<div class="ttc" id="aclass_game_scene_html_aa563b355724487c1568bd4ab41c4d95d"><div class="ttname"><a href="class_game_scene.html#aa563b355724487c1568bd4ab41c4d95d">GameScene::ProcessPendingBGM</a></div><div class="ttdeci">void ProcessPendingBGM()</div><div class="ttdoc">保留中のBGM再生を処理する</div><div class="ttdef"><b>Definition</b> GameScene.cpp:58</div></div>
+<div class="ttc" id="aclass_game_scene_html_aa6b380e426f6968c9fd2719b7305b350"><div class="ttname"><a href="class_game_scene.html#aa6b380e426f6968c9fd2719b7305b350">GameScene::bgm_controller_</a></div><div class="ttdeci">SoundController bgm_controller_</div><div class="ttdoc">BGM制御</div><div class="ttdef"><b>Definition</b> GameScene.h:88</div></div>
+<div class="ttc" id="aclass_game_scene_html_aae92d7d7647fb42ea773a6820baffb1d"><div class="ttname"><a href="class_game_scene.html#aae92d7d7647fb42ea773a6820baffb1d">GameScene::kOctopusSmileDelay</a></div><div class="ttdeci">static constexpr double kOctopusSmileDelay</div><div class="ttdoc">エンディング開始から笑顔に切り替わるまでの時間(秒)</div><div class="ttdef"><b>Definition</b> GameScene.h:127</div></div>
+<div class="ttc" id="aclass_game_scene_html_ac86ef266e524e23cde48487fa5e68cbd"><div class="ttname"><a href="class_game_scene.html#ac86ef266e524e23cde48487fa5e68cbd">GameScene::ui_manager_</a></div><div class="ttdeci">UISystem ui_manager_</div><div class="ttdoc">UIシステム</div><div class="ttdef"><b>Definition</b> GameScene.h:136</div></div>
+<div class="ttc" id="aclass_game_scene_html_acba19c430989f22697747e855c60cb1a"><div class="ttname"><a href="class_game_scene.html#acba19c430989f22697747e855c60cb1a">GameScene::kEndingDarkenAlpha</a></div><div class="ttdeci">static constexpr double kEndingDarkenAlpha</div><div class="ttdoc">笑顔後の画面暗転アルファ値</div><div class="ttdef"><b>Definition</b> GameScene.h:130</div></div>
+<div class="ttc" id="aclass_game_scene_html_ad736ded9ab220b8f39601204775908ff"><div class="ttname"><a href="class_game_scene.html#ad736ded9ab220b8f39601204775908ff">GameScene::OnPlayerDied</a></div><div class="ttdeci">void OnPlayerDied()</div><div class="ttdoc">プレイヤーが死亡した時の処理</div><div class="ttdef"><b>Definition</b> GameScene.cpp:304</div></div>
+<div class="ttc" id="aclass_game_scene_html_ad923df88ccb29eab3d1f2bc2b461e833"><div class="ttname"><a href="class_game_scene.html#ad923df88ccb29eab3d1f2bc2b461e833">GameScene::player_start_pos_</a></div><div class="ttdeci">Vec2 player_start_pos_</div><div class="ttdoc">プレイヤーの開始位置</div><div class="ttdef"><b>Definition</b> GameScene.h:103</div></div>
+<div class="ttc" id="aclass_game_scene_html_ae02f3fc820bd84d4ecaadaf2737e3e3e"><div class="ttname"><a href="class_game_scene.html#ae02f3fc820bd84d4ecaadaf2737e3e3e">GameScene::camera_manager_</a></div><div class="ttdeci">CameraSystem camera_manager_</div><div class="ttdoc">カメラシステム</div><div class="ttdef"><b>Definition</b> GameScene.h:70</div></div>
+<div class="ttc" id="aclass_game_scene_html_af61de4ec45054c4ad819aa667e2d6aab"><div class="ttname"><a href="class_game_scene.html#af61de4ec45054c4ad819aa667e2d6aab">GameScene::kEndingZoneY</a></div><div class="ttdeci">static constexpr double kEndingZoneY</div><div class="ttdoc">エンディングに移行するY座標</div><div class="ttdef"><b>Definition</b> GameScene.h:121</div></div>
+<div class="ttc" id="aclass_game_scene_html_afce5ddb19d7e812786caad6456fbf97a"><div class="ttname"><a href="class_game_scene.html#afce5ddb19d7e812786caad6456fbf97a">GameScene::enemies_</a></div><div class="ttdeci">s3d::Array&lt; Enemy &gt; enemies_</div><div class="ttdoc">敵のリスト</div><div class="ttdef"><b>Definition</b> GameScene.h:79</div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">プレイヤーを管理する</div><div class="ttdef"><b>Definition</b> Player.h:15</div></div>
+<div class="ttc" id="aclass_sound_controller_html"><div class="ttname"><a href="class_sound_controller.html">SoundController</a></div><div class="ttdoc">サウンド再生を管理する</div><div class="ttdef"><b>Definition</b> SoundController.h:10</div></div>
+<div class="ttc" id="aclass_stage_html"><div class="ttname"><a href="class_stage.html">Stage</a></div><div class="ttdoc">Tiledで作成されたマップを管理する</div><div class="ttdef"><b>Definition</b> Stage.h:24</div></div>
+<div class="ttc" id="aclass_u_i_system_html"><div class="ttname"><a href="class_u_i_system.html">UISystem</a></div><div class="ttdoc">UIの描画を一元管理する</div><div class="ttdef"><b>Definition</b> UISystem.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_204260ac86670e69c647eaba8962e745.html">Scene</a></li><li class="navelem"><a href="_game_scene_8h.html">GameScene.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

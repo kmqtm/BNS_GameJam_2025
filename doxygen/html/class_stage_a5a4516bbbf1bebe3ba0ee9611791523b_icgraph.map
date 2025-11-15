@@ -1,0 +1,5 @@
+<map id="Stage::FindCollisionLayer" name="Stage::FindCollisionLayer">
+<area shape="rect" id="Node000001" title="衝突判定レイヤーを探索する" alt="" coords="151,5,321,32"/>
+<area shape="rect" id="Node000002" href="$class_stage.html#a635602a35a967a2f052e1d02eea88606" title="コンストラクタ" alt="" coords="5,5,103,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,21,103,21,103,16,135,16"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Stage" name="Stage">
+<area shape="rect" id="Node000001" title="Tiledで作成されたマップを管理する" alt="" coords="27,104,83,131"/>
+<area shape="rect" id="Node000002" href="$struct_tile_map_layer.html" title="タイルマップレイヤーを表現する構造体" alt="" coords="5,5,105,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,48,58,104,52,104,52,48"/>
+</map>

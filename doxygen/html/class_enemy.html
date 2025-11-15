@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: Enemy クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Enemy クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>敵を管理する  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_enemy_8h_source.html">Enemy.h</a>&gt;</code></p>
+<div class="dynheader">
+Enemy 連携図</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy__coll__graph.svg" width="252" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aef53170a2c1f62d9e563f56e7c0aa559" id="r_aef53170a2c1f62d9e563f56e7c0aa559"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef53170a2c1f62d9e563f56e7c0aa559">Enemy</a> (const String &amp;type, const Vec2 &amp;center_pos)</td></tr>
+<tr class="memdesc:aef53170a2c1f62d9e563f56e7c0aa559"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:ae7e78186f7a1889e10ed2560103514e0" id="r_ae7e78186f7a1889e10ed2560103514e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7e78186f7a1889e10ed2560103514e0">Update</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage, const <a class="el" href="class_player.html">Player</a> &amp;player)</td></tr>
+<tr class="memdesc:ae7e78186f7a1889e10ed2560103514e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵を更新する  <br /></td></tr>
+<tr class="memitem:a7dffb9d5c1543c81f7729c0dc46a3547" id="r_a7dffb9d5c1543c81f7729c0dc46a3547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dffb9d5c1543c81f7729c0dc46a3547">Draw</a> (const Vec2 &amp;camera_offset) const</td></tr>
+<tr class="memdesc:a7dffb9d5c1543c81f7729c0dc46a3547"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵を描画する  <br /></td></tr>
+<tr class="memitem:a64e895e074f80e6e85f046cdfd7ae10b" id="r_a64e895e074f80e6e85f046cdfd7ae10b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_collider.html">Collider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e895e074f80e6e85f046cdfd7ae10b">GetCollider</a> ()</td></tr>
+<tr class="memdesc:a64e895e074f80e6e85f046cdfd7ae10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダーを取得する  <br /></td></tr>
+<tr class="memitem:a7f0e5ddd806c3308c537575bc7d58c66" id="r_a7f0e5ddd806c3308c537575bc7d58c66"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_collider.html">Collider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f0e5ddd806c3308c537575bc7d58c66">GetCollider</a> () const</td></tr>
+<tr class="memdesc:a7f0e5ddd806c3308c537575bc7d58c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダーを取得する(const版)  <br /></td></tr>
+<tr class="memitem:a9430d173b04d905722ab1f022c0d7560" id="r_a9430d173b04d905722ab1f022c0d7560"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9430d173b04d905722ab1f022c0d7560">IsAlive</a> () const</td></tr>
+<tr class="memdesc:a9430d173b04d905722ab1f022c0d7560"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵が生存しているかを判定する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa5eb4bbc1406d4ee5ac263761a0d96dc" id="r_aa5eb4bbc1406d4ee5ac263761a0d96dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5eb4bbc1406d4ee5ac263761a0d96dc">UpdateAI</a> (const <a class="el" href="class_stage.html">Stage</a> &amp;stage)</td></tr>
+<tr class="memdesc:aa5eb4bbc1406d4ee5ac263761a0d96dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">AIの更新処理  <br /></td></tr>
+<tr class="memitem:abcd41140bfa1313b846630982ac9d2bc" id="r_abcd41140bfa1313b846630982ac9d2bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcd41140bfa1313b846630982ac9d2bc">UpdateColliderPosition</a> ()</td></tr>
+<tr class="memdesc:abcd41140bfa1313b846630982ac9d2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダー位置を更新する  <br /></td></tr>
+<tr class="memitem:abc18b179b21728f683288332e6f17781" id="r_abc18b179b21728f683288332e6f17781"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc18b179b21728f683288332e6f17781">HandleCollision</a> ()</td></tr>
+<tr class="memdesc:abc18b179b21728f683288332e6f17781"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突処理を実行する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a2fb8611b4433805669589de23fe2e094" id="r_a2fb8611b4433805669589de23fe2e094"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_i_behavior_strategy.html">IBehaviorStrategy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a></td></tr>
+<tr class="memdesc:a2fb8611b4433805669589de23fe2e094"><td class="mdescLeft">&#160;</td><td class="mdescRight">行動戦略ポインタ  <br /></td></tr>
+<tr class="memitem:a70d54254cad1b8f23ed276971c5c4de6" id="r_a70d54254cad1b8f23ed276971c5c4de6"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a></td></tr>
+<tr class="memdesc:a70d54254cad1b8f23ed276971c5c4de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵の位置  <br /></td></tr>
+<tr class="memitem:aa33cf2e5e896801a60fb03bc12d993c0" id="r_aa33cf2e5e896801a60fb03bc12d993c0"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa33cf2e5e896801a60fb03bc12d993c0">velocity_</a> = Vec2::Zero()</td></tr>
+<tr class="memdesc:aa33cf2e5e896801a60fb03bc12d993c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵の速度  <br /></td></tr>
+<tr class="memitem:a0a86ab555672991900cdc1e66ef03b0a" id="r_a0a86ab555672991900cdc1e66ef03b0a"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a86ab555672991900cdc1e66ef03b0a">physics_size_</a></td></tr>
+<tr class="memdesc:a0a86ab555672991900cdc1e66ef03b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵の物理サイズ  <br /></td></tr>
+<tr class="memitem:ac9fd8873c3b673f8fe9d3670f7b0a32a" id="r_ac9fd8873c3b673f8fe9d3670f7b0a32a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9fd8873c3b673f8fe9d3670f7b0a32a">collision_offset_</a> = 0.0</td></tr>
+<tr class="memdesc:ac9fd8873c3b673f8fe9d3670f7b0a32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">衝突判定のオフセット  <br /></td></tr>
+<tr class="memitem:a04417b15ad5c94524a36f7ddbc294584" id="r_a04417b15ad5c94524a36f7ddbc294584"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04417b15ad5c94524a36f7ddbc294584">is_alive_</a> = true</td></tr>
+<tr class="memdesc:a04417b15ad5c94524a36f7ddbc294584"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵が生存しているか  <br /></td></tr>
+<tr class="memitem:ac7804ce1a6846b160d501be6e6ddb803" id="r_ac7804ce1a6846b160d501be6e6ddb803"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7804ce1a6846b160d501be6e6ddb803">is_facing_right_</a> = false</td></tr>
+<tr class="memdesc:ac7804ce1a6846b160d501be6e6ddb803"><td class="mdescLeft">&#160;</td><td class="mdescRight">敵が右向きか  <br /></td></tr>
+<tr class="memitem:abcb5db7bf4092d1cbf8b39a90c39027a" id="r_abcb5db7bf4092d1cbf8b39a90c39027a"><td class="memItemLeft" align="right" valign="top">Vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb5db7bf4092d1cbf8b39a90c39027a">start_pos_</a> = Vec2::Zero()</td></tr>
+<tr class="memdesc:abcb5db7bf4092d1cbf8b39a90c39027a"><td class="mdescLeft">&#160;</td><td class="mdescRight">往復移動の開始位置  <br /></td></tr>
+<tr class="memitem:ab131e27f5e2ec59a3713f326ab1a6a2c" id="r_ab131e27f5e2ec59a3713f326ab1a6a2c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab131e27f5e2ec59a3713f326ab1a6a2c">travel_distance_</a> = 0.0</td></tr>
+<tr class="memdesc:ab131e27f5e2ec59a3713f326ab1a6a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">往復移動の現在の移動距離  <br /></td></tr>
+<tr class="memitem:ae6c40d5e3f7dc3dfacc1988c916f928f" id="r_ae6c40d5e3f7dc3dfacc1988c916f928f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6c40d5e3f7dc3dfacc1988c916f928f">max_travel_distance_</a> = 0.0</td></tr>
+<tr class="memdesc:ae6c40d5e3f7dc3dfacc1988c916f928f"><td class="mdescLeft">&#160;</td><td class="mdescRight">往復移動の最大移動距離  <br /></td></tr>
+<tr class="memitem:abff7adbaa4e545c75a579756391a3e8e" id="r_abff7adbaa4e545c75a579756391a3e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation_controller.html">AnimationController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a></td></tr>
+<tr class="memdesc:abff7adbaa4e545c75a579756391a3e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションコントローラー  <br /></td></tr>
+<tr class="memitem:a8507370f060194fb572ff108b9475615" id="r_a8507370f060194fb572ff108b9475615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_collider.html">Collider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8507370f060194fb572ff108b9475615">collider_</a> { Circle{0,0,1}, <a class="el" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a> }</td></tr>
+<tr class="memdesc:a8507370f060194fb572ff108b9475615"><td class="mdescLeft">&#160;</td><td class="mdescRight">コライダー  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:ab5104eb64e4ab3ee78f4fa915c58b017" id="r_ab5104eb64e4ab3ee78f4fa915c58b017"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5104eb64e4ab3ee78f4fa915c58b017">IBehaviorStrategy</a></td></tr>
+<tr class="memitem:ab34ad93257a0fd2f84cec853c87ace30" id="r_ab34ad93257a0fd2f84cec853c87ace30"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab34ad93257a0fd2f84cec853c87ace30">StationaryBehavior</a></td></tr>
+<tr class="memitem:aca63ae1309aa2c8956d25544e951416f" id="r_aca63ae1309aa2c8956d25544e951416f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca63ae1309aa2c8956d25544e951416f">PatrolBehavior</a></td></tr>
+<tr class="memitem:a139fa512a692bb0b839ebd3a68d225d6" id="r_a139fa512a692bb0b839ebd3a68d225d6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a139fa512a692bb0b839ebd3a68d225d6">BackAndForthBehavior</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>敵を管理する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="aef53170a2c1f62d9e563f56e7c0aa559" name="aef53170a2c1f62d9e563f56e7c0aa559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef53170a2c1f62d9e563f56e7c0aa559">&#9670;&#160;</a></span>Enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>center_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>敵のタイプ </td></tr>
+    <tr><td class="paramname">center_pos</td><td>初期位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    : <a class="code hl_variable" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a>(center_pos)</div>
+<div class="line"><span class="lineno">   28</span>    , <a class="code hl_variable" href="#abcb5db7bf4092d1cbf8b39a90c39027a">start_pos_</a>(center_pos)</div>
+<div class="line"><span class="lineno">   29</span>{</div>
+<div class="line"><span class="lineno">   30</span>    <span class="comment">// 仕様の取得</span></div>
+<div class="line"><span class="lineno">   31</span>    <span class="keyword">auto</span> specOpt = <a class="code hl_function" href="class_enemy_data_system.html#a903ac6dd6ca6347575e8ff65f0bd5432">EnemyDataSystem::GetInstance</a>().<a class="code hl_function" href="class_enemy_data_system.html#adf32279bb330b55e88a56b36b2f08345">TryGetSpec</a>(type);</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span>(not specOpt)</div>
+<div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        Print &lt;&lt; U<span class="stringliteral">&quot;エラー: &#39;{}&#39; のデータが見つかりません&quot;</span>_fmt(type);</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; spec = *specOpt;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment">// Strategy の生成</span></div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">switch</span>(spec.behavior)</div>
+<div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dadf7a8712303eeadde5d19f0e2955085c">EnemyDataSystem::BehaviorKind::Patrol</a>:</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a> = std::make_unique&lt;PatrolBehavior&gt;();</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dad64312a309fe3d4d870a2afbd94d5ec3">EnemyDataSystem::BehaviorKind::BackAndForth</a>:</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a> = std::make_unique&lt;BackAndForthBehavior&gt;();</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_variable" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a> = std::make_unique&lt;StationaryBehavior&gt;();</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment">// physics</span></div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="#a0a86ab555672991900cdc1e66ef03b0a">physics_size_</a> = Vec2{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(spec.physics_size.x), <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(spec.physics_size.y) };</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment">// movement 初期化（以前は behavior_ 判定、今は spec.behavior を直接使用）</span></div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="#ac9fd8873c3b673f8fe9d3670f7b0a32a">collision_offset_</a> = spec.collision_offset;</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(spec.behavior == <a class="code hl_enumvalue" href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dadf7a8712303eeadde5d19f0e2955085c">EnemyDataSystem::BehaviorKind::Patrol</a>)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="#aa33cf2e5e896801a60fb03bc12d993c0">velocity_</a>.x = (spec.initial_facing_right ? +spec.speed : -spec.speed);</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="#ac7804ce1a6846b160d501be6e6ddb803">is_facing_right_</a> = spec.initial_facing_right;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(spec.behavior == <a class="code hl_enumvalue" href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dad64312a309fe3d4d870a2afbd94d5ec3">EnemyDataSystem::BehaviorKind::BackAndForth</a>)</div>
+<div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="#aa33cf2e5e896801a60fb03bc12d993c0">velocity_</a>.x = spec.initial_velocity_x;</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="#ae6c40d5e3f7dc3dfacc1988c916f928f">max_travel_distance_</a> = spec.max_travel_distance;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">// collider</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span>(spec.collider_shape == <a class="code hl_enumvalue" href="class_enemy_data_system.html#a432030b7c18d51dca643bd4127bfa08da30954d90085f6eaaf5817917fc5fecb3">EnemyDataSystem::ColliderKind::Circle</a>)</div>
+<div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="#a8507370f060194fb572ff108b9475615">collider_</a> = Collider{ Circle{ <a class="code hl_variable" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a>, spec.collider_radius }, <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a> };</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_variable" href="#a8507370f060194fb572ff108b9475615">collider_</a> = Collider{ RectF{ Arg::center(<a class="code hl_variable" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a>), spec.collider_width, spec.collider_height }, <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a> };</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">// animations</span></div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [name, animSpec] : spec.animations)</div>
+<div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a>.AddAnimation(name, ToAnimation(animSpec));</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="comment">// 初期再生</span></div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span>(spec.behavior == <a class="code hl_enumvalue" href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134da5146a957bfa51752bd6020691fda598e">EnemyDataSystem::BehaviorKind::Stationary</a>)</div>
+<div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span>(spec.animations.contains(U<span class="stringliteral">&quot;idle&quot;</span>))</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <a class="code hl_variable" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a>.Play(U<span class="stringliteral">&quot;idle&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span>(spec.animations.contains(U<span class="stringliteral">&quot;move&quot;</span>))</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a>.Play(U<span class="stringliteral">&quot;move&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+<div class="ttc" id="a_collider_8h_html_ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba"><div class="ttname"><a href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a></div><div class="ttdeci">@ kEnemy</div><div class="ttdoc">敵</div><div class="ttdef"><b>Definition</b> Collider.h:15</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_a432030b7c18d51dca643bd4127bfa08da30954d90085f6eaaf5817917fc5fecb3"><div class="ttname"><a href="class_enemy_data_system.html#a432030b7c18d51dca643bd4127bfa08da30954d90085f6eaaf5817917fc5fecb3">EnemyDataSystem::ColliderKind::Circle</a></div><div class="ttdeci">@ Circle</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.h:27</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_a650598c2cdecac37d41c76b31b95134da5146a957bfa51752bd6020691fda598e"><div class="ttname"><a href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134da5146a957bfa51752bd6020691fda598e">EnemyDataSystem::BehaviorKind::Stationary</a></div><div class="ttdeci">@ Stationary</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.h:24</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_a650598c2cdecac37d41c76b31b95134dad64312a309fe3d4d870a2afbd94d5ec3"><div class="ttname"><a href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dad64312a309fe3d4d870a2afbd94d5ec3">EnemyDataSystem::BehaviorKind::BackAndForth</a></div><div class="ttdeci">@ BackAndForth</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.h:24</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_a650598c2cdecac37d41c76b31b95134dadf7a8712303eeadde5d19f0e2955085c"><div class="ttname"><a href="class_enemy_data_system.html#a650598c2cdecac37d41c76b31b95134dadf7a8712303eeadde5d19f0e2955085c">EnemyDataSystem::BehaviorKind::Patrol</a></div><div class="ttdeci">@ Patrol</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.h:24</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_a903ac6dd6ca6347575e8ff65f0bd5432"><div class="ttname"><a href="class_enemy_data_system.html#a903ac6dd6ca6347575e8ff65f0bd5432">EnemyDataSystem::GetInstance</a></div><div class="ttdeci">static EnemyDataSystem &amp; GetInstance()</div><div class="ttdoc">シングルトンインスタンスを取得する</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.cpp:26</div></div>
+<div class="ttc" id="aclass_enemy_data_system_html_adf32279bb330b55e88a56b36b2f08345"><div class="ttname"><a href="class_enemy_data_system.html#adf32279bb330b55e88a56b36b2f08345">EnemyDataSystem::TryGetSpec</a></div><div class="ttdeci">s3d::Optional&lt; EnemySpec &gt; TryGetSpec(const s3d::String &amp;type) const</div><div class="ttdoc">指定したタイプの敵仕様を取得する</div><div class="ttdef"><b>Definition</b> EnemyDataSystem.cpp:121</div></div>
+<div class="ttc" id="aclass_enemy_html_a0a86ab555672991900cdc1e66ef03b0a"><div class="ttname"><a href="#a0a86ab555672991900cdc1e66ef03b0a">Enemy::physics_size_</a></div><div class="ttdeci">Vec2 physics_size_</div><div class="ttdoc">敵の物理サイズ</div><div class="ttdef"><b>Definition</b> Enemy.h:77</div></div>
+<div class="ttc" id="aclass_enemy_html_a2fb8611b4433805669589de23fe2e094"><div class="ttname"><a href="#a2fb8611b4433805669589de23fe2e094">Enemy::behavior_strategy_</a></div><div class="ttdeci">std::unique_ptr&lt; IBehaviorStrategy &gt; behavior_strategy_</div><div class="ttdoc">行動戦略ポインタ</div><div class="ttdef"><b>Definition</b> Enemy.h:68</div></div>
+<div class="ttc" id="aclass_enemy_html_a70d54254cad1b8f23ed276971c5c4de6"><div class="ttname"><a href="#a70d54254cad1b8f23ed276971c5c4de6">Enemy::pos_</a></div><div class="ttdeci">Vec2 pos_</div><div class="ttdoc">敵の位置</div><div class="ttdef"><b>Definition</b> Enemy.h:71</div></div>
+<div class="ttc" id="aclass_enemy_html_a8507370f060194fb572ff108b9475615"><div class="ttname"><a href="#a8507370f060194fb572ff108b9475615">Enemy::collider_</a></div><div class="ttdeci">Collider collider_</div><div class="ttdoc">コライダー</div><div class="ttdef"><b>Definition</b> Enemy.h:101</div></div>
+<div class="ttc" id="aclass_enemy_html_aa33cf2e5e896801a60fb03bc12d993c0"><div class="ttname"><a href="#aa33cf2e5e896801a60fb03bc12d993c0">Enemy::velocity_</a></div><div class="ttdeci">Vec2 velocity_</div><div class="ttdoc">敵の速度</div><div class="ttdef"><b>Definition</b> Enemy.h:74</div></div>
+<div class="ttc" id="aclass_enemy_html_abcb5db7bf4092d1cbf8b39a90c39027a"><div class="ttname"><a href="#abcb5db7bf4092d1cbf8b39a90c39027a">Enemy::start_pos_</a></div><div class="ttdeci">Vec2 start_pos_</div><div class="ttdoc">往復移動の開始位置</div><div class="ttdef"><b>Definition</b> Enemy.h:89</div></div>
+<div class="ttc" id="aclass_enemy_html_abff7adbaa4e545c75a579756391a3e8e"><div class="ttname"><a href="#abff7adbaa4e545c75a579756391a3e8e">Enemy::anim_controller_</a></div><div class="ttdeci">AnimationController anim_controller_</div><div class="ttdoc">アニメーションコントローラー</div><div class="ttdef"><b>Definition</b> Enemy.h:98</div></div>
+<div class="ttc" id="aclass_enemy_html_ac7804ce1a6846b160d501be6e6ddb803"><div class="ttname"><a href="#ac7804ce1a6846b160d501be6e6ddb803">Enemy::is_facing_right_</a></div><div class="ttdeci">bool is_facing_right_</div><div class="ttdoc">敵が右向きか</div><div class="ttdef"><b>Definition</b> Enemy.h:86</div></div>
+<div class="ttc" id="aclass_enemy_html_ac9fd8873c3b673f8fe9d3670f7b0a32a"><div class="ttname"><a href="#ac9fd8873c3b673f8fe9d3670f7b0a32a">Enemy::collision_offset_</a></div><div class="ttdeci">double collision_offset_</div><div class="ttdoc">衝突判定のオフセット</div><div class="ttdef"><b>Definition</b> Enemy.h:80</div></div>
+<div class="ttc" id="aclass_enemy_html_ae6c40d5e3f7dc3dfacc1988c916f928f"><div class="ttname"><a href="#ae6c40d5e3f7dc3dfacc1988c916f928f">Enemy::max_travel_distance_</a></div><div class="ttdeci">double max_travel_distance_</div><div class="ttdoc">往復移動の最大移動距離</div><div class="ttdef"><b>Definition</b> Enemy.h:95</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy_aef53170a2c1f62d9e563f56e7c0aa559_cgraph.svg" width="695" height="280"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a7dffb9d5c1543c81f7729c0dc46a3547" name="a7dffb9d5c1543c81f7729c0dc46a3547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dffb9d5c1543c81f7729c0dc46a3547">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::Draw </td>
+          <td>(</td>
+          <td class="paramtype">const Vec2 &amp;</td>          <td class="paramname"><span class="paramname"><em>camera_offset</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>敵を描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_offset</td><td>カメラオフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>{</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a04417b15ad5c94524a36f7ddbc294584">is_alive_</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span> texture_asset = <a class="code hl_variable" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a>.GetCurrentTextureAsset())</div>
+<div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keyword">const</span> Vec2 draw_pos = <a class="code hl_variable" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a> - camera_offset;</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keyword">const</span> Vec2 final_draw_pos = s3d::Floor(draw_pos);</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac7804ce1a6846b160d501be6e6ddb803">is_facing_right_</a>)</div>
+<div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            texture_asset-&gt;mirrored().drawAt(final_draw_pos);</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            texture_asset-&gt;drawAt(final_draw_pos);</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  158</span>}</div>
+<div class="ttc" id="aclass_enemy_html_a04417b15ad5c94524a36f7ddbc294584"><div class="ttname"><a href="#a04417b15ad5c94524a36f7ddbc294584">Enemy::is_alive_</a></div><div class="ttdeci">bool is_alive_</div><div class="ttdoc">敵が生存しているか</div><div class="ttdef"><b>Definition</b> Enemy.h:83</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64e895e074f80e6e85f046cdfd7ae10b" name="a64e895e074f80e6e85f046cdfd7ae10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e895e074f80e6e85f046cdfd7ae10b">&#9670;&#160;</a></span>GetCollider() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_collider.html">Collider</a> &amp; Enemy::GetCollider </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コライダーを取得する </p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8507370f060194fb572ff108b9475615">collider_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7f0e5ddd806c3308c537575bc7d58c66" name="a7f0e5ddd806c3308c537575bc7d58c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0e5ddd806c3308c537575bc7d58c66">&#9670;&#160;</a></span>GetCollider() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_collider.html">Collider</a> &amp; Enemy::GetCollider </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コライダーを取得する(const版) </p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8507370f060194fb572ff108b9475615">collider_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abc18b179b21728f683288332e6f17781" name="abc18b179b21728f683288332e6f17781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc18b179b21728f683288332e6f17781">&#9670;&#160;</a></span>HandleCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::HandleCollision </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突処理を実行する </p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
+<div class="line"><span class="lineno">  137</span>    <span class="comment">// 本ゲームでは特に敵側で行う処理なし</span></div>
+<div class="line"><span class="lineno">  138</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy_abc18b179b21728f683288332e6f17781_icgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9430d173b04d905722ab1f022c0d7560" name="a9430d173b04d905722ab1f022c0d7560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9430d173b04d905722ab1f022c0d7560">&#9670;&#160;</a></span>IsAlive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy::IsAlive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵が生存しているかを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>生存している場合はtrue </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a04417b15ad5c94524a36f7ddbc294584">is_alive_</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae7e78186f7a1889e10ed2560103514e0" name="ae7e78186f7a1889e10ed2560103514e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e78186f7a1889e10ed2560103514e0">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::Update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_player.html">Player</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>敵を更新する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+    <tr><td class="paramname">player</td><td>プレイヤー情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>    (void)player;</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="#a04417b15ad5c94524a36f7ddbc294584">is_alive_</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_function" href="#aa5eb4bbc1406d4ee5ac263761a0d96dc">UpdateAI</a>(stage);</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_variable" href="#abff7adbaa4e545c75a579756391a3e8e">anim_controller_</a>.Update();</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="#abcd41140bfa1313b846630982ac9d2bc">UpdateColliderPosition</a>();</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="#abc18b179b21728f683288332e6f17781">HandleCollision</a>();</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aclass_enemy_html_aa5eb4bbc1406d4ee5ac263761a0d96dc"><div class="ttname"><a href="#aa5eb4bbc1406d4ee5ac263761a0d96dc">Enemy::UpdateAI</a></div><div class="ttdeci">void UpdateAI(const Stage &amp;stage)</div><div class="ttdoc">AIの更新処理</div><div class="ttdef"><b>Definition</b> Enemy.cpp:115</div></div>
+<div class="ttc" id="aclass_enemy_html_abc18b179b21728f683288332e6f17781"><div class="ttname"><a href="#abc18b179b21728f683288332e6f17781">Enemy::HandleCollision</a></div><div class="ttdeci">void HandleCollision()</div><div class="ttdoc">衝突処理を実行する</div><div class="ttdef"><b>Definition</b> Enemy.cpp:135</div></div>
+<div class="ttc" id="aclass_enemy_html_abcd41140bfa1313b846630982ac9d2bc"><div class="ttname"><a href="#abcd41140bfa1313b846630982ac9d2bc">Enemy::UpdateColliderPosition</a></div><div class="ttdeci">void UpdateColliderPosition()</div><div class="ttdoc">コライダー位置を更新する</div><div class="ttdef"><b>Definition</b> Enemy.cpp:123</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy_ae7e78186f7a1889e10ed2560103514e0_cgraph.svg" width="375" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa5eb4bbc1406d4ee5ac263761a0d96dc" name="aa5eb4bbc1406d4ee5ac263761a0d96dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5eb4bbc1406d4ee5ac263761a0d96dc">&#9670;&#160;</a></span>UpdateAI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::UpdateAI </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stage.html">Stage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AIの更新処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>ステージ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a>)</div>
+<div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="#a2fb8611b4433805669589de23fe2e094">behavior_strategy_</a>-&gt;Update(*<span class="keyword">this</span>, stage);</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy_aa5eb4bbc1406d4ee5ac263761a0d96dc_icgraph.svg" width="296" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abcd41140bfa1313b846630982ac9d2bc" name="abcd41140bfa1313b846630982ac9d2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd41140bfa1313b846630982ac9d2bc">&#9670;&#160;</a></span>UpdateColliderPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::UpdateColliderPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コライダー位置を更新する </p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
+<div class="line"><span class="lineno">  125</span>    std::visit([&amp;](<span class="keyword">auto</span>&amp; shape)</div>
+<div class="line"><span class="lineno">  126</span>               {</div>
+<div class="line"><span class="lineno">  127</span>                   <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(std::is_same_v&lt;std::decay_t&lt;<span class="keyword">decltype</span>(shape)&gt;, s3d::Circle&gt; ||</div>
+<div class="line"><span class="lineno">  128</span>                                std::is_same_v&lt;std::decay_t&lt;<span class="keyword">decltype</span>(shape)&gt;, s3d::RectF&gt;)</div>
+<div class="line"><span class="lineno">  129</span>                   {</div>
+<div class="line"><span class="lineno">  130</span>                       shape.setCenter(<a class="code hl_variable" href="#a70d54254cad1b8f23ed276971c5c4de6">pos_</a>);</div>
+<div class="line"><span class="lineno">  131</span>                   }</div>
+<div class="line"><span class="lineno">  132</span>               }, <a class="code hl_variable" href="#a8507370f060194fb572ff108b9475615">collider_</a>.shape);</div>
+<div class="line"><span class="lineno">  133</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_enemy_abcd41140bfa1313b846630982ac9d2bc_icgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a139fa512a692bb0b839ebd3a68d225d6" name="a139fa512a692bb0b839ebd3a68d225d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139fa512a692bb0b839ebd3a68d225d6">&#9670;&#160;</a></span>BackAndForthBehavior</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_back_and_forth_behavior.html">BackAndForthBehavior</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5104eb64e4ab3ee78f4fa915c58b017" name="ab5104eb64e4ab3ee78f4fa915c58b017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5104eb64e4ab3ee78f4fa915c58b017">&#9670;&#160;</a></span>IBehaviorStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_i_behavior_strategy.html">IBehaviorStrategy</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca63ae1309aa2c8956d25544e951416f" name="aca63ae1309aa2c8956d25544e951416f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca63ae1309aa2c8956d25544e951416f">&#9670;&#160;</a></span>PatrolBehavior</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_patrol_behavior.html">PatrolBehavior</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab34ad93257a0fd2f84cec853c87ace30" name="ab34ad93257a0fd2f84cec853c87ace30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34ad93257a0fd2f84cec853c87ace30">&#9670;&#160;</a></span>StationaryBehavior</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_stationary_behavior.html">StationaryBehavior</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="abff7adbaa4e545c75a579756391a3e8e" name="abff7adbaa4e545c75a579756391a3e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff7adbaa4e545c75a579756391a3e8e">&#9670;&#160;</a></span>anim_controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation_controller.html">AnimationController</a> Enemy::anim_controller_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションコントローラー </p>
+
+</div>
+</div>
+<a id="a2fb8611b4433805669589de23fe2e094" name="a2fb8611b4433805669589de23fe2e094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb8611b4433805669589de23fe2e094">&#9670;&#160;</a></span>behavior_strategy_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_i_behavior_strategy.html">IBehaviorStrategy</a>&gt; Enemy::behavior_strategy_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行動戦略ポインタ </p>
+
+</div>
+</div>
+<a id="a8507370f060194fb572ff108b9475615" name="a8507370f060194fb572ff108b9475615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8507370f060194fb572ff108b9475615">&#9670;&#160;</a></span>collider_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_collider.html">Collider</a> Enemy::collider_ { Circle{0,0,1}, <a class="el" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a> }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コライダー </p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>{ Circle{0,0,1}, <a class="code hl_enumvalue" href="_collider_8h.html#ac7af8ecfc927eb4be84ab71d0d3ec21ea5248b149b662cf79e1a1239bb4ef97ba">ColliderTag::kEnemy</a> };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac9fd8873c3b673f8fe9d3670f7b0a32a" name="ac9fd8873c3b673f8fe9d3670f7b0a32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fd8873c3b673f8fe9d3670f7b0a32a">&#9670;&#160;</a></span>collision_offset_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Enemy::collision_offset_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>衝突判定のオフセット </p>
+
+</div>
+</div>
+<a id="a04417b15ad5c94524a36f7ddbc294584" name="a04417b15ad5c94524a36f7ddbc294584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04417b15ad5c94524a36f7ddbc294584">&#9670;&#160;</a></span>is_alive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy::is_alive_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵が生存しているか </p>
+
+</div>
+</div>
+<a id="ac7804ce1a6846b160d501be6e6ddb803" name="ac7804ce1a6846b160d501be6e6ddb803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7804ce1a6846b160d501be6e6ddb803">&#9670;&#160;</a></span>is_facing_right_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Enemy::is_facing_right_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵が右向きか </p>
+
+</div>
+</div>
+<a id="ae6c40d5e3f7dc3dfacc1988c916f928f" name="ae6c40d5e3f7dc3dfacc1988c916f928f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c40d5e3f7dc3dfacc1988c916f928f">&#9670;&#160;</a></span>max_travel_distance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Enemy::max_travel_distance_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>往復移動の最大移動距離 </p>
+
+</div>
+</div>
+<a id="a0a86ab555672991900cdc1e66ef03b0a" name="a0a86ab555672991900cdc1e66ef03b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a86ab555672991900cdc1e66ef03b0a">&#9670;&#160;</a></span>physics_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Enemy::physics_size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵の物理サイズ </p>
+
+</div>
+</div>
+<a id="a70d54254cad1b8f23ed276971c5c4de6" name="a70d54254cad1b8f23ed276971c5c4de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d54254cad1b8f23ed276971c5c4de6">&#9670;&#160;</a></span>pos_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Enemy::pos_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵の位置 </p>
+
+</div>
+</div>
+<a id="abcb5db7bf4092d1cbf8b39a90c39027a" name="abcb5db7bf4092d1cbf8b39a90c39027a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb5db7bf4092d1cbf8b39a90c39027a">&#9670;&#160;</a></span>start_pos_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Enemy::start_pos_ = Vec2::Zero()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>往復移動の開始位置 </p>
+
+</div>
+</div>
+<a id="ab131e27f5e2ec59a3713f326ab1a6a2c" name="ab131e27f5e2ec59a3713f326ab1a6a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab131e27f5e2ec59a3713f326ab1a6a2c">&#9670;&#160;</a></span>travel_distance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Enemy::travel_distance_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>往復移動の現在の移動距離 </p>
+
+</div>
+</div>
+<a id="aa33cf2e5e896801a60fb03bc12d993c0" name="aa33cf2e5e896801a60fb03bc12d993c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33cf2e5e896801a60fb03bc12d993c0">&#9670;&#160;</a></span>velocity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec2 Enemy::velocity_ = Vec2::Zero()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>敵の速度 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/Entitie/<a class="el" href="_enemy_8h_source.html">Enemy.h</a></li>
+<li>src/Entitie/<a class="el" href="_enemy_8cpp.html">Enemy.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_enemy.html">Enemy</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

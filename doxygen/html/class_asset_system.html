@@ -1,0 +1,863 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: AssetSystem クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_asset_system.html','','class_asset_system-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AssetSystem クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>アセット読み込みと登録を管理するシングルトン  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_asset_system_8h_source.html">AssetSystem.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ad0d388da66b9a01be0ed99087c994324" id="r_ad0d388da66b9a01be0ed99087c994324"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d388da66b9a01be0ed99087c994324">LoadMode</a> { <a class="el" href="#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">Auto</a>
+, <a class="el" href="#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">Sync</a>
+, <a class="el" href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">Async</a>
+ }</td></tr>
+<tr class="memdesc:ad0d388da66b9a01be0ed99087c994324"><td class="mdescLeft">&#160;</td><td class="mdescRight">アセットのロードモード  <a href="#ad0d388da66b9a01be0ed99087c994324">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a38216f3fc1a218b4cf6910e8ed455be9" id="r_a38216f3fc1a218b4cf6910e8ed455be9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38216f3fc1a218b4cf6910e8ed455be9">PrepareAssets</a> (const String &amp;scene_name)</td></tr>
+<tr class="memdesc:a38216f3fc1a218b4cf6910e8ed455be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したシーン名のアセットを準備する  <br /></td></tr>
+<tr class="memitem:ab7a0d836fbd30a0f29e661f9832a15b4" id="r_ab7a0d836fbd30a0f29e661f9832a15b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7a0d836fbd30a0f29e661f9832a15b4">UnregisterAssets</a> ()</td></tr>
+<tr class="memdesc:ab7a0d836fbd30a0f29e661f9832a15b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のシーンのアセット登録をすべて解除する  <br /></td></tr>
+<tr class="memitem:a8699ee18bd398670439d3b6340e1f1dc" id="r_a8699ee18bd398670439d3b6340e1f1dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8699ee18bd398670439d3b6340e1f1dc">IsSceneAssetsReady</a> ()</td></tr>
+<tr class="memdesc:a8699ee18bd398670439d3b6340e1f1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のシーンのアセット非同期ロードが完了したか  <br /></td></tr>
+<tr class="memitem:a88219cddf418f7a49d68ec447eb8ed13" id="r_a88219cddf418f7a49d68ec447eb8ed13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88219cddf418f7a49d68ec447eb8ed13">WaitUntilReady</a> ()</td></tr>
+<tr class="memdesc:a88219cddf418f7a49d68ec447eb8ed13"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ロードが完了するまで待機する  <br /></td></tr>
+<tr class="memitem:a01eef25242d94de3e93ac0644a269127" id="r_a01eef25242d94de3e93ac0644a269127"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01eef25242d94de3e93ac0644a269127">AssetSystem</a> (const <a class="el" href="class_asset_system.html">AssetSystem</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a01eef25242d94de3e93ac0644a269127"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ(削除)  <br /></td></tr>
+<tr class="memitem:af585580f85ed1c4eaf30b2b2de0156b5" id="r_af585580f85ed1c4eaf30b2b2de0156b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_asset_system.html">AssetSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af585580f85ed1c4eaf30b2b2de0156b5">operator=</a> (const <a class="el" href="class_asset_system.html">AssetSystem</a> &amp;)=delete</td></tr>
+<tr class="memdesc:af585580f85ed1c4eaf30b2b2de0156b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子(削除)  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac182714115a88042762b2c178a6865ca" id="r_ac182714115a88042762b2c178a6865ca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_asset_system.html">AssetSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac182714115a88042762b2c178a6865ca">GetInstance</a> ()</td></tr>
+<tr class="memdesc:ac182714115a88042762b2c178a6865ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">シングルトンインスタンスを取得する  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aed9f592fdf9bfe9af1df040c18e97754" id="r_aed9f592fdf9bfe9af1df040c18e97754"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed9f592fdf9bfe9af1df040c18e97754">AssetSystem</a> ()</td></tr>
+<tr class="memdesc:aed9f592fdf9bfe9af1df040c18e97754"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:a89836a6278b0d4237fe0efc49906e437" id="r_a89836a6278b0d4237fe0efc49906e437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89836a6278b0d4237fe0efc49906e437">RegisterAndLoadAsset</a> (const String &amp;asset_type, const String &amp;asset_filepath, <a class="el" href="#ad0d388da66b9a01be0ed99087c994324">LoadMode</a> mode)</td></tr>
+<tr class="memdesc:a89836a6278b0d4237fe0efc49906e437"><td class="mdescLeft">&#160;</td><td class="mdescRight">アセットを登録してロードする  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a84c29f36ac79b28eebef7bf12778430c" id="r_a84c29f36ac79b28eebef7bf12778430c"><td class="memItemLeft" align="right" valign="top">JSON&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a></td></tr>
+<tr class="memdesc:a84c29f36ac79b28eebef7bf12778430c"><td class="mdescLeft">&#160;</td><td class="mdescRight">アセット情報を定義したJSONデータ  <br /></td></tr>
+<tr class="memitem:a331ce0c5847cff3bcc955be4adb3d5c5" id="r_a331ce0c5847cff3bcc955be4adb3d5c5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a></td></tr>
+<tr class="memdesc:a331ce0c5847cff3bcc955be4adb3d5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在対象となっているシーン名  <br /></td></tr>
+<tr class="memitem:a5fd5308f6f828605011d7589bd4176a7" id="r_a5fd5308f6f828605011d7589bd4176a7"><td class="memItemLeft" align="right" valign="top">const Array&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fd5308f6f828605011d7589bd4176a7">asset_types_</a> = { U&quot;Font&quot;, U&quot;Sound&quot;, U&quot;Texture&quot; }</td></tr>
+<tr class="memdesc:a5fd5308f6f828605011d7589bd4176a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">対象とするアセットの種類  <br /></td></tr>
+<tr class="memitem:a6af9bda56fa2ed84717983f7f54784bc" id="r_a6af9bda56fa2ed84717983f7f54784bc"><td class="memItemLeft" align="right" valign="top">Array&lt; std::pair&lt; String, String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6af9bda56fa2ed84717983f7f54784bc">registered_assets_</a></td></tr>
+<tr class="memdesc:a6af9bda56fa2ed84717983f7f54784bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録されたアセットの一覧(種類,基本名)  <br /></td></tr>
+<tr class="memitem:a5973b962623451f754298ad7657efd50" id="r_a5973b962623451f754298ad7657efd50"><td class="memItemLeft" align="right" valign="top">Array&lt; std::pair&lt; String, String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a></td></tr>
+<tr class="memdesc:a5973b962623451f754298ad7657efd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">非同期ロード中のアセット一覧(種類,基本名)  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>アセット読み込みと登録を管理するシングルトン </p>
+<p>シーンごとに必要なアセットをJSONファイルから読み込み，同期・非同期での 登録・ロードを制御する </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="ad0d388da66b9a01be0ed99087c994324" name="ad0d388da66b9a01be0ed99087c994324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d388da66b9a01be0ed99087c994324">&#9670;&#160;</a></span>LoadMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad0d388da66b9a01be0ed99087c994324">AssetSystem::LoadMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アセットのロードモード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb" name="ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb"></a>Auto&#160;</td><td class="fielddoc"><p>自動判別(デフォルト) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f" name="ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f"></a>Sync&#160;</td><td class="fielddoc"><p>同期ロード </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6" name="ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6"></a>Async&#160;</td><td class="fielddoc"><p>非同期ロード </p>
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        Auto,   </div>
+<div class="line"><span class="lineno">   27</span>        Sync,   </div>
+<div class="line"><span class="lineno">   28</span>        Async   </div>
+<div class="line"><span class="lineno">   29</span>    };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a01eef25242d94de3e93ac0644a269127" name="a01eef25242d94de3e93ac0644a269127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01eef25242d94de3e93ac0644a269127">&#9670;&#160;</a></span>AssetSystem() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AssetSystem::AssetSystem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_asset_system.html">AssetSystem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ(削除) </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a01eef25242d94de3e93ac0644a269127_cgraph.svg" width="199" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a01eef25242d94de3e93ac0644a269127_icgraph.svg" width="655" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aed9f592fdf9bfe9af1df040c18e97754" name="aed9f592fdf9bfe9af1df040c18e97754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9f592fdf9bfe9af1df040c18e97754">&#9670;&#160;</a></span>AssetSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AssetSystem::AssetSystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a> = JSON::Load(U<span class="stringliteral">&quot;asset/AssetInformation.json&quot;</span>);</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>)</div>
+<div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;AssetInformation.jsonの読み込みに失敗しました．&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a84c29f36ac79b28eebef7bf12778430c"><div class="ttname"><a href="#a84c29f36ac79b28eebef7bf12778430c">AssetSystem::asset_json_</a></div><div class="ttdeci">JSON asset_json_</div><div class="ttdoc">アセット情報を定義したJSONデータ</div><div class="ttdef"><b>Definition</b> AssetSystem.h:56</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ac182714115a88042762b2c178a6865ca" name="ac182714115a88042762b2c178a6865ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac182714115a88042762b2c178a6865ca">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_asset_system.html">AssetSystem</a> &amp; AssetSystem::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シングルトンインスタンスを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>AssetSystemのインスタンス </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
+<div class="line"><span class="lineno">    7</span>    <span class="keyword">static</span> <a class="code hl_function" href="#a01eef25242d94de3e93ac0644a269127">AssetSystem</a> instance;</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">return</span> instance;</div>
+<div class="line"><span class="lineno">    9</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a01eef25242d94de3e93ac0644a269127"><div class="ttname"><a href="#a01eef25242d94de3e93ac0644a269127">AssetSystem::AssetSystem</a></div><div class="ttdeci">AssetSystem(const AssetSystem &amp;)=delete</div><div class="ttdoc">コピーコンストラクタ(削除)</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_ac182714115a88042762b2c178a6865ca_cgraph.svg" width="426" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_ac182714115a88042762b2c178a6865ca_icgraph.svg" width="420" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8699ee18bd398670439d3b6340e1f1dc" name="a8699ee18bd398670439d3b6340e1f1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8699ee18bd398670439d3b6340e1f1dc">&#9670;&#160;</a></span>IsSceneAssetsReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AssetSystem::IsSceneAssetsReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のシーンのアセット非同期ロードが完了したか </p>
+<dl class="section return"><dt>戻り値</dt><dd>完了している場合はtrue </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
+<div class="line"><span class="lineno">  144</span>    <span class="comment">// より読みやすく: pending_assets_ を走査して未完了のみを残す</span></div>
+<div class="line"><span class="lineno">  145</span>    Array&lt;std::pair&lt;String, String&gt;&gt; remaining;</div>
+<div class="line"><span class="lineno">  146</span>    remaining.reserve(<a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.size());</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>)</div>
+<div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keyword">const</span> String&amp; type = p.first;</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keyword">const</span> String&amp; baseName = p.second;</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordtype">bool</span> ready = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span>(type == U<span class="stringliteral">&quot;Texture&quot;</span>)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            ready = TextureAsset::IsReady(baseName);</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == U<span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            ready = AudioAsset::IsReady(baseName);</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == U<span class="stringliteral">&quot;Font&quot;</span>)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            ready = FontAsset::IsReady(baseName);</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span>(!ready)</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            remaining.push_back(p);</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>    <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.swap(remaining);</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.isEmpty();</div>
+<div class="line"><span class="lineno">  176</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a5973b962623451f754298ad7657efd50"><div class="ttname"><a href="#a5973b962623451f754298ad7657efd50">AssetSystem::pending_assets_</a></div><div class="ttdeci">Array&lt; std::pair&lt; String, String &gt; &gt; pending_assets_</div><div class="ttdoc">非同期ロード中のアセット一覧(種類,基本名)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:74</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a8699ee18bd398670439d3b6340e1f1dc_icgraph.svg" width="1176" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af585580f85ed1c4eaf30b2b2de0156b5" name="af585580f85ed1c4eaf30b2b2de0156b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af585580f85ed1c4eaf30b2b2de0156b5">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_asset_system.html">AssetSystem</a> &amp; AssetSystem::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_asset_system.html">AssetSystem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピー代入演算子(削除) </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_af585580f85ed1c4eaf30b2b2de0156b5_cgraph.svg" width="410" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a38216f3fc1a218b4cf6910e8ed455be9" name="a38216f3fc1a218b4cf6910e8ed455be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38216f3fc1a218b4cf6910e8ed455be9">&#9670;&#160;</a></span>PrepareAssets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetSystem::PrepareAssets </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>scene_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したシーン名のアセットを準備する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene_name</td><td>シーン名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment">// コンストラクタで読み込み失敗した場合は即時リターン</span></div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span>((not <a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a>.isEmpty()) &amp;&amp; (<a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a> != scene_name))</div>
+<div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="comment">//先に古いシーンのアセットを解放する</span></div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_function" href="#ab7a0d836fbd30a0f29e661f9832a15b4">UnregisterAssets</a>();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a> = scene_name;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; asset_type : <a class="code hl_variable" href="#a5fd5308f6f828605011d7589bd4176a7">asset_types_</a>)</div>
+<div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; file_name_json : <a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>[<a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a>][asset_type])</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="comment">// parse load mode and file name in a helper to reduce nesting</span></div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_enumeration" href="#ad0d388da66b9a01be0ed99087c994324">AssetSystem::LoadMode</a> mode = ParseLoadModeFromJson(file_name_json.value);</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>            <span class="keyword">const</span> String asset_file_name = ParseAssetFileNameFromJson(file_name_json.value);</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span>(asset_file_name.isEmpty())</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span>(asset_file_name == U<span class="stringliteral">&quot;null&quot;</span>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>            <span class="keyword">const</span> String asset_filepath = U<span class="stringliteral">&quot;asset/&quot;</span> + asset_type + U<span class="stringliteral">&quot;/&quot;</span> + asset_file_name;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span>(FileSystem::Exists(asset_filepath))</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                <a class="code hl_function" href="#a89836a6278b0d4237fe0efc49906e437">RegisterAndLoadAsset</a>(asset_type, asset_filepath, mode);</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a331ce0c5847cff3bcc955be4adb3d5c5"><div class="ttname"><a href="#a331ce0c5847cff3bcc955be4adb3d5c5">AssetSystem::current_scene_name_</a></div><div class="ttdeci">String current_scene_name_</div><div class="ttdoc">現在対象となっているシーン名</div><div class="ttdef"><b>Definition</b> AssetSystem.h:59</div></div>
+<div class="ttc" id="aclass_asset_system_html_a5fd5308f6f828605011d7589bd4176a7"><div class="ttname"><a href="#a5fd5308f6f828605011d7589bd4176a7">AssetSystem::asset_types_</a></div><div class="ttdeci">const Array&lt; String &gt; asset_types_</div><div class="ttdoc">対象とするアセットの種類</div><div class="ttdef"><b>Definition</b> AssetSystem.h:62</div></div>
+<div class="ttc" id="aclass_asset_system_html_a89836a6278b0d4237fe0efc49906e437"><div class="ttname"><a href="#a89836a6278b0d4237fe0efc49906e437">AssetSystem::RegisterAndLoadAsset</a></div><div class="ttdeci">void RegisterAndLoadAsset(const String &amp;asset_type, const String &amp;asset_filepath, LoadMode mode)</div><div class="ttdoc">アセットを登録してロードする</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:186</div></div>
+<div class="ttc" id="aclass_asset_system_html_ab7a0d836fbd30a0f29e661f9832a15b4"><div class="ttname"><a href="#ab7a0d836fbd30a0f29e661f9832a15b4">AssetSystem::UnregisterAssets</a></div><div class="ttdeci">void UnregisterAssets()</div><div class="ttdoc">現在のシーンのアセット登録をすべて解除する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:100</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324"><div class="ttname"><a href="#ad0d388da66b9a01be0ed99087c994324">AssetSystem::LoadMode</a></div><div class="ttdeci">LoadMode</div><div class="ttdoc">アセットのロードモード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:25</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a38216f3fc1a218b4cf6910e8ed455be9_cgraph.svg" width="955" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a38216f3fc1a218b4cf6910e8ed455be9_icgraph.svg" width="427" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a89836a6278b0d4237fe0efc49906e437" name="a89836a6278b0d4237fe0efc49906e437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89836a6278b0d4237fe0efc49906e437">&#9670;&#160;</a></span>RegisterAndLoadAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetSystem::RegisterAndLoadAsset </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>asset_filepath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad0d388da66b9a01be0ed99087c994324">AssetSystem::LoadMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アセットを登録してロードする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asset_type</td><td>アセットの種類 </td></tr>
+    <tr><td class="paramname">asset_filepath</td><td>アセットのファイルパス </td></tr>
+    <tr><td class="paramname">mode</td><td>ロードモード </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>{</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keyword">const</span> String asset_base_name = FileSystem::BaseName(asset_filepath);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="comment">// Determine mode if Auto</span></div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span>(mode == <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">AssetSystem::LoadMode::Auto</a>)</div>
+<div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        <span class="comment">// Simple heuristic: textures and sounds =&gt; Async, fonts =&gt; Sync</span></div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Texture&quot;</span> || asset_type == U<span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            mode = <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a>;</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  199</span>        {</div>
+<div class="line"><span class="lineno">  200</span>            mode = <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">AssetSystem::LoadMode::Sync</a>;</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    <span class="comment">// small lambda to centralize registered_assets_ push</span></div>
+<div class="line"><span class="lineno">  205</span>    <span class="keyword">auto</span> markRegistered = [&amp;](<span class="keyword">const</span> String&amp; type, <span class="keyword">const</span> String&amp; name)</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_variable" href="#a6af9bda56fa2ed84717983f7f54784bc">registered_assets_</a>.push_back({ type, name });</div>
+<div class="line"><span class="lineno">  208</span>        };</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Font&quot;</span>)</div>
+<div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        int32 font_size = 24; <span class="comment">// default</span></div>
+<div class="line"><span class="lineno">  213</span>        <span class="comment">// JSON に FontSize があれば取得</span></div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span>(JSONValueType::Empty != <a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>[<a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a>][U<span class="stringliteral">&quot;FontSize&quot;</span>].getType())</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            font_size = <a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>[<a class="code hl_variable" href="#a331ce0c5847cff3bcc955be4adb3d5c5">current_scene_name_</a>][U<span class="stringliteral">&quot;FontSize&quot;</span>].get&lt;int32&gt;();</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>        FontAsset::Register(asset_base_name, font_size, asset_filepath);</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span>(mode == <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a>)</div>
+<div class="line"><span class="lineno">  222</span>        {</div>
+<div class="line"><span class="lineno">  223</span>            FontAsset::LoadAsync(asset_base_name);</div>
+<div class="line"><span class="lineno">  224</span>            <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.push_back({ asset_type, asset_base_name });</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  227</span>        {</div>
+<div class="line"><span class="lineno">  228</span>            FontAsset::Load(asset_base_name);</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        markRegistered(asset_type, asset_base_name);</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>        AudioAsset::Register(asset_base_name, asset_filepath);</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span>(mode == <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a>)</div>
+<div class="line"><span class="lineno">  238</span>        {</div>
+<div class="line"><span class="lineno">  239</span>            AudioAsset::LoadAsync(asset_base_name);</div>
+<div class="line"><span class="lineno">  240</span>            <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.push_back({ asset_type, asset_base_name });</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            AudioAsset::Load(asset_base_name);</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span>        markRegistered(asset_type, asset_base_name);</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Texture&quot;</span>)</div>
+<div class="line"><span class="lineno">  250</span>    {</div>
+<div class="line"><span class="lineno">  251</span>        TextureAsset::Register(asset_base_name, asset_filepath);</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">if</span>(mode == <a class="code hl_enumvalue" href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a>)</div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            TextureAsset::LoadAsync(asset_base_name);</div>
+<div class="line"><span class="lineno">  256</span>            <a class="code hl_variable" href="#a5973b962623451f754298ad7657efd50">pending_assets_</a>.push_back({ asset_type, asset_base_name });</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  259</span>        {</div>
+<div class="line"><span class="lineno">  260</span>            TextureAsset::Load(asset_base_name);</div>
+<div class="line"><span class="lineno">  261</span>        }</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>        markRegistered(asset_type, asset_base_name);</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  265</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a6af9bda56fa2ed84717983f7f54784bc"><div class="ttname"><a href="#a6af9bda56fa2ed84717983f7f54784bc">AssetSystem::registered_assets_</a></div><div class="ttdeci">Array&lt; std::pair&lt; String, String &gt; &gt; registered_assets_</div><div class="ttdoc">登録されたアセットの一覧(種類,基本名)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:71</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb"><div class="ttname"><a href="#ad0d388da66b9a01be0ed99087c994324a06b9281e396db002010bde1de57262eb">AssetSystem::LoadMode::Auto</a></div><div class="ttdeci">@ Auto</div><div class="ttdoc">自動判別(デフォルト)</div><div class="ttdef"><b>Definition</b> AssetSystem.h:26</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6"><div class="ttname"><a href="#ad0d388da66b9a01be0ed99087c994324a24aa4117da86c41684ad25742832dfa6">AssetSystem::LoadMode::Async</a></div><div class="ttdeci">@ Async</div><div class="ttdoc">非同期ロード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:28</div></div>
+<div class="ttc" id="aclass_asset_system_html_ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f"><div class="ttname"><a href="#ad0d388da66b9a01be0ed99087c994324ad8e87c0927539672f54462c837be0b7f">AssetSystem::LoadMode::Sync</a></div><div class="ttdeci">@ Sync</div><div class="ttdoc">同期ロード</div><div class="ttdef"><b>Definition</b> AssetSystem.h:27</div></div>
+</div><!-- fragment --><div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a89836a6278b0d4237fe0efc49906e437_icgraph.svg" width="655" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab7a0d836fbd30a0f29e661f9832a15b4" name="ab7a0d836fbd30a0f29e661f9832a15b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a0d836fbd30a0f29e661f9832a15b4">&#9670;&#160;</a></span>UnregisterAssets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetSystem::UnregisterAssets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のシーンのアセット登録をすべて解除する </p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>{</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a84c29f36ac79b28eebef7bf12778430c">asset_json_</a>)</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="comment">// 非同期読み込みが終わるまで待つ</span></div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_function" href="#a88219cddf418f7a49d68ec447eb8ed13">WaitUntilReady</a>();</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="comment">// 登録したものだけを解除する</span></div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : <a class="code hl_variable" href="#a6af9bda56fa2ed84717983f7f54784bc">registered_assets_</a>)</div>
+<div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keyword">const</span> String&amp; asset_type = item.first;</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">const</span> String&amp; asset_base_name = item.second;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Font&quot;</span>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span>(FontAsset::IsRegistered(asset_base_name))</div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                FontAsset::Unregister(asset_base_name);</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span>(AudioAsset::IsRegistered(asset_base_name))</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                AudioAsset::Unregister(asset_base_name);</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(asset_type == U<span class="stringliteral">&quot;Texture&quot;</span>)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span>(TextureAsset::IsRegistered(asset_base_name))</div>
+<div class="line"><span class="lineno">  133</span>            {</div>
+<div class="line"><span class="lineno">  134</span>                TextureAsset::Unregister(asset_base_name);</div>
+<div class="line"><span class="lineno">  135</span>            }</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_variable" href="#a6af9bda56fa2ed84717983f7f54784bc">registered_assets_</a>.clear();</div>
+<div class="line"><span class="lineno">  140</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a88219cddf418f7a49d68ec447eb8ed13"><div class="ttname"><a href="#a88219cddf418f7a49d68ec447eb8ed13">AssetSystem::WaitUntilReady</a></div><div class="ttdeci">void WaitUntilReady()</div><div class="ttdoc">非同期ロードが完了するまで待機する</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:178</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_ab7a0d836fbd30a0f29e661f9832a15b4_cgraph.svg" width="714" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_ab7a0d836fbd30a0f29e661f9832a15b4_icgraph.svg" width="684" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a88219cddf418f7a49d68ec447eb8ed13" name="a88219cddf418f7a49d68ec447eb8ed13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88219cddf418f7a49d68ec447eb8ed13">&#9670;&#160;</a></span>WaitUntilReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetSystem::WaitUntilReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>非同期ロードが完了するまで待機する </p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>{</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">while</span>(!<a class="code hl_function" href="#a8699ee18bd398670439d3b6340e1f1dc">IsSceneAssetsReady</a>())</div>
+<div class="line"><span class="lineno">  181</span>    {</div>
+<div class="line"><span class="lineno">  182</span>        std::this_thread::sleep_for(std::chrono::milliseconds(1));</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  184</span>}</div>
+<div class="ttc" id="aclass_asset_system_html_a8699ee18bd398670439d3b6340e1f1dc"><div class="ttname"><a href="#a8699ee18bd398670439d3b6340e1f1dc">AssetSystem::IsSceneAssetsReady</a></div><div class="ttdeci">bool IsSceneAssetsReady()</div><div class="ttdoc">現在のシーンのアセット非同期ロードが完了したか</div><div class="ttdef"><b>Definition</b> AssetSystem.cpp:142</div></div>
+</div><!-- fragment --><div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a88219cddf418f7a49d68ec447eb8ed13_cgraph.svg" width="456" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_asset_system_a88219cddf418f7a49d68ec447eb8ed13_icgraph.svg" width="931" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a84c29f36ac79b28eebef7bf12778430c" name="a84c29f36ac79b28eebef7bf12778430c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c29f36ac79b28eebef7bf12778430c">&#9670;&#160;</a></span>asset_json_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JSON AssetSystem::asset_json_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アセット情報を定義したJSONデータ </p>
+
+</div>
+</div>
+<a id="a5fd5308f6f828605011d7589bd4176a7" name="a5fd5308f6f828605011d7589bd4176a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd5308f6f828605011d7589bd4176a7">&#9670;&#160;</a></span>asset_types_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Array&lt;String&gt; AssetSystem::asset_types_ = { U&quot;Font&quot;, U&quot;Sound&quot;, U&quot;Texture&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>対象とするアセットの種類 </p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{ U<span class="stringliteral">&quot;Font&quot;</span>, U<span class="stringliteral">&quot;Sound&quot;</span>, U<span class="stringliteral">&quot;Texture&quot;</span> };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a331ce0c5847cff3bcc955be4adb3d5c5" name="a331ce0c5847cff3bcc955be4adb3d5c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331ce0c5847cff3bcc955be4adb3d5c5">&#9670;&#160;</a></span>current_scene_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String AssetSystem::current_scene_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在対象となっているシーン名 </p>
+
+</div>
+</div>
+<a id="a5973b962623451f754298ad7657efd50" name="a5973b962623451f754298ad7657efd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5973b962623451f754298ad7657efd50">&#9670;&#160;</a></span>pending_assets_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;std::pair&lt;String, String&gt; &gt; AssetSystem::pending_assets_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非同期ロード中のアセット一覧(種類,基本名) </p>
+
+</div>
+</div>
+<a id="a6af9bda56fa2ed84717983f7f54784bc" name="a6af9bda56fa2ed84717983f7f54784bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af9bda56fa2ed84717983f7f54784bc">&#9670;&#160;</a></span>registered_assets_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;std::pair&lt;String, String&gt; &gt; AssetSystem::registered_assets_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>登録されたアセットの一覧(種類,基本名) </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>src/System/<a class="el" href="_asset_system_8h_source.html">AssetSystem.h</a></li>
+<li>src/System/<a class="el" href="_asset_system_8cpp.html">AssetSystem.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_asset_system.html">AssetSystem</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

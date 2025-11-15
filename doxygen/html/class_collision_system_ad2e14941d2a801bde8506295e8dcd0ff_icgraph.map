@@ -1,0 +1,5 @@
+<map id="CollisionSystem::CheckIntersection" name="CollisionSystem::CheckIntersection">
+<area shape="rect" id="Node000001" title="2つの図形の衝突判定を実行する" alt="" coords="226,13,456,40"/>
+<area shape="rect" id="Node000002" href="$class_collision_system.html#af606574fc2a2716cc06096ca9025c57d" title="プレイヤーと他のオブジェクトの衝突判定を実行する" alt="" coords="5,5,178,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,29,178,29,178,24,210,24"/>
+</map>

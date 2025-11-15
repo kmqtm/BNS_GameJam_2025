@@ -1,0 +1,7 @@
+<map id="Player::OnSwimPressed" name="Player::OnSwimPressed">
+<area shape="rect" id="Node000001" title="泳ぎ入力時の処理" alt="" coords="346,5,510,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a235c6e2e4fe87bbec295d71a31e5ead2" title="入力を処理する" alt="" coords="162,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,21,298,21,298,16,330,16"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a4b224bdee973f00772184b1e87970633" title="プレイヤーを更新する" alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

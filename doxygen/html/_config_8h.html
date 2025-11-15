@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/Core/Config.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_config_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Config.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲーム設定の定義  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;Siv3D.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Config.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="_config_8h__incl.svg" width="135" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="_config_8h__dep__incl.svg" width="671" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="_config_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:aaea305de8385c40a637a08e6e3c9d031" id="r_aaea305de8385c40a637a08e6e3c9d031"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaea305de8385c40a637a08e6e3c9d031">App</a> = s3d::SceneManager&lt;<a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a>&gt;</td></tr>
+<tr class="memdesc:aaea305de8385c40a637a08e6e3c9d031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Siv3DのシーンマネージャーにSceneIDを適用した型  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a90ba02b54dbe5fd736bc63ddf8306871" id="r_a90ba02b54dbe5fd736bc63ddf8306871"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a> : int8 { <a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">kTitle</a> = 0
+, <a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</a>
+ }</td></tr>
+<tr class="memdesc:a90ba02b54dbe5fd736bc63ddf8306871"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンを識別するID  <a href="#a90ba02b54dbe5fd736bc63ddf8306871">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a3b8841eb4f4bcd8fa09fb6a8cb3394ba" id="r_a3b8841eb4f4bcd8fa09fb6a8cb3394ba"><td class="memItemLeft" align="right" valign="top">constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">kSceneSize</a> = { 704, 900 }</td></tr>
+<tr class="memdesc:a3b8841eb4f4bcd8fa09fb6a8cb3394ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームシーンのサイズ(ピクセル)  <br /></td></tr>
+<tr class="memitem:a4c675c65b7e7f3d0cdfd9b05c644327b" id="r_a4c675c65b7e7f3d0cdfd9b05c644327b"><td class="memItemLeft" align="right" valign="top">constexpr ColorF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c675c65b7e7f3d0cdfd9b05c644327b">kBackgroundColor</a> = ColorF{ 0.8, 0.9, 1.0 }</td></tr>
+<tr class="memdesc:a4c675c65b7e7f3d0cdfd9b05c644327b"><td class="mdescLeft">&#160;</td><td class="mdescRight">メニューシーンの背景色  <br /></td></tr>
+<tr class="memitem:ab121746c70d1bcde449ab4bd2e676855" id="r_ab121746c70d1bcde449ab4bd2e676855"><td class="memItemLeft" align="right" valign="top">constexpr ColorF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab121746c70d1bcde449ab4bd2e676855">kGameBackgroundColor</a> = ColorF{ 0.4, 0.7, 1.0 }</td></tr>
+<tr class="memdesc:ab121746c70d1bcde449ab4bd2e676855"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームシーンの背景色  <br /></td></tr>
+<tr class="memitem:ad475090b87f406cb3ff3562105a10251" id="r_ad475090b87f406cb3ff3562105a10251"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad475090b87f406cb3ff3562105a10251">kInputOK</a> { KeyEnter }</td></tr>
+<tr class="memdesc:ad475090b87f406cb3ff3562105a10251"><td class="mdescLeft">&#160;</td><td class="mdescRight">決定キー  <br /></td></tr>
+<tr class="memitem:af57baa81603a60e0088da1c8be6680dd" id="r_af57baa81603a60e0088da1c8be6680dd"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af57baa81603a60e0088da1c8be6680dd">kInputCancel</a> { KeyEscape }</td></tr>
+<tr class="memdesc:af57baa81603a60e0088da1c8be6680dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンセルキー  <br /></td></tr>
+<tr class="memitem:a4084901ed266524f2686dfe9165b3611" id="r_a4084901ed266524f2686dfe9165b3611"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4084901ed266524f2686dfe9165b3611">kInputLeft</a> { KeyLeft, KeyA }</td></tr>
+<tr class="memdesc:a4084901ed266524f2686dfe9165b3611"><td class="mdescLeft">&#160;</td><td class="mdescRight">左移動キー  <br /></td></tr>
+<tr class="memitem:aeb82e98dd9d59993bfa121612a706012" id="r_aeb82e98dd9d59993bfa121612a706012"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb82e98dd9d59993bfa121612a706012">kInputRight</a> { KeyRight, KeyD }</td></tr>
+<tr class="memdesc:aeb82e98dd9d59993bfa121612a706012"><td class="mdescLeft">&#160;</td><td class="mdescRight">右移動キー  <br /></td></tr>
+<tr class="memitem:a174ae0b715566433c96e054b348adddd" id="r_a174ae0b715566433c96e054b348adddd"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a174ae0b715566433c96e054b348adddd">kInputUp</a> { KeyUp, KeyW }</td></tr>
+<tr class="memdesc:a174ae0b715566433c96e054b348adddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">上移動キー  <br /></td></tr>
+<tr class="memitem:aada946ad2629bcb7ea78d94206293636" id="r_aada946ad2629bcb7ea78d94206293636"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada946ad2629bcb7ea78d94206293636">kInputDown</a> { KeyDown, KeyS }</td></tr>
+<tr class="memdesc:aada946ad2629bcb7ea78d94206293636"><td class="mdescLeft">&#160;</td><td class="mdescRight">下移動キー  <br /></td></tr>
+<tr class="memitem:ac5411287b9f05244aa0f067b14a16f48" id="r_ac5411287b9f05244aa0f067b14a16f48"><td class="memItemLeft" align="right" valign="top">const InputGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5411287b9f05244aa0f067b14a16f48">kInputAction1</a> { KeySpace }</td></tr>
+<tr class="memdesc:ac5411287b9f05244aa0f067b14a16f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクション1キー  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲーム設定の定義 </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">型定義詳解</h2>
+<a id="aaea305de8385c40a637a08e6e3c9d031" name="aaea305de8385c40a637a08e6e3c9d031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea305de8385c40a637a08e6e3c9d031">&#9670;&#160;</a></span>App</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aaea305de8385c40a637a08e6e3c9d031">App</a> = s3d::SceneManager&lt;<a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Siv3DのシーンマネージャーにSceneIDを適用した型 </p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型詳解</h2>
+<a id="a90ba02b54dbe5fd736bc63ddf8306871" name="a90ba02b54dbe5fd736bc63ddf8306871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ba02b54dbe5fd736bc63ddf8306871">&#9670;&#160;</a></span>SceneID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a90ba02b54dbe5fd736bc63ddf8306871">SceneID</a> : int8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シーンを識別するID </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659" name="a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659"></a>kTitle&#160;</td><td class="fielddoc"><p>タイトルシーン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca" name="a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca"></a>kGame&#160;</td><td class="fielddoc"><p>ゲームシーン </p>
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">kTitle</a> = 0,  </div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</a>,       </div>
+<div class="line"><span class="lineno">   22</span>};</div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659"><div class="ttname"><a href="#a90ba02b54dbe5fd736bc63ddf8306871a75eccd462f7efb6d6a89f86cf4f55659">SceneID::kTitle</a></div><div class="ttdeci">@ kTitle</div><div class="ttdoc">タイトルシーン</div><div class="ttdef"><b>Definition</b> Config.h:20</div></div>
+<div class="ttc" id="a_config_8h_html_a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca"><div class="ttname"><a href="#a90ba02b54dbe5fd736bc63ddf8306871aa0ea15bd49d6b8071efbed0aa70539ca">SceneID::kGame</a></div><div class="ttdeci">@ kGame</div><div class="ttdoc">ゲームシーン</div><div class="ttdef"><b>Definition</b> Config.h:21</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">変数詳解</h2>
+<a id="a4c675c65b7e7f3d0cdfd9b05c644327b" name="a4c675c65b7e7f3d0cdfd9b05c644327b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c675c65b7e7f3d0cdfd9b05c644327b">&#9670;&#160;</a></span>kBackgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorF kBackgroundColor = ColorF{ 0.8, 0.9, 1.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メニューシーンの背景色 </p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ 0.8, 0.9, 1.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab121746c70d1bcde449ab4bd2e676855" name="ab121746c70d1bcde449ab4bd2e676855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab121746c70d1bcde449ab4bd2e676855">&#9670;&#160;</a></span>kGameBackgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorF kGameBackgroundColor = ColorF{ 0.4, 0.7, 1.0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームシーンの背景色 </p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ 0.4, 0.7, 1.0 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac5411287b9f05244aa0f067b14a16f48" name="ac5411287b9f05244aa0f067b14a16f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5411287b9f05244aa0f067b14a16f48">&#9670;&#160;</a></span>kInputAction1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputAction1 { KeySpace }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アクション1キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{ KeySpace };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af57baa81603a60e0088da1c8be6680dd" name="af57baa81603a60e0088da1c8be6680dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57baa81603a60e0088da1c8be6680dd">&#9670;&#160;</a></span>kInputCancel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputCancel { KeyEscape }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キャンセルキー </p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ KeyEscape };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aada946ad2629bcb7ea78d94206293636" name="aada946ad2629bcb7ea78d94206293636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada946ad2629bcb7ea78d94206293636">&#9670;&#160;</a></span>kInputDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputDown { KeyDown, KeyS }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>下移動キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ KeyDown, KeyS };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4084901ed266524f2686dfe9165b3611" name="a4084901ed266524f2686dfe9165b3611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4084901ed266524f2686dfe9165b3611">&#9670;&#160;</a></span>kInputLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputLeft { KeyLeft, KeyA }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左移動キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{ KeyLeft, KeyA };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad475090b87f406cb3ff3562105a10251" name="ad475090b87f406cb3ff3562105a10251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad475090b87f406cb3ff3562105a10251">&#9670;&#160;</a></span>kInputOK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputOK { KeyEnter }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>決定キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{ KeyEnter };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb82e98dd9d59993bfa121612a706012" name="aeb82e98dd9d59993bfa121612a706012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb82e98dd9d59993bfa121612a706012">&#9670;&#160;</a></span>kInputRight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputRight { KeyRight, KeyD }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右移動キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{ KeyRight, KeyD };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a174ae0b715566433c96e054b348adddd" name="a174ae0b715566433c96e054b348adddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174ae0b715566433c96e054b348adddd">&#9670;&#160;</a></span>kInputUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const InputGroup kInputUp { KeyUp, KeyW }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上移動キー </p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{ KeyUp, KeyW };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3b8841eb4f4bcd8fa09fb6a8cb3394ba" name="a3b8841eb4f4bcd8fa09fb6a8cb3394ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8841eb4f4bcd8fa09fb6a8cb3394ba">&#9670;&#160;</a></span>kSceneSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size kSceneSize = { 704, 900 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ゲームシーンのサイズ(ピクセル) </p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ 704, 900 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a href="_config_8h.html">Config.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

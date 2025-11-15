@@ -1,0 +1,26 @@
+var class_stage =
+[
+    [ "Stage", "class_stage.html#a635602a35a967a2f052e1d02eea88606", null ],
+    [ "ComputeDrawRange", "class_stage.html#ad9f61bd78a0378947176faf7c6b9d5e8", null ],
+    [ "CreateTileRegions", "class_stage.html#a2688bb80c7887089f15bba99b0da6a4f", null ],
+    [ "Draw", "class_stage.html#a215f2d5b06903cf06f44552a23e27fc7", null ],
+    [ "DrawLayerTiles", "class_stage.html#a66e4f07a9f7811afe745b834d2743e97", null ],
+    [ "FindCollisionLayer", "class_stage.html#a5a4516bbbf1bebe3ba0ee9611791523b", null ],
+    [ "GetHeight", "class_stage.html#a23daac63487bb433207e58eba8ab21d9", null ],
+    [ "GetSpawnPoints", "class_stage.html#a2bca3f0297d6fe0babba355a77a7359c", null ],
+    [ "GetTileSize", "class_stage.html#aa1ee7cbc0b2b77c60aba3665038c2e91", null ],
+    [ "GetWidth", "class_stage.html#a2f16ed16dd395143683390ce4decac36", null ],
+    [ "IsSolid", "class_stage.html#a95f9531749e71dfe6c880295abeb9d8c", null ],
+    [ "LoadFromJson", "class_stage.html#a046289fe3fa7e0cc0c6b6c039a3e8d16", null ],
+    [ "ParseObjectLayer", "class_stage.html#ab7eb2696fab166bc7924120333715077", null ],
+    [ "ParseTileLayer", "class_stage.html#af45be338beccbbe57fc49b79572282d8", null ],
+    [ "collision_layer_", "class_stage.html#ad1b7b579a4e1afc0d1b9a4e1944e424b", null ],
+    [ "collision_layer_name_", "class_stage.html#a132d931a4431af5a7eedb6f8201c3229", null ],
+    [ "layers_", "class_stage.html#a8369f1ee5b499a4862cdc32696f6a956", null ],
+    [ "map_height_", "class_stage.html#a904f47c26bf2c2f1edf08d35512b4612", null ],
+    [ "map_width_", "class_stage.html#a49aa8cd0374c6fa45ab10b544ac53851", null ],
+    [ "spawn_points_", "class_stage.html#a1cc76748e9655e3086fbacd43b0e8754", null ],
+    [ "tile_regions_", "class_stage.html#a380236d0ce2c455fae6622a09a22470c", null ],
+    [ "tile_size_", "class_stage.html#a8735c40ee2a56eec9de8789f411b872c", null ],
+    [ "tile_texture_", "class_stage.html#a0f0ca9b9159463e3cd4d69fbc2d426c6", null ]
+];

@@ -1,0 +1,5 @@
+<map id="PatrolBehavior" name="PatrolBehavior">
+<area shape="rect" id="Node000001" title="左右に巡回する敵の行動戦略" alt="" coords="15,80,121,107"/>
+<area shape="rect" id="Node000002" href="$class_i_behavior_strategy.html" title="敵の行動戦略を定義するインターフェース" alt="" coords="5,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,48,71,80,65,80,65,48"/>
+</map>

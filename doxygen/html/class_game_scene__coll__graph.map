@@ -1,0 +1,27 @@
+<map id="GameScene" name="GameScene">
+<area shape="rect" id="Node000001" title="ゲームシーンを管理する" alt="" coords="350,301,443,328"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,203,95,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,235,126,256,172,275,266,297,350,307,349,313,265,302,171,280,124,261,83,240"/>
+<area shape="rect" id="Node000003" href="$class_stage.html" title="Tiledで作成されたマップを管理する" alt="" coords="118,203,174,229"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,239,186,259,210,275,244,289,281,299,350,309,349,314,280,305,243,294,207,280,183,263,163,243"/>
+<area shape="rect" id="Node000004" href="$struct_tile_map_layer.html" title="タイルマップレイヤーを表現する構造体" alt="" coords="96,104,196,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,146,149,202,143,202,143,146"/>
+<area shape="rect" id="Node000005" href="$class_camera_system.html" title="2Dカメラを管理する" alt="" coords="198,203,310,229"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="260,244,267,261,277,275,293,288,311,296,350,307,349,312,309,301,290,292,273,279,262,263,255,245"/>
+<area shape="rect" id="Node000006" href="$class_player.html" title="プレイヤーを管理する" alt="" coords="498,203,556,229"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="531,246,528,263,519,279,503,293,484,303,445,313,443,308,482,298,500,288,515,276,523,261,526,245"/>
+<area shape="rect" id="Node000007" href="$struct_collider.html" title="衝突判定を管理する構造体" alt="" coords="305,104,371,131"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="374,136,449,176,499,200,497,204,446,181,371,141"/>
+<area shape="rect" id="Node000011" href="$class_collision_system.html" title="プレイヤーと他のオブジェクト間の衝突判定を管理する" alt="" coords="337,203,454,229"/>
+<area shape="poly" id="edge11_Node000011_Node000007" title=" " alt="" coords="309,143,300,156,296,167,300,177,316,193,338,203,336,208,313,197,295,180,291,167,295,154,304,140"/>
+<area shape="rect" id="Node000008" href="$class_animation_controller.html" title="アニメーション再生を管理する" alt="" coords="437,104,572,131"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="505,146,508,178,520,201,515,203,503,179,499,146"/>
+<area shape="rect" id="Node000009" href="$struct_animation.html" title="アニメーション再生に必要な情報を保持する構造体" alt="" coords="465,5,544,32"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="507,48,507,104,502,104,502,48"/>
+<area shape="rect" id="Node000010" href="$class_sound_controller.html" title="サウンド再生を管理する" alt="" coords="654,104,768,131"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="744,140,752,154,756,167,752,180,736,205,719,224,681,247,583,280,511,300,444,311,444,306,510,295,581,275,679,242,715,219,732,202,748,178,751,167,748,156,739,143"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="671,140,641,157,610,181,558,206,556,201,607,176,639,152,669,136"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="398,245,399,301,394,301,393,245"/>
+<area shape="rect" id="Node000012" href="$class_u_i_system.html" title="UIの描画を一元管理する" alt="" coords="892,203,973,229"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="896,239,846,261,788,280,693,298,598,309,444,316,444,311,598,304,692,293,787,275,844,256,894,234"/>
+</map>

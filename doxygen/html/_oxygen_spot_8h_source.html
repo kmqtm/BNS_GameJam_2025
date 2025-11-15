@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShinkaiSanta - Source Code Documentation by Kanta Muramatsu: src/Entitie/OxygenSpot.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShinkaiSanta - Source Code Documentation by Kanta Muramatsu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_oxygen_spot_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OxygenSpot.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_oxygen_spot_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_animation_controller_8h.html">../Component/AnimationController.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_collider_8h.html">../Component/Collider.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_stage_8h.html">../World/Stage.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Siv3D.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_oxygen_spot.html#a9da6125384c4876b2a098aee9d038063">OxygenSpot</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_oxygen_spot.html#a9da6125384c4876b2a098aee9d038063">OxygenSpot</a>(<span class="keyword">const</span> Vec2&amp; center_pos, <span class="keyword">const</span> Vec2&amp; size);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_oxygen_spot.html#a9cc86e50d6e717b38e132bad20aca881">Update</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_oxygen_spot.html#aa76b36d9acc3958166daaa8b213e819c">Draw</a>(<span class="keyword">const</span> Vec2&amp; camera_offset) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    Vec2 <a class="code hl_function" href="class_oxygen_spot.html#a42fdfe96d5211c23f0e6f845096b6a10">GetPos</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#a90029304dc61a74c57b5ad8fd5cdf351">   33</a></span>    <a class="code hl_struct" href="struct_collider.html">Collider</a>&amp; <a class="code hl_function" href="class_oxygen_spot.html#a90029304dc61a74c57b5ad8fd5cdf351">GetCollider</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e">collider_</a>; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#a4f60009515a45a1e90adcb259f25df25">   36</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_collider.html">Collider</a>&amp; <a class="code hl_function" href="class_oxygen_spot.html#a4f60009515a45a1e90adcb259f25df25">GetCollider</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e">collider_</a>; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#a4dd423f5175e9dafd937380ccdf509d8">   40</a></span>    Vec2 <a class="code hl_variable" href="class_oxygen_spot.html#a4dd423f5175e9dafd937380ccdf509d8">pos_</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#aad6c917b5373037ea91820bee80a3c17">   43</a></span>    Vec2 <a class="code hl_variable" href="class_oxygen_spot.html#aad6c917b5373037ea91820bee80a3c17">size_</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#a0aea807c4457443a345b3d1a60921ad9">   46</a></span>    <a class="code hl_class" href="class_animation_controller.html">AnimationController</a> <a class="code hl_variable" href="class_oxygen_spot.html#a0aea807c4457443a345b3d1a60921ad9">anim_controller_</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e">   49</a></span>    <a class="code hl_struct" href="struct_collider.html">Collider</a> <a class="code hl_variable" href="class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e">collider_</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_oxygen_spot.html#a320f9adeb74057dd500e0da1bce3d259">SetupAnimation</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_oxygen_spot.html#a7d700105339bbdb89c2e9a06f440d5ca">UpdateColliderCenter</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+</div>
+<div class="ttc" id="a_animation_controller_8h_html"><div class="ttname"><a href="_animation_controller_8h.html">AnimationController.h</a></div><div class="ttdoc">アニメーション再生管理クラス</div></div>
+<div class="ttc" id="a_collider_8h_html"><div class="ttname"><a href="_collider_8h.html">Collider.h</a></div><div class="ttdoc">衝突判定用のコンポーネント定義</div></div>
+<div class="ttc" id="a_stage_8h_html"><div class="ttname"><a href="_stage_8h.html">Stage.h</a></div><div class="ttdoc">ステージ管理の定義</div></div>
+<div class="ttc" id="aclass_animation_controller_html"><div class="ttname"><a href="class_animation_controller.html">AnimationController</a></div><div class="ttdoc">アニメーション再生を管理する</div><div class="ttdef"><b>Definition</b> AnimationController.h:12</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a0aea807c4457443a345b3d1a60921ad9"><div class="ttname"><a href="class_oxygen_spot.html#a0aea807c4457443a345b3d1a60921ad9">OxygenSpot::anim_controller_</a></div><div class="ttdeci">AnimationController anim_controller_</div><div class="ttdoc">アニメーションコントローラー</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:46</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a0c88e1524bf4f5533d13345f2355b53e"><div class="ttname"><a href="class_oxygen_spot.html#a0c88e1524bf4f5533d13345f2355b53e">OxygenSpot::collider_</a></div><div class="ttdeci">Collider collider_</div><div class="ttdoc">当たり判定</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:49</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a320f9adeb74057dd500e0da1bce3d259"><div class="ttname"><a href="class_oxygen_spot.html#a320f9adeb74057dd500e0da1bce3d259">OxygenSpot::SetupAnimation</a></div><div class="ttdeci">void SetupAnimation()</div><div class="ttdoc">アニメーション初期化を実行する</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:16</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a42fdfe96d5211c23f0e6f845096b6a10"><div class="ttname"><a href="class_oxygen_spot.html#a42fdfe96d5211c23f0e6f845096b6a10">OxygenSpot::GetPos</a></div><div class="ttdeci">Vec2 GetPos() const</div><div class="ttdoc">位置を取得する</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:64</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a4dd423f5175e9dafd937380ccdf509d8"><div class="ttname"><a href="class_oxygen_spot.html#a4dd423f5175e9dafd937380ccdf509d8">OxygenSpot::pos_</a></div><div class="ttdeci">Vec2 pos_</div><div class="ttdoc">位置</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:40</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a4f60009515a45a1e90adcb259f25df25"><div class="ttname"><a href="class_oxygen_spot.html#a4f60009515a45a1e90adcb259f25df25">OxygenSpot::GetCollider</a></div><div class="ttdeci">const Collider &amp; GetCollider() const</div><div class="ttdoc">コライダーを取得する(const版)</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:36</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a7d700105339bbdb89c2e9a06f440d5ca"><div class="ttname"><a href="class_oxygen_spot.html#a7d700105339bbdb89c2e9a06f440d5ca">OxygenSpot::UpdateColliderCenter</a></div><div class="ttdeci">void UpdateColliderCenter()</div><div class="ttdoc">コライダーの中心位置を更新する</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:40</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a90029304dc61a74c57b5ad8fd5cdf351"><div class="ttname"><a href="class_oxygen_spot.html#a90029304dc61a74c57b5ad8fd5cdf351">OxygenSpot::GetCollider</a></div><div class="ttdeci">Collider &amp; GetCollider()</div><div class="ttdoc">コライダーを取得する</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:33</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a9cc86e50d6e717b38e132bad20aca881"><div class="ttname"><a href="class_oxygen_spot.html#a9cc86e50d6e717b38e132bad20aca881">OxygenSpot::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">酸素スポットを更新する</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:32</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_a9da6125384c4876b2a098aee9d038063"><div class="ttname"><a href="class_oxygen_spot.html#a9da6125384c4876b2a098aee9d038063">OxygenSpot::OxygenSpot</a></div><div class="ttdeci">OxygenSpot(const Vec2 &amp;center_pos, const Vec2 &amp;size)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:7</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_aa76b36d9acc3958166daaa8b213e819c"><div class="ttname"><a href="class_oxygen_spot.html#aa76b36d9acc3958166daaa8b213e819c">OxygenSpot::Draw</a></div><div class="ttdeci">void Draw(const Vec2 &amp;camera_offset) const</div><div class="ttdoc">酸素スポットを描画する</div><div class="ttdef"><b>Definition</b> OxygenSpot.cpp:54</div></div>
+<div class="ttc" id="aclass_oxygen_spot_html_aad6c917b5373037ea91820bee80a3c17"><div class="ttname"><a href="class_oxygen_spot.html#aad6c917b5373037ea91820bee80a3c17">OxygenSpot::size_</a></div><div class="ttdeci">Vec2 size_</div><div class="ttdoc">当たり判定サイズ</div><div class="ttdef"><b>Definition</b> OxygenSpot.h:43</div></div>
+<div class="ttc" id="astruct_collider_html"><div class="ttname"><a href="struct_collider.html">Collider</a></div><div class="ttdoc">衝突判定を管理する構造体</div><div class="ttdef"><b>Definition</b> Collider.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_679f494023f10296bb6c15dff701d1f4.html">Entitie</a></li><li class="navelem"><a href="_oxygen_spot_8h.html">OxygenSpot.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
