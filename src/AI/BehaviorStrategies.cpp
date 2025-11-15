@@ -3,14 +3,12 @@
 #include "BehaviorStrategies.h"
 #include <cmath>
 
-// Stationary: 何もしない
 void StationaryBehavior::Update(Enemy& enemy, const Stage& stage)
 {
 	(void)enemy;
 	(void)stage;
 }
 
-// Patrol: Enemy::UpdatePatrol のロジックを移植
 void PatrolBehavior::Update(Enemy& enemy, const Stage& stage)
 {
 	const double next_x = enemy.pos_.x + enemy.velocity_.x;
@@ -25,6 +23,7 @@ void PatrolBehavior::Update(Enemy& enemy, const Stage& stage)
 
 		if(stage.IsSolid(sensor_x, sensor_y))
 		{
+			// 右辺: タイル左端 - 敵幅/2 - オフセット
 			enemy.pos_.x = (std::floor(sensor_x / tile_size) * tile_size) - half_width - enemy.collision_offset_;
 			enemy.velocity_.x *= -1.0;
 			enemy.is_facing_right_ = false;
@@ -42,6 +41,7 @@ void PatrolBehavior::Update(Enemy& enemy, const Stage& stage)
 
 		if(stage.IsSolid(sensor_x, sensor_y))
 		{
+			// 右辺: タイル左端 + 敵幅/2 + オフセット
 			enemy.pos_.x = (std::floor(sensor_x / tile_size) * tile_size) + tile_size + half_width + enemy.collision_offset_;
 			enemy.velocity_.x *= -1.0;
 			enemy.is_facing_right_ = true;
@@ -53,27 +53,22 @@ void PatrolBehavior::Update(Enemy& enemy, const Stage& stage)
 	}
 }
 
-// BackAndForth: Enemy::UpdateBackAndForth のロジックを移植
 void BackAndForthBehavior::Update(Enemy& enemy, const Stage& stage)
 {
+	// ステージのパラメータは使用しない
 	(void)stage;
 
-	// 現在の移動方向に従って位置を更新
 	enemy.pos_.x += enemy.velocity_.x;
 
-	// 開始位置からの移動距離を計算
 	const double distance_from_start = std::abs(enemy.pos_.x - enemy.start_pos_.x);
 
-	// 最大移動距離に達したら方向を反転
+	// 最大移動距離に達したら方向を反転(スプライトの向きは変えない)
 	if(distance_from_start >= enemy.max_travel_distance_)
 	{
-		// 方向反転（スプライトの向きは変えない）
 		enemy.velocity_.x *= -1.0;
-
-		// 距離をリセット
 		enemy.travel_distance_ = 0.0;
 
-		// 正確な位置に補正（行き過ぎを防ぐ）
+		// 正確な位置に補正
 		if(enemy.velocity_.x > 0)
 		{
 			enemy.pos_.x = enemy.start_pos_.x - enemy.max_travel_distance_;

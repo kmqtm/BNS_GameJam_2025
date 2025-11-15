@@ -1,15 +1,22 @@
 ﻿#pragma once
 
+/// @file SpawnInfo.h
+/// @brief スポーン情報の定義
+
 #include <Siv3D.hpp>
 
+/// @brief Tiledエディタから読み込まれたスポーン情報
+///
+/// オブジェクトレイヤーで定義された敵や酸素スポットなどの
+/// 配置位置と属性情報を保持する
 struct SpawnInfo
 {
-	// Tiledで設定された型(Tiledエディタ上ではClassと表記されている)
+	/// @brief オブジェクトの種類(Tiledで設定されたクラス)
 	String type;
 
-	// Tiled上の位置(デフォルトでは左上座標)
+	/// @brief オブジェクトの位置(ワールド座標,左上基準)
 	Vec2 pos;
 
-	// Tiled上のサイズ(幅と高さ)
+	/// @brief オブジェクトのサイズ(幅と高さ)
 	Vec2 size;
 };

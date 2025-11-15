@@ -1,17 +1,19 @@
 ﻿#pragma once
 
+/// @file Animation.h
+/// @brief アニメーションパターンの定義
+
 #include <Siv3D.hpp>
 
-// 1つのアニメーションパターンを定義する構造体
+/// @brief アニメーション再生に必要な情報を保持する構造体
 struct Animation
 {
-	// アニメーションを構成するテクスチャアセット名のリスト
+	/// @brief アニメーションを構成するテクスチャアセット名のリスト
 	Array<String> texture_asset_names;
 
-	// 1フレームあたりの表示時間（秒）
-	// 0.2 に設定すると，0.2秒ごとに次の画像へ切り替わる
+	/// @brief 1フレームあたりの表示時間(秒)
 	double frame_duration_sec;
 
-	// アニメーションをループ再生するか
+	/// @brief アニメーションをループ再生するか
 	bool is_looping;
 };

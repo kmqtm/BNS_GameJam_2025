@@ -1,60 +1,75 @@
 ﻿#pragma once
 
+/// @file AssetSystem.h
+/// @brief アセット管理システムの定義
+
 #include <chrono>
 #include <Siv3D.hpp>
 #include <thread>
 #include <utility>
 #include <vector>
 
-// アセットの読み込み，登録，登録解除を管理するクラス
-// シーンごとに必要なアセットをJSONファイルから読み込む
+/// @brief アセット読み込みと登録を管理するシングルトン
+///
+/// シーンごとに必要なアセットをJSONファイルから読み込み，同期・非同期での
+/// 登録・ロードを制御する
 class AssetSystem
 {
 public:
+	/// @brief シングルトンインスタンスを取得する
+	/// @return AssetSystemのインスタンス
 	static AssetSystem& GetInstance();
 
-	// アセットのロードモード
+	/// @brief アセットのロードモード
 	enum class LoadMode
 	{
-		Auto, // 自動判別（デフォルト）
-		Sync, // 同期ロード
-		Async // 非同期ロード
+		Auto,   ///< 自動判別(デフォルト)
+		Sync,   ///< 同期ロード
+		Async   ///< 非同期ロード
 	};
 
-	// 指定されたシーン名に基づいてアセットを準備(登録・ロード)
+	/// @brief 指定したシーン名のアセットを準備する
+	/// @param scene_name シーン名
 	void PrepareAssets(const String& scene_name);
 
-	// 現在のシーンで登録されているアセットの登録をすべて解除
+	/// @brief 現在のシーンのアセット登録をすべて解除する
 	void UnregisterAssets();
 
-	// 現在シーンの非同期読み込みが完了しているか
+	/// @brief 現在のシーンのアセット非同期ロードが完了したか
+	/// @return 完了している場合はtrue
 	bool IsSceneAssetsReady();
 
-	// 非同期読み込みが完了するまで待機する（ロード画面で使用）
+	/// @brief 非同期ロードが完了するまで待機する
 	void WaitUntilReady();
 
-	// コピーコンストラクタとコピー代入演算子を禁止
+	/// @brief コピーコンストラクタ(削除)
 	AssetSystem(const AssetSystem&) = delete;
+
+	/// @brief コピー代入演算子(削除)
 	AssetSystem& operator=(const AssetSystem&) = delete;
 
 private:
+	/// @brief コンストラクタ
 	AssetSystem();
 
-	// アセット情報を定義したJSONデータを保持
+	/// @brief アセット情報を定義したJSONデータ
 	JSON asset_json_;
 
-	// 現在対象となっているシーン名
+	/// @brief 現在対象となっているシーン名
 	String current_scene_name_;
 
-	// 対象とするアセットの種類を定義した配列
+	/// @brief 対象とするアセットの種類
 	const Array<String> asset_types_ = { U"Font", U"Sound", U"Texture" };
 
-	// アセットの登録とロードを行うヘルパー関数
+	/// @brief アセットを登録してロードする
+	/// @param asset_type アセットの種類
+	/// @param asset_filepath アセットのファイルパス
+	/// @param mode ロードモード
 	void RegisterAndLoadAsset(const String& asset_type, const String& asset_filepath, LoadMode mode);
 
-	// 実際に登録したアセットの一覧を保持して安全に解除できるようにする
-	Array<std::pair<String, String>> registered_assets_; // pair<type, baseName>
+	/// @brief 登録されたアセットの一覧(種類,基本名)
+	Array<std::pair<String, String>> registered_assets_;
 
-	// 非同期ロード中のアセットを追跡する配列 pair<type, baseName>
+	/// @brief 非同期ロード中のアセット一覧(種類,基本名)
 	Array<std::pair<String, String>> pending_assets_;
 };

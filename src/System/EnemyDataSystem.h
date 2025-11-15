@@ -1,73 +1,105 @@
 ﻿#pragma once
 
+/// @file EnemyDataSystem.h
+/// @brief 敵データ管理システムの定義
+
 #include <Siv3D.hpp>
 
-// AssetController と同様の「集中管理＋防御的読み込み」方針
+/// @brief 敵の仕様データを一元管理するシングルトン
+///
+/// JSONファイルから敵の行動，物理属性，アニメーションなどのデータを読み込み，
+/// 安全にアクセスできるインターフェースを提供する
 class EnemyDataSystem
 {
 public:
+	/// @brief シングルトンインスタンスを取得する
+	/// @return EnemyDataSystemのインスタンス
 	static EnemyDataSystem& GetInstance();
 
-	// JSON 全体が有効にロードされているか
+	/// @brief JSON全体が有効にロードされているか
+	/// @return ロード完了している場合はtrue
 	bool IsLoaded() const;
 
-	// 型安全な仕様データ
+	/// @brief 敵の行動パターン
 	enum class BehaviorKind { Stationary, Patrol, BackAndForth };
+
+	/// @brief コライダー図形の種類
 	enum class ColliderKind { RectF, Circle };
 
+	/// @brief アニメーション仕様
 	struct AnimationSpec
 	{
-		s3d::Array<s3d::String> textures;
-		double frame_duration_sec = 0.5;
-		bool is_looping = true;
+		s3d::Array<s3d::String> textures;           ///< テクスチャアセット名のリスト
+		double frame_duration_sec = 0.5;            ///< フレーム表示時間(秒)
+		bool is_looping = true;                     ///< ループ再生するか
 	};
 
+	/// @brief 敵の仕様
 	struct EnemySpec
 	{
-		BehaviorKind behavior = BehaviorKind::Stationary;
+		BehaviorKind behavior = BehaviorKind::Stationary;  ///< 行動パターン
 
-		s3d::Size physics_size{ 0, 0 };
+		s3d::Size physics_size{ 0, 0 };                     ///< 物理サイズ
 
-		ColliderKind collider_shape = ColliderKind::RectF;
-		// RectF 用
-		double collider_width = 0.0;
-		double collider_height = 0.0;
-		// Circle 用
-		double collider_radius = 0.0;
+		ColliderKind collider_shape = ColliderKind::RectF;  ///< コライダー図形
+		double collider_width = 0.0;                        ///< コライダー幅(RectF用)
+		double collider_height = 0.0;                       ///< コライダー高さ(RectF用)
+		double collider_radius = 0.0;                       ///< コライダー半径(Circle用)
 
-		// Patrol / BackAndForth 共通・専用
-		double speed = 0.0;                 // Patrol / BackAndForth
-		double collision_offset = 0.0;      // Patrol
-		double max_travel_distance = 0.0;   // BackAndForth
-		bool initial_facing_right = false;  // Patrol
-		double initial_velocity_x = 0.0;    // BackAndForth
+		double speed = 0.0;                         ///< 移動速度(Patrol/BackAndForth用)
+		double collision_offset = 0.0;              ///< 衝突判定オフセット(Patrol用)
+		double max_travel_distance = 0.0;           ///< 最大移動距離(BackAndForth用)
+		bool initial_facing_right = false;          ///< 初期向き(Patrol用)
+		double initial_velocity_x = 0.0;            ///< 初期速度X(BackAndForth用)
 
-		// 必要なアニメーション（"move", "idle" を想定）
+		/// @brief アニメーション("move","idle"など)
 		s3d::HashTable<s3d::String, AnimationSpec> animations;
 	};
 
-	// 指定タイプの仕様を安全に取得（存在しなければ none）
+	/// @brief 指定したタイプの敵仕様を取得する
+	/// @param type 敵タイプ
+	/// @return 敵仕様。存在しない場合はnullopt
 	s3d::Optional<EnemySpec> TryGetSpec(const s3d::String& type) const;
 
-	// 指定タイプの JSON データを取得（存在しなければ空の JSON を返す）
+	/// @brief 指定したタイプのJSONデータを取得する
+	/// @param type 敵タイプ
+	/// @return JSONデータ。存在しない場合は空のJSON
 	const s3d::JSON& GetData(const s3d::String& type) const;
 
+	/// @brief コピーコンストラクタ(削除)
 	EnemyDataSystem(const EnemyDataSystem&) = delete;
+
+	/// @brief コピー代入演算子(削除)
 	EnemyDataSystem& operator=(const EnemyDataSystem&) = delete;
 
 private:
+	/// @brief コンストラクタ
 	EnemyDataSystem();
+
+	/// @brief 敵データをロードする
 	void LoadEnemyData();
 
-	// ヘルパー
+	/// @brief 文字列を行動パターンに変換する
+	/// @param s 文字列
+	/// @return 行動パターン
 	static BehaviorKind ToBehaviorKind(const s3d::String& s);
+
+	/// @brief 文字列をコライダー図形に変換する
+	/// @param s 文字列
+	/// @return コライダー図形
 	static ColliderKind ToColliderKind(const s3d::String& s);
+
+	/// @brief JSONからアニメーション仕様を読み込む
+	/// @param anim JSONデータ
+	/// @return アニメーション仕様。無効な場合はnullopt
 	static s3d::Optional<AnimationSpec> ReadAnimationSpec(const s3d::JSON& anim);
 
-	// JSON root
+	/// @brief 敵データのJSONルート
 	s3d::JSON enemy_data_;
+
+	/// @brief 空のJSON定数
 	static const s3d::JSON kEmptyJSON;
 
-	// パスは App 配下を基準に "asset/..." で OK（ログにも同パスが出ていました）
+	/// @brief 敵データのファイルパス
 	static constexpr s3d::FilePathView kEnemyDataPath = U"asset/EnemyData.json";
 };
