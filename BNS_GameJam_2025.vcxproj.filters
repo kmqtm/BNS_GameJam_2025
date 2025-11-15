@@ -817,25 +817,16 @@
     <ClCompile Include="src\pch\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\AssetController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\Config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Scenes\GameScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entitie\Component\AnimationController.cpp">
+    <ClCompile Include="src\Scene\GameScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Entitie\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\World\Stage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\CameraManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Utility.cpp">
@@ -847,19 +838,28 @@
     <ClCompile Include="src\Entitie\OxygenSpot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Entitie\Component\SoundController.cpp">
+    <ClCompile Include="src\System\AssetSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\System\CollisionManager.cpp">
+    <ClCompile Include="src\System\CameraSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Manager\EnemyDataManager.cpp">
+    <ClCompile Include="src\AI\BehaviorStrategies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Entitie\BehaviorStrategies.cpp">
+    <ClCompile Include="src\Component\AnimationController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UI\UIManager.cpp">
+    <ClCompile Include="src\Component\SoundController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\EnemyDataSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\CollisionSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\UISystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -867,31 +867,16 @@
     <ClInclude Include="src\pch\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\AssetController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Core\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Scenes\GameScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Entitie\Component\Animation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Entitie\Component\AnimationController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Entitie\Component\Collider.h">
+    <ClInclude Include="src\Scene\GameScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Entitie\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\World\Stage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\CameraManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Utility.h">
@@ -906,22 +891,37 @@
     <ClInclude Include="src\Entitie\OxygenSpot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Entitie\Component\SoundController.h">
+    <ClInclude Include="src\System\AssetSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\System\CollisionManager.h">
+    <ClInclude Include="src\System\CameraSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Manager\EnemyDataManager.h">
+    <ClInclude Include="src\AI\BehaviorStrategies.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Entitie\IBehaviorStrategy.h">
+    <ClInclude Include="src\Component\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Entitie\BehaviorStrategies.h">
+    <ClInclude Include="src\Component\AnimationController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\UI\UIManager.h">
+    <ClInclude Include="src\Component\Collider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Component\SoundController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AI\IBehaviorStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\EnemyDataSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\CollisionSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\UISystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

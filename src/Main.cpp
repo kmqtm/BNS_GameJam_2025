@@ -1,5 +1,5 @@
 ﻿#include "Core/Config.h"
-#include "Scenes/GameScene.h"
+#include "Scene/GameScene.h"
 
 #include <Siv3D.hpp>
 

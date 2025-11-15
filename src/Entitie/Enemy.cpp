@@ -4,6 +4,7 @@
 #include "../World/Stage.h"
 #include "Enemy.h"
 #include "Player.h"
+
 #include <cmath>
 #include <Siv3D.hpp>
 #include <variant>
